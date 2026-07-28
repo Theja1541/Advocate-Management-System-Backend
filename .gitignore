@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+
+# Logs and databases
+logs/
+*.log
+npm-debug.log*
+
+# Uploads directory
+uploads/
+downloads/
