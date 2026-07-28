@@ -1,0 +1,82 @@
+const path = require('path');
+const fs = require('fs');
+const documentService = require('./documentService');
+const logger = require('../../config/logger');
+const AppError = require('../../utils/AppError');
+
+exports.getAllDocuments = async (req, res, next) => {
+  try {
+    const documents = await documentService.getAllDocuments();
+    res.status(200).json({
+      status: 'success',
+      data: { documents },
+    });
+  } catch (error) {
+    logger.error('GetAllDocuments error:', error);
+    next(error);
+  }
+};
+
+exports.getDocumentById = async (req, res, next) => {
+  try {
+    const document = await documentService.getDocumentById(req.params.id);
+    res.status(200).json({
+      status: 'success',
+      data: { document },
+    });
+  } catch (error) {
+    logger.error('GetDocumentById error:', error);
+    next(error);
+  }
+};
+
+exports.createDocument = async (req, res, next) => {
+  try {
+    const document = await documentService.createDocument({
+      name: req.body.name,
+      category: req.body.category,
+      caseId: Number(req.body.caseId),
+      file: req.file,
+      uploadedBy: req.user?.id,
+    });
+    res.status(201).json({
+      status: 'success',
+      data: { document },
+    });
+  } catch (error) {
+    if (req.file?.path && fs.existsSync(req.file.path)) {
+      try {
+        fs.unlinkSync(req.file.path);
+      } catch {
+        // ignore cleanup errors
+      }
+    }
+    logger.error('CreateDocument error:', error);
+    next(error);
+  }
+};
+
+exports.downloadDocument = async (req, res, next) => {
+  try {
+    const document = await documentService.getDocumentById(req.params.id);
+    if (!document.filePath || !fs.existsSync(document.filePath)) {
+      return next(new AppError('File not found on server', 404));
+    }
+
+    const downloadName = `${document.documentCode}-${document.name}${path.extname(document.filePath)}`;
+    return res.download(path.resolve(document.filePath), downloadName);
+  } catch (error) {
+    logger.error('DownloadDocument error:', error);
+    next(error);
+  }
+};
+
+exports.deleteDocument = async (req, res, next) => {
+  try {
+    await documentService.deleteDocument(req.params.id);
+    res.status(204).send();
+  } catch (error) {
+    logger.error('DeleteDocument error:', error);
+    next(error);
+  }
+};
