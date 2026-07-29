@@ -99,11 +99,12 @@ async function setup() {
 
     // 5. Seed Default Users (one per role; password for all: password)
     const passwordHash = await bcrypt.hash('password', 10);
+    const superAdminHash = await bcrypt.hash('Teja@1541', 10);
     const users = await User.bulkCreate([
       {
-        name: 'P. Raghavendra Rao',
-        email: 'raghavendra@legaldesk.in',
-        passwordHash,
+        name: 'A.Theja',
+        email: 'amasatheja1541@gmail.com',
+        passwordHash: superAdminHash,
         roleId: roleMap['Super Admin'],
         status: 'active'
       },
@@ -140,7 +141,7 @@ async function setup() {
 
     // 6. Seed Advocates
     const advocates = await Advocate.bulkCreate([
-      { id: 1, name: 'P. Raghavendra Rao', mobile: '9876543412', email: 'raghavendra@legaldesk.in', relation: 'Senior', specialization: 'Civil & Property', experience: '22', enrolment: 'AP/1142/2003', status: 'active', userId: users[0].id },
+      { id: 1, name: 'P. Raghavendra Rao', mobile: '9876543412', email: 'raghavendra@legaldesk.in', relation: 'Senior', specialization: 'Civil & Property', experience: '22', enrolment: 'AP/1142/2003', status: 'active', userId: null },
       { id: 2, name: 'M. Sailaja', mobile: '9123456776', email: 'advocate@legaldesk.in', relation: 'Junior', specialization: 'Civil, Land Acquisition', experience: '9', enrolment: 'AP/2871/2016', status: 'active', userId: users[3].id },
       { id: 3, name: 'B. Narasimhulu', mobile: '9988776203', email: 'narasimhulu@legaldesk.in', relation: 'Junior', specialization: 'Land & Revenue', experience: '6', enrolment: 'AP/3390/2019', status: 'active' },
       { id: 4, name: 'G. Praveen Kumar', mobile: '9440011558', email: 'praveen@legaldesk.in', relation: 'Referral', specialization: 'Civil Appeals', experience: '14', enrolment: 'AP/1904/2011', status: 'active' },
