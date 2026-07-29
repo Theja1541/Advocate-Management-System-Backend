@@ -12,9 +12,10 @@ const startServer = async () => {
     await connectDB();
 
     // Ensure advocate ↔ user link column exists (safe no-op if already present)
-    const { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded } = require('./utils/ensureSchema');
+    const { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded, ensureTasksTable } = require('./utils/ensureSchema');
     await ensureAdvocateUserIdColumn();
     await linkDemoAdvocateIfNeeded();
+    await ensureTasksTable();
 
     // Load models/associations before background jobs touch them
     require('./features/associations');

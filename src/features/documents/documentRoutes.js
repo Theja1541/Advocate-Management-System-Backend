@@ -3,6 +3,7 @@ const documentController = require('./documentController');
 const {
   createDocumentRules,
   documentIdParamRules,
+  updateDocumentRules,
 } = require('./documentValidation');
 const { protect } = require('../../middleware/auth');
 const authorizePermission = require('../../middleware/authorize');
@@ -40,6 +41,13 @@ router
     ...documentIdParamRules,
     validate,
     documentController.getDocumentById
+  )
+  .put(
+    authorizePermission('docs', 'E'),
+    upload.single('file'),
+    ...updateDocumentRules,
+    validate,
+    documentController.updateDocument
   )
   .delete(
     authorizePermission('docs', 'E'),

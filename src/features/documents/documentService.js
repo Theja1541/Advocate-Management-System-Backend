@@ -120,6 +120,38 @@ const createDocument = async ({
   return getDocumentById(document.id);
 };
 
+const updateDocument = async (id, { name, category, caseId, file }) => {
+  const document = await Document.findByPk(id);
+  if (!document) {
+    throw new AppError('Document not found', 404);
+  }
+
+  if (caseId !== undefined) {
+    await assertCaseExists(caseId);
+    document.caseId = caseId;
+  }
+  if (name !== undefined) document.name = name;
+  if (category !== undefined) document.category = category;
+
+  if (file) {
+    // Clean up old file first
+    const oldFilePath = document.filePath;
+    if (oldFilePath && fs.existsSync(oldFilePath)) {
+      try {
+        fs.unlinkSync(oldFilePath);
+      } catch {
+        // ignore
+      }
+    }
+    document.fileType = resolveFileType(file.originalname, file.mimetype);
+    document.fileSize = formatFileSize(file.size);
+    document.filePath = file.path || path.join('uploads', file.filename);
+  }
+
+  await document.save();
+  return getDocumentById(document.id);
+};
+
 const deleteDocument = async (id) => {
   const document = await Document.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
@@ -147,6 +179,7 @@ module.exports = {
   getAllDocuments,
   getDocumentById,
   createDocument,
+  updateDocument,
   deleteDocument,
   formatFileSize,
   resolveFileType,

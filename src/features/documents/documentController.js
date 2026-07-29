@@ -71,6 +71,31 @@ exports.downloadDocument = async (req, res, next) => {
   }
 };
 
+exports.updateDocument = async (req, res, next) => {
+  try {
+    const document = await documentService.updateDocument(req.params.id, {
+      name: req.body.name,
+      category: req.body.category,
+      caseId: req.body.caseId !== undefined ? Number(req.body.caseId) : undefined,
+      file: req.file,
+    });
+    res.status(200).json({
+      status: 'success',
+      data: { document },
+    });
+  } catch (error) {
+    if (req.file?.path && fs.existsSync(req.file.path)) {
+      try {
+        fs.unlinkSync(req.file.path);
+      } catch {
+        // ignore
+      }
+    }
+    logger.error('UpdateDocument error:', error);
+    next(error);
+  }
+};
+
 exports.deleteDocument = async (req, res, next) => {
   try {
     await documentService.deleteDocument(req.params.id);

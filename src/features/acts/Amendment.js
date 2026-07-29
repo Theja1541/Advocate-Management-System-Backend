@@ -46,6 +46,16 @@ Amendment.init(
       allowNull: false,
       field: 'effective_date',
     },
+    createdBy: {
+      type: DataTypes.BIGINT.UNSIGNED,
+      allowNull: true,
+      field: 'created_by',
+    },
+    updatedBy: {
+      type: DataTypes.BIGINT.UNSIGNED,
+      allowNull: true,
+      field: 'updated_by',
+    },
   },
   {
     sequelize,

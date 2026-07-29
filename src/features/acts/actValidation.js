@@ -54,6 +54,17 @@ const listAmendmentsQueryRules = [
     .trim()
     .isLength({ max: 255 })
     .withMessage('Search query must be at most 255 characters'),
+  query('sourceAct')
+    .optional()
+    .trim(),
+  query('targetAct')
+    .optional()
+    .trim(),
+  query('effectiveDate')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isISO8601()
+    .withMessage('Effective date must be a valid YYYY-MM-DD date'),
 ];
 
 const actIdParamRules = [
@@ -142,6 +153,103 @@ const updateActRules = [
     .toInt(),
 ];
 
+const createAmendmentRules = [
+  body('sourceAct')
+    .trim()
+    .notEmpty()
+    .withMessage('Source Act is required')
+    .isLength({ max: 255 }),
+  body('targetAct')
+    .trim()
+    .notEmpty()
+    .withMessage('Target Act is required')
+    .isLength({ max: 255 }),
+  body('oldSection')
+    .trim()
+    .notEmpty()
+    .withMessage('Old Section is required')
+    .isLength({ max: 40 }),
+  body('oldTitle')
+    .trim()
+    .notEmpty()
+    .withMessage('Old Title is required')
+    .isLength({ max: 255 }),
+  body('newSection')
+    .trim()
+    .notEmpty()
+    .withMessage('New Section is required')
+    .isLength({ max: 40 }),
+  body('newTitle')
+    .trim()
+    .notEmpty()
+    .withMessage('New Title is required')
+    .isLength({ max: 255 }),
+  body('effectiveDate')
+    .optional({ values: 'falsy' })
+    .isISO8601()
+    .withMessage('Effective date must be YYYY-MM-DD'),
+  body('newSection').custom(async (value, { req }) => {
+    const { Amendment } = require('../associations');
+    const { Op } = require('sequelize');
+    const { sourceAct, targetAct, oldSection, newSection } = req.body;
+    const match = await Amendment.findOne({
+      where: {
+        sourceAct: (sourceAct || '').trim(),
+        targetAct: (targetAct || '').trim(),
+        oldSection: (oldSection || '').trim(),
+        newSection: (newSection || '').trim(),
+      }
+    });
+    if (match) {
+      throw new Error('An amendment mapping with these exact section relationships already exists.');
+    }
+    return true;
+  }),
+];
+
+const updateAmendmentRules = [
+  param('id')
+    .isInt({ min: 1 })
+    .withMessage('Valid ID is required'),
+  body('sourceAct').optional().trim().notEmpty().isLength({ max: 255 }),
+  body('targetAct').optional().trim().notEmpty().isLength({ max: 255 }),
+  body('oldSection').optional().trim().notEmpty().isLength({ max: 40 }),
+  body('oldTitle').optional().trim().notEmpty().isLength({ max: 255 }),
+  body('newSection').optional().trim().notEmpty().isLength({ max: 40 }),
+  body('newTitle').optional().trim().notEmpty().isLength({ max: 255 }),
+  body('effectiveDate')
+    .optional({ values: 'falsy' })
+    .isISO8601()
+    .withMessage('Effective date must be YYYY-MM-DD'),
+  body('newSection').custom(async (value, { req }) => {
+    const { Amendment } = require('../associations');
+    const { Op } = require('sequelize');
+    const { id } = req.params;
+    const { sourceAct, targetAct, oldSection, newSection } = req.body;
+    
+    // Check if duplicate target exists, excluding current row ID
+    const match = await Amendment.findOne({
+      where: {
+        sourceAct: (sourceAct || '').trim(),
+        targetAct: (targetAct || '').trim(),
+        oldSection: (oldSection || '').trim(),
+        newSection: (newSection || '').trim(),
+        id: { [Op.ne]: id }
+      }
+    });
+    if (match) {
+      throw new Error('An amendment mapping with these exact section relationships already exists.');
+    }
+    return true;
+  }),
+];
+
+const amendmentIdParamRules = [
+  param('id')
+    .isInt({ min: 1 })
+    .withMessage('Valid amendment ID is required'),
+];
+
 module.exports = {
   listActsQueryRules,
   listAmendmentsQueryRules,
@@ -149,4 +257,7 @@ module.exports = {
   bookmarkActRules,
   createActRules,
   updateActRules,
+  createAmendmentRules,
+  updateAmendmentRules,
+  amendmentIdParamRules,
 };

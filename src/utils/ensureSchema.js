@@ -63,4 +63,15 @@ const linkDemoAdvocateIfNeeded = async () => {
   }
 };
 
-module.exports = { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded };
+const ensureTasksTable = async () => {
+  try {
+    const { Task, Amendment } = require('../features/associations');
+    await Task.sync();
+    await Amendment.sync({ alter: true });
+    logger.info('Synced Task and Amendment tables.');
+  } catch (error) {
+    logger.warn('ensureTasksTable / ensureAmendmentTable failed:', error.message);
+  }
+};
+
+module.exports = { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded, ensureTasksTable };
