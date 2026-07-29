@@ -20,6 +20,7 @@ const CaseType = require('./masters/case-types/CaseType');
 const CaseStage = require('./masters/case-stages/CaseStage');
 const CaseStageHistory = require('./cases/CaseStageHistory');
 const Court = require('./masters/courts/Court');
+const Task = require('./tasks/Task');
 
 
 // 1. Roles & Users
@@ -100,6 +101,23 @@ CaseStageHistory.belongsTo(CaseStage, { foreignKey: 'old_stage_id', as: 'oldStag
 Case.belongsTo(Court, { foreignKey: 'court_id', as: 'assignedCourt' });
 Court.hasMany(Case, { foreignKey: 'court_id', as: 'cases' });
 
+// 13. Tasks
+User.hasMany(Task, { foreignKey: 'assigned_to', as: 'assignedTasks' });
+Task.belongsTo(User, { foreignKey: 'assigned_to', as: 'assignedUser' });
+
+User.hasMany(Task, { foreignKey: 'created_by', as: 'createdTasks' });
+Task.belongsTo(User, { foreignKey: 'created_by', as: 'creator' });
+
+User.hasMany(Task, { foreignKey: 'updated_by', as: 'updatedTasks' });
+Task.belongsTo(User, { foreignKey: 'updated_by', as: 'updater' });
+
+// 14. Amendments
+User.hasMany(Amendment, { foreignKey: 'created_by', as: 'createdAmendments' });
+Amendment.belongsTo(User, { foreignKey: 'created_by', as: 'creator' });
+
+User.hasMany(Amendment, { foreignKey: 'updated_by', as: 'updatedAmendments' });
+Amendment.belongsTo(User, { foreignKey: 'updated_by', as: 'updater' });
+
 // Export everything from a unified hub to prevent circular dependency
 module.exports = {
   Role,
@@ -124,5 +142,6 @@ module.exports = {
   CaseStage,
   CaseStageHistory,
   Court,
+  Task,
 };
 

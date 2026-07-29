@@ -29,6 +29,7 @@ const amendmentRoutes = require('./features/acts/amendmentRoutes');
 const reportRoutes = require('./features/reports/reportRoutes');
 const dashboardRoutes = require('./features/dashboard/dashboardRoutes');
 const mastersRoutes = require('./features/masters/mastersRoutes');
+const taskRoutes = require('./features/tasks/taskRoutes');
 
 const app = express();
 
@@ -56,6 +57,10 @@ app.use(compression());
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser(process.env.COOKIE_SECRET || 'cookiesecret'));
+
+// Register dynamic audit logging middleware
+const auditLogger = require('./middleware/auditLogger');
+app.use(auditLogger);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -87,6 +92,7 @@ app.use('/api/v1/amendments', amendmentRoutes);
 app.use('/api/v1/reports', reportRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);
 app.use('/api/v1/masters', mastersRoutes);
+app.use('/api/v1/tasks', taskRoutes);
 
 // Serve uploads and bare-act PDFs statically
 app.use('/uploads', express.static('uploads'));

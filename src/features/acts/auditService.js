@@ -17,7 +17,7 @@ const auditLogger = winston.createLogger({
   ),
   transports: [
     new winston.transports.File({
-      filename: path.join(logsDir, 'bare_acts_audit.log'),
+      filename: path.join(logsDir, 'audit.log'),
     }),
   ],
 });

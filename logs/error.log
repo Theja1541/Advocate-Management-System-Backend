@@ -3422,3 +3422,1380 @@
 2026-07-29 10:14:29:1429 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
 2026-07-29 10:22:44:2244 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
 2026-07-29 10:22:44:2244 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts/1/pdf - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:06:486 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 10:48:07:487 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 11:15:34:1534 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:15:34:1534 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages - POST - ::1[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:31:41:3141 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 11:48:50:4850 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:02:46:246 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:02:46:246 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:02:46:246 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:02:46:246 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:16:316 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:16:316 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:16:316 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:16:316 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:31:331 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:31:331 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:31:331 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:31:331 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:36:336 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:36:336 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:36:336 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:36:336 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:56:356 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:57:357 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:03:58:358 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:04:38:438 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:38:438 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:04:38:438 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:38:438 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:04:58:458 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31mGetAllAmendments error: Unknown column 'Amendment.createdAt' in 'field list'[39m
+2026-07-29 12:05:16:516 [31merror[39m: [31m500 - Unknown column 'Amendment.createdAt' in 'field list' - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:19:09:199 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:26:28:2628 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:26:29:2629 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:36:02:362 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:46:4346 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:51:4351 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:53:4353 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:43:57:4357 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:57:4357 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:43:58:4358 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:43:58:4358 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:44:24:4424 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:44:26:4426 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:44:26:4426 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:44:28:4428 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:44:28:4428 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:44:28:4428 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:44:28:4428 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:44:35:4435 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:44:37:4437 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:44:40:4440 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:44:40:4440 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:44:45:4445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:44:45:4445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:44:45:4445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:44:45:4445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:41:4541 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 12:45:42:4542 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:00:43:043 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/reports/case?year=2026 - GET - ::1[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:20:1120 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:11:21:1121 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:11:22:1122 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 13:11:22:1122 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 13:11:22:1122 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 13:11:22:1122 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 13:21:15:2115 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:21:15:2115 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 13:21:15:2115 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 13:21:15:2115 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:06:50:650 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:50:650 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 14:06:50:650 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:50:650 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:55:655 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:06:57:657 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:06:57:657 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:07:01:71 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:02:72 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:04:74 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:04:74 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:04:74 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:04:74 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:07:77 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:07:08:78 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:08:78 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:07:08:78 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:08:78 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:07:09:79 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:07:10:710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:07:11:711 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:07:11:711 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:36:39:3639 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:40:3640 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:36:40:3640 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:40:3640 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:36:40:3640 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:36:40:3640 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:02:372 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:03:373 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 14:37:04:374 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 14:37:06:376 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 14:37:07:377 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:09:69 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:06:13:613 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:14:2614 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:15:2615 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:26:15:2615 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:26:15:2615 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:26:15:2615 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:26:15:2615 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:27:48:2748 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:27:55:2755 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:27:55:2755 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:27:55:2755 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:27:55:2755 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:27:58:2758 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:27:58:2758 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:00:280 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:00:280 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:09:289 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:09:289 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:19:2819 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:19:2819 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:53:2853 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:28:53:2853 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:29:09:299 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:29:11:2911 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:11:2911 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:12:2912 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:12:2912 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:12:2912 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:12:2912 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:14:2914 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:14:2914 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:29:30:2930 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:29:31:2931 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:29:32:2932 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:31:24:3124 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:31:24:3124 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:31:37:3137 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:31:37:3137 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-07-29 15:47:57:4757 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m

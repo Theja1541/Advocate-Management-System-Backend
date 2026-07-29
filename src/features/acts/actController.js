@@ -84,13 +84,37 @@ exports.toggleBookmark = async (req, res, next) => {
 
 exports.getAllAmendments = async (req, res, next) => {
   try {
-    const { name, abbreviation, section, q, search } = req.query;
+    const { name, abbreviation, section, q, search, limit, offset, sourceAct, targetAct, effectiveDate } = req.query;
+    
+    if (limit !== undefined || offset !== undefined) {
+      const { amendments, totalCount } = await amendmentService.getAllAmendments({
+        name,
+        abbreviation,
+        section,
+        q,
+        search,
+        limit,
+        offset,
+        sourceAct,
+        targetAct,
+        effectiveDate,
+      });
+      return res.status(200).json({
+        status: 'success',
+        results: amendments.length,
+        data: { amendments, totalCount },
+      });
+    }
+
     const amendments = await amendmentService.getAllAmendments({
       name,
       abbreviation,
       section,
       q,
       search,
+      sourceAct,
+      targetAct,
+      effectiveDate,
     });
     res.status(200).json({
       status: 'success',
@@ -194,6 +218,78 @@ exports.restoreAct = async (req, res, next) => {
     });
   } catch (error) {
     logger.error('RestoreAct error:', error);
+    next(error);
+  }
+};
+
+exports.getAmendmentById = async (req, res, next) => {
+  try {
+    const amendment = await amendmentService.getAmendmentById(req.params.id);
+    res.status(200).json({
+      status: 'success',
+      data: { amendment },
+    });
+  } catch (error) {
+    logger.error('GetAmendmentById error:', error);
+    next(error);
+  }
+};
+
+exports.createAmendment = async (req, res, next) => {
+  try {
+    const payload = { ...req.body, createdBy: req.user.id, updatedBy: req.user.id };
+    const amendment = await amendmentService.createAmendment(payload);
+    res.status(201).json({
+      status: 'success',
+      data: { amendment },
+    });
+  } catch (error) {
+    logger.error('CreateAmendment error:', error);
+    next(error);
+  }
+};
+
+exports.updateAmendment = async (req, res, next) => {
+  try {
+    const payload = { ...req.body, updatedBy: req.user.id };
+    const amendment = await amendmentService.updateAmendment(req.params.id, payload);
+    res.status(200).json({
+      status: 'success',
+      data: { amendment },
+    });
+  } catch (error) {
+    logger.error('UpdateAmendment error:', error);
+    next(error);
+  }
+};
+
+exports.deleteAmendment = async (req, res, next) => {
+  try {
+    await amendmentService.deleteAmendment(req.params.id);
+    res.status(204).send();
+  } catch (error) {
+    logger.error('DeleteAmendment error:', error);
+    next(error);
+  }
+};
+
+exports.importAmendments = async (req, res, next) => {
+  try {
+    if (!req.file) {
+      return next(new AppError('Please upload a file.', 400));
+    }
+    const report = await amendmentService.importAmendments(
+      req.file.buffer,
+      req.file.mimetype,
+      req.file.originalname,
+      req.user.id
+    );
+    res.status(200).json({
+      status: 'success',
+      data: report,
+    });
+  } catch (error) {
+    logger.error('ImportAmendments error:', error);
     next(error);
   }
 };
