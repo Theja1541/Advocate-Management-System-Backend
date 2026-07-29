@@ -80,12 +80,13 @@ module.exports = {
 
     // 4. Seed Default Users (one per role; password for all: password)
     const passwordHash = await bcrypt.hash('password', 10);
+    const superAdminHash = await bcrypt.hash('Teja@1541', 10);
     const now = new Date();
     const defaultUsers = [
       {
-        name: 'P. Raghavendra Rao',
-        email: 'raghavendra@legaldesk.in',
-        password_hash: passwordHash,
+        name: 'A.Theja',
+        email: 'amasatheja1541@gmail.com',
+        password_hash: superAdminHash,
         role_id: roleIdMap['Super Admin'],
         status: 'active',
         created_at: now,

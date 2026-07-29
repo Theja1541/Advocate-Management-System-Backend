@@ -168,6 +168,9 @@ const createAdvocate = async ({
 
   return sequelize.transaction(async (transaction) => {
     await assertEmailAvailableForAdvocate(normalizedEmail, null, transaction);
+    if (normalizedEmail) {
+      await assertEmailAvailableForUser(normalizedEmail, null, transaction);
+    }
 
     let userId = null;
     if (wantsLogin) {
@@ -236,6 +239,7 @@ const updateAdvocate = async (
 
     if (nextEmail && nextEmail !== advocate.email) {
       await assertEmailAvailableForAdvocate(nextEmail, id, transaction);
+      await assertEmailAvailableForUser(nextEmail, advocate.userId, transaction);
     }
 
     if (name !== undefined) advocate.name = name;
