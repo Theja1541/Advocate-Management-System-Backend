@@ -65,7 +65,11 @@ Case.init(
       allowNull: true,
       field: 'approval_level',
     },
-
+    courtFeeSnapshot: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      field: 'court_fee_snapshot',
+    },
   },
   {
     sequelize,

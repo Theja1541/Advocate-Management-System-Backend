@@ -173,6 +173,7 @@ const getDashboard = async ({ advocateId } = {}) => {
     Document.findAll({
       limit: 5,
       order: [['created_at', 'DESC']],
+      attributes: ['id', 'name', 'created_at'],
       include: [{ model: Case, as: 'case', where: caseWhere, required: true, attributes: ['caseNo'] }],
     }),
   ]);

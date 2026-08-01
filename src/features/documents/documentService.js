@@ -1,13 +1,20 @@
 const path = require('path');
 const fs = require('fs');
-const { Document, Case, User } = require('../associations');
+const { sequelize } = require('../../config/database');
+const { Document, Case, User, DocumentCategory } = require('../associations');
 const AppError = require('../../utils/AppError');
+const logger = require('../../config/logger');
+const {
+  MAX_DOCUMENT_SIZE_BYTES,
+  ALLOWED_DOCUMENT_EXTENSIONS,
+} = require('./documentUpload');
+const { extractDocumentSearchContent } = require('./documentTextExtraction');
 
 const SAFE_ATTRIBUTES = [
   'id',
   'documentCode',
   'name',
-  'category',
+  'documentCategoryId',
   'caseId',
   'fileType',
   'fileSize',
@@ -16,6 +23,45 @@ const SAFE_ATTRIBUTES = [
   'uploadDate',
   'created_at',
 ];
+
+let hasSearchContentColumnCache = null;
+
+const hasSearchContentColumn = async () => {
+  if (typeof hasSearchContentColumnCache === 'boolean') {
+    return hasSearchContentColumnCache;
+  }
+  const table = await sequelize.getQueryInterface().describeTable('documents');
+  hasSearchContentColumnCache = Boolean(table?.search_content);
+  return hasSearchContentColumnCache;
+};
+
+const getSafeAttributes = async () => {
+  const hasColumn = await hasSearchContentColumn();
+  return hasColumn ? [...SAFE_ATTRIBUTES, 'searchContent'] : SAFE_ATTRIBUTES;
+};
+
+const isMissingSearchContentColumnError = (error) => {
+  const message = String(error?.message || '');
+  return message.includes('search_content') && message.includes('Unknown column');
+};
+
+const resolveStoredFilePath = (filePath) => {
+  if (!filePath) return null;
+  if (path.isAbsolute(filePath) && fs.existsSync(filePath)) return filePath;
+
+  const candidates = [
+    filePath,
+    path.resolve(process.cwd(), filePath),
+    path.resolve(__dirname, '../../../', filePath),
+    path.resolve(__dirname, '../../../uploads', path.basename(filePath)),
+    path.resolve(__dirname, '../../../uploads/documents', path.basename(filePath)),
+  ];
+
+  for (const candidate of candidates) {
+    if (candidate && fs.existsSync(candidate)) return candidate;
+  }
+  return null;
+};
 
 const caseInclude = {
   model: Case,
@@ -27,6 +73,12 @@ const uploaderInclude = {
   model: User,
   as: 'uploader',
   attributes: ['id', 'name'],
+};
+
+const categoryInclude = {
+  model: DocumentCategory,
+  as: 'documentCategory',
+  attributes: ['id', 'name', 'code'],
 };
 
 const toPublicDocument = (doc) => {
@@ -67,19 +119,36 @@ const resolveFileType = (originalName = '', mimeType = '') => {
   return 'FILE';
 };
 
+const validateDocumentFile = (file) => {
+  if (!file) {
+    throw new AppError('File is required', 400);
+  }
+
+  const ext = path.extname(file.originalname || '').toLowerCase();
+  if (!ALLOWED_DOCUMENT_EXTENSIONS.has(ext)) {
+    throw new AppError('Invalid file format. Accepted types: PDF, DOC, DOCX, TXT.', 400);
+  }
+
+  if (!Number.isFinite(file.size) || file.size <= 0 || file.size > MAX_DOCUMENT_SIZE_BYTES) {
+    throw new AppError('File size must be less than or equal to 5MB.', 400);
+  }
+};
+
 const getAllDocuments = async () => {
+  const attributes = await getSafeAttributes();
   const documents = await Document.findAll({
-    attributes: SAFE_ATTRIBUTES,
-    include: [caseInclude, uploaderInclude],
+    attributes,
+    include: [caseInclude, uploaderInclude, categoryInclude],
     order: [['id', 'DESC']],
   });
   return documents.map(toPublicDocument);
 };
 
 const getDocumentById = async (id) => {
+  const attributes = await getSafeAttributes();
   const document = await Document.findByPk(id, {
-    attributes: SAFE_ATTRIBUTES,
-    include: [caseInclude, uploaderInclude],
+    attributes,
+    include: [caseInclude, uploaderInclude, categoryInclude],
   });
 
   if (!document) {
@@ -91,37 +160,56 @@ const getDocumentById = async (id) => {
 
 const createDocument = async ({
   name,
-  category,
+  documentCategoryId,
   caseId,
   file,
   uploadedBy,
 }) => {
-  if (!file) {
-    throw new AppError('File is required', 400);
-  }
+  validateDocumentFile(file);
 
   await assertCaseExists(caseId);
 
   const documentCode = await generateDocumentCode();
   const uploadDate = new Date().toISOString().slice(0, 10);
-
-  const document = await Document.create({
-    documentCode,
-    name,
-    category,
-    caseId,
-    fileType: resolveFileType(file.originalname, file.mimetype),
-    fileSize: formatFileSize(file.size),
-    filePath: file.path || path.join('uploads', file.filename),
-    uploadedBy: uploadedBy || null,
-    uploadDate,
-  });
+  const supportsSearchContent = await hasSearchContentColumn();
+  // Always extract; persist only when the column exists.
+  const searchContent = await extractDocumentSearchContent(file);
+  let document;
+  try {
+    document = await Document.create({
+      documentCode,
+      name,
+      documentCategoryId,
+      caseId,
+      fileType: resolveFileType(file.originalname, file.mimetype),
+      fileSize: formatFileSize(file.size),
+      filePath: file.path || path.join('uploads', file.filename),
+      ...(supportsSearchContent ? { searchContent } : {}),
+      uploadedBy: uploadedBy || null,
+      uploadDate,
+    });
+  } catch (error) {
+    if (!isMissingSearchContentColumnError(error)) throw error;
+    hasSearchContentColumnCache = false;
+    document = await Document.create({
+      documentCode,
+      name,
+      documentCategoryId,
+      caseId,
+      fileType: resolveFileType(file.originalname, file.mimetype),
+      fileSize: formatFileSize(file.size),
+      filePath: file.path || path.join('uploads', file.filename),
+      uploadedBy: uploadedBy || null,
+      uploadDate,
+    });
+  }
 
   return getDocumentById(document.id);
 };
 
-const updateDocument = async (id, { name, category, caseId, file }) => {
-  const document = await Document.findByPk(id);
+const updateDocument = async (id, { name, documentCategoryId, caseId, file }) => {
+  const attributes = await getSafeAttributes();
+  const document = await Document.findByPk(id, { attributes });
   if (!document) {
     throw new AppError('Document not found', 404);
   }
@@ -131,10 +219,10 @@ const updateDocument = async (id, { name, category, caseId, file }) => {
     document.caseId = caseId;
   }
   if (name !== undefined) document.name = name;
-  if (category !== undefined) document.category = category;
+  if (documentCategoryId !== undefined) document.documentCategoryId = documentCategoryId;
 
   if (file) {
-    // Clean up old file first
+    validateDocumentFile(file);
     const oldFilePath = document.filePath;
     if (oldFilePath && fs.existsSync(oldFilePath)) {
       try {
@@ -146,15 +234,30 @@ const updateDocument = async (id, { name, category, caseId, file }) => {
     document.fileType = resolveFileType(file.originalname, file.mimetype);
     document.fileSize = formatFileSize(file.size);
     document.filePath = file.path || path.join('uploads', file.filename);
+    if (await hasSearchContentColumn()) {
+      try {
+        document.searchContent = await extractDocumentSearchContent(file);
+      } catch {
+        // best effort when extractor fails
+      }
+    }
   }
-
-  await document.save();
+  try {
+    await document.save();
+  } catch (error) {
+    if (!isMissingSearchContentColumnError(error)) throw error;
+    hasSearchContentColumnCache = false;
+    document.setDataValue('searchContent', null);
+    document.changed('searchContent', false);
+    await document.save();
+  }
   return getDocumentById(document.id);
 };
 
 const deleteDocument = async (id) => {
+  const attributes = await getSafeAttributes();
   const document = await Document.findByPk(id, {
-    attributes: SAFE_ATTRIBUTES,
+    attributes,
   });
 
   if (!document) {
@@ -175,9 +278,48 @@ const deleteDocument = async (id) => {
   return true;
 };
 
+const getDocumentTextContent = async (id) => {
+  const attributes = await getSafeAttributes();
+  const document = await Document.findByPk(id, { attributes });
+  if (!document) {
+    throw new AppError('Document not found', 404);
+  }
+
+  const plain = toPublicDocument(document);
+  let text = String(plain.searchContent || '').trim();
+  const resolvedPath = resolveStoredFilePath(plain.filePath);
+
+  if (!text && resolvedPath) {
+    text = await extractDocumentSearchContent({
+      path: resolvedPath,
+      originalname: path.basename(resolvedPath),
+    });
+
+    if (text && (await hasSearchContentColumn())) {
+      try {
+        await Document.update({ searchContent: text }, { where: { id: plain.id } });
+      } catch (error) {
+        if (!isMissingSearchContentColumnError(error)) {
+          logger.warn(`Failed to persist extracted search content: ${error.message}`);
+        } else {
+          hasSearchContentColumnCache = false;
+        }
+      }
+    }
+  }
+
+  return {
+    id: plain.id,
+    name: plain.name,
+    fileType: plain.fileType,
+    text: text || '',
+  };
+};
+
 module.exports = {
   getAllDocuments,
   getDocumentById,
+  getDocumentTextContent,
   createDocument,
   updateDocument,
   deleteDocument,

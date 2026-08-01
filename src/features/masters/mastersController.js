@@ -1,4 +1,4 @@
-const { CaseType, CaseStage, Court } = require('../associations');
+const { CaseType, CaseStage, Court, DocumentCategory } = require('../associations');
 const AppError = require('../../utils/AppError');
 
 // ==========================================
@@ -386,6 +386,137 @@ exports.deactivateCourt = async (req, res, next) => {
     res.status(200).json({
       status: 'success',
       data: { court },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// ==========================================
+// DOCUMENT CATEGORIES CONTROLLER
+// ==========================================
+
+exports.getAllDocumentCategories = async (req, res, next) => {
+  try {
+    const where = {};
+    if (req.query.activeOnly === 'true') {
+      where.isActive = true;
+    }
+    const categories = await DocumentCategory.findAll({
+      where,
+      order: [['displayOrder', 'ASC'], ['name', 'ASC']],
+    });
+    res.status(200).json({
+      status: 'success',
+      data: { documentCategories: categories },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.getDocumentCategoryById = async (req, res, next) => {
+  try {
+    const category = await DocumentCategory.findByPk(req.params.id);
+    if (!category) {
+      throw new AppError('Document Category not found', 404);
+    }
+    res.status(200).json({
+      status: 'success',
+      data: { documentCategory: category },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.createDocumentCategory = async (req, res, next) => {
+  try {
+    const { code, name, description, displayOrder } = req.body;
+    
+    // Check code unique
+    const existing = await DocumentCategory.findOne({ where: { code } });
+    if (existing) {
+      throw new AppError('Document Category code must be unique', 400);
+    }
+
+    const category = await DocumentCategory.create({
+      code,
+      name,
+      description,
+      displayOrder: displayOrder || 0,
+      isActive: true,
+      isSystem: false,
+      createdBy: req.user?.id,
+    });
+
+    res.status(201).json({
+      status: 'success',
+      data: { documentCategory: category },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.updateDocumentCategory = async (req, res, next) => {
+  try {
+    const category = await DocumentCategory.findByPk(req.params.id);
+    if (!category) {
+      throw new AppError('Document Category not found', 404);
+    }
+
+    const { name, description, displayOrder, isActive } = req.body;
+    
+    if (name !== undefined) category.name = name;
+    if (description !== undefined) category.description = description;
+    if (displayOrder !== undefined) category.displayOrder = displayOrder;
+    if (isActive !== undefined) category.isActive = isActive;
+    category.updatedBy = req.user?.id;
+
+    await category.save();
+
+    res.status(200).json({
+      status: 'success',
+      data: { documentCategory: category },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.activateDocumentCategory = async (req, res, next) => {
+  try {
+    const category = await DocumentCategory.findByPk(req.params.id);
+    if (!category) {
+      throw new AppError('Document Category not found', 404);
+    }
+    category.isActive = true;
+    category.updatedBy = req.user?.id;
+    await category.save();
+
+    res.status(200).json({
+      status: 'success',
+      data: { documentCategory: category },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.deactivateDocumentCategory = async (req, res, next) => {
+  try {
+    const category = await DocumentCategory.findByPk(req.params.id);
+    if (!category) {
+      throw new AppError('Document Category not found', 404);
+    }
+    category.isActive = false;
+    category.updatedBy = req.user?.id;
+    await category.save();
+
+    res.status(200).json({
+      status: 'success',
+      data: { documentCategory: category },
     });
   } catch (error) {
     next(error);

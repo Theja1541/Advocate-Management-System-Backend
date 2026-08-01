@@ -1,15 +1,5 @@
 const { body, param } = require('express-validator');
 
-const CATEGORIES = [
-  'Petitions',
-  'Affidavits',
-  'Orders',
-  'Judgments',
-  'Evidence',
-  'Client Documents',
-  'Agreements',
-];
-
 const createDocumentRules = [
   body('name')
     .trim()
@@ -17,12 +7,19 @@ const createDocumentRules = [
     .withMessage('Document name is required')
     .isLength({ max: 200 })
     .withMessage('Document name must be at most 200 characters'),
-  body('category')
-    .trim()
+  body('documentCategoryId')
     .notEmpty()
     .withMessage('Category is required')
-    .isIn(CATEGORIES)
-    .withMessage(`Category must be one of: ${CATEGORIES.join(', ')}`),
+    .isInt({ min: 1 })
+    .withMessage('Valid Category ID is required')
+    .custom(async (value) => {
+      const { DocumentCategory } = require('../associations');
+      const cat = await DocumentCategory.findOne({ where: { id: value, isActive: true } });
+      if (!cat) {
+        throw new Error('Selected category is invalid or inactive');
+      }
+      return true;
+    }),
   body('caseId')
     .notEmpty()
     .withMessage('Case is required')
@@ -47,13 +44,18 @@ const updateDocumentRules = [
     .withMessage('Document name cannot be empty')
     .isLength({ max: 200 })
     .withMessage('Document name must be at most 200 characters'),
-  body('category')
+  body('documentCategoryId')
     .optional()
-    .trim()
-    .notEmpty()
-    .withMessage('Category cannot be empty')
-    .isIn(CATEGORIES)
-    .withMessage(`Category must be one of: ${CATEGORIES.join(', ')}`),
+    .isInt({ min: 1 })
+    .withMessage('Valid Category ID is required')
+    .custom(async (value) => {
+      const { DocumentCategory } = require('../associations');
+      const cat = await DocumentCategory.findOne({ where: { id: value, isActive: true } });
+      if (!cat) {
+        throw new Error('Selected category is invalid or inactive');
+      }
+      return true;
+    }),
   body('caseId')
     .optional()
     .isInt({ min: 1 })
@@ -64,5 +66,4 @@ module.exports = {
   createDocumentRules,
   documentIdParamRules,
   updateDocumentRules,
-  CATEGORIES,
 };

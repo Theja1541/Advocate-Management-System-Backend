@@ -34,7 +34,7 @@ exports.createDocument = async (req, res, next) => {
   try {
     const document = await documentService.createDocument({
       name: req.body.name,
-      category: req.body.category,
+      documentCategoryId: req.body.documentCategoryId !== undefined ? Number(req.body.documentCategoryId) : undefined,
       caseId: Number(req.body.caseId),
       file: req.file,
       uploadedBy: req.user?.id,
@@ -59,14 +59,43 @@ exports.createDocument = async (req, res, next) => {
 exports.downloadDocument = async (req, res, next) => {
   try {
     const document = await documentService.getDocumentById(req.params.id);
-    if (!document.filePath || !fs.existsSync(document.filePath)) {
+    const filePath = document.filePath;
+    const fsPathCandidates = [
+      filePath,
+      path.isAbsolute(filePath || '') ? filePath : path.resolve(process.cwd(), filePath || ''),
+      path.resolve(__dirname, '../../../uploads/documents', path.basename(filePath || '')),
+      path.resolve(__dirname, '../../../uploads', path.basename(filePath || '')),
+    ].filter(Boolean);
+
+    const existingPath = filePathCandidatesFind(fsPathCandidates);
+    if (!existingPath) {
       return next(new AppError('File not found on server', 404));
     }
 
-    const downloadName = `${document.documentCode}-${document.name}${path.extname(document.filePath)}`;
-    return res.download(path.resolve(document.filePath), downloadName);
+    const downloadName = `${document.documentCode}-${document.name}${path.extname(existingPath)}`;
+    return res.download(existingPath, downloadName);
   } catch (error) {
     logger.error('DownloadDocument error:', error);
+    next(error);
+  }
+};
+
+function filePathCandidatesFind(candidates) {
+  for (const candidate of candidates) {
+    if (candidate && fs.existsSync(candidate)) return candidate;
+  }
+  return null;
+}
+
+exports.getDocumentText = async (req, res, next) => {
+  try {
+    const content = await documentService.getDocumentTextContent(req.params.id);
+    res.status(200).json({
+      status: 'success',
+      data: { content },
+    });
+  } catch (error) {
+    logger.error('GetDocumentText error:', error);
     next(error);
   }
 };
@@ -75,7 +104,7 @@ exports.updateDocument = async (req, res, next) => {
   try {
     const document = await documentService.updateDocument(req.params.id, {
       name: req.body.name,
-      category: req.body.category,
+      documentCategoryId: req.body.documentCategoryId !== undefined ? Number(req.body.documentCategoryId) : undefined,
       caseId: req.body.caseId !== undefined ? Number(req.body.caseId) : undefined,
       file: req.file,
     });

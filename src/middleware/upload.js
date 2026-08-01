@@ -20,13 +20,13 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  const allowedExtensions = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png'];
+  const allowedExtensions = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png', '.txt'];
   const ext = path.extname(file.originalname).toLowerCase();
   
   if (allowedExtensions.includes(ext)) {
     cb(null, true);
   } else {
-    cb(new AppError('Invalid file format. Accepted types: PDF, DOC, DOCX, JPG, PNG.', 400), false);
+    cb(new AppError('Invalid file format. Accepted types: PDF, DOC, DOCX, JPG, PNG, TXT.', 400), false);
   }
 };
 

@@ -26,6 +26,10 @@ const DEFAULT_LOGIN_PASSWORD = 'password';
 const toPublicAdvocate = (advocate) => {
   const plain = advocate.get ? advocate.get({ plain: true }) : { ...advocate };
   plain.hasLogin = plain.userId != null;
+  if (plain.user) {
+    plain.roleId = plain.user.roleId;
+    delete plain.user;
+  }
   return plain;
 };
 
@@ -72,10 +76,10 @@ const assertEmailAvailableForUser = async (email, excludeUserId, transaction) =>
 };
 
 const createLinkedLoginUser = async (
-  { name, email, password, status },
+  { name, email, password, status, roleId },
   transaction
 ) => {
-  const roleId = await getAdvocateRoleId(transaction);
+  const finalRoleId = roleId || (await getAdvocateRoleId(transaction));
   await assertEmailAvailableForUser(email, null, transaction);
 
   const passwordHash = await bcrypt.hash(
@@ -87,7 +91,7 @@ const createLinkedLoginUser = async (
     {
       name,
       email,
-      roleId,
+      roleId: finalRoleId,
       passwordHash,
       status: status === 'inactive' ? 'inactive' : 'active',
     },
@@ -97,7 +101,7 @@ const createLinkedLoginUser = async (
 
 const syncLinkedLoginUser = async (
   advocate,
-  { name, email, password, status },
+  { name, email, password, status, roleId },
   transaction
 ) => {
   if (!advocate.userId) return;
@@ -119,6 +123,9 @@ const syncLinkedLoginUser = async (
   if (status !== undefined) {
     user.status = status === 'inactive' ? 'inactive' : 'active';
   }
+  if (roleId !== undefined && roleId !== null) {
+    user.roleId = roleId;
+  }
   if (password && String(password).trim()) {
     user.passwordHash = await bcrypt.hash(String(password).trim(), 10);
   }
@@ -129,6 +136,7 @@ const syncLinkedLoginUser = async (
 const getAllAdvocates = async () => {
   const advocates = await Advocate.findAll({
     attributes: SAFE_ATTRIBUTES,
+    include: [{ model: User, as: 'user', attributes: ['roleId'] }],
     order: [['id', 'ASC']],
   });
   return advocates.map(toPublicAdvocate);
@@ -137,6 +145,7 @@ const getAllAdvocates = async () => {
 const getAdvocateById = async (id) => {
   const advocate = await Advocate.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
+    include: [{ model: User, as: 'user', attributes: ['roleId'] }],
   });
 
   if (!advocate) {
@@ -157,6 +166,7 @@ const createAdvocate = async ({
   status,
   password,
   createLogin,
+  roleId,
 }) => {
   const normalizedEmail = email ? String(email).trim().toLowerCase() : null;
   const wantsLogin =
@@ -180,6 +190,7 @@ const createAdvocate = async ({
           email: normalizedEmail,
           password,
           status: status || 'active',
+          roleId,
         },
         transaction
       );
@@ -218,6 +229,7 @@ const updateAdvocate = async (
     status,
     password,
     createLogin,
+    roleId,
   }
 ) => {
   return sequelize.transaction(async (transaction) => {
@@ -268,6 +280,7 @@ const updateAdvocate = async (
           email: nextEmail,
           password,
           status: advocate.status,
+          roleId,
         },
         transaction
       );
@@ -280,6 +293,7 @@ const updateAdvocate = async (
           email: nextEmail,
           password,
           status: advocate.status,
+          roleId,
         },
         transaction
       );

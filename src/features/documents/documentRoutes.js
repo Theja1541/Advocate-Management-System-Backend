@@ -8,7 +8,7 @@ const {
 const { protect } = require('../../middleware/auth');
 const authorizePermission = require('../../middleware/authorize');
 const validate = require('../../middleware/validate');
-const upload = require('../../middleware/upload');
+const { uploadDocumentFile } = require('./documentUpload');
 
 const router = express.Router();
 
@@ -19,7 +19,7 @@ router
   .get(authorizePermission('docs', 'V'), documentController.getAllDocuments)
   .post(
     authorizePermission('docs', 'E'),
-    upload.single('file'),
+    uploadDocumentFile,
     ...createDocumentRules,
     validate,
     documentController.createDocument
@@ -35,6 +35,15 @@ router
   );
 
 router
+  .route('/:id/text')
+  .get(
+    authorizePermission('docs', 'V'),
+    ...documentIdParamRules,
+    validate,
+    documentController.getDocumentText
+  );
+
+router
   .route('/:id')
   .get(
     authorizePermission('docs', 'V'),
@@ -44,7 +53,7 @@ router
   )
   .put(
     authorizePermission('docs', 'E'),
-    upload.single('file'),
+    uploadDocumentFile,
     ...updateDocumentRules,
     validate,
     documentController.updateDocument

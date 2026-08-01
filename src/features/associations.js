@@ -21,7 +21,13 @@ const CaseStage = require('./masters/case-stages/CaseStage');
 const CaseStageHistory = require('./cases/CaseStageHistory');
 const Court = require('./masters/courts/Court');
 const Task = require('./tasks/Task');
+const DocumentCategory = require('./masters/document-categories/DocumentCategory');
+const StateCourtFeeRule = require('./masters/state-fees/StateCourtFeeRule');
+const StateCourtFeeSlab = require('./masters/state-fees/StateCourtFeeSlab');
 
+// State Court Fee Rules & Slabs (1-to-Many)
+StateCourtFeeRule.hasMany(StateCourtFeeSlab, { foreignKey: 'ruleId', as: 'slabs', onDelete: 'CASCADE' });
+StateCourtFeeSlab.belongsTo(StateCourtFeeRule, { foreignKey: 'ruleId', as: 'rule' });
 
 // 1. Roles & Users
 Role.hasMany(User, { foreignKey: 'role_id', as: 'users' });
@@ -58,6 +64,9 @@ Document.belongsTo(User, { foreignKey: 'uploaded_by', as: 'uploader' });
 
 CaseDiary.hasMany(Document, { foreignKey: 'diary_id', as: 'attachments', onDelete: 'CASCADE' });
 Document.belongsTo(CaseDiary, { foreignKey: 'diary_id', as: 'caseDiary' });
+
+DocumentCategory.hasMany(Document, { foreignKey: 'document_category_id', as: 'documents' });
+Document.belongsTo(DocumentCategory, { foreignKey: 'document_category_id', as: 'documentCategory' });
 
 // 7. Lands & Clients / Cases
 Client.hasMany(Land, { foreignKey: 'client_id', as: 'lands' });
@@ -143,5 +152,8 @@ module.exports = {
   CaseStageHistory,
   Court,
   Task,
+  DocumentCategory,
+  StateCourtFeeRule,
+  StateCourtFeeSlab,
 };
 
