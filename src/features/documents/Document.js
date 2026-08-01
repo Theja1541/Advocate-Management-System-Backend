@@ -20,9 +20,10 @@ Document.init(
       type: DataTypes.STRING(200),
       allowNull: false,
     },
-    category: {
-      type: DataTypes.STRING(50),
+    documentCategoryId: {
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
+      field: 'document_category_id',
     },
     caseId: {
       type: DataTypes.BIGINT,
@@ -43,6 +44,11 @@ Document.init(
       type: DataTypes.STRING(255),
       allowNull: true,
       field: 'file_path',
+    },
+    searchContent: {
+      type: DataTypes.TEXT('long'),
+      allowNull: true,
+      field: 'search_content',
     },
     uploadedBy: {
       type: DataTypes.BIGINT,

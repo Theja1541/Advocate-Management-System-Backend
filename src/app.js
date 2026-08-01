@@ -30,6 +30,7 @@ const reportRoutes = require('./features/reports/reportRoutes');
 const dashboardRoutes = require('./features/dashboard/dashboardRoutes');
 const mastersRoutes = require('./features/masters/mastersRoutes');
 const taskRoutes = require('./features/tasks/taskRoutes');
+const searchRoutes = require('./features/search/searchRoutes');
 
 const app = express();
 
@@ -38,7 +39,7 @@ app.use(helmet());
 
 // CORS config
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ['http://localhost:5173', 'http://localhost:5174'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
 };
@@ -93,6 +94,7 @@ app.use('/api/v1/reports', reportRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);
 app.use('/api/v1/masters', mastersRoutes);
 app.use('/api/v1/tasks', taskRoutes);
+app.use('/api/v1/search', searchRoutes);
 
 // Serve uploads and bare-act PDFs statically
 app.use('/uploads', express.static('uploads'));

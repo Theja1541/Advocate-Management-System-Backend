@@ -44,4 +44,30 @@ router.route('/courts/:id')
 router.patch('/courts/:id/activate', authorizePermission('roles', 'E'), mastersController.activateCourt);
 router.patch('/courts/:id/deactivate', authorizePermission('roles', 'E'), mastersController.deactivateCourt);
 
+// Document Categories CRUD Endpoints
+router.route('/document-categories')
+  .get(mastersController.getAllDocumentCategories)
+  .post(authorizePermission('roles', 'E'), mastersController.createDocumentCategory);
+
+router.route('/document-categories/:id')
+  .get(mastersController.getDocumentCategoryById)
+  .put(authorizePermission('roles', 'E'), mastersController.updateDocumentCategory);
+
+router.patch('/document-categories/:id/activate', authorizePermission('roles', 'E'), mastersController.activateDocumentCategory);
+const stateFeeController = require('./state-fees/stateFeeController');
+
+// State Court Fee Rules Endpoints
+router.route('/state-fees')
+  .get(stateFeeController.getAllStateFees)
+  .post(authorizePermission('roles', 'E'), stateFeeController.createStateFeeConfig);
+
+router.post('/state-fees/calculate', stateFeeController.calculateFee);
+
+router.route('/state-fees/:id')
+  .get(stateFeeController.getStateFeeById)
+  .put(authorizePermission('roles', 'E'), stateFeeController.updateStateFeeConfig);
+
+router.patch('/state-fees/:id/activate', authorizePermission('roles', 'E'), stateFeeController.activateStateFeeConfig);
+router.patch('/state-fees/:id/deactivate', authorizePermission('roles', 'E'), stateFeeController.deactivateStateFeeConfig);
+
 module.exports = router;

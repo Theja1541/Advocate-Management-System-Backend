@@ -112,6 +112,11 @@ const getAllDiaries = async ({ advocateId } = {}) => {
 const fs = require('fs').promises;
 const path = require('path');
 const { formatFileSize, resolveFileType } = require('../documents/documentService');
+const { extractDocumentSearchContent } = require('../documents/documentTextExtraction');
+const isMissingSearchContentColumnError = (error) => {
+  const message = String(error?.message || '');
+  return message.includes('search_content') && message.includes('Unknown column');
+};
 
 const generateDocumentCode = async (transaction) => {
   const last = await Document.findOne({
@@ -130,18 +135,36 @@ const createAttachmentsForDiary = async (diaryId, caseId, files, uploadedBy, tra
   let addedCount = 0;
   for (const file of files) {
     const documentCode = await generateDocumentCode(transaction);
-    await Document.create({
-      documentCode,
-      name: file.originalname,
-      category: 'Evidence',
-      caseId,
-      diaryId,
-      fileType: resolveFileType(file.originalname, file.mimetype),
-      fileSize: formatFileSize(file.size),
-      filePath: file.path || path.join('uploads', file.filename),
-      uploadedBy: uploadedBy || null,
-      uploadDate,
-    }, { transaction });
+    const searchContent = await extractDocumentSearchContent(file);
+    try {
+      await Document.create({
+        documentCode,
+        name: file.originalname,
+        category: 'Evidence',
+        caseId,
+        diaryId,
+        fileType: resolveFileType(file.originalname, file.mimetype),
+        fileSize: formatFileSize(file.size),
+        filePath: file.path || path.join('uploads', file.filename),
+        searchContent,
+        uploadedBy: uploadedBy || null,
+        uploadDate,
+      }, { transaction });
+    } catch (error) {
+      if (!isMissingSearchContentColumnError(error)) throw error;
+      await Document.create({
+        documentCode,
+        name: file.originalname,
+        category: 'Evidence',
+        caseId,
+        diaryId,
+        fileType: resolveFileType(file.originalname, file.mimetype),
+        fileSize: formatFileSize(file.size),
+        filePath: file.path || path.join('uploads', file.filename),
+        uploadedBy: uploadedBy || null,
+        uploadDate,
+      }, { transaction });
+    }
     addedCount++;
   }
   return addedCount;
