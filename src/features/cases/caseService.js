@@ -2,6 +2,7 @@ const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court } =
 const AppError = require('../../utils/AppError');
 const { assertAdvocateOwnsCase } = require('../../utils/advocateScope');
 const { sequelize } = require('../../config/database');
+const { resolveAlert, resolveAllAlertsForRecord } = require('../alerts/alertEngine');
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -247,6 +248,12 @@ const updateCase = async (
     }
 
     await t.commit();
+    
+    // Resolve case approval alert if it is no longer pending
+    if (caseRecord.status !== 'Pending Approval') {
+      await resolveAlert('Case', caseRecord.id, 'CASE_APPROVAL_PENDING');
+    }
+
     return getCaseById(caseRecord.id, { advocateId: scopedAdvocateId });
   } catch (error) {
     await t.rollback();
@@ -266,6 +273,7 @@ const deleteCase = async (id, { advocateId } = {}) => {
   assertAdvocateOwnsCase(caseRecord, advocateId);
 
   await caseRecord.destroy();
+  await resolveAllAlertsForRecord('Case', id);
   return true;
 };
 

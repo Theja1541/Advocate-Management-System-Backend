@@ -65,11 +65,12 @@ const linkDemoAdvocateIfNeeded = async () => {
 
 const ensureTasksTable = async () => {
   try {
-    const { Task, Amendment, Case } = require('../features/associations');
+    const { Task, Amendment, Case, Alert } = require('../features/associations');
     await Task.sync();
     await Amendment.sync({ alter: true });
     await Case.sync({ alter: true });
-    logger.info('Synced Task, Amendment, and Case tables.');
+    await Alert.sync({ alter: true });
+    logger.info('Synced Task, Amendment, Case, and Alert tables.');
   } catch (error) {
     logger.warn('ensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:', error.message);
   }

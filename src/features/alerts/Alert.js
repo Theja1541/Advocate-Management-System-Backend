@@ -10,27 +10,49 @@ Alert.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    type: {
+    referenceType: {
       type: DataTypes.STRING(50),
       allowNull: false,
+      field: 'reference_type',
     },
-    description: {
+    referenceId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      field: 'reference_id',
+    },
+    alertType: {
+      type: DataTypes.STRING(50),
+      allowNull: false,
+      field: 'alert_type',
+    },
+    priority: {
+      type: DataTypes.STRING(50),
+      allowNull: false,
+      defaultValue: 'medium',
+    },
+    status: {
+      type: DataTypes.STRING(50),
+      allowNull: false,
+      defaultValue: 'active',
+    },
+    assignedTo: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'assigned_to',
+    },
+    isRead: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+      field: 'is_read',
+    },
+    message: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    severity: {
-      type: DataTypes.ENUM('tape', 'brass', 'ink'),
-      allowNull: false,
-    },
-    dueInfo: {
-      type: DataTypes.STRING(50),
+    metadata: {
+      type: DataTypes.JSON,
       allowNull: true,
-      field: 'due_info',
-    },
-    isResolved: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-      field: 'is_resolved',
     },
   },
   {
@@ -39,6 +61,13 @@ Alert.init(
     tableName: 'alerts',
     underscored: true,
     timestamps: true,
+    indexes: [
+      {
+        unique: true,
+        fields: ['reference_type', 'reference_id', 'alert_type'],
+        name: 'idx_alert_unique_ref',
+      },
+    ],
   }
 );
 

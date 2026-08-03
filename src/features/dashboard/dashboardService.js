@@ -218,29 +218,25 @@ const getDashboard = async ({ advocateId } = {}) => {
     }));
 
   // 4. Notifications (Latest unresolved alerts)
-  const alertWhere = { isResolved: false };
+  const alertWhere = { status: 'active' };
   if (advocateId) {
-    const advocateCases = await Case.findAll({
-      where: { advocateId },
-      attributes: ['caseNo'],
-    });
-    const caseNos = advocateCases.map((c) => c.caseNo);
-    alertWhere.type = { [Op.in]: [...caseNos, 'Payments Due', 'Membership'] };
+    // Ideally we filter alerts by assignedTo or role, but keeping it simple for now
+    alertWhere.assignedTo = advocateId;
   }
 
   const alerts = await Alert.findAll({
     where: alertWhere,
     limit: 5,
     order: [['created_at', 'DESC']],
-    attributes: ['id', 'type', 'description', 'severity', 'dueInfo'],
+    attributes: ['id', 'alertType', 'message', 'priority', 'created_at'],
   });
 
   const notifications = alerts.map((a) => ({
     id: a.id,
-    type: a.type,
-    description: a.description,
-    severity: a.severity,
-    dueInfo: a.dueInfo || '—',
+    type: a.alertType,
+    description: a.message,
+    severity: a.priority,
+    dueInfo: getRelativeTime(a.created_at),
   }));
 
   return {

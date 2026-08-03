@@ -1,12 +1,7 @@
 const express = require('express');
 const alertController = require('./alertController');
-const {
-  createAlertRules,
-  updateAlertRules,
-  alertIdParamRules,
-} = require('./alertValidation');
+const { alertIdParamRules, resolveAlertRules } = require('./alertValidation');
 const { protect } = require('../../middleware/auth');
-const authorizePermission = require('../../middleware/authorize');
 const validate = require('../../middleware/validate');
 
 const router = express.Router();
@@ -15,33 +10,43 @@ router.use(protect);
 
 router
   .route('/')
-  .get(authorizePermission('cases', 'V'), alertController.getAllAlerts)
-  .post(
-    authorizePermission('cases', 'E'),
-    ...createAlertRules,
-    validate,
-    alertController.createAlert
-  );
+  .get(alertController.getAllAlerts);
+
+router
+  .route('/count')
+  .get(alertController.getAlertCount);
 
 router
   .route('/:id')
   .get(
-    authorizePermission('cases', 'V'),
     ...alertIdParamRules,
     validate,
     alertController.getAlertById
-  )
-  .put(
-    authorizePermission('cases', 'E'),
-    ...updateAlertRules,
+  );
+
+router
+  .route('/:id/resolve')
+  .patch(
+    ...alertIdParamRules,
+    ...resolveAlertRules,
     validate,
-    alertController.updateAlert
-  )
-  .delete(
-    authorizePermission('cases', 'E'),
+    alertController.resolveAlertStatus
+  );
+
+router
+  .route('/:id/read')
+  .patch(
     ...alertIdParamRules,
     validate,
-    alertController.deleteAlert
+    alertController.markAlertAsRead
+  );
+
+router
+  .route('/:id/unread')
+  .patch(
+    ...alertIdParamRules,
+    validate,
+    alertController.markAlertAsUnread
   );
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const { Task, User } = require('../associations');
 const AppError = require('../../utils/AppError');
 const { Op } = require('sequelize');
+const { resolveAlert, resolveAllAlertsForRecord } = require('../alerts/alertEngine');
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -133,6 +134,12 @@ const updateTask = async (
   if (status !== undefined) task.status = status;
 
   await task.save();
+  
+  if (task.status === 'Completed' || task.status === 'Cancelled') {
+    await resolveAlert('Task', task.id, 'TASK_OVERDUE');
+    await resolveAlert('Task', task.id, 'TASK_DUE_TODAY');
+  }
+
   return getTaskById(task.id);
 };
 
@@ -142,6 +149,7 @@ const deleteTask = async (id) => {
     throw new AppError('Task not found', 404);
   }
   await task.destroy();
+  await resolveAllAlertsForRecord('Task', id);
   return true;
 };
 
