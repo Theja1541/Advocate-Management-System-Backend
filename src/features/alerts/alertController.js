@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllAlerts = async (req, res, next) => {
   try {
-    const alerts = await alertService.getAllAlerts();
+    const alerts = await alertService.getAllAlerts(req.query, req);
     res.status(200).json({
       status: 'success',
       data: { alerts },
@@ -14,9 +14,22 @@ exports.getAllAlerts = async (req, res, next) => {
   }
 };
 
+exports.getAlertCount = async (req, res, next) => {
+  try {
+    const count = await alertService.getAlertCount(req.query, req);
+    res.status(200).json({
+      status: 'success',
+      data: { count },
+    });
+  } catch (error) {
+    logger.error('GetAlertCount error:', error);
+    next(error);
+  }
+};
+
 exports.getAlertById = async (req, res, next) => {
   try {
-    const alert = await alertService.getAlertById(req.params.id);
+    const alert = await alertService.getAlertById(req.params.id, req);
     res.status(200).json({
       status: 'success',
       data: { alert },
@@ -27,38 +40,42 @@ exports.getAlertById = async (req, res, next) => {
   }
 };
 
-exports.createAlert = async (req, res, next) => {
+exports.resolveAlertStatus = async (req, res, next) => {
   try {
-    const alert = await alertService.createAlert(req.body);
-    res.status(201).json({
-      status: 'success',
-      data: { alert },
-    });
-  } catch (error) {
-    logger.error('CreateAlert error:', error);
-    next(error);
-  }
-};
-
-exports.updateAlert = async (req, res, next) => {
-  try {
-    const alert = await alertService.updateAlert(req.params.id, req.body);
+    const { status } = req.body; // 'active' or 'resolved'
+    const alert = await alertService.resolveAlertStatus(req.params.id, status, req);
     res.status(200).json({
       status: 'success',
       data: { alert },
     });
   } catch (error) {
-    logger.error('UpdateAlert error:', error);
+    logger.error('ResolveAlertStatus error:', error);
     next(error);
   }
 };
 
-exports.deleteAlert = async (req, res, next) => {
+exports.markAlertAsRead = async (req, res, next) => {
   try {
-    await alertService.deleteAlert(req.params.id);
-    res.status(204).send();
+    const alert = await alertService.markAlertAsRead(req.params.id, req);
+    res.status(200).json({
+      status: 'success',
+      data: { alert },
+    });
   } catch (error) {
-    logger.error('DeleteAlert error:', error);
+    logger.error('MarkAlertAsRead error:', error);
+    next(error);
+  }
+};
+
+exports.markAlertAsUnread = async (req, res, next) => {
+  try {
+    const alert = await alertService.markAlertAsUnread(req.params.id, req);
+    res.status(200).json({
+      status: 'success',
+      data: { alert },
+    });
+  } catch (error) {
+    logger.error('MarkAlertAsUnread error:', error);
     next(error);
   }
 };

@@ -7038,3 +7038,491 @@
 2026-08-01 10:09:04:94 [31merror[39m: [31m500 - User is associated to Advocate using an alias. You must use the 'as' keyword to specify the alias within your include statement. - /api/v1/advocates - GET - ::1[39m
 2026-08-01 10:09:04:94 [31merror[39m: [31mGetAllAdvocates error: User is associated to Advocate using an alias. You must use the 'as' keyword to specify the alias within your include statement.[39m
 2026-08-01 10:09:04:94 [31merror[39m: [31m500 - User is associated to Advocate using an alias. You must use the 'as' keyword to specify the alias within your include statement. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:39:55:3955 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 10:56:03:563 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 10:56:03:563 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:03:50:350 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:12:412 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:04:28:428 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:05:23:523 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:06:09:69 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:07:02:72 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:21:1121 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:39:1139 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:11:54:1154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:54:1154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:54:1154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:55:1155 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:55:1155 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:55:1155 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:55:1155 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:11:55:1155 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:12:09:129 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:13:43:1343 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:13:58:1358 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:13:58:1358 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts - GET - ::1[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:14:40:1440 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:15:02:152 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:02:152 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:15:02:152 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:02:152 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:04:154 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:15:37:1537 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:15:37:1537 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:16:04:164 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:04:164 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:16:07:167 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:17:21:1721 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:17:21:1721 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:18:15:1815 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:18:15:1815 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:18:15:1815 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:18:15:1815 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:18:33:1833 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:18:33:1833 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:26:38:2638 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:27:08:278 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mError upserting alert: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:45:47:4547 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 11:46:06:466 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts? - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:46:07:467 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:47:07:477 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:47:07:477 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:47:07:477 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:47:07:477 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:48:07:487 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:48:07:487 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:48:07:487 [31merror[39m: [31mGetAllAlerts error: Unknown column 'reference_type' in 'field list'[39m
+2026-08-01 11:48:07:487 [31merror[39m: [31m500 - Unknown column 'reference_type' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:03:493 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:49:05:495 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'search_content' in 'field list'[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31mGetDashboard error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31mGetAllDiaries error: Unknown column 'CaseDiary.court_id' in 'field list'[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/diary - GET - ::1[39m
+2026-08-01 11:49:18:4918 [31merror[39m: [31m500 - Unknown column 'CaseDiary.court_id' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:53:20:5320 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'Document.status' in 'where clause'[39m
+2026-08-01 11:54:32:5432 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'Document.status' in 'where clause'[39m
+2026-08-01 11:56:22:5622 [31merror[39m: [31mAlert Engine: Documents check failed Unknown column 'Document.status' in 'where clause'[39m
+2026-08-01 11:57:12:5712 [31merror[39m: [31mGetDashboard error: Unknown column 'type' in 'field list'[39m
+2026-08-01 11:57:12:5712 [31merror[39m: [31m500 - Unknown column 'type' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 11:57:12:5712 [31merror[39m: [31mGetDashboard error: Unknown column 'type' in 'field list'[39m
+2026-08-01 11:57:12:5712 [31merror[39m: [31m500 - Unknown column 'type' in 'field list' - /api/v1/dashboard - GET - ::1[39m
+2026-08-01 12:01:12:112 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:01:12:112 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 12:01:12:112 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:01:12:112 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 12:16:58:1658 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:16:58:1658 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 12:32:14:3214 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:32:14:3214 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 12:51:38:5138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-01 13:07:03:73 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 13:07:03:73 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-01 13:22:03:223 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-01 13:22:03:223 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-03 09:45:38:4538 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-03 10:19:15:1915 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 10:19:15:1915 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 10:26:17:2617 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 10:26:17:2617 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 10:32:26:3226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 10:32:26:3226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 10:32:26:3226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 10:32:26:3226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 10:32:37:3237 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 10:32:38:3238 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 10:32:41:3241 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
+2026-08-03 10:32:45:3245 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
+2026-08-03 10:32:46:3246 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 17:00:35:035 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:00:59:059 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:02:26:226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:03:22:322 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:15:415 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:16:416 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:11:09:119 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:11:11:1111 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:13:37:1337 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:45:26:4526 [31merror[39m: [31m404 - Can't find /api/reports/payment?month=8&year=2026 on this server! - /api/reports/payment?month=8&year=2026 - GET - ::1[39m
+2026-08-03 18:09:04:94 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 09:48:10:4810 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 11:12:57:1257 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=false - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:42:1442 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:16:06:166 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m

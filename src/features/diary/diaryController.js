@@ -42,7 +42,7 @@ exports.createDiary = async (req, res, next) => {
         updatedBy: req.user?.id,
         files: req.files,
       },
-      { advocateId }
+      { advocateId, req }
     );
     res.status(201).json({
       status: 'success',
@@ -75,7 +75,7 @@ exports.updateDiary = async (req, res, next) => {
         updatedBy: req.user?.id,
         files: req.files,
       },
-      { advocateId }
+      { advocateId, req }
     );
     res.status(200).json({
       status: 'success',
@@ -101,7 +101,7 @@ exports.updateDiary = async (req, res, next) => {
 exports.deleteDiary = async (req, res, next) => {
   try {
     const advocateId = requireAdvocateScope(req.user);
-    await diaryService.deleteDiary(req.params.id, { advocateId });
+    await diaryService.deleteDiary(req.params.id, { advocateId, req });
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteDiary error:', error);

@@ -70,6 +70,51 @@ Case.init(
       allowNull: true,
       field: 'court_fee_snapshot',
     },
+    suitValue: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'suit_value',
+    },
+    feePercentage: {
+      type: DataTypes.DECIMAL(5, 2),
+      allowNull: true,
+      field: 'fee_percentage',
+    },
+    advocateFee: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'advocate_fee',
+    },
+    courtFee: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'court_fee',
+    },
+    processFee: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'process_fee',
+    },
+    filingFee: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'filing_fee',
+    },
+    miscCharges: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'misc_charges',
+    },
+    totalPayable: {
+      type: DataTypes.DECIMAL(12, 2),
+      allowNull: true,
+      field: 'total_payable',
+    },
+    feeCalculationStatus: {
+      type: DataTypes.STRING(20),
+      allowNull: true,
+      field: 'fee_calculation_status',
+    },
   },
   {
     sequelize,

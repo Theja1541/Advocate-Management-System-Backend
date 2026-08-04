@@ -24,6 +24,11 @@ Court.init(
       type: DataTypes.STRING(255),
       allowNull: true,
     },
+    stateCode: {
+      type: DataTypes.STRING(10),
+      allowNull: true,
+      field: 'state_code',
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

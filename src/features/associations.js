@@ -65,6 +65,13 @@ Document.belongsTo(User, { foreignKey: 'uploaded_by', as: 'uploader' });
 CaseDiary.hasMany(Document, { foreignKey: 'diary_id', as: 'attachments', onDelete: 'CASCADE' });
 Document.belongsTo(CaseDiary, { foreignKey: 'diary_id', as: 'caseDiary' });
 
+// Add new CaseDiary specific associations
+CaseDiary.belongsTo(Court, { foreignKey: 'court_id', as: 'court' });
+Court.hasMany(CaseDiary, { foreignKey: 'court_id', as: 'diaries' });
+
+CaseDiary.belongsTo(Advocate, { foreignKey: 'conducted_by', as: 'conductedByAdvocate' });
+Advocate.hasMany(CaseDiary, { foreignKey: 'conducted_by', as: 'conductedHearings' });
+
 DocumentCategory.hasMany(Document, { foreignKey: 'document_category_id', as: 'documents' });
 Document.belongsTo(DocumentCategory, { foreignKey: 'document_category_id', as: 'documentCategory' });
 

@@ -113,8 +113,19 @@ const createActRules = [
     .trim()
     .notEmpty()
     .withMessage('Jurisdiction type is required')
-    .isLength({ max: 80 })
-    .withMessage('Jurisdiction type must be at most 80 characters'),
+    .isIn(['Central', 'State'])
+    .withMessage('Jurisdiction type must be Central or State'),
+  body('state')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('State must be at most 100 characters')
+    .custom((value, { req }) => {
+      if (req.body.type === 'State' && !value) {
+        throw new Error('State name is required when jurisdiction type is State');
+      }
+      return true;
+    }),
   body('effectiveDate')
     .optional({ values: 'falsy' })
     .isISO8601()
@@ -140,8 +151,19 @@ const updateActRules = [
   body('type')
     .optional()
     .trim()
-    .isLength({ max: 80 })
-    .withMessage('Jurisdiction type must be at most 80 characters'),
+    .isIn(['Central', 'State'])
+    .withMessage('Jurisdiction type must be Central or State'),
+  body('state')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('State must be at most 100 characters')
+    .custom((value, { req }) => {
+      if (req.body.type === 'State' && !value) {
+        throw new Error('State name is required when jurisdiction type is State');
+      }
+      return true;
+    }),
   body('effectiveDate')
     .optional({ values: 'falsy' })
     .isISO8601()

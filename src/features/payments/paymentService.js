@@ -1,6 +1,7 @@
 const { sequelize } = require('../../config/database');
 const { Payment, Case, Client, Advocate, User, Daybook } = require('../associations');
 const AppError = require('../../utils/AppError');
+const { resolveAlert, resolveAllAlertsForRecord } = require('../alerts/alertEngine');
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -290,6 +291,12 @@ const updatePayment = async (
   }
 
   await payment.save();
+  
+  if (payment.status === 'Completed' || payment.status === 'paid') {
+    await resolveAlert('Payment', payment.id, 'PAYMENT_OVERDUE');
+    await resolveAlert('Payment', payment.id, 'PAYMENT_DUE');
+  }
+
   return getPaymentById(payment.id);
 };
 
@@ -297,6 +304,7 @@ const deletePayment = async (id) => {
   const payment = await Payment.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!payment) throw new AppError('Payment not found', 404);
   await payment.destroy();
+  await resolveAllAlertsForRecord('Payment', id);
   return true;
 };
 

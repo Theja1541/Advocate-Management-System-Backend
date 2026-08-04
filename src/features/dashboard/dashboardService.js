@@ -12,15 +12,6 @@ const {
   CaseStage,
 } = require('../associations');
 
-const parseTitle = (title = '') => {
-  const [head = '', stage = 'Filing'] = String(title).split(' :: ');
-  let opponent = '';
-  const vsIdx = head.indexOf(' — vs ');
-  if (vsIdx >= 0) {
-    opponent = head.slice(vsIdx + ' — vs '.length);
-  }
-  return { opponent: opponent || '—', stage: stage || 'Filing' };
-};
 
 const formatDisplayDate = (date) => {
   return date.toLocaleDateString('en-GB', {
@@ -127,7 +118,11 @@ const getDashboard = async ({ advocateId } = {}) => {
   });
 
   const causeList = diaries.map((d) => {
-    const { opponent } = parseTitle(d.case?.title);
+    let opponent = '—';
+    const vsIdx = String(d.case?.title || '').indexOf(' — vs ');
+    if (vsIdx >= 0) {
+      opponent = String(d.case?.title).slice(vsIdx + ' — vs '.length);
+    }
     const { t, ap } = formatTime12h(d.hearingTime);
     return {
       no: d.case?.caseNo || '—',
@@ -218,29 +213,25 @@ const getDashboard = async ({ advocateId } = {}) => {
     }));
 
   // 4. Notifications (Latest unresolved alerts)
-  const alertWhere = { isResolved: false };
+  const alertWhere = { status: 'active' };
   if (advocateId) {
-    const advocateCases = await Case.findAll({
-      where: { advocateId },
-      attributes: ['caseNo'],
-    });
-    const caseNos = advocateCases.map((c) => c.caseNo);
-    alertWhere.type = { [Op.in]: [...caseNos, 'Payments Due', 'Membership'] };
+    // Ideally we filter alerts by assignedTo or role, but keeping it simple for now
+    alertWhere.assignedTo = advocateId;
   }
 
   const alerts = await Alert.findAll({
     where: alertWhere,
     limit: 5,
     order: [['created_at', 'DESC']],
-    attributes: ['id', 'type', 'description', 'severity', 'dueInfo'],
+    attributes: ['id', 'alertType', 'message', 'priority', 'created_at'],
   });
 
   const notifications = alerts.map((a) => ({
     id: a.id,
-    type: a.type,
-    description: a.description,
-    severity: a.severity,
-    dueInfo: a.dueInfo || '—',
+    type: a.alertType,
+    description: a.message,
+    severity: a.priority,
+    dueInfo: getRelativeTime(a.created_at),
   }));
 
   return {

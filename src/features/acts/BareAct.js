@@ -28,6 +28,10 @@ BareAct.init(
       type: DataTypes.STRING(80),
       allowNull: false,
     },
+    state: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+    },
     description: {
       type: DataTypes.TEXT,
       allowNull: true,

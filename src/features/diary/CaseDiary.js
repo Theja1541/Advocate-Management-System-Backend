@@ -30,10 +30,53 @@ CaseDiary.init(
       allowNull: false,
       field: 'advocate_id',
     },
-    courtIndex: {
-      type: DataTypes.INTEGER,
+    courtId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'court_id',
+    },
+    status: {
+      type: DataTypes.ENUM('Scheduled', 'In Progress', 'Completed', 'Adjourned', 'Cancelled'),
       allowNull: false,
-      field: 'court_index',
+      defaultValue: 'Scheduled',
+    },
+    hearingType: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'hearing_type',
+    },
+    judge: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    outcome: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    nextAction: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'next_action',
+    },
+    conductedBy: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'conducted_by',
+    },
+    actualStartTime: {
+      type: DataTypes.TIME,
+      allowNull: true,
+      field: 'actual_start_time',
+    },
+    actualEndTime: {
+      type: DataTypes.TIME,
+      allowNull: true,
+      field: 'actual_end_time',
+    },
+    adjournmentReason: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'adjournment_reason',
     },
     note: {
       type: DataTypes.TEXT,

@@ -2,6 +2,8 @@ const { Op } = require('sequelize');
 const { sequelize } = require('../../config/database');
 const { CaseDiary, Case, Advocate, User, Document } = require('../associations');
 const AppError = require('../../utils/AppError');
+const auditService = require('../acts/auditService');
+const alertEngine = require('../alerts/alertEngine');
 
 const syncCaseNextHearing = async (caseId, transaction) => {
   if (!caseId) return;
@@ -35,7 +37,16 @@ const SAFE_ATTRIBUTES = [
   'hearingDate',
   'hearingTime',
   'advocateId',
-  'courtIndex',
+  'courtId',
+  'status',
+  'hearingType',
+  'judge',
+  'outcome',
+  'nextAction',
+  'conductedBy',
+  'actualStartTime',
+  'actualEndTime',
+  'adjournmentReason',
   'note',
   'nextHearingDate',
   'attachmentsCount',
@@ -193,14 +204,23 @@ const createDiary = async (
     hearingDate,
     hearingTime,
     advocateId,
-    courtIndex,
+    courtId,
+    status,
+    hearingType,
+    judge,
+    outcome,
+    nextAction,
+    conductedBy,
+    actualStartTime,
+    actualEndTime,
+    adjournmentReason,
     note,
     nextHearingDate,
     createdBy,
     updatedBy,
     files,
   },
-  { advocateId: scopedAdvocateId } = {}
+  { advocateId: scopedAdvocateId, req } = {}
 ) => {
   const resolvedAdvocateId =
     scopedAdvocateId != null ? scopedAdvocateId : advocateId;
@@ -226,7 +246,16 @@ const createDiary = async (
       hearingDate,
       hearingTime,
       advocateId: resolvedAdvocateId,
-      courtIndex,
+      courtId,
+      status: status || 'Scheduled',
+      hearingType,
+      judge,
+      outcome,
+      nextAction,
+      conductedBy: conductedBy || null,
+      actualStartTime: actualStartTime || null,
+      actualEndTime: actualEndTime || null,
+      adjournmentReason: status === 'Adjourned' ? adjournmentReason : null,
       note,
       nextHearingDate: nextHearingDate || null,
       attachmentsCount: 0,
@@ -240,7 +269,16 @@ const createDiary = async (
 
     await syncCaseNextHearing(caseId, t);
 
+    if (entry.status === 'Completed') {
+      await alertEngine.resolveAlert('Case', caseId, 'HEARING_TODAY');
+    }
+
     await t.commit();
+    
+    if (req) {
+      auditService.logEvent('DIARY_CREATED', req, { diaryId: entry.id, caseId: entry.caseId, status: entry.status });
+    }
+    
     return getDiaryById(entry.id, { advocateId: scopedAdvocateId });
   } catch (error) {
     await t.rollback();
@@ -255,14 +293,23 @@ const updateDiary = async (
     hearingDate,
     hearingTime,
     advocateId,
-    courtIndex,
+    courtId,
+    status,
+    hearingType,
+    judge,
+    outcome,
+    nextAction,
+    conductedBy,
+    actualStartTime,
+    actualEndTime,
+    adjournmentReason,
     note,
     nextHearingDate,
     updatedBy,
     files,
     retainedAttachmentIds,
   },
-  { advocateId: scopedAdvocateId } = {}
+  { advocateId: scopedAdvocateId, req } = {}
 ) => {
   const entry = await CaseDiary.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
@@ -321,7 +368,24 @@ const updateDiary = async (
     if (updatedBy !== undefined) entry.updatedBy = updatedBy;
     if (hearingDate !== undefined) entry.hearingDate = hearingDate;
     if (hearingTime !== undefined) entry.hearingTime = hearingTime;
-    if (courtIndex !== undefined) entry.courtIndex = courtIndex;
+    if (courtId !== undefined) entry.courtId = courtId;
+    
+    const oldStatus = entry.status;
+    if (status !== undefined) entry.status = status;
+    if (hearingType !== undefined) entry.hearingType = hearingType;
+    if (judge !== undefined) entry.judge = judge;
+    if (outcome !== undefined) entry.outcome = outcome;
+    if (nextAction !== undefined) entry.nextAction = nextAction;
+    if (conductedBy !== undefined) entry.conductedBy = conductedBy || null;
+    if (actualStartTime !== undefined) entry.actualStartTime = actualStartTime || null;
+    if (actualEndTime !== undefined) entry.actualEndTime = actualEndTime || null;
+    
+    if (entry.status === 'Adjourned') {
+      if (adjournmentReason !== undefined) entry.adjournmentReason = adjournmentReason;
+    } else {
+      entry.adjournmentReason = null;
+    }
+    
     if (note !== undefined) entry.note = note;
     if (nextHearingDate !== undefined) entry.nextHearingDate = nextHearingDate || null;
 
@@ -357,9 +421,16 @@ const updateDiary = async (
     if (caseId !== undefined && caseId !== oldCaseId) {
       await syncCaseNextHearing(oldCaseId, t);
     }
-    await syncCaseNextHearing(entry.caseId, t);
+    if (entry.status === 'Completed') {
+      await alertEngine.resolveAlert('Case', entry.caseId, 'HEARING_TODAY');
+    }
 
     await t.commit();
+    
+    if (req) {
+      const action = oldStatus !== entry.status ? 'DIARY_STATUS_CHANGED' : 'DIARY_UPDATED';
+      auditService.logEvent(action, req, { diaryId: entry.id, caseId: entry.caseId, oldStatus, newStatus: entry.status });
+    }
 
     // Clean up unlinked files from filesystem asynchronously after commit
     for (const att of toDelete) {
@@ -379,7 +450,7 @@ const updateDiary = async (
   }
 };
 
-const deleteDiary = async (id, { advocateId: scopedAdvocateId } = {}) => {
+const deleteDiary = async (id, { advocateId: scopedAdvocateId, req } = {}) => {
   const entry = await CaseDiary.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
   });
@@ -405,6 +476,10 @@ const deleteDiary = async (id, { advocateId: scopedAdvocateId } = {}) => {
     await entry.destroy({ transaction: t });
     await syncCaseNextHearing(caseId, t);
     await t.commit();
+    
+    if (req) {
+      auditService.logEvent('DIARY_DELETED', req, { diaryId: id, caseId });
+    }
 
     // Delete files from storage asynchronously
     for (const att of attachments) {

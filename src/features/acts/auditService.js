@@ -24,15 +24,27 @@ const auditLogger = winston.createLogger({
 
 /**
  * Log a bare act audit event
- * @param {string} action - Action performed (CREATED, UPLOADED, UPDATED, REPLACED, VIEWED, DOWNLOADED, DELETED, RESTORED)
- * @param {object} req - Express request object to extract user, IP, etc.
+ * @param {string} action - Action performed
+ * @param {object|string} actor - Express request object OR a string like 'SYSTEM'
  * @param {object} details - Any additional metadata details
  */
-const logEvent = (action, req, details = {}) => {
-  const userEmail = req?.user?.email || 'SYSTEM';
-  const userRole = req?.user?.role || 'SYSTEM';
-  const userId = req?.user?.id || null;
-  const ipAddress = req?.ip || req?.headers?.['x-forwarded-for'] || req?.socket?.remoteAddress || 'unknown';
+const logEvent = (action, actor = 'SYSTEM', details = {}) => {
+  let userEmail = 'SYSTEM';
+  let userRole = 'SYSTEM';
+  let userId = null;
+  let ipAddress = 'unknown';
+
+  if (typeof actor === 'object' && actor !== null) {
+    // If it's a req object, extract properties
+    userEmail = actor.user?.email || 'SYSTEM';
+    userRole = actor.user?.role || 'SYSTEM';
+    userId = actor.user?.id || null;
+    ipAddress = actor.ip || actor.headers?.['x-forwarded-for'] || actor.socket?.remoteAddress || 'unknown';
+  } else if (typeof actor === 'string') {
+    // If it's just 'SYSTEM' or another identifier
+    userEmail = actor;
+    userRole = actor;
+  }
 
   auditLogger.info({
     action,
@@ -56,5 +68,16 @@ module.exports = {
     DOWNLOADED: 'DOWNLOADED',
     DELETED: 'DELETED',
     RESTORED: 'RESTORED',
+    // Alert specific actions
+    ALERT_GENERATED: 'ALERT_GENERATED',
+    ALERT_REACTIVATED: 'ALERT_REACTIVATED',
+    ALERT_READ: 'ALERT_READ',
+    ALERT_UNREAD: 'ALERT_UNREAD',
+    ALERT_RESOLVED: 'ALERT_RESOLVED',
+    // Diary specific actions
+    DIARY_CREATED: 'DIARY_CREATED',
+    DIARY_UPDATED: 'DIARY_UPDATED',
+    DIARY_STATUS_CHANGED: 'DIARY_STATUS_CHANGED',
+    DIARY_DELETED: 'DIARY_DELETED',
   },
 };

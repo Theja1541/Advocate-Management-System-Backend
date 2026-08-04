@@ -47,12 +47,12 @@ Amendment.init(
       field: 'effective_date',
     },
     createdBy: {
-      type: DataTypes.BIGINT.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: true,
       field: 'created_by',
     },
     updatedBy: {
-      type: DataTypes.BIGINT.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: true,
       field: 'updated_by',
     },
