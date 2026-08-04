@@ -1,4 +1,5 @@
-const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court } = require('../associations');
+const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court, StateCourtFeeRule } = require('../associations');
+const { calculateCourtFee } = require('../masters/state-fees/courtFeeCalculator.service');
 const AppError = require('../../utils/AppError');
 const { assertAdvocateOwnsCase } = require('../../utils/advocateScope');
 const { sequelize } = require('../../config/database');
@@ -17,6 +18,15 @@ const SAFE_ATTRIBUTES = [
   'caseStageId',
   'courtId',
   'approvalLevel',
+  'suitValue',
+  'feePercentage',
+  'advocateFee',
+  'courtFee',
+  'processFee',
+  'filingFee',
+  'miscCharges',
+  'totalPayable',
+  'feeCalculationStatus',
   'created_at',
   'updated_at',
 ];
@@ -110,6 +120,74 @@ const getCaseById = async (id, { advocateId } = {}) => {
   return toPublicCase(caseRecord);
 };
 
+const calculateFeeForCase = async (courtId, inputs) => {
+  const { suitValue, feePercentage, processFee, filingFee, miscCharges } = inputs;
+  const sv = Number(suitValue) || 0;
+  const fp = Number(feePercentage) || 0;
+  const pf = Number(processFee) || 0;
+  const ff = Number(filingFee) || 0;
+  const mc = Number(miscCharges) || 0;
+
+  const result = {
+    suitValue: sv,
+    feePercentage: fp,
+    advocateFee: (sv * fp) / 100,
+    courtFee: 0,
+    processFee: pf,
+    filingFee: ff,
+    miscCharges: mc,
+    totalPayable: 0,
+    feeCalculationStatus: 'PENDING',
+    courtFeeSnapshot: null,
+    warning: null,
+  };
+
+  let court = null;
+  if (courtId) {
+    court = await Court.findByPk(courtId);
+  }
+
+  if (court && court.stateCode) {
+    const activeRule = await StateCourtFeeRule.findOne({
+      where: { stateCode: court.stateCode, isActive: true },
+      include: ['slabs']
+    });
+
+    if (activeRule) {
+      try {
+        const ruleData = activeRule.get({ plain: true });
+        if (inputs.processFee !== undefined && inputs.processFee !== null) ruleData.processFee = pf;
+        if (inputs.filingFee !== undefined && inputs.filingFee !== null) ruleData.filingFee = ff;
+        if (inputs.miscCharges !== undefined && inputs.miscCharges !== null) ruleData.miscCharges = mc;
+        
+        const calc = calculateCourtFee(ruleData, sv, fp);
+        
+        result.advocateFee = calc.advocateFee;
+        result.courtFee = calc.courtFee;
+        result.processFee = calc.processFee;
+        result.filingFee = calc.filingFee;
+        result.miscCharges = calc.miscCharges;
+        result.totalPayable = calc.totalAmount;
+        result.courtFeeSnapshot = calc;
+        result.feeCalculationStatus = 'COMPLETE';
+      } catch (err) {
+        result.feeCalculationStatus = 'ERROR';
+        result.warning = `Calculation error: ${err.message}`;
+      }
+    } else {
+      result.totalPayable = result.advocateFee + pf + ff + mc;
+      result.feeCalculationStatus = 'PARTIAL';
+      result.warning = `No active fee rules found for state ${court.stateCode}. Court fee could not be calculated.`;
+    }
+  } else {
+    result.totalPayable = result.advocateFee + pf + ff + mc;
+    result.feeCalculationStatus = 'PARTIAL';
+    result.warning = 'Court fee could not be calculated because the selected court has no assigned state.';
+  }
+
+  return result;
+};
+
 const createCase = async (
   {
     caseNo,
@@ -123,6 +201,11 @@ const createCase = async (
     caseStageId,
     courtId,
     approvalLevel,
+    suitValue,
+    feePercentage,
+    processFee,
+    filingFee,
+    miscCharges,
   },
   { advocateId: scopedAdvocateId, user } = {}
 ) => {
@@ -145,6 +228,8 @@ const createCase = async (
   await assertClientExists(clientId);
   await validateCaseMasters(caseTypeId, caseStageId, courtId);
 
+  const feeResult = await calculateFeeForCase(courtId, { suitValue, feePercentage, processFee, filingFee, miscCharges });
+
   const t = await sequelize.transaction();
   try {
     const caseRecord = await Case.create({
@@ -159,6 +244,16 @@ const createCase = async (
       caseStageId: caseStageId || null,
       courtId: courtId || null,
       approvalLevel: approvalLevel ?? null,
+      suitValue: feeResult.suitValue,
+      feePercentage: feeResult.feePercentage,
+      advocateFee: feeResult.advocateFee,
+      courtFee: feeResult.courtFee,
+      processFee: feeResult.processFee,
+      filingFee: feeResult.filingFee,
+      miscCharges: feeResult.miscCharges,
+      totalPayable: feeResult.totalPayable,
+      feeCalculationStatus: feeResult.feeCalculationStatus,
+      courtFeeSnapshot: feeResult.courtFeeSnapshot,
     }, { transaction: t });
 
     if (caseStageId) {
@@ -172,7 +267,11 @@ const createCase = async (
     }
 
     await t.commit();
-    return getCaseById(caseRecord.id, { advocateId: scopedAdvocateId });
+    const returnedCase = await getCaseById(caseRecord.id, { advocateId: scopedAdvocateId });
+    if (feeResult.warning) {
+      returnedCase.warning = feeResult.warning;
+    }
+    return returnedCase;
   } catch (error) {
     await t.rollback();
     throw error;
@@ -181,7 +280,7 @@ const createCase = async (
 
 const updateCase = async (
   id,
-  { caseNo, title, status, court, nextHearing, advocateId, clientId, caseTypeId, caseStageId, courtId, approvalLevel },
+  { caseNo, title, status, court, nextHearing, advocateId, clientId, caseTypeId, caseStageId, courtId, approvalLevel, suitValue, feePercentage, processFee, filingFee, miscCharges },
   { advocateId: scopedAdvocateId, user } = {}
 ) => {
   const caseRecord = await Case.findByPk(id, {
@@ -216,11 +315,34 @@ const updateCase = async (
   }
   await validateCaseMasters(caseTypeId, caseStageId, courtId);
 
+  const oldStageId = caseRecord.caseStageId;
+  const stageChanged = caseStageId !== undefined && caseStageId !== oldStageId;
+
+  const shouldRecalculate = (
+    (courtId !== undefined && courtId !== caseRecord.courtId) ||
+    (suitValue !== undefined && Number(suitValue) !== Number(caseRecord.suitValue)) ||
+    (feePercentage !== undefined && Number(feePercentage) !== Number(caseRecord.feePercentage)) ||
+    (processFee !== undefined && Number(processFee) !== Number(caseRecord.processFee)) ||
+    (filingFee !== undefined && Number(filingFee) !== Number(caseRecord.filingFee)) ||
+    (miscCharges !== undefined && Number(miscCharges) !== Number(caseRecord.miscCharges))
+  );
+
+  let warning = null;
+  let feeResult = null;
+  if (shouldRecalculate) {
+    const inputs = {
+      suitValue: suitValue !== undefined ? suitValue : caseRecord.suitValue,
+      feePercentage: feePercentage !== undefined ? feePercentage : caseRecord.feePercentage,
+      processFee: processFee !== undefined ? processFee : caseRecord.processFee,
+      filingFee: filingFee !== undefined ? filingFee : caseRecord.filingFee,
+      miscCharges: miscCharges !== undefined ? miscCharges : caseRecord.miscCharges,
+    };
+    const finalCourtId = courtId !== undefined ? courtId : caseRecord.courtId;
+    feeResult = await calculateFeeForCase(finalCourtId, inputs);
+  }
+
   const t = await sequelize.transaction();
   try {
-    const oldStageId = caseRecord.caseStageId;
-    const stageChanged = caseStageId !== undefined && caseStageId !== oldStageId;
-
     if (caseNo !== undefined) caseRecord.caseNo = caseNo;
     if (title !== undefined) caseRecord.title = title;
     if (status) caseRecord.status = status;
@@ -234,6 +356,20 @@ const updateCase = async (
     if (caseStageId !== undefined) caseRecord.caseStageId = caseStageId || null;
     if (courtId !== undefined) caseRecord.courtId = courtId || null;
     if (approvalLevel !== undefined) caseRecord.approvalLevel = approvalLevel;
+
+    if (feeResult) {
+      caseRecord.suitValue = feeResult.suitValue;
+      caseRecord.feePercentage = feeResult.feePercentage;
+      caseRecord.advocateFee = feeResult.advocateFee;
+      caseRecord.courtFee = feeResult.courtFee;
+      caseRecord.processFee = feeResult.processFee;
+      caseRecord.filingFee = feeResult.filingFee;
+      caseRecord.miscCharges = feeResult.miscCharges;
+      caseRecord.totalPayable = feeResult.totalPayable;
+      caseRecord.feeCalculationStatus = feeResult.feeCalculationStatus;
+      caseRecord.courtFeeSnapshot = feeResult.courtFeeSnapshot;
+      warning = feeResult.warning;
+    }
 
     await caseRecord.save({ transaction: t });
 
@@ -254,7 +390,11 @@ const updateCase = async (
       await resolveAlert('Case', caseRecord.id, 'CASE_APPROVAL_PENDING');
     }
 
-    return getCaseById(caseRecord.id, { advocateId: scopedAdvocateId });
+    const returnedCase = await getCaseById(caseRecord.id, { advocateId: scopedAdvocateId });
+    if (warning) {
+      returnedCase.warning = warning;
+    }
+    return returnedCase;
   } catch (error) {
     await t.rollback();
     throw error;

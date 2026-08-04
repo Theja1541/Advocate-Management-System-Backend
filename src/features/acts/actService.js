@@ -15,6 +15,7 @@ const SAFE_ATTRIBUTES = [
   'abbreviation',
   'effectiveDate',
   'type',
+  'state',
   'description',
   'sectionsCount',
   'isBookmarked',
@@ -202,6 +203,7 @@ const createAct = async (data, file, userId) => {
     name: data.name,
     abbreviation: data.abbreviation,
     type: data.type,
+    state: data.state || null,
     effectiveDate: data.effectiveDate || null,
     description: data.description || null,
     sectionsCount: Number(data.sectionsCount) || 0,
@@ -236,6 +238,7 @@ const updateAct = async (id, data, userId) => {
   act.name = data.name || act.name;
   act.abbreviation = data.abbreviation || act.abbreviation;
   act.type = data.type || act.type;
+  act.state = data.state !== undefined ? data.state : act.state;
   act.effectiveDate = data.effectiveDate !== undefined ? data.effectiveDate : act.effectiveDate;
   act.description = data.description !== undefined ? data.description : act.description;
   act.sectionsCount = data.sectionsCount !== undefined ? Number(data.sectionsCount) : act.sectionsCount;

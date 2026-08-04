@@ -12,15 +12,6 @@ const {
   CaseStage,
 } = require('../associations');
 
-const parseTitle = (title = '') => {
-  const [head = '', stage = 'Filing'] = String(title).split(' :: ');
-  let opponent = '';
-  const vsIdx = head.indexOf(' — vs ');
-  if (vsIdx >= 0) {
-    opponent = head.slice(vsIdx + ' — vs '.length);
-  }
-  return { opponent: opponent || '—', stage: stage || 'Filing' };
-};
 
 const formatDisplayDate = (date) => {
   return date.toLocaleDateString('en-GB', {
@@ -127,7 +118,11 @@ const getDashboard = async ({ advocateId } = {}) => {
   });
 
   const causeList = diaries.map((d) => {
-    const { opponent } = parseTitle(d.case?.title);
+    let opponent = '—';
+    const vsIdx = String(d.case?.title || '').indexOf(' — vs ');
+    if (vsIdx >= 0) {
+      opponent = String(d.case?.title).slice(vsIdx + ' — vs '.length);
+    }
     const { t, ap } = formatTime12h(d.hearingTime);
     return {
       no: d.case?.caseNo || '—',

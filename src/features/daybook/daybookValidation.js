@@ -10,7 +10,7 @@ const CATEGORIES = [
   'Client Payment',
   'Advocate Payment',
   'Office Expense',
-  'Misc',
+  'Misc.',
   'Opening',
 ];
 

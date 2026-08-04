@@ -52,6 +52,26 @@ const createCaseRules = [
     .optional({ values: 'falsy' })
     .isInt({ min: 0, max: 127 })
     .withMessage('Approval level must be a valid integer'),
+  body('suitValue')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Suit value must be a positive number'),
+  body('feePercentage')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0, max: 100 })
+    .withMessage('Fee percentage must be between 0 and 100'),
+  body('processFee')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Process fee must be a positive number'),
+  body('filingFee')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Filing fee must be a positive number'),
+  body('miscCharges')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Misc charges must be a positive number'),
 ];
 
 const updateCaseRules = [
@@ -110,6 +130,26 @@ const updateCaseRules = [
     .optional({ values: 'falsy' })
     .isInt({ min: 0, max: 127 })
     .withMessage('Approval level must be a valid integer'),
+  body('suitValue')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Suit value must be a positive number'),
+  body('feePercentage')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0, max: 100 })
+    .withMessage('Fee percentage must be between 0 and 100'),
+  body('processFee')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Process fee must be a positive number'),
+  body('filingFee')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Filing fee must be a positive number'),
+  body('miscCharges')
+    .optional({ values: 'falsy' })
+    .isFloat({ min: 0 })
+    .withMessage('Misc charges must be a positive number'),
 ];
 
 const caseIdParamRules = [

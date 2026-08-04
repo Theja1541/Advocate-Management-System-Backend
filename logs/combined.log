@@ -11102,3 +11102,274 @@
 2026-08-03 10:35:38:3538 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
 2026-08-03 10:35:48:3548 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
 2026-08-03 10:35:48:3548 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 10:44:12:4412 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 10:44:14:4414 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 10:44:17:4417 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 10:44:18:4418 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 10:44:18:4418 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 10:44:18:4418 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 10:44:28:4428 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 10:44:28:4428 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 11:18:46:1846 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 11:18:47:1847 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 11:18:50:1850 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 11:18:51:1851 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 11:18:51:1851 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 11:18:51:1851 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 11:19:01:191 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 11:19:01:191 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 15:07:46:746 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 15:07:48:748 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 15:07:52:752 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 15:07:52:752 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 15:07:52:752 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 15:07:52:752 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 15:08:02:82 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 15:08:03:83 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 15:27:37:2737 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 15:27:39:2739 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 15:27:40:2740 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 15:27:40:2740 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 15:27:40:2740 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 15:27:50:2750 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 15:27:50:2750 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 16:31:12:3112 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 16:31:14:3114 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 16:31:15:3115 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 16:31:15:3115 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 16:31:16:3116 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 16:31:16:3116 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 16:31:26:3126 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 16:31:26:3126 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 17:00:35:035 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:00:59:059 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:02:26:226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:03:22:322 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:15:415 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:16:416 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:11:09:119 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:11:11:1111 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:13:37:1337 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:43:50:4350 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 17:43:52:4352 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 17:43:55:4355 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 17:43:56:4356 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 17:43:56:4356 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 17:43:56:4356 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 17:44:06:446 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 17:44:06:446 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 17:45:26:4526 [31merror[39m: [31m404 - Can't find /api/reports/payment?month=8&year=2026 on this server! - /api/reports/payment?month=8&year=2026 - GET - ::1[39m
+2026-08-03 17:56:56:5656 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 17:57:00:570 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 17:57:01:571 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 17:57:01:571 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 17:57:01:571 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 17:57:11:5711 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 17:57:11:5711 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 18:09:04:94 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 18:35:40:3540 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 18:35:42:3542 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 18:35:42:3542 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 18:35:42:3542 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 18:35:42:3542 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 18:35:52:3552 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 18:35:52:3552 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-03 18:38:19:3819 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-03 18:38:22:3822 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-03 18:38:23:3823 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-03 18:38:23:3823 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-03 18:38:23:3823 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-03 18:38:33:3833 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-03 18:38:33:3833 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 09:41:25:4125 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 09:41:27:4127 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 09:41:30:4130 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 09:41:31:4131 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 09:41:31:4131 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 09:41:31:4131 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 09:41:41:4141 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 09:41:41:4141 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 09:48:10:4810 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 10:11:54:1154 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:11:56:1156 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:11:57:1157 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:11:57:1157 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:11:57:1157 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:12:07:127 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:12:07:127 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 10:12:15:1215 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:12:17:1217 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:12:17:1217 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:12:17:1217 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:12:17:1217 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:12:27:1227 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:12:27:1227 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 10:13:16:1316 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:13:18:1318 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:13:19:1319 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:13:19:1319 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:13:19:1319 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:13:29:1329 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:13:29:1329 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 10:13:57:1357 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:14:00:140 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:14:00:140 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:14:00:140 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:14:00:140 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:14:10:1410 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:14:11:1411 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 10:40:33:4033 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:40:36:4036 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:40:36:4036 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:40:36:4036 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:40:36:4036 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:40:46:4046 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:40:46:4046 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 10:57:46:5746 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:57:47:5747 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 10:57:50:5750 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 10:57:51:5751 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 10:57:51:5751 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 10:57:51:5751 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 10:58:01:581 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 10:58:01:581 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:06:50:650 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:06:52:652 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:06:53:653 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:06:53:653 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:06:53:653 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:06:59:659 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:07:03:73 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:07:03:73 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:07:03:73 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:07:03:73 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:07:13:713 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:07:14:714 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:07:17:717 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:07:20:720 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:07:21:721 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:07:21:721 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:07:21:721 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:07:31:731 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:07:31:731 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:09:11:911 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:09:15:915 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:09:16:916 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:09:16:916 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:09:16:916 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:09:26:926 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:09:26:926 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:09:32:932 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:09:34:934 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:09:35:935 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:09:35:935 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:09:35:935 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:09:45:945 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:09:48:948 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:09:49:949 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:09:49:949 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:09:49:949 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:09:59:959 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:09:59:959 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:10:13:1013 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:10:16:1016 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:10:17:1017 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:10:17:1017 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:10:17:1017 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:10:23:1023 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:10:26:1026 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:10:27:1027 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:10:27:1027 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:10:27:1027 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:10:37:1037 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:10:37:1037 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:12:57:1257 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=false - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:42:1442 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:16:06:166 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:17:59:1759 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:18:02:182 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:18:03:183 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:18:03:183 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:18:03:183 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:18:13:1813 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:18:13:1813 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:26:53:2653 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:26:57:2657 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:26:57:2657 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:26:57:2657 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:26:57:2657 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:27:07:277 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:27:07:277 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 11:48:28:4828 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 11:48:32:4832 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 11:48:32:4832 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 11:48:32:4832 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 11:48:32:4832 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 11:48:42:4842 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 11:48:42:4842 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 12:15:01:151 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:15:02:152 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:15:05:155 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 12:15:05:155 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 12:15:05:155 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 12:15:05:155 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 12:15:15:1515 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 12:15:15:1515 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 12:16:51:1651 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:16:54:1654 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 12:16:54:1654 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 12:16:54:1654 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 12:16:54:1654 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 12:17:04:174 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 12:17:04:174 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 12:17:18:1718 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:17:21:1721 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 12:17:21:1721 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 12:17:21:1721 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 12:17:21:1721 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 12:17:31:1731 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 12:17:31:1731 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 12:20:03:203 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:20:04:204 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 12:20:09:209 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-04 12:20:09:209 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 12:20:09:209 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 12:20:09:209 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 12:20:10:2010 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 12:20:10:2010 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 12:20:10:2010 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 12:20:10:2010 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 12:20:19:2019 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 12:20:19:2019 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 12:20:20:2020 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 12:20:20:2020 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-04 14:21:56:2156 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 14:21:56:2156 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-04 14:22:00:220 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-04 14:22:00:220 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 14:22:00:220 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 14:22:00:220 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 14:22:01:221 [32minfo[39m: [32mSynced Task, Amendment, Case, and Alert tables.[39m
+2026-08-04 14:22:01:221 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-04 14:22:02:222 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-04 14:22:02:222 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-04 14:22:10:2210 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 14:22:10:2210 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-04 14:22:12:2212 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-04 14:22:12:2212 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m

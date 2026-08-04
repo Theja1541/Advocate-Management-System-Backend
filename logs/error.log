@@ -7495,3 +7495,34 @@
 2026-08-03 10:32:41:3241 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
 2026-08-03 10:32:45:3245 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
 2026-08-03 10:32:46:3246 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases/11 - PUT - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-03 16:59:17:5917 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 16:59:20:5920 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-03 17:00:35:035 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:00:59:059 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:02:26:226 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:03:22:322 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:14:414 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:15:415 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:04:16:416 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:11:09:119 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:11:11:1111 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:13:37:1337 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-03 17:14:04:144 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-03 17:45:26:4526 [31merror[39m: [31m404 - Can't find /api/reports/payment?month=8&year=2026 on this server! - /api/reports/payment?month=8&year=2026 - GET - ::1[39m
+2026-08-03 18:09:04:94 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 09:48:10:4810 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 11:12:57:1257 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=false - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:27:1427 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:36:1436 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:14:42:1442 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 11:16:06:166 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 13:05:27:527 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
