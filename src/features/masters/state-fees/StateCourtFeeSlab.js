@@ -11,6 +11,11 @@ StateCourtFeeSlab.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     ruleId: {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,

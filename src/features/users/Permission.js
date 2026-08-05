@@ -18,8 +18,8 @@ Permission.init(
       field: 'module_id',
     },
     accessLevel: {
-      type: DataTypes.ENUM('—', 'V', 'VE', 'VA', 'VEA'),
-      defaultValue: '—',
+      type: DataTypes.ENUM('---', 'V', 'VE', 'VA', 'VEA'),
+      defaultValue: '---',
       allowNull: false,
       field: 'access_level',
     },

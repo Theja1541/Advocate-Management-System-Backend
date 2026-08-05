@@ -4,12 +4,8 @@ const fs = require('fs');
 const AppError = require('../utils/AppError');
 
 // Retrieve upload directory from env or default to uploads/bare-acts
-const uploadDir = process.env.BARE_ACT_UPLOAD_DIR || 'uploads/bare-acts';
-
-// Ensure upload directory exists dynamically
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
-}
+const os = require('os');
+const uploadDir = os.tmpdir();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

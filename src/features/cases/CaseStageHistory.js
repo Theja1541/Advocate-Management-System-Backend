@@ -11,6 +11,11 @@ CaseStageHistory.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     caseId: {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,

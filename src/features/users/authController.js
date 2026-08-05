@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const ms = require('ms');
-const { User, Role, Advocate } = require('../associations');
+const { User, Role, Advocate, Tenant } = require('../associations');
 const AppError = require('../../utils/AppError');
 const logger = require('../../config/logger');
 
@@ -16,6 +16,8 @@ const roleInclude = {
   attributes: ['id', 'name'],
 };
 
+
+const tenantInclude = { model: Tenant, as: 'tenant', attributes: ['name', 'logo'] };
 const advocateInclude = {
   model: Advocate,
   as: 'advocateProfile',
@@ -47,6 +49,8 @@ const signAccessToken = (user) => {
     name: user.name,
     roleId: user.roleId,
     role: getRoleName(user),
+    tenantId: user.tenantId,
+  tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
   };
   const advocateId = getAdvocateId(user);
   if (advocateId != null) {
@@ -71,12 +75,14 @@ const toAuthUser = (user) => ({
   role: getRoleName(user),
   status: user.status,
   advocateId: getAdvocateId(user),
+  tenantId: user.tenantId,
+  tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
 });
 
 const findAuthUserById = async (id) => {
   return User.findByPk(id, {
-    attributes: ['id', 'name', 'email', 'roleId', 'status'],
-    include: [roleInclude, advocateInclude],
+    attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId'],
+    include: [roleInclude, advocateInclude, tenantInclude],
   });
 };
 
@@ -90,8 +96,8 @@ exports.login = async (req, res, next) => {
 
     const user = await User.findOne({
       where: { email, status: 'active' },
-      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status'],
-      include: [roleInclude, advocateInclude],
+      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status', 'tenantId'],
+      include: [roleInclude, advocateInclude, tenantInclude],
     });
 
     if (!user || !(await bcrypt.compare(password, user.passwordHash))) {

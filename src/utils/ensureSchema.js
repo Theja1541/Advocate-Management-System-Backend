@@ -76,6 +76,16 @@ const ensureTasksTable = async () => {
   }
 };
 
+const ensureGlobalSettingsTable = async () => {
+  try {
+    const { GlobalSetting } = require('../features/associations');
+    await GlobalSetting.sync({ alter: true });
+    logger.info('Synced GlobalSetting table.');
+  } catch (error) {
+    logger.warn('ensureGlobalSettingsTable failed:', error.message);
+  }
+};
+
 const ensureStateCourtFeeTables = async () => {
   try {
     const { StateCourtFeeRule, StateCourtFeeSlab } = require('../features/associations');
@@ -290,4 +300,4 @@ const ensureStateCourtFeeTables = async () => {
   }
 };
 
-module.exports = { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded, ensureTasksTable, ensureStateCourtFeeTables };
+module.exports = { ensureAdvocateUserIdColumn, linkDemoAdvocateIfNeeded, ensureTasksTable, ensureStateCourtFeeTables, ensureGlobalSettingsTable };

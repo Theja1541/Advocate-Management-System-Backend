@@ -11,6 +11,11 @@ User.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     name: {
       type: DataTypes.STRING(120),
       allowNull: false,

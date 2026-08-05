@@ -116,7 +116,7 @@ exports.deleteRole = async (req, res, next) => {
 
 // --- Permissions Assignment ---
 
-const VALID_LEVELS = ['—', 'V', 'VE', 'VA', 'VEA'];
+const VALID_LEVELS = ['---', 'V', 'VE', 'VA', 'VEA'];
 
 const upsertPermission = async ({ roleId, moduleId, accessLevel }, options = {}) => {
   const role = await Role.findByPk(roleId, {

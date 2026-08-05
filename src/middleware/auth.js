@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const AppError = require('../utils/AppError');
 const logger = require('../config/logger');
+const { tenantContext } = require('../config/database');
+const { checkTenantStatus } = require('./tenantStatus');
 
 const protect = (req, res, next) => {
   let token;
@@ -28,8 +30,15 @@ const protect = (req, res, next) => {
       roleId: decoded.roleId,
       role: decoded.role,
       advocateId: decoded.advocateId ?? null,
+      tenantId: decoded.tenantId ?? null,
     };
-    next();
+
+    const isSuperAdmin = decoded.role === 'Super Admin';
+    const contextData = { tenantId: decoded.tenantId, isSuperAdmin };
+
+    tenantContext.run(contextData, () => {
+      checkTenantStatus(req, res, next);
+    });
   } catch (error) {
     logger.error('JWT Verification Error:', error);
     return next(new AppError('Invalid or expired security token. Please log in again.', 401));

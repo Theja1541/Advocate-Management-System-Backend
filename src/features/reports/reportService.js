@@ -1,4 +1,5 @@
 const { QueryTypes } = require('sequelize');
+const { tenantContext } = require('../../config/database');
 const { sequelize } = require('../../config/database');
 const AppError = require('../../utils/AppError');
 
@@ -387,6 +388,8 @@ const getMembershipReport = async (options = {}) => {
 
 const getDailyReport = async ({ date } = {}) => {
   const reportDate = date || new Date().toISOString().slice(0, 10);
+  const store = tenantContext.getStore() || {};
+  const tenantId = store.tenantId;
 
   const daybook = await sequelize.query(
     `
@@ -402,10 +405,10 @@ const getDailyReport = async ({ date } = {}) => {
       u.name AS recordedBy
     FROM daybook d
     LEFT JOIN users u ON u.id = d.recorded_by
-    WHERE d.transaction_date = :reportDate
+    WHERE ${tenantId ? 'd.tenant_id = :tenantId AND ' : ''}d.transaction_date = :reportDate
     ORDER BY d.id ASC
     `,
-    { replacements: { reportDate }, type: QueryTypes.SELECT }
+    { replacements: { reportDate, tenantId }, type: QueryTypes.SELECT }
   );
 
   const hearings = await sequelize.query(
@@ -421,10 +424,10 @@ const getDailyReport = async ({ date } = {}) => {
     FROM cases c
     LEFT JOIN advocates a ON a.id = c.advocate_id
     LEFT JOIN clients cl ON cl.id = c.client_id
-    WHERE c.next_hearing = :reportDate
+    WHERE ${tenantId ? 'c.tenant_id = :tenantId AND ' : ''}c.next_hearing = :reportDate
     ORDER BY c.court ASC, c.case_no ASC
     `,
-    { replacements: { reportDate }, type: QueryTypes.SELECT }
+    { replacements: { reportDate, tenantId }, type: QueryTypes.SELECT }
   );
 
   const diary = await sequelize.query(
@@ -441,10 +444,10 @@ const getDailyReport = async ({ date } = {}) => {
     FROM case_diaries cd
     LEFT JOIN cases c ON c.id = cd.case_id
     LEFT JOIN advocates a ON a.id = cd.advocate_id
-    WHERE cd.hearing_date = :reportDate
+    WHERE ${tenantId ? 'cd.tenant_id = :tenantId AND ' : ''}cd.hearing_date = :reportDate
     ORDER BY cd.hearing_time ASC, cd.id ASC
     `,
-    { replacements: { reportDate }, type: QueryTypes.SELECT }
+    { replacements: { reportDate, tenantId }, type: QueryTypes.SELECT }
   );
 
   const daybookIn = daybook
@@ -478,6 +481,10 @@ const getMonthlyReport = async ({ month, year } = {}) => {
   const reportYear = Number(year) || now.getFullYear();
   const reportMonth = Number(month) || now.getMonth() + 1;
   const monthStart = `${reportYear}-${String(reportMonth).padStart(2, '0')}-01`;
+  const store = tenantContext.getStore() || {};
+  const tenantId = store.tenantId;
+  const tClause = tenantId ? 'tenant_id = :tenantId' : '1=1';
+  const tClauseAnd = tenantId ? 'tenant_id = :tenantId AND ' : '';
 
   const [caseStats] = await sequelize.query(
     `
@@ -489,7 +496,7 @@ const getMonthlyReport = async ({ month, year } = {}) => {
       SUM(CASE WHEN ${caseWhere} THEN 1 ELSE 0 END) AS openedThisMonth
     FROM cases
     `,
-    { replacements: { monthStart }, type: QueryTypes.SELECT }
+    { replacements: { monthStart, tenantId }, type: QueryTypes.SELECT }
   );
 
   const [paymentStats] = await sequelize.query(
@@ -500,9 +507,9 @@ const getMonthlyReport = async ({ month, year } = {}) => {
       COALESCE(SUM(CASE WHEN party_type = 'Advocate' THEN amount_received ELSE 0 END), 0) AS advocateShares,
       COUNT(*) AS paymentCount
     FROM payments
-    WHERE ${payWhere}
+    WHERE ${tClauseAnd}${payWhere}
     `,
-    { replacements: { monthStart }, type: QueryTypes.SELECT }
+    { replacements: { monthStart, tenantId }, type: QueryTypes.SELECT }
   );
 
   const [daybookStats] = await sequelize.query(
@@ -512,18 +519,18 @@ const getMonthlyReport = async ({ month, year } = {}) => {
       COALESCE(SUM(CASE WHEN type = 'out' THEN amount ELSE 0 END), 0) AS cashOut,
       COUNT(*) AS entryCount
     FROM daybook
-    WHERE ${payWhere}
+    WHERE ${tClauseAnd}${payWhere}
     `,
-    { replacements: { monthStart }, type: QueryTypes.SELECT }
+    { replacements: { monthStart, tenantId }, type: QueryTypes.SELECT }
   );
 
   const [diaryStats] = await sequelize.query(
     `
     SELECT COUNT(*) AS hearingCount
     FROM case_diaries
-    WHERE ${diaryWhere}
+    WHERE ${tClauseAnd}${diaryWhere}
     `,
-    { replacements: { monthStart }, type: QueryTypes.SELECT }
+    { replacements: { monthStart, tenantId }, type: QueryTypes.SELECT }
   );
 
   const courtBreakdown = await sequelize.query(

@@ -10,6 +10,11 @@ CaseDiary.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     caseId: {
       type: DataTypes.BIGINT,
       allowNull: false,

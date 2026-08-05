@@ -1,9 +1,7 @@
-const fs = require('fs').promises;
-const fsClassic = require('fs');
-const path = require('path');
 const crypto = require('crypto');
-const logger = require('../../config/logger');
+const fsClassic = require('fs');
 const AppError = require('../../utils/AppError');
+const globalStorageService = require('../../services/StorageService');
 
 /**
  * Calculates SHA-256 hash of a file on disk
@@ -24,26 +22,9 @@ const calculateHash = (filePath) => {
 const deleteFile = async (filePath) => {
   if (!filePath) return;
   try {
-    const resolvedPath = path.resolve(filePath);
-    
-    // Safety check: ensure file is within allowed upload directory
-    const uploadDir = path.resolve(process.env.BARE_ACT_UPLOAD_DIR || 'uploads/bare-acts');
-    if (!resolvedPath.startsWith(uploadDir)) {
-      logger.warn(`StorageService block: Prevented deletion outside allowed directory: ${resolvedPath}`);
-      return;
-    }
-
-    try {
-      await fs.access(resolvedPath);
-      await fs.unlink(resolvedPath);
-      logger.info(`StorageService: Successfully deleted file asynchronously: ${resolvedPath}`);
-    } catch (err) {
-      if (err.code !== 'ENOENT') {
-        logger.error(`StorageService error deleting file asynchronously: ${resolvedPath}`, err);
-      }
-    }
+    await globalStorageService.deleteFile(filePath);
   } catch (error) {
-    logger.error(`StorageService error deleting file: ${filePath}`, error);
+    // best-effort cleanup
   }
 };
 
@@ -57,17 +38,16 @@ const processUploadedFile = async (file) => {
 
   try {
     const fileHash = await calculateHash(file.path);
+    const savedPath = await globalStorageService.saveFile(file, 'bare-acts');
     return {
       pdfOriginalName: file.originalname,
-      pdfStorageName: file.filename,
-      pdfStoragePath: file.path,
+      pdfStorageName: file.filename, // temp name if needed
+      pdfStoragePath: savedPath,
       pdfSize: file.size,
       mimeType: file.mimetype,
       fileHash,
     };
   } catch (error) {
-    // Clean up file if processing failed
-    await deleteFile(file.path);
     throw new AppError('Failed to process uploaded PDF file.', 500);
   }
 };

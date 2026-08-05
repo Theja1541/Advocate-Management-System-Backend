@@ -11,6 +11,11 @@ Amendment.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     sourceAct: {
       type: DataTypes.STRING(255),
       allowNull: false,

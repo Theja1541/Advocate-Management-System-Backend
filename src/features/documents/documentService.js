@@ -167,7 +167,16 @@ const createDocument = async ({
 }) => {
   validateDocumentFile(file);
 
-  await assertCaseExists(caseId);
+  const caseRecord = await Case.findByPk(caseId, { attributes: ['id', 'tenantId'] });
+  if (!caseRecord) {
+    throw new AppError('Case not found', 400);
+  }
+
+  // Check storage limit
+  if (caseRecord.tenantId) {
+    const tenantService = require('../tenants/tenantService');
+    await tenantService.checkStorageLimit(caseRecord.tenantId, file.size);
+  }
 
   const documentCode = await generateDocumentCode();
   const uploadDate = new Date().toISOString().slice(0, 10);

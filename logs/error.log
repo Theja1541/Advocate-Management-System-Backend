@@ -7526,3 +7526,483 @@
 2026-08-04 11:16:06:166 [31merror[39m: [31m500 - Unknown column 'state_code' in 'field list' - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
 2026-08-04 13:05:27:527 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
 2026-08-04 13:05:27:527 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:12:5212 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:27:5227 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:27:5227 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:52:27:5227 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:27:5227 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:32:5232 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:33:5233 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:33:5233 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:33:5233 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:33:5233 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:33:5233 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mError upserting alert: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.tenant_id' in 'field list'[39m
+2026-08-04 14:52:58:5258 [31merror[39m: [31mAlert Engine: Tasks check failed Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:53:28:5328 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:53:28:5328 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:53:28:5328 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:53:28:5328 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:54:27:5427 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:54:27:5427 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:54:27:5427 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:54:27:5427 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:55:28:5528 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:55:28:5528 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:55:28:5528 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:55:28:5528 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:56:28:5628 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:56:28:5628 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:56:28:5628 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:56:28:5628 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:57:28:5728 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:57:28:5728 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:57:28:5728 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:57:28:5728 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:58:28:5828 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:58:28:5828 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 14:58:28:5828 [31merror[39m: [31mGetAllAlerts error: Unknown column 'tenant_id' in 'field list'[39m
+2026-08-04 14:58:28:5828 [31merror[39m: [31m500 - Unknown column 'tenant_id' in 'field list' - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-04 17:16:22:1622 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:20:41:2041 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:20:41:2041 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:20:41:2041 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:20:41:2041 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:21:23:2123 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:21:23:2123 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:21:23:2123 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:21:23:2123 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:22:36:2236 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:22:36:2236 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:22:42:2242 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:22:42:2242 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:22:42:2242 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:22:42:2242 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:22:45:2245 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:22:45:2245 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:22:45:2245 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:22:45:2245 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:24:52:2452 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:25:44:2544 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:29:28:2928 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:29:28:2928 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:29:28:2928 [31merror[39m: [31mGetAllTenants error: Unknown column 'plan.tenant_id' in 'field list'[39m
+2026-08-04 17:29:28:2928 [31merror[39m: [31m500 - Unknown column 'plan.tenant_id' in 'field list' - /api/v1/tenants - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:33:5433 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:34:5434 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:34:5434 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:34:5434 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:34:5434 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:54:34:5434 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:35:5435 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:54:35:5435 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:04:564 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:04:564 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:09:569 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:13:5613 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:23:5623 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:23:5623 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:24:5624 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:24:5624 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:24:5624 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:24:5624 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:46:5646 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:53:5653 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:56:56:5656 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:57:24:5724 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:58:43:5843 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 17:58:43:5843 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:08:48 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:08:48 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:08:48 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:08:48 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:24:424 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:36:436 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:36:436 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:04:36:436 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:04:36:436 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:08:04:84 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:08:04:84 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:08:04:84 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/roles - GET - ::1[39m
+2026-08-04 18:08:04:84 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'targetTenantId') - /api/v1/roles/modules - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-04 18:40:01:401 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-04 18:40:07:407 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-04 18:40:29:4029 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-04 18:40:35:4035 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-04 18:40:52:4052 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-04 19:10:56:1056 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:10:56:1056 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:10:59:1059 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:10:59:1059 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:11:01:111 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:11:01:111 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:11:03:113 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:11:03:113 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:11:27:1127 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:11:27:1127 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:12:19:1219 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:12:19:1219 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 19:15:14:1514 [31merror[39m: [31mUpdatePermission error: Role not found[39m
+2026-08-04 19:15:14:1514 [31merror[39m: [31m404 - Role not found - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-04 20:18:54:1854 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:18:54:1854 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:18:54:1854 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:18:55:1855 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:20:03:203 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:20:03:203 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:20:35:2035 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:20:35:2035 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:22:38:2238 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:22:38:2238 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:22:38:2238 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:22:38:2238 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:23:05:235 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:23:05:235 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:30:02:302 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:30:03:303 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:30:38:3038 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:30:39:3039 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:32:25:3225 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:32:25:3225 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:33:27:3327 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:35:36:3536 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:35:36:3536 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:35:38:3538 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:35:38:3538 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:37:46:3746 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:37:47:3747 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:40:55:4055 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:40:55:4055 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:45:05:455 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:45:05:455 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:49:54:4954 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:49:54:4954 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:13:5013 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:13:5013 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:13:5013 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:13:5013 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:27:5027 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:50:27:5027 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:51:03:513 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:51:03:513 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:51:26:5126 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:51:30:5130 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:51:31:5131 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:52:22:5222 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:52:22:5222 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:52:35:5235 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:52:35:5235 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:53:36:5336 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:53:36:5336 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:55:51:5551 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-04 20:55:51:5551 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-05 10:11:03:113 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-05 10:11:16:1116 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-05 10:13:19:1319 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/payments - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/cases - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/clients - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/advocates - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/diary - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/daybook - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts? - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/lands - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/opinions - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/memberships - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/acts - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/amendments - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/cases - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/clients - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/advocates - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/diary - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/daybook - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/payments - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts? - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/lands - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/opinions - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/memberships - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/acts - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/amendments - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:21:1321 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:22:1322 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:22:1322 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:26:1326 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:26:1326 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:29:1329 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:29:1329 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:30:1330 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:31:1331 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:31:1331 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:31:1331 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:31:1331 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/cases - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/clients - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/advocates - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/payments - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/diary - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/daybook - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts? - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/opinions - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/memberships - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/acts - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/lands - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/amendments - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/dashboard - GET - ::1[39m
+2026-08-05 10:13:44:1344 [31merror[39m: [31m403 - Your organization account is suspended. Please contact support. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:27:32:2732 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 10:59:27:5927 [31merror[39m: [31mTenant status check error: Unknown column 'address' in 'field list'[39m
+2026-08-05 10:59:27:5927 [31merror[39m: [31m500 - Internal server error during tenant validation - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 10:59:36:5936 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 10:59:57:5957 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:00:27:027 [31merror[39m: [31mTenant status check error: Unknown column 'address' in 'field list'[39m
+2026-08-05 11:00:27:027 [31merror[39m: [31m500 - Internal server error during tenant validation - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 11:00:50:050 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:01:27:127 [31merror[39m: [31mTenant status check error: Unknown column 'address' in 'field list'[39m
+2026-08-05 11:01:27:127 [31merror[39m: [31m500 - Internal server error during tenant validation - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-05 11:01:30:130 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:01:44:144 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:29:26:2926 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:32:18:3218 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:33:13:3313 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 11:34:16:3416 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:34:16:3416 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:35:32:3532 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:35:32:3532 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:36:45:3645 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:36:45:3645 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:07:377 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:07:377 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:15:3715 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:15:3715 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:34:3734 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:37:34:3734 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:38:20:3820 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:38:20:3820 [31merror[39m: [31m404 - Can't find /api/v1/tenants/stats on this server! - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-05 11:40:35:4035 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 12:57:19:5719 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:31:04:314 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:46:19:4619 [31merror[39m: [31mGetPublicSettings error: Table 'advocate_management_system.global_settings' doesn't exist[39m
+2026-08-05 15:46:19:4619 [31merror[39m: [31m500 - Table 'advocate_management_system.global_settings' doesn't exist - /api/v1/settings/public - GET - ::1[39m
+2026-08-05 15:46:19:4619 [31merror[39m: [31mGetPublicSettings error: Table 'advocate_management_system.global_settings' doesn't exist[39m
+2026-08-05 15:46:19:4619 [31merror[39m: [31m500 - Table 'advocate_management_system.global_settings' doesn't exist - /api/v1/settings/public - GET - ::1[39m
+2026-08-05 15:46:22:4622 [31merror[39m: [31mGetPublicSettings error: Table 'advocate_management_system.global_settings' doesn't exist[39m
+2026-08-05 15:46:22:4622 [31merror[39m: [31m500 - Table 'advocate_management_system.global_settings' doesn't exist - /api/v1/settings/public - GET - ::1[39m
+2026-08-05 15:46:25:4625 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:46:47:4647 [31merror[39m: [31mGetPublicSettings error: Table 'advocate_management_system.global_settings' doesn't exist[39m
+2026-08-05 15:46:47:4647 [31merror[39m: [31m500 - Table 'advocate_management_system.global_settings' doesn't exist - /api/v1/settings/public - GET - ::1[39m
+2026-08-05 15:46:47:4647 [31merror[39m: [31mGetPublicSettings error: Table 'advocate_management_system.global_settings' doesn't exist[39m
+2026-08-05 15:46:47:4647 [31merror[39m: [31m500 - Table 'advocate_management_system.global_settings' doesn't exist - /api/v1/settings/public - GET - ::1[39m
+2026-08-05 15:46:50:4650 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:47:48:4748 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:55:21:5521 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 15:58:05:585 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 16:00:33:033 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-05 16:00:38:038 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-05 16:35:41:3541 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 16:50:54:5054 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 16:53:56:5356 [31merror[39m: [31m500 - Validation error - /api/v1/masters/case-types - POST - ::1[39m
+2026-08-05 16:54:01:541 [31merror[39m: [31m500 - Validation error - /api/v1/masters/case-types - POST - ::1[39m
+2026-08-05 17:01:16:116 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:01:47:147 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:03:38:338 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:04:08:48 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:06:00:60 [31merror[39m: [31m500 - Validation error - /api/v1/masters/case-types - POST - ::1[39m
+2026-08-05 17:06:18:618 [31merror[39m: [31m500 - Validation error - /api/v1/masters/case-types - POST - ::1[39m
+2026-08-05 17:12:43:1243 [31merror[39m: [31mCreateAct error: Validation error[39m
+2026-08-05 17:12:43:1243 [31merror[39m: [31m500 - Validation error - /api/v1/acts - POST - ::1[39m
+2026-08-05 17:12:55:1255 [31merror[39m: [31mCreateAct error: Validation error[39m
+2026-08-05 17:12:55:1255 [31merror[39m: [31m500 - Validation error - /api/v1/acts - POST - ::1[39m
+2026-08-05 17:13:41:1341 [31merror[39m: [31mCreateAct error: Validation error[39m
+2026-08-05 17:13:41:1341 [31merror[39m: [31m500 - Validation error - /api/v1/acts - POST - ::1[39m
+2026-08-05 17:13:49:1349 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:15:43:1543 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:16:11:1611 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:17:16:1716 [31merror[39m: [31mCreateAct error: Validation error[39m
+2026-08-05 17:17:16:1716 [31merror[39m: [31m500 - Validation error - /api/v1/acts - POST - ::1[39m
+2026-08-05 17:18:12:1812 [31merror[39m: [31mCreateAct error: Validation error[39m
+2026-08-05 17:18:12:1812 [31merror[39m: [31m500 - Validation error - /api/v1/acts - POST - ::1[39m
+2026-08-05 17:22:48:2248 [31merror[39m: [31mCreateDaybookEntry error: Validation error[39m
+2026-08-05 17:22:48:2248 [31merror[39m: [31m500 - Validation error - /api/v1/daybook - POST - ::1[39m
+2026-08-05 17:30:11:3011 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:30:44:3044 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:30:56:3056 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:33:27:3327 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:34:05:345 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:42:13:4213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:42:13:4213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 17:42:13:4213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 18:59:38:5938 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 18:59:38:5938 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 18:59:38:5938 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:35:46:3546 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:35:46:3546 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:35:46:3546 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:40:54:4054 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:40:54:4054 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 22:40:54:4054 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m

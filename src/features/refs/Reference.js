@@ -10,10 +10,14 @@ Reference.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     citation: {
       type: DataTypes.STRING(100),
       allowNull: false,
-      unique: true,
     },
     title: {
       type: DataTypes.STRING(200),
@@ -51,6 +55,12 @@ Reference.init(
     tableName: 'references_library',
     underscored: true,
     timestamps: true,
+    indexes: [
+      {
+        unique: true,
+        fields: ['tenant_id', 'citation'],
+      }
+    ],
     updatedAt: false,
   }
 );

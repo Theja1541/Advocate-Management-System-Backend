@@ -10,10 +10,15 @@ Role.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     name: {
       type: DataTypes.STRING(50),
       allowNull: false,
-      unique: true,
+      
     },
     description: {
       type: DataTypes.TEXT,

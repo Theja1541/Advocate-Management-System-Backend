@@ -15,9 +15,9 @@ router.use(protect);
 
 router
   .route('/')
-  .get(authorizePermission('docs', 'V'), referenceController.getAllReferences)
+  .get(authorizePermission('refs', 'V'), referenceController.getAllReferences)
   .post(
-    authorizePermission('docs', 'E'),
+    authorizePermission('refs', 'E'),
     ...createReferenceRules,
     validate,
     referenceController.createReference
@@ -26,19 +26,19 @@ router
 router
   .route('/:id')
   .get(
-    authorizePermission('docs', 'V'),
+    authorizePermission('refs', 'V'),
     ...referenceIdParamRules,
     validate,
     referenceController.getReferenceById
   )
   .put(
-    authorizePermission('docs', 'E'),
+    authorizePermission('refs', 'E'),
     ...updateReferenceRules,
     validate,
     referenceController.updateReference
   )
   .delete(
-    authorizePermission('docs', 'E'),
+    authorizePermission('refs', 'E'),
     ...referenceIdParamRules,
     validate,
     referenceController.deleteReference

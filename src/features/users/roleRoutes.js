@@ -2,12 +2,16 @@ const express = require('express');
 const { body } = require('express-validator');
 const roleController = require('./roleController');
 const { protect, restrictTo } = require('../../middleware/auth');
+const { tenantImpersonator } = require('../../middleware/tenantImpersonator');
 const validate = require('../../middleware/validate');
 
 const router = express.Router();
 
 // All roles & permissions routes require active authorization
 router.use(protect);
+
+// Apply tenant impersonation for Super Admins
+router.use(tenantImpersonator);
 
 // Read-only modules and roles accessible by authenticated users
 router.get('/roles', roleController.getAllRoles);
@@ -55,7 +59,7 @@ router.put(
       .withMessage('Valid Module ID is required'),
     body('accessLevel')
       .optional()
-      .isIn(['—', 'V', 'VE', 'VA', 'VEA'])
+      .isIn(['---', 'V', 'VE', 'VA', 'VEA'])
       .withMessage('Invalid access level specified'),
     body('permissions')
       .optional()
@@ -71,7 +75,7 @@ router.put(
       .withMessage('Valid Module ID is required'),
     body('permissions.*.accessLevel')
       .optional()
-      .isIn(['—', 'V', 'VE', 'VA', 'VEA'])
+      .isIn(['---', 'V', 'VE', 'VA', 'VEA'])
       .withMessage('Invalid access level specified'),
     validate,
   ],

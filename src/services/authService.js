@@ -9,6 +9,7 @@ const { Role, Module, Permission } = require('../features/associations');
  * @returns {Promise<boolean>} - True if permission is granted, otherwise false.
  */
 const checkPermission = async (userRoleName, moduleKey, action = 'V') => {
+  if (userRoleName === 'Super Admin') return true;
   const role = await Role.findOne({ where: { name: userRoleName } });
   const moduleObj = await Module.findOne({ where: { keyCode: moduleKey } });
 

@@ -156,7 +156,7 @@ const createAttachmentsForDiary = async (diaryId, caseId, files, uploadedBy, tra
         diaryId,
         fileType: resolveFileType(file.originalname, file.mimetype),
         fileSize: formatFileSize(file.size),
-        filePath: file.path || path.join('uploads', file.filename),
+        filePath: await StorageService.saveFile(file, 'diaries'),
         searchContent,
         uploadedBy: uploadedBy || null,
         uploadDate,
@@ -171,7 +171,7 @@ const createAttachmentsForDiary = async (diaryId, caseId, files, uploadedBy, tra
         diaryId,
         fileType: resolveFileType(file.originalname, file.mimetype),
         fileSize: formatFileSize(file.size),
-        filePath: file.path || path.join('uploads', file.filename),
+        filePath: await StorageService.saveFile(file, 'diaries'),
         uploadedBy: uploadedBy || null,
         uploadDate,
       }, { transaction });

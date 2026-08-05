@@ -10,6 +10,11 @@ Land.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     surveyNo: {
       type: DataTypes.STRING(50),
       allowNull: false,

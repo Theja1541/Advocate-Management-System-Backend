@@ -11,10 +11,14 @@ CaseStage.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     code: {
       type: DataTypes.STRING(30),
       allowNull: false,
-      unique: true,
     },
     name: {
       type: DataTypes.STRING(100),
@@ -68,6 +72,12 @@ CaseStage.init(
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
+    indexes: [
+      {
+        unique: true,
+        fields: ['tenant_id', 'code']
+      }
+    ]
   }
 );
 

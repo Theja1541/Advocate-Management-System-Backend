@@ -10,6 +10,11 @@ Alert.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     referenceType: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -64,7 +69,7 @@ Alert.init(
     indexes: [
       {
         unique: true,
-        fields: ['reference_type', 'reference_id', 'alert_type'],
+        fields: ['tenant_id', 'reference_type', 'reference_id', 'alert_type'],
         name: 'idx_alert_unique_ref',
       },
     ],

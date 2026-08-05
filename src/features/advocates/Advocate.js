@@ -11,6 +11,11 @@ Advocate.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     name: {
       type: DataTypes.STRING(140),
       allowNull: false,
@@ -22,7 +27,6 @@ Advocate.init(
     email: {
       type: DataTypes.STRING(160),
       allowNull: true,
-      unique: true,
       validate: {
         isEmail: true,
       },
@@ -52,7 +56,6 @@ Advocate.init(
     userId: {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: true,
-      unique: true,
       field: 'user_id',
       references: {
         model: 'users',
@@ -73,11 +76,11 @@ Advocate.init(
     indexes: [
       {
         unique: true,
-        fields: ['email'],
+        fields: ['tenant_id', 'email'],
       },
       {
         unique: true,
-        fields: ['user_id'],
+        fields: ['tenant_id', 'user_id'],
       },
     ],
   }

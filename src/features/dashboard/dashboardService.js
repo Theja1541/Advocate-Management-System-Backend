@@ -11,6 +11,7 @@ const {
   CaseType,
   CaseStage,
 } = require('../associations');
+const { tenantContext } = require('../../config/database');
 
 
 const formatDisplayDate = (date) => {
@@ -62,8 +63,14 @@ const getDashboard = async ({ advocateId } = {}) => {
     },
   });
 
+    const store = tenantContext.getStore();
+  const paymentWhere = { amountOutstanding: { [Op.gt]: 0 } };
+  if (store && store.tenantId) {
+    paymentWhere.tenantId = store.tenantId;
+  }
+
   const duePaymentAmountResult = await Payment.sum('amount_outstanding', {
-    where: { amountOutstanding: { [Op.gt]: 0 } },
+    where: paymentWhere,
     include: [{
       model: Case,
       as: 'case',

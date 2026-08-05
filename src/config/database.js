@@ -1,8 +1,12 @@
 const { Sequelize } = require('sequelize');
+const { AsyncLocalStorage } = require('async_hooks');
 const dotenv = require('dotenv');
 const logger = require('./logger');
 
 dotenv.config();
+
+const tenantContext = new AsyncLocalStorage();
+
 
 const sequelize = new Sequelize(
   process.env.DB_NAME || 'legal_desk_db',
@@ -26,6 +30,47 @@ const sequelize = new Sequelize(
   }
 );
 
+// Global hooks for tenant scoping
+sequelize.addHook('beforeCount', function(options) {
+  const model = this;
+  if (options.bypassTenant) return;
+  const store = tenantContext.getStore();
+  if (store && store.tenantId && model.rawAttributes.tenantId) {
+    options.where = options.where || {};
+    options.where.tenantId = store.tenantId;
+  }
+});
+
+sequelize.addHook('beforeFind', function(options) {
+  const model = this;
+  if (options.bypassTenant) return;
+  const store = tenantContext.getStore();
+  if (store && store.tenantId && model.rawAttributes.tenantId) {
+    options.where = options.where || {};
+    options.where.tenantId = store.tenantId;
+  }
+});
+
+
+sequelize.addHook('beforeValidate', (instance, options) => {
+  if (options.bypassTenant) return;
+  const store = tenantContext.getStore();
+  const rawAttrs = instance.rawAttributes || instance.constructor.rawAttributes;
+  if (store && store.tenantId && rawAttrs && rawAttrs.tenantId) {
+    instance.tenantId = store.tenantId;
+  }
+});
+
+sequelize.addHook('beforeCreate', (instance, options) => {
+  if (options.bypassTenant) return;
+  const store = tenantContext.getStore();
+  const rawAttrs = instance.rawAttributes || instance.constructor.rawAttributes;
+  if (store && store.tenantId && rawAttrs && rawAttrs.tenantId) {
+    instance.tenantId = store.tenantId;
+  }
+});
+
+
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
@@ -35,5 +80,5 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+module.exports = { sequelize, tenantContext, connectDB };
 
-module.exports = { sequelize, connectDB };

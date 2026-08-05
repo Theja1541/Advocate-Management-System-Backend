@@ -31,11 +31,16 @@ const dashboardRoutes = require('./features/dashboard/dashboardRoutes');
 const mastersRoutes = require('./features/masters/mastersRoutes');
 const taskRoutes = require('./features/tasks/taskRoutes');
 const searchRoutes = require('./features/search/searchRoutes');
+const tenantRoutes = require('./features/tenants/tenantRoutes');
+const subscriptionPlanRoutes = require('./features/tenants/subscriptionPlanRoutes');
+const settingsRoutes = require('./features/settings/settingsRoutes');
 
 const app = express();
 
 // Security Headers
-app.use(helmet());
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" },
+}));
 
 // CORS config
 const corsOptions = {
@@ -95,6 +100,9 @@ app.use('/api/v1/dashboard', dashboardRoutes);
 app.use('/api/v1/masters', mastersRoutes);
 app.use('/api/v1/tasks', taskRoutes);
 app.use('/api/v1/search', searchRoutes);
+app.use('/api/v1/tenants', tenantRoutes);
+app.use('/api/v1/plans', subscriptionPlanRoutes);
+app.use('/api/v1/settings', settingsRoutes);
 
 // Serve uploads and bare-act PDFs statically
 app.use('/uploads', express.static('uploads'));

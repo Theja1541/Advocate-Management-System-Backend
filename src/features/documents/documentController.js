@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const StorageService = require('../../services/StorageService');
 const documentService = require('./documentService');
 const logger = require('../../config/logger');
 const AppError = require('../../utils/AppError');

@@ -16,9 +16,9 @@ router.use(protect);
 
 router
   .route('/')
-  .get(authorizePermission('diary', 'V'), diaryController.getAllDiaries)
+  .get(authorizePermission('hearings', 'V'), diaryController.getAllDiaries)
   .post(
-    authorizePermission('diary', 'E'),
+    authorizePermission('hearings', 'E'),
     upload.array('files', 10),
     ...createDiaryRules,
     validate,
@@ -28,20 +28,20 @@ router
 router
   .route('/:id')
   .get(
-    authorizePermission('diary', 'V'),
+    authorizePermission('hearings', 'V'),
     ...diaryIdParamRules,
     validate,
     diaryController.getDiaryById
   )
   .put(
-    authorizePermission('diary', 'E'),
+    authorizePermission('hearings', 'E'),
     upload.array('files', 10),
     ...updateDiaryRules,
     validate,
     diaryController.updateDiary
   )
   .delete(
-    authorizePermission('diary', 'E'),
+    authorizePermission('hearings', 'E'),
     ...diaryIdParamRules,
     validate,
     diaryController.deleteDiary

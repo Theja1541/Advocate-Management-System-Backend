@@ -10,10 +10,14 @@ Payment.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     receiptNo: {
       type: DataTypes.STRING(20),
       allowNull: false,
-      unique: true,
       field: 'receipt_no',
     },
     caseId: {

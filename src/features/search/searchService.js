@@ -1,5 +1,5 @@
 const { Op, fn, col, where, QueryTypes } = require('sequelize');
-const { sequelize } = require('../../config/database');
+const { sequelize, tenantContext } = require('../../config/database');
 const { CaseDiary, Document, Case } = require('../associations');
 
 const DEFAULT_LIMIT = 20;
@@ -110,6 +110,11 @@ const searchDocuments = async ({ keyword, limit, advocateId }) => {
 };
 
 const searchWithMySqlFullText = async ({ keyword, limit, advocateId }) => {
+  const store = tenantContext.getStore() || {};
+  const tenantId = store.tenantId;
+  const tenantClauseCd = tenantId ? 'AND cd.tenant_id = :tenantId' : '';
+  const tenantClauseC = tenantId ? 'AND c.tenant_id = :tenantId' : '';
+  
   const advocateClause = advocateId != null ? 'AND c.advocate_id = :advocateId' : '';
   const against = `${keyword}*`;
 
@@ -122,15 +127,19 @@ const searchWithMySqlFullText = async ({ keyword, limit, advocateId }) => {
       FROM case_diaries cd
       INNER JOIN cases c ON c.id = cd.case_id
       WHERE MATCH(cd.note) AGAINST(:against IN BOOLEAN MODE)
+      ${tenantClauseCd}
+      ${tenantClauseC}
       ${advocateClause}
       ORDER BY cd.id DESC
       LIMIT :limit
     `,
     {
-      replacements: { against, advocateId, limit },
+      replacements: { against, advocateId, limit, tenantId },
       type: QueryTypes.SELECT,
     }
   );
+
+  const tenantClauseD = tenantId ? 'AND d.tenant_id = :tenantId' : '';
 
   const documents = await sequelize.query(
     `
@@ -141,12 +150,14 @@ const searchWithMySqlFullText = async ({ keyword, limit, advocateId }) => {
       FROM documents d
       INNER JOIN cases c ON c.id = d.case_id
       WHERE MATCH(d.search_content) AGAINST(:against IN BOOLEAN MODE)
+      ${tenantClauseD}
+      ${tenantClauseC}
       ${advocateClause}
       ORDER BY d.id DESC
       LIMIT :limit
     `,
     {
-      replacements: { against, advocateId, limit },
+      replacements: { against, advocateId, limit, tenantId },
       type: QueryTypes.SELECT,
     }
   );

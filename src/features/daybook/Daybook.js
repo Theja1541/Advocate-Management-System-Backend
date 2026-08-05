@@ -10,10 +10,14 @@ Daybook.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     daybookCode: {
       type: DataTypes.STRING(20),
       allowNull: false,
-      unique: true,
       field: 'daybook_code',
     },
     transactionDate: {

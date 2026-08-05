@@ -10,6 +10,11 @@ Membership.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     advocateId: {
       type: DataTypes.BIGINT,
       allowNull: false,

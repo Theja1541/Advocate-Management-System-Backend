@@ -10,10 +10,14 @@ Opinion.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     referenceNo: {
       type: DataTypes.STRING(30),
       allowNull: false,
-      unique: true,
       field: 'reference_no',
     },
     clientId: {

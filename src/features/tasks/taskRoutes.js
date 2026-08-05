@@ -15,9 +15,9 @@ router.use(protect);
 
 router
   .route('/')
-  .get(authorizePermission('cases', 'V'), taskController.getAllTasks) // Let's use the cases key permission or simple V, or just cases for tasks
+  .get(authorizePermission('tasks', 'V'), taskController.getAllTasks) // Let's use the cases key permission or simple V, or just cases for tasks
   .post(
-    authorizePermission('cases', 'E'),
+    authorizePermission('tasks', 'E'),
     ...createTaskRules,
     validate,
     taskController.createTask
@@ -26,19 +26,19 @@ router
 router
   .route('/:id')
   .get(
-    authorizePermission('cases', 'V'),
+    authorizePermission('tasks', 'V'),
     ...taskIdParamRules,
     validate,
     taskController.getTaskById
   )
   .put(
-    authorizePermission('cases', 'E'),
+    authorizePermission('tasks', 'E'),
     ...updateTaskRules,
     validate,
     taskController.updateTask
   )
   .delete(
-    authorizePermission('cases', 'E'),
+    authorizePermission('tasks', 'E'),
     ...taskIdParamRules,
     validate,
     taskController.deleteTask

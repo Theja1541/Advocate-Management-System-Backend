@@ -11,6 +11,11 @@ StateCourtFeeRule.init(
       autoIncrement: true,
       allowNull: false,
     },
+    tenantId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      field: 'tenant_id',
+    },
     stateCode: {
       type: DataTypes.STRING(10),
       allowNull: false,

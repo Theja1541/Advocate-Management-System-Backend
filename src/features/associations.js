@@ -2,6 +2,10 @@ const Role = require('./users/Role');
 const User = require('./users/User');
 const Module = require('./users/Module');
 const Permission = require('./users/Permission');
+const Tenant = require('./tenants/Tenant');
+const TenantSetting = require('./tenants/TenantSetting');
+const SubscriptionPlan = require('./tenants/SubscriptionPlan');
+const TenantSubscription = require('./tenants/TenantSubscription');
 const Client = require('./clients/Client');
 const Advocate = require('./advocates/Advocate');
 const Case = require('./cases/Case');
@@ -24,6 +28,30 @@ const Task = require('./tasks/Task');
 const DocumentCategory = require('./masters/document-categories/DocumentCategory');
 const StateCourtFeeRule = require('./masters/state-fees/StateCourtFeeRule');
 const StateCourtFeeSlab = require('./masters/state-fees/StateCourtFeeSlab');
+const GlobalSetting = require('./settings/GlobalSetting');
+
+// Tenant Relationships
+Tenant.hasMany(TenantSetting, { foreignKey: 'tenant_id', as: 'settings', onDelete: 'CASCADE' });
+TenantSetting.belongsTo(Tenant, { foreignKey: 'tenant_id', as: 'tenant' });
+
+Tenant.hasMany(TenantSubscription, { foreignKey: 'tenant_id', as: 'subscriptions', onDelete: 'CASCADE' });
+TenantSubscription.belongsTo(Tenant, { foreignKey: 'tenant_id', as: 'tenant' });
+
+SubscriptionPlan.hasMany(TenantSubscription, { foreignKey: 'plan_id', as: 'subscriptions' });
+TenantSubscription.belongsTo(SubscriptionPlan, { foreignKey: 'plan_id', as: 'plan' });
+
+SubscriptionPlan.hasMany(Tenant, { foreignKey: 'plan_id', as: 'tenants' });
+Tenant.belongsTo(SubscriptionPlan, { foreignKey: 'plan_id', as: 'plan' });
+
+const tenantModels = [
+  User, Role, Client, Advocate, Case, CaseDiary, Document, Land, Opinion, Payment, Daybook, Alert, Task, Amendment, Reference, Membership,
+  CaseType, CaseStage, CaseStageHistory, Court, DocumentCategory, StateCourtFeeRule, StateCourtFeeSlab, BareAct
+];
+
+tenantModels.forEach(model => {
+  Tenant.hasMany(model, { foreignKey: 'tenant_id' });
+  model.belongsTo(Tenant, { foreignKey: 'tenant_id', as: 'tenant' });
+});
 
 // State Court Fee Rules & Slabs (1-to-Many)
 StateCourtFeeRule.hasMany(StateCourtFeeSlab, { foreignKey: 'ruleId', as: 'slabs', onDelete: 'CASCADE' });
@@ -162,5 +190,10 @@ module.exports = {
   DocumentCategory,
   StateCourtFeeRule,
   StateCourtFeeSlab,
+  Tenant,
+  TenantSetting,
+  SubscriptionPlan,
+  TenantSubscription,
+  GlobalSetting,
 };
 
