@@ -26,8 +26,6 @@ const CaseStageHistory = require('./cases/CaseStageHistory');
 const Court = require('./masters/courts/Court');
 const Task = require('./tasks/Task');
 const DocumentCategory = require('./masters/document-categories/DocumentCategory');
-const StateCourtFeeRule = require('./masters/state-fees/StateCourtFeeRule');
-const StateCourtFeeSlab = require('./masters/state-fees/StateCourtFeeSlab');
 const GlobalSetting = require('./settings/GlobalSetting');
 
 // Tenant Relationships
@@ -45,7 +43,7 @@ Tenant.belongsTo(SubscriptionPlan, { foreignKey: 'plan_id', as: 'plan' });
 
 const tenantModels = [
   User, Role, Client, Advocate, Case, CaseDiary, Document, Land, Opinion, Payment, Daybook, Alert, Task, Amendment, Reference, Membership,
-  CaseType, CaseStage, CaseStageHistory, Court, DocumentCategory, StateCourtFeeRule, StateCourtFeeSlab, BareAct
+  CaseType, CaseStage, CaseStageHistory, Court, DocumentCategory, BareAct
 ];
 
 tenantModels.forEach(model => {
@@ -53,9 +51,6 @@ tenantModels.forEach(model => {
   model.belongsTo(Tenant, { foreignKey: 'tenant_id', as: 'tenant' });
 });
 
-// State Court Fee Rules & Slabs (1-to-Many)
-StateCourtFeeRule.hasMany(StateCourtFeeSlab, { foreignKey: 'ruleId', as: 'slabs', onDelete: 'CASCADE' });
-StateCourtFeeSlab.belongsTo(StateCourtFeeRule, { foreignKey: 'ruleId', as: 'rule' });
 
 // 1. Roles & Users
 Role.hasMany(User, { foreignKey: 'role_id', as: 'users' });
@@ -188,8 +183,6 @@ module.exports = {
   Court,
   Task,
   DocumentCategory,
-  StateCourtFeeRule,
-  StateCourtFeeSlab,
   Tenant,
   TenantSetting,
   SubscriptionPlan,

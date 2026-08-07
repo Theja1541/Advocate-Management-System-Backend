@@ -34,6 +34,7 @@ const searchRoutes = require('./features/search/searchRoutes');
 const tenantRoutes = require('./features/tenants/tenantRoutes');
 const subscriptionPlanRoutes = require('./features/tenants/subscriptionPlanRoutes');
 const settingsRoutes = require('./features/settings/settingsRoutes');
+const courtFeeRoutes = require('./features/court-fees/courtFee.routes');
 
 const app = express();
 
@@ -103,7 +104,7 @@ app.use('/api/v1/search', searchRoutes);
 app.use('/api/v1/tenants', tenantRoutes);
 app.use('/api/v1/plans', subscriptionPlanRoutes);
 app.use('/api/v1/settings', settingsRoutes);
-
+app.use('/api/v1/court-fees', courtFeeRoutes);
 // Serve uploads and bare-act PDFs statically
 app.use('/uploads', express.static('uploads'));
 app.use(
