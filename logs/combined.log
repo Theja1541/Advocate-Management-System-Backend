@@ -12878,3 +12878,400 @@
 2026-08-05 22:40:54:4054 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
 2026-08-05 22:40:54:4054 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
 2026-08-05 22:41:29:4129 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-05 23:03:52:352 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-05 23:03:52:352 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-05 23:03:53:353 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-05 23:03:53:353 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-05 23:03:54:354 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-05 23:03:54:354 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-05 23:04:04:44 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-05 23:04:04:44 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:04:04:44 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:04:04:44 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:04:04:44 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-05 23:42:04:424 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-05 23:42:05:425 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-05 23:42:06:426 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-05 23:42:07:427 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-05 23:42:07:427 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-05 23:42:07:427 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-05 23:42:07:427 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-05 23:42:17:4217 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-05 23:42:17:4217 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:42:17:4217 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:42:17:4217 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:42:17:4217 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-05 23:55:51:5551 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-05 23:55:51:5551 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-05 23:55:52:5552 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-05 23:55:53:5553 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-05 23:55:53:5553 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-05 23:55:53:5553 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-05 23:56:01:561 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-05 23:56:02:562 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-05 23:56:03:563 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:03:563 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:03:563 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-05 23:56:03:563 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-05 23:56:13:5613 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-05 23:56:13:5613 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:13:5613 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:13:5613 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-05 23:56:13:5613 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 00:00:00:00 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 00:00:00:00 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 00:00:00:00 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 09:20:25:2025 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 09:20:27:2027 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 09:20:28:2028 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 09:20:29:2029 [32minfo[39m: [32mSynced StateCourtFeeRule and StateCourtFeeSlab tables.[39m
+2026-08-06 09:20:30:2030 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 09:20:30:2030 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 09:20:30:2030 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 09:20:40:2040 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 09:20:40:2040 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 09:20:40:2040 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 09:20:40:2040 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 09:20:40:2040 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:20:12:2012 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:20:13:2013 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:20:13:2013 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:20:13:2013 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:20:13:2013 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:20:13:2013 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:20:23:2023 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:20:23:2023 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:23:2023 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:23:2023 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:23:2023 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:20:37:2037 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:20:38:2038 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:20:38:2038 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:20:38:2038 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:20:38:2038 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:20:38:2038 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:20:38:2038 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:20:48:2048 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:20:48:2048 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:48:2048 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:48:2048 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:20:48:2048 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:21:15:2115 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:21:15:2115 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:21:15:2115 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:21:15:2115 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:21:15:2115 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:21:15:2115 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:21:24:2124 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:21:25:2125 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:21:25:2125 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:21:25:2125 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:21:25:2125 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:21:25:2125 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:21:30:2130 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:21:30:2130 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:21:30:2130 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:21:30:2130 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:21:30:2130 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:21:30:2130 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:21:35:2135 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:21:35:2135 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:21:35:2135 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:21:36:2136 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:21:36:2136 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:21:36:2136 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:21:46:2146 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:21:46:2146 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:21:46:2146 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:21:46:2146 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:21:46:2146 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:38:04:384 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:38:05:385 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:38:05:385 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:38:05:385 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:38:05:385 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:38:05:385 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:38:15:3815 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:38:15:3815 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:15:3815 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:15:3815 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:15:3815 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:38:23:3823 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:38:23:3823 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:38:23:3823 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:38:23:3823 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:38:23:3823 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:38:23:3823 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:38:33:3833 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:38:33:3833 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:33:3833 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:33:3833 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:38:33:3833 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 10:46:57:4657 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 10:46:58:4658 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 10:46:58:4658 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 10:46:58:4658 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 10:46:58:4658 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 10:46:58:4658 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 10:47:08:478 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 10:47:08:478 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:47:08:478 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:47:08:478 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 10:47:08:478 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 12:04:26:426 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 12:04:27:427 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 12:04:27:427 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 12:04:27:427 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 12:04:27:427 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 12:04:27:427 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 12:04:27:427 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 12:04:37:437 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 12:04:37:437 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 12:04:37:437 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 12:04:37:437 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 12:04:37:437 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 13:02:17:217 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-06 13:08:49:849 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 13:08:50:850 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 13:08:51:851 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 13:08:51:851 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 13:08:51:851 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 13:08:51:851 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 13:08:51:851 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 13:09:01:91 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 13:09:01:91 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 13:09:01:91 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 13:09:01:91 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 13:09:01:91 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 14:59:17:5917 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 14:59:19:5919 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 14:59:19:5919 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 14:59:19:5919 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 14:59:19:5919 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 14:59:19:5919 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 14:59:19:5919 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 14:59:29:5929 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 14:59:29:5929 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 14:59:29:5929 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 14:59:29:5929 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 14:59:29:5929 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 16:01:28:128 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-06 16:01:28:128 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-06 16:14:57:1457 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:14:58:1458 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:14:59:1459 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:14:59:1459 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:14:59:1459 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:14:59:1459 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:14:59:1459 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:15:09:159 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 16:15:09:159 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:15:09:159 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:15:09:159 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:15:09:159 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 16:15:58:1558 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:15:58:1558 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:15:58:1558 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:15:58:1558 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:15:58:1558 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:15:58:1558 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:16:08:168 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 16:16:09:169 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:16:09:169 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:16:09:169 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:16:09:169 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 16:40:17:4017 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:40:18:4018 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:40:18:4018 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:40:18:4018 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:40:18:4018 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:40:18:4018 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:40:28:4028 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:40:28:4028 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:40:28:4028 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:40:29:4029 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:40:29:4029 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:40:29:4029 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:40:39:4039 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 16:40:39:4039 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:39:4039 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:39:4039 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:39:4039 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 16:40:47:4047 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:40:48:4048 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:40:48:4048 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:40:48:4048 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:40:48:4048 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:40:48:4048 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:40:58:4058 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 16:40:58:4058 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:58:4058 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:58:4058 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:40:58:4058 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 16:41:09:419 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:41:09:419 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:41:09:419 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:41:09:419 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:41:09:419 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:41:09:419 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:41:19:4119 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:41:19:4119 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:41:19:4119 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:41:19:4119 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:41:19:4119 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:41:19:4119 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:41:28:4128 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 16:41:29:4129 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 16:41:29:4129 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 16:41:29:4129 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 16:41:29:4129 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 16:41:29:4129 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 16:41:39:4139 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 16:41:39:4139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:41:39:4139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:41:39:4139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 16:41:39:4139 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 17:09:20:920 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-06 17:17:28:1728 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 17:17:29:1729 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 17:17:30:1730 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 17:17:30:1730 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 17:17:30:1730 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 17:17:30:1730 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 17:17:30:1730 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 17:17:40:1740 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 17:17:40:1740 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 17:17:40:1740 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 17:17:40:1740 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 17:17:40:1740 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 18:01:37:137 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:01:38:138 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 18:01:38:138 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 18:01:38:138 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 18:01:38:138 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 18:01:38:138 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 18:01:48:148 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 18:01:48:148 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:01:48:148 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:01:48:148 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:01:48:148 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 18:07:26:726 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:07:26:726 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 18:07:26:726 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 18:07:26:726 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 18:07:26:726 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 18:07:26:726 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 18:07:36:736 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 18:07:37:737 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:07:37:737 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:07:37:737 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:07:37:737 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 18:07:57:757 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:07:58:758 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 18:07:58:758 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 18:07:58:758 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 18:07:58:758 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 18:07:58:758 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 18:08:07:87 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:08:07:87 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 18:08:07:87 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 18:08:08:88 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 18:08:08:88 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 18:08:08:88 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 18:08:18:818 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 18:08:18:818 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:08:18:818 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:08:18:818 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:08:18:818 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 18:29:49:2949 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:29:50:2950 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-06 18:29:50:2950 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-06 18:29:50:2950 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-06 18:29:50:2950 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-06 18:29:50:2950 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-06 18:29:50:2950 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-06 18:30:00:300 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-06 18:30:00:300 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:30:00:300 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:30:00:300 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-06 18:30:00:300 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-06 18:50:27:5027 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-07 09:38:38:3838 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 09:38:40:3840 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 09:38:40:3840 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 09:38:40:3840 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 09:38:41:3841 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 09:38:41:3841 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 09:38:41:3841 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 09:38:51:3851 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 09:38:51:3851 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:38:51:3851 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:38:51:3851 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:38:51:3851 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 09:51:11:5111 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 09:51:11:5111 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 09:51:11:5111 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 09:51:11:5111 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 09:51:11:5111 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 09:51:11:5111 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 09:51:21:5121 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 09:51:22:5122 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:51:22:5122 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:51:22:5122 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 09:51:22:5122 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 10:13:52:1352 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 10:13:53:1353 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 10:13:53:1353 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 10:13:53:1353 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 10:13:53:1353 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 10:13:53:1353 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 10:14:03:143 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 10:14:03:143 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:14:03:143 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:14:03:143 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:14:03:143 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 10:30:24:3024 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 10:30:24:3024 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 10:30:24:3024 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 10:30:24:3024 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 10:30:24:3024 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 10:30:24:3024 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 10:30:34:3034 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 10:30:35:3035 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:30:35:3035 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:30:35:3035 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:30:35:3035 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 10:31:43:3143 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 10:31:44:3144 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 10:31:44:3144 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 10:31:44:3144 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 10:31:44:3144 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 10:31:44:3144 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 10:31:54:3154 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 10:31:54:3154 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:31:54:3154 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:31:54:3154 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:31:54:3154 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 10:36:35:3635 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 10:36:35:3635 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 10:36:35:3635 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 10:36:35:3635 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 10:36:35:3635 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 10:36:35:3635 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 10:36:45:3645 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 10:36:45:3645 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:36:45:3645 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:36:45:3645 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 10:36:45:3645 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m

@@ -1,5 +1,5 @@
 const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court, StateCourtFeeRule } = require('../associations');
-const { calculateCourtFee } = require('../masters/state-fees/courtFeeCalculator.service');
+const courtFeeService = require('../court-fees/courtFee.service');
 const AppError = require('../../utils/AppError');
 const { assertAdvocateOwnsCase } = require('../../utils/advocateScope');
 const { sequelize } = require('../../config/database');
@@ -148,36 +148,28 @@ const calculateFeeForCase = async (courtId, inputs) => {
   }
 
   if (court && court.stateCode) {
-    const activeRule = await StateCourtFeeRule.findOne({
-      where: { stateCode: court.stateCode, isActive: true },
-      include: ['slabs']
-    });
-
-    if (activeRule) {
-      try {
-        const ruleData = activeRule.get({ plain: true });
-        if (inputs.processFee !== undefined && inputs.processFee !== null) ruleData.processFee = pf;
-        if (inputs.filingFee !== undefined && inputs.filingFee !== null) ruleData.filingFee = ff;
-        if (inputs.miscCharges !== undefined && inputs.miscCharges !== null) ruleData.miscCharges = mc;
+    try {
+      const resultData = courtFeeService.calculateCourtFee(court.stateCode, sv);
+      if (!resultData.supported) {
+        result.totalPayable = result.advocateFee + pf + ff + mc;
+        result.feeCalculationStatus = 'PARTIAL';
+        result.warning = resultData.message || 'Court fee calculation is not yet available for this state.';
+      } else {
+        const courtFee = resultData.courtFee;
+        const advocateFee = (sv * fp) / 100;
         
-        const calc = calculateCourtFee(ruleData, sv, fp);
-        
-        result.advocateFee = calc.advocateFee;
-        result.courtFee = calc.courtFee;
-        result.processFee = calc.processFee;
-        result.filingFee = calc.filingFee;
-        result.miscCharges = calc.miscCharges;
-        result.totalPayable = calc.totalAmount;
-        result.courtFeeSnapshot = calc;
+        result.advocateFee = advocateFee;
+        result.courtFee = courtFee;
+        result.processFee = pf;
+        result.filingFee = ff;
+        result.miscCharges = mc;
+        result.totalPayable = advocateFee + courtFee + pf + ff + mc;
         result.feeCalculationStatus = 'COMPLETE';
-      } catch (err) {
-        result.feeCalculationStatus = 'ERROR';
-        result.warning = `Calculation error: ${err.message}`;
       }
-    } else {
+    } catch (err) {
       result.totalPayable = result.advocateFee + pf + ff + mc;
-      result.feeCalculationStatus = 'PARTIAL';
-      result.warning = `No active fee rules found for state ${court.stateCode}. Court fee could not be calculated.`;
+      result.feeCalculationStatus = 'ERROR';
+      result.warning = `Calculation error: ${err.message}`;
     }
   } else {
     result.totalPayable = result.advocateFee + pf + ff + mc;

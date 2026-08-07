@@ -54,20 +54,5 @@ router.route('/document-categories/:id')
   .put(authorizePermission('roles', 'E'), mastersController.updateDocumentCategory);
 
 router.patch('/document-categories/:id/activate', authorizePermission('roles', 'E'), mastersController.activateDocumentCategory);
-const stateFeeController = require('./state-fees/stateFeeController');
-
-// State Court Fee Rules Endpoints
-router.route('/state-fees')
-  .get(stateFeeController.getAllStateFees)
-  .post(authorizePermission('roles', 'E'), stateFeeController.createStateFeeConfig);
-
-router.post('/state-fees/calculate', stateFeeController.calculateFee);
-
-router.route('/state-fees/:id')
-  .get(stateFeeController.getStateFeeById)
-  .put(authorizePermission('roles', 'E'), stateFeeController.updateStateFeeConfig);
-
-router.patch('/state-fees/:id/activate', authorizePermission('roles', 'E'), stateFeeController.activateStateFeeConfig);
-router.patch('/state-fees/:id/deactivate', authorizePermission('roles', 'E'), stateFeeController.deactivateStateFeeConfig);
 
 module.exports = router;
