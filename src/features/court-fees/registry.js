@@ -6,9 +6,21 @@
  */
 
 const AP = require('./states/AP');
+const BR = require('./states/BR');
 const TG = require('./states/TG');
 const DL = require('./states/DL');
+const GJ = require('./states/GJ');
+const HR = require('./states/HR');
 const KA = require('./states/KA');
+const KL = require('./states/KL');
+const MH = require('./states/MH');
+const MP = require('./states/MP');
+const OR = require('./states/OR');
+const PB = require('./states/PB');
+const RJ = require('./states/RJ');
+const TN = require('./states/TN');
+const UP = require('./states/UP');
+const WB = require('./states/WB');
 
 /**
  * Explicit map of state codes to calculator modules.
@@ -16,10 +28,22 @@ const KA = require('./states/KA');
  */
 const calculators = {
   'AP': AP,
+  'BR': BR,
   'TG': TG,
   'TS': TG,
   'DL': DL,
+  'GJ': GJ,
+  'HR': HR,
   'KA': KA,
+  'KL': KL,
+  'MH': MH,
+  'MP': MP,
+  'OR': OR,
+  'PB': PB,
+  'RJ': RJ,
+  'TN': TN,
+  'UP': UP,
+  'WB': WB,
 };
 
 /**
@@ -57,8 +81,8 @@ function calculateCourtFee(stateCode, suitValue) {
     suitValue: Number(suitValue),
     courtFee,
     currency: 'INR',
-    verified: meta.legislation.verified,
-    act: meta.legislation.act,
+    verified: meta.legislation ? meta.legislation.verified : (meta.statutoryVerification || false),
+    act: meta.legislation ? meta.legislation.act : (meta.reference || 'N/A'),
     version: meta.version,
   };
 }
@@ -94,7 +118,7 @@ function getSupportedStates() {
     states.push({
       code: meta.stateCode,
       name: meta.stateName,
-      verified: meta.legislation.verified,
+      verified: meta.legislation ? meta.legislation.verified : (meta.statutoryVerification || false),
     });
   }
 

@@ -1,0 +1,89 @@
+/**
+ * Court Fee Calculator for Haryana (HR)
+ * 
+ * NOTE: This implementation is strictly designed for Functional Compatibility 
+ * with the Century Law Firm calculator based on manually verified outputs.
+ */
+
+const META = {
+  stateCode: 'HR',
+  stateName: 'Haryana',
+  version: 1,
+  lastUpdated: '2026-08-07',
+  implementationType: 'Functional Compatibility',
+  reference: 'Century Law Firm Court Fee Calculator',
+  verifiedAgainstReference: true,
+  statutoryVerification: false
+};
+
+/**
+ * Validates the input for court fee calculation.
+ * @param {number} suitValue - The value of the suit
+ * @returns {{ isValid: boolean, error: string|null }}
+ */
+function validateInput(suitValue) {
+  if (suitValue === undefined || suitValue === null) {
+    return { isValid: false, error: 'suitValue is required' };
+  }
+  const numericValue = Number(suitValue);
+  if (isNaN(numericValue) || numericValue <= 0) {
+    return { isValid: false, error: 'suitValue must be a positive number greater than 0' };
+  }
+  return { isValid: true, error: null };
+}
+
+/**
+ * Calculates the Court Fee for a Money Suit in Haryana based on CLF functional parity.
+ * 
+ * @param {number} v - Suit Value
+ * @returns {number} The calculated court fee
+ */
+function calculateCourtFee(v) {
+  const { isValid } = validateInput(v);
+  if (!isValid) {
+    throw new Error('Invalid suit value for HR Court Fee calculation');
+  }
+
+  let fee = 0;
+  
+  if (v <= 15000) {
+    fee = v * 0.025;
+  } else if (v <= 25000) {
+    fee = 375 + (v - 15000) * 0.035;
+  } else if (v <= 30000) {
+    fee = 725 + (v - 25000) * 0.041;
+  } else if (v <= 40000) {
+    fee = 930 + (v - 30000) * 0.046;
+  } else if (v <= 50000) {
+    fee = 1390 + (v - 40000) * 0.055;
+  } else if (v <= 60000) {
+    fee = 1940 + (v - 50000) * 0.064;
+  } else if (v <= 75000) {
+    fee = 2580 + (v - 60000) * 0.073;
+  } else if (v <= 500000) {
+    fee = 3675 + (v - 75000) * 0.065;
+  } else if (v <= 1000000) {
+    fee = 31300 + (v - 500000) * 0.055;
+  } else if (v <= 2000000) {
+    fee = 58800 + (v - 1000000) * 0.045;
+  } else if (v <= 3000000) {
+    fee = 103800 + (v - 2000000) * 0.035;
+  } else if (v <= 4000000) {
+    fee = 138800 + (v - 3000000) * 0.025;
+  } else if (v <= 5000000) {
+    fee = 163800 + (v - 4000000) * 0.02;
+  } else if (v <= 10000000) {
+    fee = 183800 + (v - 5000000) * 0.007;
+  } else {
+    fee = 218800 + (v - 10000000) * 0.005;
+  }
+
+  // Haryana uses continuous floating-point calculation without ceiling steps
+  return Math.round(fee * 100) / 100;
+}
+
+module.exports = {
+  META,
+  calculateCourtFee,
+  validateInput,
+};

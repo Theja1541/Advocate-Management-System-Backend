@@ -13275,3 +13275,428 @@
 2026-08-07 10:36:45:3645 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
 2026-08-07 10:36:45:3645 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
 2026-08-07 10:36:45:3645 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 11:27:31:2731 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 11:27:32:2732 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 11:27:32:2732 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 11:27:32:2732 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 11:27:32:2732 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 11:27:32:2732 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 11:27:42:2742 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 11:27:42:2742 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:27:42:2742 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:27:42:2742 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:27:42:2742 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 11:57:35:5735 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 11:57:37:5737 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 11:57:38:5738 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 11:57:38:5738 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 11:57:38:5738 [32minfo[39m: [32mSynced GlobalSetting table.[39m
+2026-08-07 11:57:38:5738 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 11:57:38:5738 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 11:57:48:5748 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 11:57:48:5748 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:57:48:5748 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:57:48:5748 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 11:57:48:5748 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 12:00:19:019 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:00:20:020 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 12:00:20:020 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 12:00:20:020 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 12:00:20:020 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 12:00:20:020 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 12:00:30:030 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 12:00:30:030 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:00:30:030 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:00:30:030 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:00:30:030 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 12:03:17:317 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:03:17:317 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 12:03:17:317 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 12:03:17:317 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 12:03:17:317 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 12:03:17:317 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 12:03:27:327 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 12:03:27:327 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:03:27:327 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:03:27:327 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:03:27:327 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 12:04:11:411 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:04:12:412 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 12:04:12:412 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 12:04:12:412 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 12:04:12:412 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 12:04:12:412 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 12:04:22:422 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 12:04:22:422 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:04:22:422 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:04:22:422 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:04:22:422 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 12:26:00:260 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:26:02:262 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:26:02:262 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 12:26:02:262 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 12:26:02:262 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 12:26:02:262 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 12:26:02:262 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 12:26:12:2612 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 12:26:12:2612 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:26:12:2612 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:26:12:2612 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:26:12:2612 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 12:28:48:2848 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-07 12:48:47:4847 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 12:48:48:4848 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 12:48:48:4848 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 12:48:48:4848 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 12:48:48:4848 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 12:48:48:4848 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 12:48:58:4858 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 12:48:58:4858 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:48:58:4858 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:48:58:4858 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 12:48:58:4858 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 13:01:32:132 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 13:01:34:134 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 13:01:34:134 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 13:01:34:134 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 13:01:34:134 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 13:01:34:134 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 13:01:34:134 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 13:01:44:144 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 13:01:44:144 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:01:44:144 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:01:44:144 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:01:44:144 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 13:34:08:348 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 13:34:10:3410 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 13:34:10:3410 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 13:34:10:3410 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 13:34:10:3410 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 13:34:10:3410 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 13:34:10:3410 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 13:34:20:3420 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 13:34:20:3420 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:34:20:3420 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:34:20:3420 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 13:34:20:3420 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 14:09:14:914 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 14:09:16:916 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 14:09:17:917 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 14:09:17:917 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 14:09:17:917 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 14:09:17:917 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 14:09:17:917 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 14:09:27:927 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 14:09:27:927 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 14:09:27:927 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 14:09:27:927 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 14:09:27:927 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 15:25:40:2540 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 15:25:42:2542 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 15:25:43:2543 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 15:25:43:2543 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 15:25:43:2543 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 15:25:43:2543 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 15:25:43:2543 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 15:25:53:2553 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 15:25:53:2553 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:25:53:2553 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:25:53:2553 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:25:53:2553 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 15:26:40:2640 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 15:26:41:2641 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 15:26:41:2641 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 15:26:41:2641 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 15:26:41:2641 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 15:26:41:2641 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 15:26:51:2651 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 15:26:51:2651 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:26:51:2651 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:26:51:2651 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:26:51:2651 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 15:38:28:3828 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 15:38:29:3829 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 15:38:29:3829 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 15:38:29:3829 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 15:38:29:3829 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 15:38:29:3829 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 15:38:39:3839 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 15:38:39:3839 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:38:39:3839 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:38:39:3839 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:38:39:3839 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 15:55:21:5521 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 15:55:21:5521 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 15:55:21:5521 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 15:55:21:5521 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 15:55:21:5521 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 15:55:21:5521 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 15:55:31:5531 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 15:55:31:5531 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:55:31:5531 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:55:31:5531 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 15:55:31:5531 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 16:16:17:1617 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 16:16:17:1617 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 16:16:17:1617 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 16:16:17:1617 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 16:16:17:1617 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 16:16:17:1617 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 16:16:27:1627 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 16:16:27:1627 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:16:27:1627 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:16:27:1627 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:16:27:1627 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 16:41:42:4142 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 16:41:44:4144 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 16:41:45:4145 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 16:41:45:4145 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 16:41:45:4145 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 16:41:45:4145 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 16:41:45:4145 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 16:41:55:4155 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 16:41:55:4155 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:41:55:4155 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:41:55:4155 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:41:55:4155 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 16:42:51:4251 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 16:42:51:4251 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 16:42:51:4251 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 16:42:51:4251 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 16:42:51:4251 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 16:42:51:4251 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 16:43:01:431 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 16:43:02:432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:43:02:432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:43:02:432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:43:02:432 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 16:59:22:5922 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 16:59:22:5922 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 16:59:22:5922 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 16:59:22:5922 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 16:59:22:5922 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 16:59:22:5922 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 16:59:32:5932 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 16:59:32:5932 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:59:32:5932 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:59:32:5932 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 16:59:32:5932 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 17:14:15:1415 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 17:14:15:1415 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 17:14:15:1415 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 17:14:15:1415 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 17:14:15:1415 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 17:14:15:1415 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 17:14:25:1425 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 17:14:25:1425 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:14:25:1425 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:14:25:1425 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:14:25:1425 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 17:16:29:1629 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 17:16:30:1630 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 17:16:30:1630 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 17:16:30:1630 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 17:16:30:1630 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 17:16:30:1630 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 17:16:40:1640 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 17:16:40:1640 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:16:40:1640 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:16:40:1640 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:16:40:1640 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 17:35:11:3511 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-07 17:36:10:3610 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 17:36:10:3610 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 17:36:10:3610 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 17:36:11:3611 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 17:36:11:3611 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 17:36:11:3611 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 17:36:21:3621 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 17:36:21:3621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:36:21:3621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:36:21:3621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 17:36:21:3621 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 17:42:39:4239 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-07 18:35:30:3530 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 18:35:32:3532 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 18:35:33:3533 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 18:35:33:3533 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 18:35:33:3533 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 18:35:33:3533 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 18:35:33:3533 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 18:35:43:3543 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 18:35:43:3543 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:35:43:3543 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:35:43:3543 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:35:43:3543 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 18:40:41:4041 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 18:40:42:4042 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 18:40:42:4042 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 18:40:42:4042 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 18:40:42:4042 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 18:40:42:4042 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 18:40:52:4052 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 18:40:52:4052 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:40:52:4052 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:40:52:4052 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 18:40:52:4052 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 19:08:06:86 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 19:08:06:86 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 19:08:06:86 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 19:08:06:86 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 19:08:06:86 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 19:08:06:86 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 19:08:16:816 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 19:08:17:817 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:08:17:817 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:08:17:817 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:08:17:817 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 19:08:59:859 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 19:09:00:90 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 19:09:00:90 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 19:09:00:90 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 19:09:00:90 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 19:09:00:90 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 19:09:10:910 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 19:09:10:910 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:09:10:910 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:09:10:910 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:09:10:910 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 19:33:23:3323 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 19:33:25:3325 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 19:33:26:3326 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 19:33:26:3326 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 19:33:26:3326 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 19:33:26:3326 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 19:33:26:3326 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 19:33:36:3336 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 19:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:33:36:3336 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-07 19:34:07:347 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-07 19:34:07:347 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-07 19:34:07:347 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-07 19:34:07:347 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-07 19:34:07:347 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-07 19:34:07:347 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-07 19:34:17:3417 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-07 19:34:18:3418 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:34:18:3418 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:34:18:3418 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-07 19:34:18:3418 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-10 09:49:21:4921 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-10 09:49:23:4923 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-10 09:49:24:4924 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-10 09:49:24:4924 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-10 09:49:24:4924 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-10 09:49:24:4924 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-10 09:49:24:4924 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-10 09:49:34:4934 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-10 09:49:34:4934 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 09:49:34:4934 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 09:49:34:4934 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 09:49:34:4934 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:28:5028 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/memberships - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:29:5029 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:50:40:5040 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/dashboard - GET - ::1[39m
+2026-08-10 09:50:40:5040 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-10 09:50:40:5040 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-10 09:50:40:5040 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:40:5040 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/cases - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/clients - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/advocates - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:42:5042 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/cases - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/clients - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/advocates - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/case-types?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/case-stages?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31mRefresh token error: invalid signature[39m
+2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 09:51:16:5116 [32minfo[39m: [32mShutting down server gracefully...[39m
