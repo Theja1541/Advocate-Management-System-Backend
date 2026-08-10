@@ -10,6 +10,7 @@
 | Andhra Pradesh | AP | ✅ | ✅ | ✅ |
 | Telangana | TG | ✅ | ✅ | ✅ |
 | Delhi | DL | ✅ | ✅ | ❌ (Century Law Firm parity only) |
+| Chandigarh | CH | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Karnataka | KA | ✅ | ✅ | ✅ |
 | Tamil Nadu | TN | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Maharashtra | MH | ✅ | ✅ | ❌ (Century Law Firm parity only) |
@@ -22,7 +23,10 @@
 | Punjab | PB | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Odisha | OR | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Bihar | BR | ✅ | ✅ | ❌ (Century Law Firm parity only) |
-| Jharkhand | JH | ❌ | ❌ | ❌ |
+| Uttarakhand | UT | ✅ | ✅ | ❌ (Century Law Firm parity only) |
+| Jharkhand | JH | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Chhattisgarh | CT | ❌ | ❌ | ❌ |
 | Rajasthan | RJ | ✅ | ✅ | ❌ (Century Law Firm parity only) |
 | Assam | AS | ❌ | ❌ | ❌ |
+| Himachal Pradesh | HP | ✅ | ✅ | ❌ (Century Law Firm parity only) |
+| Jammu and Kashmir | JK | ✅ | ✅ | ❌ (Century Law Firm parity only) |

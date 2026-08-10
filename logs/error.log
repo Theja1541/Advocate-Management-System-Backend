@@ -8291,3 +8291,21 @@
 2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/masters/courts?activeOnly=true - GET - ::1[39m
 2026-08-10 09:50:43:5043 [31merror[39m: [31mRefresh token error: invalid signature[39m
 2026-08-10 09:50:43:5043 [31merror[39m: [31m401 - Invalid or expired refresh token - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-10 10:08:00:80 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 10:08:00:80 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 10:08:00:80 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 10:32:13:3213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 10:32:13:3213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 10:32:13:3213 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:00:47:047 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:00:47:047 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:00:47:047 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:07:23:723 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:07:23:723 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:07:23:723 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:13:42:1342 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:13:42:1342 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:13:42:1342 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
