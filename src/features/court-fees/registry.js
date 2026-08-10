@@ -21,6 +21,11 @@ const RJ = require('./states/RJ');
 const TN = require('./states/TN');
 const UP = require('./states/UP');
 const WB = require('./states/WB');
+const HP = require('./states/HP');
+const JK = require('./states/JK');
+const JH = require('./states/JH');
+const CH = require('./states/CH');
+const UT = require('./states/UT');
 
 /**
  * Explicit map of state codes to calculator modules.
@@ -44,6 +49,11 @@ const calculators = {
   'TN': TN,
   'UP': UP,
   'WB': WB,
+  'HP': HP,
+  'JK': JK,
+  'JH': JH,
+  'CH': CH,
+  'UT': UT,
 };
 
 /**
