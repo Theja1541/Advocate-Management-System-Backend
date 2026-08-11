@@ -44,4 +44,36 @@ router
     opinionController.deleteOpinion
   );
 
+router.post(
+  '/:id/submit',
+  authorizePermission('opinions', 'E'),
+  ...opinionIdParamRules,
+  validate,
+  opinionController.submitForReview
+);
+
+router.post(
+  '/:id/approve',
+  authorizePermission('opinions', 'E'),
+  ...opinionIdParamRules,
+  validate,
+  opinionController.approve
+);
+
+router.post(
+  '/:id/reject',
+  authorizePermission('opinions', 'E'),
+  ...opinionIdParamRules,
+  validate,
+  opinionController.reject
+);
+
+router.post(
+  '/:id/issue',
+  authorizePermission('opinions', 'E'),
+  ...opinionIdParamRules,
+  validate,
+  opinionController.issue
+);
+
 module.exports = router;

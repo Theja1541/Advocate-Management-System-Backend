@@ -63,6 +63,47 @@ const createLandRules = [
     .optional({ values: 'falsy' })
     .isInt({ min: 1 })
     .withMessage('Valid case ID is required'),
+  body('subDivisionNo')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Sub division number must be at most 50 characters'),
+  body('sro')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('SRO must be at most 100 characters'),
+  body('registrationDistrict')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('Registration district must be at most 100 characters'),
+  body('documentNo')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Document number must be at most 50 characters'),
+  body('documentYear')
+    .optional({ values: 'falsy' })
+    .isInt()
+    .withMessage('Document year must be a valid integer'),
+  body('registrationDate')
+    .optional({ values: 'falsy' })
+    .isISO8601()
+    .withMessage('Registration date must be a valid date (YYYY-MM-DD)'),
+  body('acquisitionType')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Acquisition type must be at most 50 characters'),
+  body('currentOwnerName')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 150 })
+    .withMessage('Current owner name must be at most 150 characters'),
+  body('remarks')
+    .optional({ values: 'falsy' })
+    .trim(),
 ];
 
 const updateLandRules = [
@@ -122,6 +163,47 @@ const updateLandRules = [
     .withMessage('Patta number cannot be empty')
     .isLength({ max: 50 })
     .withMessage('Patta number must be at most 50 characters'),
+  body('subDivisionNo')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Sub division number must be at most 50 characters'),
+  body('sro')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('SRO must be at most 100 characters'),
+  body('registrationDistrict')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 100 })
+    .withMessage('Registration district must be at most 100 characters'),
+  body('documentNo')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Document number must be at most 50 characters'),
+  body('documentYear')
+    .optional({ values: 'falsy' })
+    .isInt()
+    .withMessage('Document year must be a valid integer'),
+  body('registrationDate')
+    .optional({ values: 'falsy' })
+    .isISO8601()
+    .withMessage('Registration date must be a valid date (YYYY-MM-DD)'),
+  body('acquisitionType')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 50 })
+    .withMessage('Acquisition type must be at most 50 characters'),
+  body('currentOwnerName')
+    .optional({ values: 'falsy' })
+    .trim()
+    .isLength({ max: 150 })
+    .withMessage('Current owner name must be at most 150 characters'),
+  body('remarks')
+    .optional({ values: 'falsy' })
+    .trim(),
   body('encumbranceStatus')
     .optional({ values: 'falsy' })
     .isIn(ENCUMBRANCE_STATUSES)

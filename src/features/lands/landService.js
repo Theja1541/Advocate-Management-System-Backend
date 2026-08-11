@@ -11,6 +11,15 @@ const SAFE_ATTRIBUTES = [
   'extent',
   'classification',
   'pattaNo',
+  'subDivisionNo',
+  'sro',
+  'registrationDistrict',
+  'documentNo',
+  'documentYear',
+  'registrationDate',
+  'acquisitionType',
+  'currentOwnerName',
+  'remarks',
   'encumbranceStatus',
   'titleStatus',
   'caseId',
@@ -81,6 +90,15 @@ const createLand = async ({
   extent,
   classification,
   pattaNo,
+  subDivisionNo,
+  sro,
+  registrationDistrict,
+  documentNo,
+  documentYear,
+  registrationDate,
+  acquisitionType,
+  currentOwnerName,
+  remarks,
   encumbranceStatus,
   titleStatus,
   caseId,
@@ -101,6 +119,15 @@ const createLand = async ({
     extent,
     classification,
     pattaNo,
+    subDivisionNo: subDivisionNo || null,
+    sro: sro || null,
+    registrationDistrict: registrationDistrict || null,
+    documentNo: documentNo || null,
+    documentYear: documentYear ? Number(documentYear) : null,
+    registrationDate: registrationDate || null,
+    acquisitionType: acquisitionType || null,
+    currentOwnerName: currentOwnerName || null,
+    remarks: remarks || null,
     encumbranceStatus: encumbranceStatus || 'clear',
     titleStatus: titleStatus || 'clear',
     caseId: caseId || null,
@@ -122,6 +149,15 @@ const updateLand = async (
     extent,
     classification,
     pattaNo,
+    subDivisionNo,
+    sro,
+    registrationDistrict,
+    documentNo,
+    documentYear,
+    registrationDate,
+    acquisitionType,
+    currentOwnerName,
+    remarks,
     encumbranceStatus,
     titleStatus,
     caseId,
@@ -151,6 +187,17 @@ const updateLand = async (
   if (extent !== undefined) land.extent = extent;
   if (classification !== undefined) land.classification = classification;
   if (pattaNo !== undefined) land.pattaNo = pattaNo;
+  
+  if (subDivisionNo !== undefined) land.subDivisionNo = subDivisionNo || null;
+  if (sro !== undefined) land.sro = sro || null;
+  if (registrationDistrict !== undefined) land.registrationDistrict = registrationDistrict || null;
+  if (documentNo !== undefined) land.documentNo = documentNo || null;
+  if (documentYear !== undefined) land.documentYear = documentYear ? Number(documentYear) : null;
+  if (registrationDate !== undefined) land.registrationDate = registrationDate || null;
+  if (acquisitionType !== undefined) land.acquisitionType = acquisitionType || null;
+  if (currentOwnerName !== undefined) land.currentOwnerName = currentOwnerName || null;
+  if (remarks !== undefined) land.remarks = remarks || null;
+
   if (encumbranceStatus) land.encumbranceStatus = encumbranceStatus;
   if (titleStatus) land.titleStatus = titleStatus;
 

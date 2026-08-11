@@ -8,9 +8,17 @@ const { Role, Module, Permission } = require('../features/associations');
  * @param {string} action - The action to check ('V', 'E', 'A').
  * @returns {Promise<boolean>} - True if permission is granted, otherwise false.
  */
-const checkPermission = async (userRoleName, moduleKey, action = 'V') => {
+const checkPermission = async (userRoleName, moduleKey, action = 'V', roleId = null) => {
   if (userRoleName === 'Super Admin') return true;
-  const role = await Role.findOne({ where: { name: userRoleName } });
+
+  let role = null;
+  if (roleId != null) {
+    role = await Role.findByPk(roleId);
+  }
+  if (!role && userRoleName) {
+    role = await Role.findOne({ where: { name: userRoleName } });
+  }
+
   const moduleObj = await Module.findOne({ where: { keyCode: moduleKey } });
 
   if (!role || !moduleObj) return false;
@@ -22,8 +30,8 @@ const checkPermission = async (userRoleName, moduleKey, action = 'V') => {
     }
   });
 
-  const accessLevel = permission ? permission.accessLevel : '—';
-  return accessLevel.includes(action);
+  const accessLevel = permission ? permission.accessLevel : '---';
+  return typeof accessLevel === 'string' && accessLevel.includes(action);
 };
 
 /**

@@ -37,7 +37,8 @@ module.exports = {
       { name: 'Payments', key_code: 'pay' },
       { name: 'Reports', key_code: 'reports' },
       { name: 'Bare Acts', key_code: 'acts' },
-      { name: 'Settings', key_code: 'roles' }
+      { name: 'Settings', key_code: 'roles' },
+      { name: 'Legal Texts', key_code: 'legalTexts' }
     ];
     await queryInterface.bulkInsert('modules', modules, {});
 
@@ -46,16 +47,16 @@ module.exports = {
       `SELECT id, name FROM modules;`,
       { type: Sequelize.QueryTypes.SELECT }
     );
-    const moduleList = seededModules; // In original array order matching index 0-13
+    const moduleList = seededModules; // In original array order matching index 0-14
 
     // 3. Seed Permissions Matrix
-    // Role permissions indices matching PMODS index 0-13:
+    // Role permissions indices matching PMODS index 0-14:
     const matrix = {
-      'Super Admin':  ['VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA'],
-      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','—'],
-      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','—'],
-      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','—','V','V','V','—'],
-      'Staff/Bearer': ['V','VA','V','VE','VE','—','—','V','—','VE','—','—','V','—']
+      'Super Admin':  ['VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA'],
+      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','—','VE'],
+      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','—','V'],
+      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','—','V','V','V','—','VE'],
+      'Staff/Bearer': ['V','VA','V','VE','VE','—','—','V','—','VE','—','—','V','—','V']
     };
 
     const permissionsToSeed = [];

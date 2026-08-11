@@ -30,9 +30,14 @@ Document.init(
       field: 'document_category_id',
     },
     caseId: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
       field: 'case_id',
+    },
+    landId: {
+      type: DataTypes.BIGINT,
+      allowNull: true,
+      field: 'land_id',
     },
     fileType: {
       type: DataTypes.STRING(10),

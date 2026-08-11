@@ -21,10 +21,20 @@ const createDocumentRules = [
       return true;
     }),
   body('caseId')
-    .notEmpty()
-    .withMessage('Case is required')
+    .optional({ values: 'falsy' })
     .isInt({ min: 1 })
     .withMessage('Valid case ID is required'),
+  body('landId')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1 })
+    .withMessage('Valid land ID is required'),
+  body()
+    .custom((value, { req }) => {
+      if (!req.body.caseId && !req.body.landId) {
+        throw new Error('A document must reference at least one of caseId or landId');
+      }
+      return true;
+    }),
 ];
 
 const documentIdParamRules = [
@@ -57,9 +67,13 @@ const updateDocumentRules = [
       return true;
     }),
   body('caseId')
-    .optional()
+    .optional({ values: 'falsy' })
     .isInt({ min: 1 })
     .withMessage('Valid case ID is required'),
+  body('landId')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1 })
+    .withMessage('Valid land ID is required'),
 ];
 
 module.exports = {

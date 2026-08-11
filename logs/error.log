@@ -8309,3 +8309,665 @@
 2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
 2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
 2026-08-10 11:17:15:1715 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:49:49:4949 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:49:49:4949 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 11:49:49:4949 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:11:56:1156 [31merror[39m: [31mCreateDocument error: notNull Violation: Document.tenantId cannot be null[39m
+2026-08-10 12:11:56:1156 [31merror[39m: [31m500 - notNull Violation: Document.tenantId cannot be null - /api/v1/documents - POST - ::1[39m
+2026-08-10 12:12:21:1221 [31merror[39m: [31mCreateDocument error: notNull Violation: Document.tenantId cannot be null[39m
+2026-08-10 12:12:21:1221 [31merror[39m: [31m500 - notNull Violation: Document.tenantId cannot be null - /api/v1/documents - POST - ::1[39m
+2026-08-10 12:12:27:1227 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:12:27:1227 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:12:27:1227 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:14:16:1416 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:14:16:1416 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:14:16:1416 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:15:33:1533 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:15:33:1533 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:15:33:1533 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:31:00:310 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:31:00:310 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:31:00:310 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:54:35:5435 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:54:35:5435 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 12:54:35:5435 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 13:23:37:2337 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 13:23:37:2337 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 13:23:37:2337 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:22:05:225 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:22:05:225 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:22:05:225 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:05:235 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:05:235 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:05:235 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:51:2351 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:51:2351 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:23:51:2351 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:24:34:2434 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:24:34:2434 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:24:34:2434 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:26:01:261 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:26:01:261 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:26:01:261 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:38:26:3826 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:38:26:3826 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:38:26:3826 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:39:26:3926 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:39:26:3926 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:39:26:3926 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:48:04:484 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:48:04:484 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:48:04:484 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:58:38:5838 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:58:38:5838 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 14:58:38:5838 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 15:26:30:2630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 15:26:30:2630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 15:26:30:2630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 16:39:33:3933 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 16:39:34:3934 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 16:39:34:3934 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:17:2417 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:17:2417 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:17:2417 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:47:2447 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:47:2447 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:24:47:2447 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:39:36:3936 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:39:36:3936 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:39:36:3936 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:58:40:5840 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:58:40:5840 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 17:58:40:5840 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:04:29:429 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:04:29:429 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:04:29:429 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:15:21:1521 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:15:21:1521 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-10 18:15:21:1521 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 09:43:26:4326 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 09:43:26:4326 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 09:43:26:4326 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 10:51:39:5139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 10:51:39:5139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 10:51:39:5139 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 10:56:53:5653 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 10:56:58:5658 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 11:32:40:3240 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:32:40:3240 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:32:40:3240 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:04:334 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:04:334 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:04:334 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:19:3319 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:19:3319 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:19:3319 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:33:36:3336 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:36:17:3617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:36:17:3617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:36:17:3617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:32:4432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:32:4432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:32:4432 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:58:4458 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:58:4458 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:44:58:4458 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31mCreateTitleSearch error: Land record not found[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31m400 - Land record not found - /api/v1/title-searches - POST - 127.0.0.1[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31mCreateTitleSearch error: Conducted by user not found[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31m400 - Conducted by user not found - /api/v1/title-searches - POST - 127.0.0.1[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31mCreateTitleSearch error: Unknown column 'conductedByUser.role' in 'field list'[39m
+2026-08-11 11:45:43:4543 [31merror[39m: [31m500 - Unknown column 'conductedByUser.role' in 'field list' - /api/v1/title-searches - POST - 127.0.0.1[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31mCreateTitleSearch error: Land record not found[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31m400 - Land record not found - /api/v1/title-searches - POST - 127.0.0.1[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31mCreateTitleSearch error: Conducted by user not found[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31m400 - Conducted by user not found - /api/v1/title-searches - POST - 127.0.0.1[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31mGetTitleSearchById error: Title search record not found[39m
+2026-08-11 11:46:03:463 [31merror[39m: [31m404 - Title search record not found - /api/v1/title-searches/2 - GET - 127.0.0.1[39m
+2026-08-11 11:46:09:469 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:46:09:469 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:46:09:469 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:02:532 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:02:532 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:02:532 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:43:5343 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:43:5343 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:43:5343 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:57:5357 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:57:5357 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:53:57:5357 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:54:10:5410 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:54:10:5410 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:54:10:5410 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:54:54:5454 [31merror[39m: [31mCreateDocument error: Land record not found[39m
+2026-08-11 11:54:54:5454 [31merror[39m: [31m400 - Land record not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:54:54:5454 [31merror[39m: [31mCreateDocument error: Case not found[39m
+2026-08-11 11:54:54:5454 [31merror[39m: [31m400 - Case not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:55:17:5517 [31merror[39m: [31mCreateDocument error: Land record not found[39m
+2026-08-11 11:55:17:5517 [31merror[39m: [31m400 - Land record not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:55:17:5517 [31merror[39m: [31mCreateDocument error: Case not found[39m
+2026-08-11 11:55:17:5517 [31merror[39m: [31m400 - Case not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31mCreateDocument error: Land record not found[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31m400 - Land record not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31mCreateDocument error: Case not found[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31m400 - Case not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31mCreateDocument error: Case not found[39m
+2026-08-11 11:55:40:5540 [31merror[39m: [31m400 - Case not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31mCreateDocument error: Land record not found[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31m400 - Land record not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31mCreateDocument error: Case not found[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31m400 - Case not found - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31mCreateDocument error: Access denied: Case does not belong to your tenant[39m
+2026-08-11 11:56:13:5613 [31merror[39m: [31m403 - Access denied: Case does not belong to your tenant - /api/v1/documents - POST - 127.0.0.1[39m
+2026-08-11 11:56:17:5617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:56:17:5617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 11:56:17:5617 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:37:07:377 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:37:07:377 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:37:07:377 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:38:46:3846 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:38:46:3846 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:38:46:3846 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:39:48:3948 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:39:48:3948 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:39:48:3948 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:41:19:4119 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:41:19:4119 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:41:19:4119 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:00:420 [31merror[39m: [31mCreateOpinion error: WHERE parameter "reference_no" has invalid "undefined" value[39m
+2026-08-11 12:42:00:420 [31merror[39m: [31m500 - WHERE parameter "reference_no" has invalid "undefined" value - /api/v1/opinions - POST - 127.0.0.1[39m
+2026-08-11 12:42:04:424 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:04:424 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:04:424 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:30:4230 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:30:4230 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:30:4230 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31mUpdateOpinion error: Cannot edit an issued legal opinion[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31m400 - Cannot edit an issued legal opinion - /api/v1/opinions/4 - PUT - 127.0.0.1[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31mDeleteOpinion error: Cannot delete an issued legal opinion[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31m400 - Cannot delete an issued legal opinion - /api/v1/opinions/4 - DELETE - 127.0.0.1[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31mSubmitForReview error: Opinion must be in draft or rejected status to submit for review[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31m400 - Opinion must be in draft or rejected status to submit for review - /api/v1/opinions/4/submit - POST - 127.0.0.1[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31mApproveOpinion error: Opinion must be in pending_review status to approve[39m
+2026-08-11 12:42:33:4233 [31merror[39m: [31m400 - Opinion must be in pending_review status to approve - /api/v1/opinions/5/approve - POST - 127.0.0.1[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31mUpdateOpinion error: Cannot edit an issued legal opinion[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31m400 - Cannot edit an issued legal opinion - /api/v1/opinions/6 - PUT - 127.0.0.1[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31mDeleteOpinion error: Cannot delete an issued legal opinion[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31m400 - Cannot delete an issued legal opinion - /api/v1/opinions/6 - DELETE - 127.0.0.1[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31mSubmitForReview error: Opinion must be in draft or rejected status to submit for review[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31m400 - Opinion must be in draft or rejected status to submit for review - /api/v1/opinions/6/submit - POST - 127.0.0.1[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31mApproveOpinion error: Opinion must be in pending_review status to approve[39m
+2026-08-11 12:42:59:4259 [31merror[39m: [31m400 - Opinion must be in pending_review status to approve - /api/v1/opinions/7/approve - POST - 127.0.0.1[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31mUpdateOpinion error: Cannot edit an issued legal opinion[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31m400 - Cannot edit an issued legal opinion - /api/v1/opinions/8 - PUT - 127.0.0.1[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31mDeleteOpinion error: Cannot delete an issued legal opinion[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31m400 - Cannot delete an issued legal opinion - /api/v1/opinions/8 - DELETE - 127.0.0.1[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31mSubmitForReview error: Opinion must be in draft or rejected status to submit for review[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31m400 - Opinion must be in draft or rejected status to submit for review - /api/v1/opinions/8/submit - POST - 127.0.0.1[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31mApproveOpinion error: Opinion must be in pending_review status to approve[39m
+2026-08-11 12:43:23:4323 [31merror[39m: [31m400 - Opinion must be in pending_review status to approve - /api/v1/opinions/9/approve - POST - 127.0.0.1[39m
+2026-08-11 12:51:45:5145 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:51:45:5145 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:51:45:5145 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:55:20:5520 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:55:20:5520 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 12:55:20:5520 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:05:15 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:05:15 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:05:15 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:31:131 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:31:131 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:01:31:131 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:02:44:244 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:02:44:244 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:02:44:244 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:03:26:326 [31merror[39m: [31mIssueOpinion error: Failed to register PDF document: notNull Violation: Document.documentCategoryId cannot be null[39m
+2026-08-11 13:03:26:326 [31merror[39m: [31m500 - Failed to register PDF document: notNull Violation: Document.documentCategoryId cannot be null - /api/v1/opinions/12/issue - POST - 127.0.0.1[39m
+2026-08-11 13:04:48:448 [31merror[39m: [31mIssueOpinion error: Opinion must be approved before it can be issued[39m
+2026-08-11 13:04:48:448 [31merror[39m: [31m400 - Opinion must be approved before it can be issued - /api/v1/opinions/13/issue - POST - 127.0.0.1[39m
+2026-08-11 13:04:48:448 [31merror[39m: [31mUpdateOpinion error: Cannot edit an issued legal opinion[39m
+2026-08-11 13:04:48:448 [31merror[39m: [31m400 - Cannot edit an issued legal opinion - /api/v1/opinions/13 - PUT - 127.0.0.1[39m
+2026-08-11 13:04:49:449 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:04:50:450 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:04:50:450 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:06:30:630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:06:30:630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:06:30:630 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 13:06:42:642 [31merror[39m: [31mIssueOpinion error: Opinion must be approved before it can be issued[39m
+2026-08-11 13:06:42:642 [31merror[39m: [31m400 - Opinion must be approved before it can be issued - /api/v1/opinions/14/issue - POST - 127.0.0.1[39m
+2026-08-11 13:06:42:642 [31merror[39m: [31mUpdateOpinion error: Cannot edit an issued legal opinion[39m
+2026-08-11 13:06:42:642 [31merror[39m: [31m400 - Cannot edit an issued legal opinion - /api/v1/opinions/14 - PUT - 127.0.0.1[39m
+2026-08-11 14:17:34:1734 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:17:34:1734 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:17:34:1734 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:18:20:1820 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:18:20:1820 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:18:20:1820 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:40:59:4059 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 14:41:04:414 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 14:41:17:4117 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 14:41:18:4118 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 14:41:18:4118 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 14:41:18:4118 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 14:41:18:4118 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 14:42:45:4245 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:42:49:4249 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:42:56:4256 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:43:48:4348 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 14:44:01:441 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-11 14:44:01:441 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-11 14:45:12:4512 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 14:45:44:4544 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 14:46:01:461 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:46:33:4633 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:46:33:4633 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:46:33:4633 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:46:47:4647 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/roles/permissions - PUT - ::1[39m
+2026-08-11 14:56:21:5621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:56:21:5621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:56:21:5621 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 14:57:04:574 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 14:57:06:576 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:06:576 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:57:06:576 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:06:576 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:57:07:577 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:07:577 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:23:5723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:23:5723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:57:23:5723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:23:5723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:57:25:5725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:57:25:5725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:58:07:587 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:58:07:587 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 14:58:07:587 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 14:58:07:587 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:04:09:49 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:09:49 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:04:25:425 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:25:425 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:04:25:425 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:25:425 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:04:39:439 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:04:39:439 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:04:39:439 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:04:44:444 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:44:444 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:45:445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:45:445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:04:45:445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:04:45:445 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:04:54 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:04:54 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:04:54 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:05:04:54 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:05:05:55 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:05:07:57 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:07:57 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:07:57 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:07:57 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:25:525 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:25:525 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:25:525 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:05:25:525 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:05:25:525 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:05:26:526 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:05:29:529 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:29:529 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:05:29:529 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:05:29:529 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:06:66 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:21:621 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:06:34:634 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:07:52:752 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:08:03:83 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:08:03:83 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:04:94 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:09:36:936 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:09:38:938 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:38:938 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:09:49:949 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:09:52:952 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:09:52:952 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:12:1212 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:12:1212 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:12:1212 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:12:12:1212 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:12:13:1213 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:12:15:1215 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:15:1215 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:15:1215 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:15:1215 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:22:1222 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:22:1222 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:23:1223 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:23:1223 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:23:1223 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 15:12:23:1223 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:12:57:1257 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:13:43:1343 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:13:44:1344 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:20:56:2056 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:20:56:2056 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:21:07:217 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:21:07:217 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:21:16:2116 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:21:16:2116 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:24:06:246 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:24:06:246 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:06:376 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:06:376 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:08:378 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:08:378 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:09:379 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:09:379 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:10:3710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:10:3710 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:19:3719 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:19:3719 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:23:3723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:23:3723 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:25:3725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/tasks - GET - ::1[39m
+2026-08-11 15:37:25:3725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:25:3725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/tasks - GET - ::1[39m
+2026-08-11 15:37:25:3725 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:26:3726 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:26:3726 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:37:26:3726 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:26:3726 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:37:28:3728 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:37:28:3728 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:37:28:3728 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:37:28:3728 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:28:3728 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:29:3729 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/tasks - GET - ::1[39m
+2026-08-11 15:37:29:3729 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:29:3729 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/tasks - GET - ::1[39m
+2026-08-11 15:37:29:3729 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:31:3731 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:31:3731 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts?includeDeleted=false - GET - ::1[39m
+2026-08-11 15:37:32:3732 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:32:3732 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments?limit=10&offset=0 - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/tenants - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/tenants - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:35:3735 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-11 15:37:36:3736 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:36:3736 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:38:3738 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:38:3738 [31merror[39m: [31m403 - Access Denied: You do not have the required role to perform this action - /api/v1/plans - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:37:49:3749 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 15:37:50:3750 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 15:46:37:4637 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:46:37:4637 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:46:42:4642 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:46:42:4642 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:46:45:4645 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:46:45:4645 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:39:5539 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:39:5539 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:53:5553 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:53:5553 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:58:5558 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:55:58:5558 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 15:56:24:5624 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:56:24:5624 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 15:56:24:5624 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 16:01:16:116 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:01:16:116 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 16:03:09:39 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 16:04:43:443 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 16:04:43:443 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 16:04:43:443 [31merror[39m: [31mError upserting alert: notNull Violation: Alert.tenantId cannot be null[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 16:46:02:462 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-11 16:46:03:463 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:46:03:463 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:47:29:4729 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
