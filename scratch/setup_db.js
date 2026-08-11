@@ -69,17 +69,18 @@ async function setup() {
       { name: 'Payments', keyCode: 'pay' },
       { name: 'Reports', keyCode: 'reports' },
       { name: 'Bare Acts', keyCode: 'acts' },
-      { name: 'Settings', keyCode: 'roles' }
+      { name: 'Settings', keyCode: 'roles' },
+      { name: 'Legal Texts', keyCode: 'legalTexts' }
     ]);
     console.log('Modules seeded.');
 
     // 4. Seed Permissions
     const matrix = {
-      'Super Admin':  ['VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA'],
-      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','—'],
-      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','—'],
-      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','—','V','V','V','—'],
-      'Staff/Bearer': ['V','VA','V','VE','VE','—','—','V','—','VE','—','—','V','—']
+      'Super Admin':  ['VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA'],
+      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','—','VE'],
+      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','—','V'],
+      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','—','V','V','V','—','VE'],
+      'Staff/Bearer': ['V','VA','V','VE','VE','—','—','V','—','VE','—','—','V','—','V']
     };
 
     const permissions = [];

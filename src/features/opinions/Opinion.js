@@ -41,8 +41,33 @@ Opinion.init(
     },
     issueDate: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
+      allowNull: true,
       field: 'issue_date',
+    },
+    status: {
+      type: DataTypes.ENUM('draft', 'pending_review', 'approved', 'rejected', 'issued'),
+      allowNull: false,
+      defaultValue: 'draft',
+    },
+    approvedBy: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'approved_by',
+    },
+    approvalDate: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      field: 'approval_date',
+    },
+    issuedBy: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'issued_by',
+    },
+    rejectReason: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'reject_reason',
     },
     titleStatus: {
       type: DataTypes.ENUM('clear', 'disputed', 'under_scrutiny'),
@@ -54,10 +79,28 @@ Opinion.init(
       allowNull: false,
       field: 'advocate_id',
     },
+    landId: {
+      type: DataTypes.BIGINT,
+      allowNull: true,
+      field: 'land_id',
+    },
     findingsNote: {
       type: DataTypes.TEXT,
       allowNull: false,
       field: 'findings_note',
+    },
+    recommendation: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    limitations: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    documentId: {
+      type: DataTypes.BIGINT,
+      allowNull: true,
+      field: 'document_id',
     },
     createdBy: {
       type: DataTypes.BIGINT,

@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { sequelize } = require('../../config/database');
-const { Document, Case, User, DocumentCategory } = require('../associations');
+const { Document, Case, User, DocumentCategory, Land } = require('../associations');
 const AppError = require('../../utils/AppError');
 const logger = require('../../config/logger');
 const {
@@ -16,6 +16,7 @@ const SAFE_ATTRIBUTES = [
   'name',
   'documentCategoryId',
   'caseId',
+  'landId',
   'fileType',
   'fileSize',
   'filePath',
@@ -69,6 +70,12 @@ const caseInclude = {
   attributes: ['id', 'caseNo', 'title'],
 };
 
+const landInclude = {
+  model: Land,
+  as: 'land',
+  attributes: ['id', 'surveyNo', 'pattaNo', 'village'],
+};
+
 const uploaderInclude = {
   model: User,
   as: 'uploader',
@@ -86,10 +93,25 @@ const toPublicDocument = (doc) => {
   return plain;
 };
 
-const assertCaseExists = async (caseId) => {
-  const caseRecord = await Case.findByPk(caseId, { attributes: ['id'] });
+const assertCaseBelongsToTenant = async (caseId, tenantId) => {
+  if (!caseId) return;
+  const caseRecord = await Case.findByPk(caseId, { attributes: ['id', 'tenantId'], bypassTenant: true });
   if (!caseRecord) {
     throw new AppError('Case not found', 400);
+  }
+  if (Number(caseRecord.tenantId) !== Number(tenantId)) {
+    throw new AppError('Access denied: Case does not belong to your tenant', 403);
+  }
+};
+
+const assertLandBelongsToTenant = async (landId, tenantId) => {
+  if (!landId) return;
+  const landRecord = await Land.findByPk(landId, { attributes: ['id', 'tenantId'], bypassTenant: true });
+  if (!landRecord) {
+    throw new AppError('Land record not found', 400);
+  }
+  if (Number(landRecord.tenantId) !== Number(tenantId)) {
+    throw new AppError('Access denied: Land record does not belong to your tenant', 403);
   }
 };
 
@@ -134,21 +156,23 @@ const validateDocumentFile = (file) => {
   }
 };
 
-const getAllDocuments = async () => {
+const getAllDocuments = async (tenantId) => {
   const attributes = await getSafeAttributes();
   const documents = await Document.findAll({
+    where: { tenantId },
     attributes,
-    include: [caseInclude, uploaderInclude, categoryInclude],
+    include: [caseInclude, landInclude, uploaderInclude, categoryInclude],
     order: [['id', 'DESC']],
   });
   return documents.map(toPublicDocument);
 };
 
-const getDocumentById = async (id) => {
+const getDocumentById = async (id, tenantId) => {
   const attributes = await getSafeAttributes();
-  const document = await Document.findByPk(id, {
+  const document = await Document.findOne({
+    where: { id, tenantId },
     attributes,
-    include: [caseInclude, uploaderInclude, categoryInclude],
+    include: [caseInclude, landInclude, uploaderInclude, categoryInclude],
   });
 
   if (!document) {
@@ -162,34 +186,35 @@ const createDocument = async ({
   name,
   documentCategoryId,
   caseId,
+  landId,
   file,
   uploadedBy,
+  tenantId,
 }) => {
   validateDocumentFile(file);
 
-  const caseRecord = await Case.findByPk(caseId, { attributes: ['id', 'tenantId'] });
-  if (!caseRecord) {
-    throw new AppError('Case not found', 400);
-  }
+  await assertCaseBelongsToTenant(caseId, tenantId);
+  await assertLandBelongsToTenant(landId, tenantId);
 
   // Check storage limit
-  if (caseRecord.tenantId) {
+  if (tenantId) {
     const tenantService = require('../tenants/tenantService');
-    await tenantService.checkStorageLimit(caseRecord.tenantId, file.size);
+    await tenantService.checkStorageLimit(tenantId, file.size);
   }
 
   const documentCode = await generateDocumentCode();
   const uploadDate = new Date().toISOString().slice(0, 10);
   const supportsSearchContent = await hasSearchContentColumn();
-  // Always extract; persist only when the column exists.
   const searchContent = await extractDocumentSearchContent(file);
   let document;
   try {
     document = await Document.create({
+      tenantId,
       documentCode,
       name,
       documentCategoryId,
-      caseId,
+      caseId: caseId || null,
+      landId: landId || null,
       fileType: resolveFileType(file.originalname, file.mimetype),
       fileSize: formatFileSize(file.size),
       filePath: file.path || path.join('uploads', file.filename),
@@ -201,10 +226,12 @@ const createDocument = async ({
     if (!isMissingSearchContentColumnError(error)) throw error;
     hasSearchContentColumnCache = false;
     document = await Document.create({
+      tenantId,
       documentCode,
       name,
       documentCategoryId,
-      caseId,
+      caseId: caseId || null,
+      landId: landId || null,
       fileType: resolveFileType(file.originalname, file.mimetype),
       fileSize: formatFileSize(file.size),
       filePath: file.path || path.join('uploads', file.filename),
@@ -213,19 +240,23 @@ const createDocument = async ({
     });
   }
 
-  return getDocumentById(document.id);
+  return getDocumentById(document.id, tenantId);
 };
 
-const updateDocument = async (id, { name, documentCategoryId, caseId, file }) => {
+const updateDocument = async (id, { name, documentCategoryId, caseId, landId, file, tenantId }) => {
   const attributes = await getSafeAttributes();
-  const document = await Document.findByPk(id, { attributes });
+  const document = await Document.findOne({ where: { id, tenantId }, attributes });
   if (!document) {
     throw new AppError('Document not found', 404);
   }
 
   if (caseId !== undefined) {
-    await assertCaseExists(caseId);
-    document.caseId = caseId;
+    await assertCaseBelongsToTenant(caseId, tenantId);
+    document.caseId = caseId || null;
+  }
+  if (landId !== undefined) {
+    await assertLandBelongsToTenant(landId, tenantId);
+    document.landId = landId || null;
   }
   if (name !== undefined) document.name = name;
   if (documentCategoryId !== undefined) document.documentCategoryId = documentCategoryId;
@@ -260,12 +291,13 @@ const updateDocument = async (id, { name, documentCategoryId, caseId, file }) =>
     document.changed('searchContent', false);
     await document.save();
   }
-  return getDocumentById(document.id);
+  return getDocumentById(document.id, tenantId);
 };
 
-const deleteDocument = async (id) => {
+const deleteDocument = async (id, tenantId) => {
   const attributes = await getSafeAttributes();
-  const document = await Document.findByPk(id, {
+  const document = await Document.findOne({
+    where: { id, tenantId },
     attributes,
   });
 
@@ -287,9 +319,9 @@ const deleteDocument = async (id) => {
   return true;
 };
 
-const getDocumentTextContent = async (id) => {
+const getDocumentTextContent = async (id, tenantId) => {
   const attributes = await getSafeAttributes();
-  const document = await Document.findByPk(id, { attributes });
+  const document = await Document.findOne({ where: { id, tenantId }, attributes });
   if (!document) {
     throw new AppError('Document not found', 404);
   }

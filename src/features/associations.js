@@ -27,6 +27,10 @@ const Court = require('./masters/courts/Court');
 const Task = require('./tasks/Task');
 const DocumentCategory = require('./masters/document-categories/DocumentCategory');
 const GlobalSetting = require('./settings/GlobalSetting');
+const LegalText = require('./legal-texts/LegalText');
+const PhraseGroup = require('./legal-texts/PhraseGroup');
+const PhraseOccurrence = require('./legal-texts/PhraseOccurrence');
+const LandTitleSearch = require('./title-searches/LandTitleSearch');
 
 // Tenant Relationships
 Tenant.hasMany(TenantSetting, { foreignKey: 'tenant_id', as: 'settings', onDelete: 'CASCADE' });
@@ -43,7 +47,7 @@ Tenant.belongsTo(SubscriptionPlan, { foreignKey: 'plan_id', as: 'plan' });
 
 const tenantModels = [
   User, Role, Client, Advocate, Case, CaseDiary, Document, Land, Opinion, Payment, Daybook, Alert, Task, Amendment, Reference, Membership,
-  CaseType, CaseStage, CaseStageHistory, Court, DocumentCategory, BareAct
+  CaseType, CaseStage, CaseStageHistory, Court, DocumentCategory, BareAct, LegalText, PhraseGroup, PhraseOccurrence
 ];
 
 tenantModels.forEach(model => {
@@ -82,6 +86,9 @@ CaseDiary.belongsTo(Advocate, { foreignKey: 'advocate_id', as: 'advocate' });
 Case.hasMany(Document, { foreignKey: 'case_id', as: 'documents' });
 Document.belongsTo(Case, { foreignKey: 'case_id', as: 'case' });
 
+Land.hasMany(Document, { foreignKey: 'land_id', as: 'documents' });
+Document.belongsTo(Land, { foreignKey: 'land_id', as: 'land' });
+
 User.hasMany(Document, { foreignKey: 'uploaded_by', as: 'uploadedDocuments' });
 Document.belongsTo(User, { foreignKey: 'uploaded_by', as: 'uploader' });
 
@@ -111,6 +118,18 @@ Opinion.belongsTo(Client, { foreignKey: 'client_id', as: 'client' });
 
 Advocate.hasMany(Opinion, { foreignKey: 'advocate_id', as: 'draftedOpinions' });
 Opinion.belongsTo(Advocate, { foreignKey: 'advocate_id', as: 'advocate' });
+
+Land.hasMany(Opinion, { foreignKey: 'land_id', as: 'opinions' });
+Opinion.belongsTo(Land, { foreignKey: 'land_id', as: 'land' });
+
+User.hasMany(Opinion, { foreignKey: 'approved_by', as: 'approvedOpinions' });
+Opinion.belongsTo(User, { foreignKey: 'approved_by', as: 'approver' });
+
+User.hasMany(Opinion, { foreignKey: 'issued_by', as: 'issuedOpinions' });
+Opinion.belongsTo(User, { foreignKey: 'issued_by', as: 'issuer' });
+
+Opinion.belongsTo(Document, { foreignKey: 'document_id', as: 'finalPdf' });
+Document.hasOne(Opinion, { foreignKey: 'document_id', as: 'opinion' });
 
 // 9. Membership & Advocates
 Advocate.hasOne(Membership, { foreignKey: 'advocate_id', as: 'membership' });
@@ -157,6 +176,23 @@ Amendment.belongsTo(User, { foreignKey: 'created_by', as: 'creator' });
 User.hasMany(Amendment, { foreignKey: 'updated_by', as: 'updatedAmendments' });
 Amendment.belongsTo(User, { foreignKey: 'updated_by', as: 'updater' });
 
+// 15. LegalTexts
+User.hasMany(LegalText, { foreignKey: 'created_by', as: 'createdLegalTexts' });
+LegalText.belongsTo(User, { foreignKey: 'created_by', as: 'creator' });
+
+User.hasMany(LegalText, { foreignKey: 'updated_by', as: 'updatedLegalTexts' });
+LegalText.belongsTo(User, { foreignKey: 'updated_by', as: 'updater' });
+
+PhraseGroup.hasMany(PhraseOccurrence, { foreignKey: 'phrase_group_id', as: 'occurrences', onDelete: 'CASCADE' });
+PhraseOccurrence.belongsTo(PhraseGroup, { foreignKey: 'phrase_group_id', as: 'phraseGroup' });
+
+// 15. Land Title Searches
+Land.hasMany(LandTitleSearch, { foreignKey: 'land_id', as: 'titleSearches' });
+LandTitleSearch.belongsTo(Land, { foreignKey: 'land_id', as: 'land' });
+
+User.hasMany(LandTitleSearch, { foreignKey: 'conducted_by', as: 'titleSearchesConducted' });
+LandTitleSearch.belongsTo(User, { foreignKey: 'conducted_by', as: 'conductedByUser' });
+
 // Export everything from a unified hub to prevent circular dependency
 module.exports = {
   Role,
@@ -188,5 +224,9 @@ module.exports = {
   SubscriptionPlan,
   TenantSubscription,
   GlobalSetting,
+  LegalText,
+  PhraseGroup,
+  PhraseOccurrence,
+  LandTitleSearch,
 };
 

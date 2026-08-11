@@ -33,6 +33,7 @@
     "mysql2": "^3.23.1",
     "node-cron": "^4.6.0",
     "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.19.1",
     "sequelize": "^6.37.8",
     "sequelize-cli": "^6.6.5",
     "winston": "^3.19.0",

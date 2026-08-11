@@ -4,6 +4,7 @@ const roleController = require('./roleController');
 const { protect, restrictTo } = require('../../middleware/auth');
 const { tenantImpersonator } = require('../../middleware/tenantImpersonator');
 const validate = require('../../middleware/validate');
+const AppError = require('../../utils/AppError');
 
 const router = express.Router();
 
@@ -18,23 +19,18 @@ router.get('/roles', roleController.getAllRoles);
 router.get('/roles/:id', roleController.getRoleById);
 router.get('/modules', roleController.getAllModules);
 
-// Modification actions strictly reserved for Super Admin
-router.use(restrictTo('Super Admin'));
-
-router.post(
-  '/roles',
-  [
-    body('name').notEmpty().withMessage('Role name cannot be empty'),
-    validate
-  ],
-  roleController.createRole
-);
-
-router.put('/roles/:id', roleController.updateRole);
-router.delete('/roles/:id', roleController.deleteRole);
+// Permission matrix: Super Admin + Admin / Tenant Admin (matches frontend canEdit)
+const restrictToAdminRoles = (req, res, next) => {
+  const role = req.user?.role || '';
+  if (role === 'Super Admin' || role.includes('Admin')) {
+    return next();
+  }
+  return next(new AppError('Access denied: Insufficient privileges for this operation.', 403));
+};
 
 router.put(
   '/permissions',
+  restrictToAdminRoles,
   [
     body().custom((_, { req }) => {
       const { roleId, moduleId, accessLevel, permissions } = req.body || {};
@@ -81,5 +77,20 @@ router.put(
   ],
   roleController.updatePermission
 );
+
+// Role CRUD strictly reserved for Super Admin
+router.use(restrictTo('Super Admin'));
+
+router.post(
+  '/roles',
+  [
+    body('name').notEmpty().withMessage('Role name cannot be empty'),
+    validate
+  ],
+  roleController.createRole
+);
+
+router.put('/roles/:id', roleController.updateRole);
+router.delete('/roles/:id', roleController.deleteRole);
 
 module.exports = router;

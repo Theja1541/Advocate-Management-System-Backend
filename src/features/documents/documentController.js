@@ -7,7 +7,8 @@ const AppError = require('../../utils/AppError');
 
 exports.getAllDocuments = async (req, res, next) => {
   try {
-    const documents = await documentService.getAllDocuments();
+    const tenantId = req.user?.tenantId;
+    const documents = await documentService.getAllDocuments(tenantId);
     res.status(200).json({
       status: 'success',
       data: { documents },
@@ -20,7 +21,8 @@ exports.getAllDocuments = async (req, res, next) => {
 
 exports.getDocumentById = async (req, res, next) => {
   try {
-    const document = await documentService.getDocumentById(req.params.id);
+    const tenantId = req.user?.tenantId;
+    const document = await documentService.getDocumentById(req.params.id, tenantId);
     res.status(200).json({
       status: 'success',
       data: { document },
@@ -33,12 +35,15 @@ exports.getDocumentById = async (req, res, next) => {
 
 exports.createDocument = async (req, res, next) => {
   try {
+    const tenantId = req.user?.tenantId;
     const document = await documentService.createDocument({
       name: req.body.name,
       documentCategoryId: req.body.documentCategoryId !== undefined ? Number(req.body.documentCategoryId) : undefined,
-      caseId: Number(req.body.caseId),
+      caseId: req.body.caseId !== undefined ? Number(req.body.caseId) : undefined,
+      landId: req.body.landId !== undefined ? Number(req.body.landId) : undefined,
       file: req.file,
       uploadedBy: req.user?.id,
+      tenantId,
     });
     res.status(201).json({
       status: 'success',
@@ -59,7 +64,8 @@ exports.createDocument = async (req, res, next) => {
 
 exports.downloadDocument = async (req, res, next) => {
   try {
-    const document = await documentService.getDocumentById(req.params.id);
+    const tenantId = req.user?.tenantId;
+    const document = await documentService.getDocumentById(req.params.id, tenantId);
     const filePath = document.filePath;
     const fsPathCandidates = [
       filePath,
@@ -90,7 +96,8 @@ function filePathCandidatesFind(candidates) {
 
 exports.getDocumentText = async (req, res, next) => {
   try {
-    const content = await documentService.getDocumentTextContent(req.params.id);
+    const tenantId = req.user?.tenantId;
+    const content = await documentService.getDocumentTextContent(req.params.id, tenantId);
     res.status(200).json({
       status: 'success',
       data: { content },
@@ -103,11 +110,14 @@ exports.getDocumentText = async (req, res, next) => {
 
 exports.updateDocument = async (req, res, next) => {
   try {
+    const tenantId = req.user?.tenantId;
     const document = await documentService.updateDocument(req.params.id, {
       name: req.body.name,
       documentCategoryId: req.body.documentCategoryId !== undefined ? Number(req.body.documentCategoryId) : undefined,
       caseId: req.body.caseId !== undefined ? Number(req.body.caseId) : undefined,
+      landId: req.body.landId !== undefined ? Number(req.body.landId) : undefined,
       file: req.file,
+      tenantId,
     });
     res.status(200).json({
       status: 'success',
@@ -128,7 +138,8 @@ exports.updateDocument = async (req, res, next) => {
 
 exports.deleteDocument = async (req, res, next) => {
   try {
-    await documentService.deleteDocument(req.params.id);
+    const tenantId = req.user?.tenantId;
+    await documentService.deleteDocument(req.params.id, tenantId);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteDocument error:', error);

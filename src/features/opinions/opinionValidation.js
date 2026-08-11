@@ -32,8 +32,7 @@ const createOpinionRules = [
     .isLength({ max: 100 })
     .withMessage('Opinion type must be at most 100 characters'),
   body('issueDate')
-    .notEmpty()
-    .withMessage('Issue date is required')
+    .optional({ values: 'falsy' })
     .isISO8601()
     .withMessage('Issue date must be a valid date (YYYY-MM-DD)'),
   body('titleStatus')
@@ -45,6 +44,10 @@ const createOpinionRules = [
     .withMessage('Advocate is required')
     .isInt({ min: 1 })
     .withMessage('Valid advocate ID is required'),
+  body('landId')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1 })
+    .withMessage('Valid land ID is required'),
   body('findingsNote')
     .trim()
     .notEmpty()
@@ -99,6 +102,10 @@ const updateOpinionRules = [
     .optional()
     .isInt({ min: 1 })
     .withMessage('Valid advocate ID is required'),
+  body('landId')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1 })
+    .withMessage('Valid land ID is required'),
   body('findingsNote')
     .optional()
     .trim()

@@ -50,6 +50,51 @@ Land.init(
       allowNull: false,
       field: 'patta_no',
     },
+    subDivisionNo: {
+      type: DataTypes.STRING(50),
+      allowNull: true,
+      field: 'sub_division_no',
+    },
+    sro: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'sro',
+    },
+    registrationDistrict: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'registration_district',
+    },
+    documentNo: {
+      type: DataTypes.STRING(50),
+      allowNull: true,
+      field: 'document_no',
+    },
+    documentYear: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      field: 'document_year',
+    },
+    registrationDate: {
+      type: DataTypes.DATEONLY,
+      allowNull: true,
+      field: 'registration_date',
+    },
+    acquisitionType: {
+      type: DataTypes.STRING(50),
+      allowNull: true,
+      field: 'acquisition_type',
+    },
+    currentOwnerName: {
+      type: DataTypes.STRING(150),
+      allowNull: true,
+      field: 'current_owner_name',
+    },
+    remarks: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'remarks',
+    },
     encumbranceStatus: {
       type: DataTypes.ENUM('clear', 'noted', 'pending'),
       defaultValue: 'clear',
