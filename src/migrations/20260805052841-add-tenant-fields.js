@@ -2,7 +2,12 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const tableInfo = await queryInterface.describeTable('tenants');
+    let tableInfo;
+    try {
+      tableInfo = await queryInterface.describeTable('tenants');
+    } catch (err) {
+      return; // Table does not exist, skip
+    }
     const transaction = await queryInterface.sequelize.transaction();
     try {
       if (!tableInfo.address) {

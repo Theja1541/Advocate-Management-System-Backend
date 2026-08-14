@@ -5,7 +5,7 @@ const { requireAdvocateScope } = require('../../utils/advocateScope');
 exports.getAllDiaries = async (req, res, next) => {
   try {
     const advocateId = requireAdvocateScope(req.user);
-    const diaries = await diaryService.getAllDiaries({ advocateId });
+    const diaries = await diaryService.getAllDiaries({ advocateId }, req.user);
     res.status(200).json({
       status: 'success',
       data: { diaries },
@@ -15,6 +15,7 @@ exports.getAllDiaries = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getDiaryById = async (req, res, next) => {
   try {

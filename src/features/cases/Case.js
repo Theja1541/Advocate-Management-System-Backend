@@ -28,7 +28,10 @@ Case.init(
     miscCharges: { type: DataTypes.DECIMAL(12, 2), allowNull: true, field: 'misc_charges' },
     totalPayable: { type: DataTypes.DECIMAL(12, 2), allowNull: true, field: 'total_payable' },
     feeCalculationStatus: { type: DataTypes.STRING(20), allowNull: true, field: 'fee_calculation_status' },
+    createdBy: { type: DataTypes.BIGINT.UNSIGNED, allowNull: true, field: 'created_by' },
+    updatedBy: { type: DataTypes.BIGINT.UNSIGNED, allowNull: true, field: 'updated_by' },
   },
+
   {
     sequelize,
     modelName: 'Case',

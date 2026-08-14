@@ -4,7 +4,7 @@ const logger = require('../../config/logger');
 exports.getAllTitleSearches = async (req, res, next) => {
   try {
     const tenantId = req.user.tenantId;
-    const titleSearches = await titleSearchService.getAllTitleSearches(tenantId);
+    const titleSearches = await titleSearchService.getAllTitleSearches(tenantId, req.user);
     res.status(200).json({
       status: 'success',
       data: { titleSearches },
@@ -14,6 +14,7 @@ exports.getAllTitleSearches = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getTitleSearchById = async (req, res, next) => {
   try {

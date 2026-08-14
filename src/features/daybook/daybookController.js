@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllEntries = async (req, res, next) => {
   try {
-    const entries = await daybookService.getAllEntries();
+    const entries = await daybookService.getAllEntries(req.user);
     res.status(200).json({
       status: 'success',
       data: { entries },
@@ -14,9 +14,10 @@ exports.getAllEntries = async (req, res, next) => {
   }
 };
 
+
 exports.getEntryById = async (req, res, next) => {
   try {
-    const entry = await daybookService.getEntryById(req.params.id);
+    const entry = await daybookService.getEntryById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { entry },
@@ -51,7 +52,7 @@ exports.updateEntry = async (req, res, next) => {
     const entry = await daybookService.updateEntry(req.params.id, {
       ...req.body,
       recordedBy: req.body.recordedBy ?? req.user?.id,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       data: { entry },
@@ -64,7 +65,7 @@ exports.updateEntry = async (req, res, next) => {
 
 exports.deleteEntry = async (req, res, next) => {
   try {
-    await daybookService.deleteEntry(req.params.id);
+    await daybookService.deleteEntry(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteDaybookEntry error:', error);

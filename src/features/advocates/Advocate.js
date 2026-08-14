@@ -16,6 +16,15 @@ Advocate.init(
       allowNull: false,
       field: 'tenant_id',
     },
+    tenantAdminId: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: true,
+      field: 'tenant_admin_id',
+      references: {
+        model: 'users',
+        key: 'id',
+      },
+    },
     name: {
       type: DataTypes.STRING(140),
       allowNull: false,

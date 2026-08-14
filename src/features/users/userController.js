@@ -62,3 +62,19 @@ exports.deleteUser = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.resetPassword = async (req, res, next) => {
+  try {
+    const tempPassword = await userService.resetPassword(req.params.id);
+    res.status(200).json({
+      status: 'success',
+      message: 'Password has been reset successfully',
+      data: {
+        temporaryPassword: tempPassword,
+      }
+    });
+  } catch (error) {
+    logger.error('ResetPassword error:', error);
+    next(error);
+  }
+};

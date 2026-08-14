@@ -1,6 +1,17 @@
 const { Op } = require('sequelize');
 const LegalText = require('./LegalText');
 const AppError = require('../../utils/AppError');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+const { applyGroupAdminIsolation } = require('../../utils/groupAdminScope');
+
+const scopeLegalTextWhere = async (where, user) => {
+  const role = user?.role || user?.rawRole;
+  if (isGroupAdmin(role)) {
+    where.created_by = user.id;
+    return;
+  }
+  await applyGroupAdminIsolation(where, user, 'created_by');
+};
 
 exports.getSuggestions = async (req, res, next) => {
   try {
@@ -16,6 +27,7 @@ exports.getSuggestions = async (req, res, next) => {
         { content: { [Op.like]: `%${search}%` } },
       ]
     };
+    await scopeLegalTextWhere(where, req.user);
 
     const rows = await LegalText.findAll({
       where,
@@ -92,17 +104,22 @@ exports.getAllTexts = async (req, res, next) => {
     const offset = (page - 1) * limit;
 
     const where = { tenantId: req.user.tenantId };
+    await scopeLegalTextWhere(where, req.user);
 
     if (category) {
       where.category = category;
     }
 
     if (search) {
-      where[Op.or] = [
-        { title: { [Op.like]: `%${search}%` } },
-        { content: { [Op.like]: `%${search}%` } },
-        { category: { [Op.like]: `%${search}%` } }
-      ];
+      const searchClause = {
+        [Op.or]: [
+          { title: { [Op.like]: `%${search}%` } },
+          { content: { [Op.like]: `%${search}%` } },
+          { category: { [Op.like]: `%${search}%` } }
+        ]
+      };
+      where[Op.and] = where[Op.and] || [];
+      where[Op.and].push(searchClause);
     }
 
     const { count, rows } = await LegalText.findAndCountAll({
@@ -126,9 +143,10 @@ exports.getAllTexts = async (req, res, next) => {
 
 exports.getTextById = async (req, res, next) => {
   try {
-    const legalText = await LegalText.findOne({
-      where: { id: req.params.id, tenantId: req.user.tenantId }
-    });
+    const where = { id: req.params.id, tenantId: req.user.tenantId };
+    await scopeLegalTextWhere(where, req.user);
+
+    const legalText = await LegalText.findOne({ where });
 
     if (!legalText) {
       return next(new AppError('Legal Text not found', 404));
@@ -168,9 +186,10 @@ exports.updateText = async (req, res, next) => {
   try {
     const { title, content, category } = req.body;
 
-    const legalText = await LegalText.findOne({
-      where: { id: req.params.id, tenantId: req.user.tenantId }
-    });
+    const where = { id: req.params.id, tenantId: req.user.tenantId };
+    await scopeLegalTextWhere(where, req.user);
+
+    const legalText = await LegalText.findOne({ where });
 
     if (!legalText) {
       return next(new AppError('Legal Text not found', 404));
@@ -194,9 +213,10 @@ exports.updateText = async (req, res, next) => {
 
 exports.deleteText = async (req, res, next) => {
   try {
-    const legalText = await LegalText.findOne({
-      where: { id: req.params.id, tenantId: req.user.tenantId }
-    });
+    const where = { id: req.params.id, tenantId: req.user.tenantId };
+    await scopeLegalTextWhere(where, req.user);
+
+    const legalText = await LegalText.findOne({ where });
 
     if (!legalText) {
       return next(new AppError('Legal Text not found', 404));

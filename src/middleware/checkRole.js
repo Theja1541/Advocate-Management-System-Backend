@@ -1,4 +1,5 @@
 const AppError = require('../utils/AppError');
+const { normalizeRole } = require('../utils/roleHelper');
 
 /**
  * Middleware to restrict access based strictly on user roles.
@@ -13,8 +14,10 @@ const checkRole = (...allowedRoles) => {
       return next(new AppError('Forbidden: User role is missing', 403));
     }
 
-    // Check if the user's role is in the list of allowed roles
-    if (!allowedRoles.includes(req.user.role)) {
+    const userNormalized = normalizeRole(req.user.role);
+    const allowedNormalized = allowedRoles.map(normalizeRole);
+
+    if (!allowedNormalized.includes(userNormalized)) {
       return next(
         new AppError('Access Denied: You do not have the required role to perform this action', 403)
       );
@@ -25,3 +28,4 @@ const checkRole = (...allowedRoles) => {
 };
 
 module.exports = checkRole;
+

@@ -47,15 +47,23 @@ const assertUserExists = async (userId) => {
   if (!user) throw new AppError('Conducted by user not found', 400);
 };
 
-const getAllTitleSearches = async (tenantId) => {
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllTitleSearches = async (tenantId, currentUser = null) => {
+  const where = { tenantId };
+  if (currentUser && isGroupAdmin(currentUser.role)) {
+    where.conductedBy = currentUser.id;
+  }
+
   const searches = await LandTitleSearch.findAll({
-    where: { tenantId },
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [landInclude, userInclude],
     order: [['searchDate', 'DESC'], ['id', 'DESC']],
   });
   return searches.map(toPublicTitleSearch);
 };
+
 
 const getTitleSearchById = async (id, tenantId) => {
   const search = await LandTitleSearch.findOne({

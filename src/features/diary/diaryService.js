@@ -101,11 +101,31 @@ const assertUserExists = async (userId, fieldLabel) => {
   }
 };
 
-const getAllDiaries = async ({ advocateId } = {}) => {
+const { getScopedAdvocateIds, assertUserCanAccessAdvocateData } = require('../../utils/advocateScope');
+
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllDiaries = async ({ advocateId } = {}, currentUser = null) => {
   const where = {};
   if (advocateId != null) {
     where.advocateId = advocateId;
   }
+
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        where.advocateId = { [Op.in]: allowedAdvocateIds };
+      }
+    }
+  }
+
+
 
   const entries = await CaseDiary.findAll({
     where,
@@ -119,6 +139,7 @@ const getAllDiaries = async ({ advocateId } = {}) => {
   });
   return entries.map(toPublicDiary);
 };
+
 
 const fs = require('fs').promises;
 const path = require('path');

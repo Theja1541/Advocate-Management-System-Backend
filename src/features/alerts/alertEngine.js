@@ -9,6 +9,8 @@ const { Case, Payment, Task, Document, Advocate, Client } = require('../associat
 /**
  * Upsert an alert.
  */
+const { tenantContext } = require('../../config/database');
+
 const upsertAlert = async ({
   referenceType,
   referenceId,
@@ -17,8 +19,12 @@ const upsertAlert = async ({
   message,
   assignedTo = null,
   metadata = null,
+  tenantId = null,
 }) => {
   try {
+    const store = tenantContext.getStore();
+    const resolvedTenantId = tenantId || store?.tenantId || 1;
+
     let alert = await Alert.findOne({
       where: { referenceType, referenceId, alertType },
     });
@@ -29,6 +35,7 @@ const upsertAlert = async ({
       alert.status = 'active';
       if (assignedTo !== null) alert.assignedTo = assignedTo;
       if (metadata !== null) alert.metadata = metadata;
+      if (resolvedTenantId) alert.tenantId = resolvedTenantId;
       await alert.save();
     } else {
       alert = await Alert.create({
@@ -40,6 +47,7 @@ const upsertAlert = async ({
         status: 'active',
         assignedTo,
         metadata,
+        tenantId: resolvedTenantId,
       });
       auditService.logEvent(auditService.actions.ALERT_GENERATED, 'SYSTEM', { alertId: alert.id, alertType });
     }
@@ -48,6 +56,7 @@ const upsertAlert = async ({
     logger.error('Error upserting alert:', error);
   }
 };
+
 
 /**
  * Mark an alert as resolved.

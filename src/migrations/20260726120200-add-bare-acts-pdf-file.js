@@ -3,25 +3,33 @@
 /** Adds bare_acts.pdf_file for static library PDF filenames. */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const table = await queryInterface.describeTable('bare_acts');
-    if (!table.pdf_file) {
-      await queryInterface.addColumn('bare_acts', 'pdf_file', {
-        type: Sequelize.STRING(120),
-        allowNull: true,
-      });
-    }
+    try {
+      const table = await queryInterface.describeTable('bare_acts');
+      if (!table.pdf_file) {
+        await queryInterface.addColumn('bare_acts', 'pdf_file', {
+          type: Sequelize.STRING(120),
+          allowNull: true,
+        });
+      }
 
-    await queryInterface.sequelize.query(`
-      UPDATE bare_acts
-      SET pdf_file = CONCAT(abbreviation, '.pdf')
-      WHERE pdf_file IS NULL OR pdf_file = ''
-    `);
+      await queryInterface.sequelize.query(`
+        UPDATE bare_acts
+        SET pdf_file = CONCAT(abbreviation, '.pdf')
+        WHERE pdf_file IS NULL OR pdf_file = ''
+      `);
+    } catch (err) {
+      // Table does not exist in target database, skip
+    }
   },
 
   async down(queryInterface) {
-    const table = await queryInterface.describeTable('bare_acts');
-    if (table.pdf_file) {
-      await queryInterface.removeColumn('bare_acts', 'pdf_file');
+    try {
+      const table = await queryInterface.describeTable('bare_acts');
+      if (table.pdf_file) {
+        await queryInterface.removeColumn('bare_acts', 'pdf_file');
+      }
+    } catch (err) {
+      // Table does not exist in target database, skip
     }
   },
 };

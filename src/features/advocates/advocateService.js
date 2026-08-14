@@ -4,7 +4,24 @@ const { sequelize } = require('../../config/database');
 const Advocate = require('./Advocate');
 const User = require('../users/User');
 const Role = require('../users/Role');
+const GroupAdminAdvocate = require('../users/GroupAdminAdvocate');
 const AppError = require('../../utils/AppError');
+const { isSuperAdmin, isGroupAdmin, normalizeRole } = require('../../utils/roleHelper');
+
+const isGAUser = (user) => {
+  if (!user) return false;
+  const roleName = typeof user.role === 'object' ? user.role?.name : user.role;
+  return isGroupAdmin(roleName) || isGroupAdmin(user.rawRole);
+};
+
+const getAssignedAdvocateIds = async (user, transaction) => {
+  const links = await GroupAdminAdvocate.findAll({
+    where: { groupAdminId: user.id },
+    attributes: ['advocateId'],
+    transaction,
+  });
+  return links.map((l) => l.advocateId).filter((id) => id != null);
+};
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -17,6 +34,8 @@ const SAFE_ATTRIBUTES = [
   'relation',
   'status',
   'userId',
+  'tenantId',
+  'tenantAdminId',
   'created_at',
   'updated_at',
 ];
@@ -29,6 +48,23 @@ const toPublicAdvocate = (advocate) => {
   if (plain.user) {
     plain.roleId = plain.user.roleId;
     delete plain.user;
+  }
+  if (plain.groupAdmins) {
+    plain.groupAdmins = plain.groupAdmins.map((ga) => ({
+      id: ga.id,
+      name: ga.name,
+      email: ga.email,
+    }));
+  } else {
+    plain.groupAdmins = [];
+  }
+  if (plain.assignedTenantAdmin) {
+    plain.tenantAdmin = {
+      id: plain.assignedTenantAdmin.id,
+      name: plain.assignedTenantAdmin.name,
+      email: plain.assignedTenantAdmin.email,
+    };
+    delete plain.assignedTenantAdmin;
   }
   return plain;
 };
@@ -76,7 +112,7 @@ const assertEmailAvailableForUser = async (email, excludeUserId, transaction) =>
 };
 
 const createLinkedLoginUser = async (
-  { name, email, password, status, roleId },
+  { name, email, password, status, roleId, tenantId },
   transaction
 ) => {
   const finalRoleId = roleId || (await getAdvocateRoleId(transaction));
@@ -94,6 +130,7 @@ const createLinkedLoginUser = async (
       roleId: finalRoleId,
       passwordHash,
       status: status === 'inactive' ? 'inactive' : 'active',
+      tenantId,
     },
     { transaction }
   );
@@ -133,42 +170,142 @@ const syncLinkedLoginUser = async (
   await user.save({ transaction });
 };
 
-const getAllAdvocates = async () => {
+const getAllAdvocates = async (currentUser) => {
+  const isSuper = currentUser ? isSuperAdmin(currentUser.role) : true;
+  const isGA = isGAUser(currentUser);
+
+  let advocateIdsFilter = null;
+
+  // If Group Admin, restrict to assigned advocates
+  if (isGA && currentUser) {
+    advocateIdsFilter = await getAssignedAdvocateIds(currentUser);
+    if (advocateIdsFilter.length === 0) {
+      return [];
+    }
+  }
+
+  const whereClause = isSuper ? {} : { tenantId: currentUser.tenantId };
+  if (advocateIdsFilter !== null) {
+    whereClause.id = { [Op.in]: advocateIdsFilter };
+  }
+
+
+  const include = [
+    { model: User, as: 'user', attributes: ['roleId'] },
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name', 'email'],
+      through: { attributes: [] },
+    },
+    { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
+  ];
+
   const advocates = await Advocate.findAll({
+    where: whereClause,
     attributes: SAFE_ATTRIBUTES,
-    include: [{ model: User, as: 'user', attributes: ['roleId'] }],
+    include,
     order: [['id', 'ASC']],
   });
   return advocates.map(toPublicAdvocate);
 };
 
-const getAdvocateById = async (id) => {
+const getAdvocateById = async (id, currentUser, transaction) => {
+  const include = [
+    { model: User, as: 'user', attributes: ['roleId'] },
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name', 'email'],
+      through: { attributes: [] },
+    },
+    { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
+  ];
+
   const advocate = await Advocate.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
-    include: [{ model: User, as: 'user', attributes: ['roleId'] }],
+    include,
+    transaction,
   });
-
   if (!advocate) {
     throw new AppError('Advocate not found', 404);
+  }
+
+  if (currentUser) {
+    const isSuper = isSuperAdmin(currentUser.role);
+    const isGA = isGAUser(currentUser);
+
+    if (!isSuper && advocate.tenantId !== currentUser.tenantId) {
+      throw new AppError('Access denied: Unauthorized cross-tenant access', 403);
+    }
+
+    if (isGA) {
+      const isAssigned = (advocate.groupAdmins || []).some(
+        (ga) => Number(ga.id) === Number(currentUser.id)
+      );
+      if (!isAssigned) {
+        throw new AppError('Access denied: Advocate is not assigned to you', 403);
+      }
+    }
   }
 
   return toPublicAdvocate(advocate);
 };
 
-const createAdvocate = async ({
-  name,
-  mobile,
-  email,
-  specialization,
-  enrolment,
-  experience,
-  relation,
-  status,
-  password,
-  createLogin,
-  roleId,
-}) => {
+const findExistingTenantAdvocate = async (tenantId, { enrolment, email, name }, transaction) => {
+  const conditions = [];
+
+  if (enrolment && String(enrolment).trim()) {
+    conditions.push({ enrolment: String(enrolment).trim() });
+  }
+  if (email && String(email).trim()) {
+    conditions.push({ email: String(email).trim().toLowerCase() });
+  }
+
+  if (conditions.length === 0) return null;
+
+  const include = [
+    { model: User, as: 'user', attributes: ['roleId'] },
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name', 'email'],
+      through: { attributes: [] },
+    },
+    { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
+  ];
+
+  return Advocate.findOne({
+    where: {
+      tenantId,
+      [Op.or]: conditions,
+    },
+    include,
+    transaction,
+  });
+};
+
+const createAdvocate = async (
+  {
+    name,
+    mobile,
+    email,
+    specialization,
+    enrolment,
+    experience,
+    relation,
+    status,
+    password,
+    createLogin,
+    roleId,
+    groupAdminIds,
+    tenantAdminId,
+  },
+  currentUser
+) => {
   const normalizedEmail = email ? String(email).trim().toLowerCase() : null;
+  const normalizedEnrolment = enrolment ? String(enrolment).trim() : null;
+
   const wantsLogin =
     createLogin === undefined ? Boolean(normalizedEmail) : Boolean(createLogin);
 
@@ -176,7 +313,60 @@ const createAdvocate = async ({
     throw new AppError('Email is required to create an advocate login', 400);
   }
 
+  const tenantId = currentUser ? currentUser.tenantId : null;
+  const isGA = isGAUser(currentUser);
+
+  const include = [
+    { model: User, as: 'user', attributes: ['roleId'] },
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name', 'email'],
+      through: { attributes: [] },
+    },
+    { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
+  ];
+
   return sequelize.transaction(async (transaction) => {
+    // 1. Check duplicate advocate within same tenant
+    if (tenantId) {
+      const existingAdvocate = await findExistingTenantAdvocate(
+        tenantId,
+        { enrolment: normalizedEnrolment, email: normalizedEmail, name },
+        transaction
+      );
+
+      if (existingAdvocate) {
+        // If Group Admins passed, link existing advocate
+        let gIds = groupAdminIds || [];
+        if (isGA && !gIds.includes(currentUser.id)) {
+          gIds.push(currentUser.id);
+        }
+        if (gIds.length > 0) {
+          for (const gaId of gIds) {
+            await GroupAdminAdvocate.findOrCreate({
+              where: { groupAdminId: gaId, advocateId: existingAdvocate.id },
+              defaults: { groupAdminId: gaId, advocateId: existingAdvocate.id },
+              transaction,
+            });
+          }
+        }
+        
+        if (tenantAdminId) {
+          existingAdvocate.tenantAdminId = tenantAdminId;
+          await existingAdvocate.save({ transaction });
+        }
+
+        const updatedExisting = await Advocate.findByPk(existingAdvocate.id, {
+          attributes: SAFE_ATTRIBUTES,
+          include,
+          transaction,
+        });
+        return toPublicAdvocate(updatedExisting);
+      }
+    }
+
+    // 2. Assert email availability if creating new advocate
     await assertEmailAvailableForAdvocate(normalizedEmail, null, transaction);
     if (normalizedEmail) {
       await assertEmailAvailableForUser(normalizedEmail, null, transaction);
@@ -191,6 +381,7 @@ const createAdvocate = async ({
           password,
           status: status || 'active',
           roleId,
+          tenantId,
         },
         transaction
       );
@@ -200,19 +391,42 @@ const createAdvocate = async ({
     const advocate = await Advocate.create(
       {
         name,
-        mobile,
+        mobile: mobile || '0000000000',
         email: normalizedEmail,
         specialization: specialization || null,
-        enrolment: enrolment || null,
+        enrolment: normalizedEnrolment,
         experience: experience || null,
         relation: relation || 'Junior Advocate',
         status: status || 'active',
         userId,
+        tenantId,
+        tenantAdminId: tenantAdminId || null,
       },
       { transaction }
     );
 
-    return toPublicAdvocate(advocate);
+    let gIds = groupAdminIds || [];
+    if (isGA && !gIds.includes(currentUser.id)) {
+      gIds.push(currentUser.id);
+    }
+    
+    if (gIds.length > 0) {
+      for (const gaId of gIds) {
+        await GroupAdminAdvocate.findOrCreate({
+          where: { groupAdminId: gaId, advocateId: advocate.id },
+          defaults: { groupAdminId: gaId, advocateId: advocate.id },
+          transaction,
+        });
+      }
+    }
+
+    const createdAdvocate = await Advocate.findByPk(advocate.id, {
+      attributes: SAFE_ATTRIBUTES,
+      include,
+      transaction,
+    });
+
+    return toPublicAdvocate(createdAdvocate);
   });
 };
 
@@ -230,7 +444,10 @@ const updateAdvocate = async (
     password,
     createLogin,
     roleId,
-  }
+    groupAdminIds,
+    tenantAdminId,
+  },
+  currentUser
 ) => {
   return sequelize.transaction(async (transaction) => {
     const advocate = await Advocate.findByPk(id, {
@@ -240,6 +457,25 @@ const updateAdvocate = async (
 
     if (!advocate) {
       throw new AppError('Advocate not found', 404);
+    }
+
+    if (currentUser) {
+      const isSuper = isSuperAdmin(currentUser.role);
+      const isGA = isGAUser(currentUser);
+
+      if (!isSuper && advocate.tenantId !== currentUser.tenantId) {
+        throw new AppError('Access denied: Cross-tenant modification blocked', 403);
+      }
+
+      if (isGA) {
+        const link = await GroupAdminAdvocate.findOne({
+          where: { groupAdminId: currentUser.id, advocateId: id },
+          transaction,
+        });
+        if (!link) {
+          throw new AppError('Access denied: Advocate is not assigned to you', 403);
+        }
+      }
     }
 
     const nextEmail =
@@ -299,13 +535,44 @@ const updateAdvocate = async (
       );
     }
 
+    if (tenantAdminId !== undefined) {
+      advocate.tenantAdminId = tenantAdminId || null;
+    }
+
     await advocate.save({ transaction });
 
-    return toPublicAdvocate(advocate);
+    // Sync group admin ids if provided
+    if (groupAdminIds !== undefined) {
+      const isGA = isGAUser(currentUser);
+      let gIds = Array.isArray(groupAdminIds) ? groupAdminIds : [];
+      if (isGA && !gIds.includes(currentUser.id)) {
+        gIds.push(currentUser.id);
+      }
+      
+      // Remove unassigned
+      await GroupAdminAdvocate.destroy({
+        where: {
+          advocateId: id,
+          groupAdminId: { [Op.notIn]: gIds },
+        },
+        transaction,
+      });
+
+      // Add new
+      for (const gaId of gIds) {
+        await GroupAdminAdvocate.findOrCreate({
+          where: { groupAdminId: gaId, advocateId: id },
+          defaults: { groupAdminId: gaId, advocateId: id },
+          transaction,
+        });
+      }
+    }
+
+    return getAdvocateById(advocate.id, currentUser, transaction);
   });
 };
 
-const deleteAdvocate = async (id) => {
+const deleteAdvocate = async (id, currentUser) => {
   return sequelize.transaction(async (transaction) => {
     const advocate = await Advocate.findByPk(id, {
       attributes: SAFE_ATTRIBUTES,
@@ -316,7 +583,25 @@ const deleteAdvocate = async (id) => {
       throw new AppError('Advocate not found', 404);
     }
 
+    if (currentUser) {
+      const isSuper = isSuperAdmin(currentUser.role);
+      const isGA = isGAUser(currentUser);
+      if (!isSuper && advocate.tenantId !== currentUser.tenantId) {
+        throw new AppError('Access denied: Cross-tenant deletion blocked', 403);
+      }
+      if (isGA) {
+        const link = await GroupAdminAdvocate.findOne({
+          where: { groupAdminId: currentUser.id, advocateId: id },
+          transaction,
+        });
+        if (!link) {
+          throw new AppError('Access denied: Advocate is not assigned to you', 403);
+        }
+      }
+    }
+
     const linkedUserId = advocate.userId;
+    await GroupAdminAdvocate.destroy({ where: { advocateId: id }, transaction });
     await advocate.destroy({ transaction });
 
     if (linkedUserId) {
@@ -330,11 +615,60 @@ const deleteAdvocate = async (id) => {
   });
 };
 
+const searchTenantAdvocates = async (queryStr, currentUser) => {
+  const isSuper = isSuperAdmin(currentUser.role);
+  const isGA = isGAUser(currentUser);
+  
+  let advocateIdsFilter = null;
+  if (isGA && currentUser) {
+    advocateIdsFilter = await getAssignedAdvocateIds(currentUser);
+    if (advocateIdsFilter.length === 0) {
+      return [];
+    }
+  }
+
+  const whereClause = isSuper ? {} : { tenantId: currentUser.tenantId };
+  if (advocateIdsFilter !== null) {
+    whereClause.id = { [Op.in]: advocateIdsFilter };
+  }
+
+  if (queryStr && String(queryStr).trim()) {
+    const term = `%${String(queryStr).trim()}%`;
+    whereClause[Op.or] = [
+      { name: { [Op.like]: term } },
+      { email: { [Op.like]: term } },
+      { enrolment: { [Op.like]: term } },
+      { specialization: { [Op.like]: term } },
+    ];
+  }
+
+  const include = [
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name', 'email'],
+      through: { attributes: [] },
+    },
+    { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
+  ];
+
+  const advocates = await Advocate.findAll({
+    where: whereClause,
+    attributes: SAFE_ATTRIBUTES,
+    include,
+    order: [['name', 'ASC']],
+    limit: 20,
+  });
+
+  return advocates.map(toPublicAdvocate);
+};
+
 module.exports = {
   getAllAdvocates,
   getAdvocateById,
   createAdvocate,
   updateAdvocate,
   deleteAdvocate,
+  searchTenantAdvocates,
   DEFAULT_LOGIN_PASSWORD,
 };

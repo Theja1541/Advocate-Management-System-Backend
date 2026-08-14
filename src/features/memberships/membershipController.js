@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllMemberships = async (req, res, next) => {
   try {
-    const memberships = await membershipService.getAllMemberships();
+    const memberships = await membershipService.getAllMemberships(req.user);
     res.status(200).json({
       status: 'success',
       data: { memberships },
@@ -13,6 +13,7 @@ exports.getAllMemberships = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getMembershipById = async (req, res, next) => {
   try {

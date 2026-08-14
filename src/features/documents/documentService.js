@@ -156,16 +156,48 @@ const validateDocumentFile = (file) => {
   }
 };
 
-const getAllDocuments = async (tenantId) => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+const { Op } = require('sequelize');
+
+
+const getAllDocuments = async (tenantId, currentUser = null) => {
   const attributes = await getSafeAttributes();
+  const where = { tenantId };
+
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.uploadedBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        const cases = await Case.findAll({
+          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          attributes: ['id'],
+        });
+        const caseIds = cases.map((c) => c.id);
+        if (caseIds.length === 0) {
+          return [];
+        }
+        where.caseId = { [Op.in]: caseIds };
+      }
+    }
+  }
+
+
+
   const documents = await Document.findAll({
-    where: { tenantId },
+    where,
     attributes,
     include: [caseInclude, landInclude, uploaderInclude, categoryInclude],
     order: [['id', 'DESC']],
   });
   return documents.map(toPublicDocument);
 };
+
 
 const getDocumentById = async (id, tenantId) => {
   const attributes = await getSafeAttributes();

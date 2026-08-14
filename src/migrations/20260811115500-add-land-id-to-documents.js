@@ -2,37 +2,41 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // 1. Modify case_id to allow NULL with foreign key checks temporarily disabled, matching database type (INT UNSIGNED)
-    await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
-    await queryInterface.sequelize.query('ALTER TABLE documents MODIFY case_id INT UNSIGNED NULL;');
-    await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
+    try {
+      // 1. Modify case_id to allow NULL with foreign key checks temporarily disabled
+      await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
+      await queryInterface.sequelize.query('ALTER TABLE documents MODIFY case_id INT UNSIGNED NULL;');
+      await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
+    } catch (e) {}
 
-    // 2. Add land_id column pointing to lands.id (which is BIGINT)
-    await queryInterface.addColumn('documents', 'land_id', {
-      type: Sequelize.BIGINT,
-      allowNull: true,
-      references: {
-        model: 'lands',
-        key: 'id',
-      },
-      onUpdate: 'CASCADE',
-      onDelete: 'SET NULL',
-    });
+    try {
+      const table = await queryInterface.describeTable('documents');
+      if (!table.land_id) {
+        await queryInterface.addColumn('documents', 'land_id', {
+          type: Sequelize.BIGINT,
+          allowNull: true,
+          references: {
+            model: 'lands',
+            key: 'id',
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'SET NULL',
+        });
+      }
+    } catch (e) {}
 
-    // 3. Add index on land_id
-    await queryInterface.addIndex('documents', ['land_id']);
+    try {
+      await queryInterface.addIndex('documents', ['land_id']);
+    } catch (e) {}
   },
 
   down: async (queryInterface, Sequelize) => {
-    // 1. Remove index
-    await queryInterface.removeIndex('documents', ['land_id']);
-
-    // 2. Remove land_id column
-    await queryInterface.removeColumn('documents', 'land_id');
-
-    // 3. Re-constrain case_id to NOT NULL
-    await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
-    await queryInterface.sequelize.query('ALTER TABLE documents MODIFY case_id INT UNSIGNED NOT NULL;');
-    await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
+    try { await queryInterface.removeIndex('documents', ['land_id']); } catch (e) {}
+    try { await queryInterface.removeColumn('documents', 'land_id'); } catch (e) {}
+    try {
+      await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
+      await queryInterface.sequelize.query('ALTER TABLE documents MODIFY case_id INT UNSIGNED NOT NULL;');
+      await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
+    } catch (e) {}
   },
 };

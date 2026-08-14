@@ -1,12 +1,13 @@
+const { Op } = require('sequelize');
 const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court, StateCourtFeeRule } = require('../associations');
 const courtFeeService = require('../court-fees/courtFee.service');
 const AppError = require('../../utils/AppError');
-const { assertAdvocateOwnsCase } = require('../../utils/advocateScope');
-const { sequelize } = require('../../config/database');
-const { resolveAlert, resolveAllAlertsForRecord } = require('../alerts/alertEngine');
+const { assertAdvocateOwnsCase, getScopedAdvocateIds, assertUserCanAccessAdvocateData } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
 
 const SAFE_ATTRIBUTES = [
   'id',
+  'tenantId',
   'caseNo',
   'title',
   'status',
@@ -27,73 +28,51 @@ const SAFE_ATTRIBUTES = [
   'miscCharges',
   'totalPayable',
   'feeCalculationStatus',
+  'courtFeeSnapshot',
+  'createdBy',
+  'updatedBy',
   'created_at',
   'updated_at',
 ];
 
 const caseIncludes = [
-  { model: CaseType, as: 'caseType', attributes: ['id', 'code', 'name'] },
-  { model: CaseStage, as: 'currentStage', attributes: ['id', 'code', 'name', 'color', 'isClosed'] },
-  { model: Client, as: 'client', attributes: ['id', 'name'] },
-  { model: Advocate, as: 'assignedAdvocate', attributes: ['id', 'name'] },
-  { model: Court, as: 'assignedCourt', attributes: ['id', 'code', 'name', 'location'] },
+  { model: Advocate, as: 'assignedAdvocate', attributes: ['id', 'name', 'email'] },
+  { model: Client, as: 'client', attributes: ['id', 'name', 'clientCode'] },
+  { model: CaseType, as: 'caseType', attributes: ['id', 'name', 'code'] },
+  { model: CaseStage, as: 'currentStage', attributes: ['id', 'name', 'code', 'displayOrder'] },
+  { model: Court, as: 'assignedCourt', attributes: ['id', 'name', 'code', 'stateCode'] },
 ];
 
-const toPublicCase = (caseRecord) => {
-  if (!caseRecord) return null;
-  return caseRecord.get ? caseRecord.get({ plain: true }) : { ...caseRecord };
+
+const toPublicCase = (c) => {
+  const plain = c.get ? c.get({ plain: true }) : { ...c };
+  if (plain.assignedAdvocate) {
+    plain.advocate = plain.assignedAdvocate;
+  }
+  if (plain.assignedCourt) {
+    plain.courtDetails = plain.assignedCourt;
+  }
+  return plain;
 };
 
-const assertAdvocateExists = async (advocateId) => {
-  if (advocateId == null) return;
-  const advocate = await Advocate.findByPk(advocateId, { attributes: ['id'] });
-  if (!advocate) {
-    throw new AppError('Advocate not found', 400);
-  }
-};
-
-const assertClientExists = async (clientId) => {
-  if (clientId == null) return;
-  const client = await Client.findByPk(clientId, { attributes: ['id'] });
-  if (!client) {
-    throw new AppError('Client not found', 400);
-  }
-};
-
-const validateCaseMasters = async (caseTypeId, caseStageId, courtId) => {
-  if (caseTypeId) {
-    const ct = await CaseType.findByPk(caseTypeId);
-    if (!ct) {
-      throw new AppError('Selected Case Type does not exist', 400);
-    }
-    if (!ct.isActive) {
-      throw new AppError('Selected Case Type is inactive and cannot be assigned', 400);
-    }
-  }
-  if (caseStageId) {
-    const cs = await CaseStage.findByPk(caseStageId);
-    if (!cs) {
-      throw new AppError('Selected Case Stage does not exist', 400);
-    }
-    if (!cs.isActive) {
-      throw new AppError('Selected Case Stage is inactive and cannot be assigned', 400);
-    }
-  }
-  if (courtId) {
-    const crt = await Court.findByPk(courtId);
-    if (!crt) {
-      throw new AppError('Selected Court does not exist', 400);
-    }
-    if (!crt.isActive) {
-      throw new AppError('Selected Court is inactive and cannot be assigned', 400);
-    }
-  }
-};
-
-const getAllCases = async ({ advocateId } = {}) => {
+const getAllCases = async ({ advocateId } = {}, currentUser = null) => {
   const where = {};
   if (advocateId != null) {
     where.advocateId = advocateId;
+  }
+
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        where.advocateId = { [Op.in]: allowedAdvocateIds };
+      }
+    }
   }
 
   const cases = await Case.findAll({
@@ -105,7 +84,8 @@ const getAllCases = async ({ advocateId } = {}) => {
   return cases.map(toPublicCase);
 };
 
-const getCaseById = async (id, { advocateId } = {}) => {
+
+const getCaseById = async (id, { advocateId } = {}, currentUser = null) => {
   const caseRecord = await Case.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
     include: caseIncludes,
@@ -116,9 +96,13 @@ const getCaseById = async (id, { advocateId } = {}) => {
   }
 
   assertAdvocateOwnsCase(caseRecord, advocateId);
+  if (currentUser) {
+    await assertUserCanAccessAdvocateData(caseRecord.advocateId, currentUser);
+  }
 
   return toPublicCase(caseRecord);
 };
+
 
 const calculateFeeForCase = async (courtId, inputs) => {
   const { suitValue, feePercentage, processFee, filingFee, miscCharges } = inputs;
@@ -246,7 +230,9 @@ const createCase = async (
       totalPayable: feeResult.totalPayable,
       feeCalculationStatus: feeResult.feeCalculationStatus,
       courtFeeSnapshot: feeResult.courtFeeSnapshot,
+      createdBy: user?.id || null,
     }, { transaction: t });
+
 
     if (caseStageId) {
       await CaseStageHistory.create({

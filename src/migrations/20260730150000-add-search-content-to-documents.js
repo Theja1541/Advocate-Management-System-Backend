@@ -2,19 +2,27 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const table = await queryInterface.describeTable('documents');
-    if (!table.search_content) {
-      await queryInterface.addColumn('documents', 'search_content', {
-        type: Sequelize.TEXT('long'),
-        allowNull: true,
-      });
+    try {
+      const table = await queryInterface.describeTable('documents');
+      if (!table.search_content) {
+        await queryInterface.addColumn('documents', 'search_content', {
+          type: Sequelize.TEXT('long'),
+          allowNull: true,
+        });
+      }
+    } catch (err) {
+      // Table does not exist in target database, skip
     }
   },
 
   async down(queryInterface) {
-    const table = await queryInterface.describeTable('documents');
-    if (table.search_content) {
-      await queryInterface.removeColumn('documents', 'search_content');
+    try {
+      const table = await queryInterface.describeTable('documents');
+      if (table.search_content) {
+        await queryInterface.removeColumn('documents', 'search_content');
+      }
+    } catch (err) {
+      // Table does not exist in target database, skip
     }
   },
 };

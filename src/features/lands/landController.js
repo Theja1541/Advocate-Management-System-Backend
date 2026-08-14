@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllLands = async (req, res, next) => {
   try {
-    const lands = await landService.getAllLands();
+    const lands = await landService.getAllLands(req.user);
     res.status(200).json({
       status: 'success',
       data: { lands },
@@ -13,6 +13,7 @@ exports.getAllLands = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getLandById = async (req, res, next) => {
   try {

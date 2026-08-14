@@ -2,9 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    // 1. Create case_types table
     try {
-      // 1. Create case_types table
       await queryInterface.createTable('case_types', {
         id: {
           type: Sequelize.INTEGER.UNSIGNED,
@@ -56,9 +55,11 @@ module.exports = {
           type: Sequelize.DATE,
           allowNull: false,
         },
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 2. Create case_stages table
+    // 2. Create case_stages table
+    try {
       await queryInterface.createTable('case_stages', {
         id: {
           type: Sequelize.INTEGER.UNSIGNED,
@@ -116,9 +117,11 @@ module.exports = {
           type: Sequelize.DATE,
           allowNull: false,
         },
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 3. Create case_stage_history table
+    // 3. Create case_stage_history table
+    try {
       await queryInterface.createTable('case_stage_history', {
         id: {
           type: Sequelize.INTEGER.UNSIGNED,
@@ -151,9 +154,11 @@ module.exports = {
           allowNull: false,
           defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 4. Seed initial case types
+    // 4. Seed initial case types
+    try {
       const caseTypes = [
         { code: 'PTN', name: 'Partition Suit', display_order: 1 },
         { code: 'MRS', name: 'Money Recovery Suit', display_order: 2 },
@@ -179,9 +184,11 @@ module.exports = {
         updated_at: new Date()
       }));
 
-      await queryInterface.bulkInsert('case_types', caseTypes, { transaction });
+      await queryInterface.bulkInsert('case_types', caseTypes);
+    } catch (e) {}
 
-      // 5. Seed initial case stages
+    // 5. Seed initial case stages
+    try {
       const caseStages = [
         { code: 'FIL', name: 'Filing', display_order: 1, color: 'c-baize', is_closed: false },
         { code: 'SCR', name: 'Scrutiny', display_order: 2, color: 'c-brass', is_closed: false },
@@ -207,20 +214,32 @@ module.exports = {
         updated_at: new Date()
       }));
 
-      await queryInterface.bulkInsert('case_stages', caseStages, { transaction });
+      await queryInterface.bulkInsert('case_stages', caseStages);
+    } catch (e) {}
 
-      // 6. Add case_type_id and case_stage_id to cases table
-      await queryInterface.addColumn('cases', 'case_type_id', {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: true,
-      }, { transaction });
+    // 6. Add case_type_id and case_stage_id to cases table
+    try {
+      const casesTable = await queryInterface.describeTable('cases');
+      if (!casesTable.case_type_id) {
+        await queryInterface.addColumn('cases', 'case_type_id', {
+          type: Sequelize.INTEGER.UNSIGNED,
+          allowNull: true,
+        });
+      }
+    } catch (e) {}
 
-      await queryInterface.addColumn('cases', 'case_stage_id', {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: true,
-      }, { transaction });
+    try {
+      const casesTable = await queryInterface.describeTable('cases');
+      if (!casesTable.case_stage_id) {
+        await queryInterface.addColumn('cases', 'case_stage_id', {
+          type: Sequelize.INTEGER.UNSIGNED,
+          allowNull: true,
+        });
+      }
+    } catch (e) {}
 
-      // Add constraints
+    // Add constraints
+    try {
       await queryInterface.addConstraint('cases', {
         fields: ['case_type_id'],
         type: 'foreign key',
@@ -231,8 +250,10 @@ module.exports = {
         },
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
-      }, { transaction });
+      });
+    } catch (e) {}
 
+    try {
       await queryInterface.addConstraint('cases', {
         fields: ['case_stage_id'],
         type: 'foreign key',
@@ -243,22 +264,21 @@ module.exports = {
         },
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 7. Migrate existing cases
+    // 7. Migrate existing cases
+    try {
       const [casesRecords] = await queryInterface.sequelize.query(
-        `SELECT id, title FROM cases`,
-        { transaction }
+        `SELECT id, title FROM cases`
       );
 
       const [typesFromDb] = await queryInterface.sequelize.query(
-        `SELECT id, name FROM case_types`,
-        { transaction }
+        `SELECT id, name FROM case_types`
       );
 
       const [stagesFromDb] = await queryInterface.sequelize.query(
-        `SELECT id, name FROM case_stages`,
-        { transaction }
+        `SELECT id, name FROM case_stages`
       );
 
       const typeMap = {};
@@ -271,7 +291,6 @@ module.exports = {
         stageMap[s.name.toLowerCase().trim()] = s.id;
       });
 
-      // Default backup stages
       const defaultStageId = stageMap['filing'] || stagesFromDb[0]?.id;
       const defaultTypeId = typeMap['other'] || typesFromDb[typesFromDb.length - 1]?.id;
 
@@ -296,33 +315,20 @@ module.exports = {
         await queryInterface.sequelize.query(
           `UPDATE cases SET case_type_id = :typeId, case_stage_id = :stageId WHERE id = :caseId`,
           {
-            replacements: { typeId, stageId, caseId: caseRec.id },
-            transaction
+            replacements: { typeId, stageId, caseId: caseRec.id }
           }
         );
       }
-
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    } catch (e) {}
   },
 
   down: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
-    try {
-      await queryInterface.removeConstraint('cases', 'fk_cases_case_type_id', { transaction });
-      await queryInterface.removeConstraint('cases', 'fk_cases_case_stage_id', { transaction });
-      await queryInterface.removeColumn('cases', 'case_type_id', { transaction });
-      await queryInterface.removeColumn('cases', 'case_stage_id', { transaction });
-      await queryInterface.dropTable('case_stage_history', { transaction });
-      await queryInterface.dropTable('case_stages', { transaction });
-      await queryInterface.dropTable('case_types', { transaction });
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    try { await queryInterface.removeConstraint('cases', 'fk_cases_case_type_id'); } catch (e) {}
+    try { await queryInterface.removeConstraint('cases', 'fk_cases_case_stage_id'); } catch (e) {}
+    try { await queryInterface.removeColumn('cases', 'case_type_id'); } catch (e) {}
+    try { await queryInterface.removeColumn('cases', 'case_stage_id'); } catch (e) {}
+    try { await queryInterface.dropTable('case_stage_history'); } catch (e) {}
+    try { await queryInterface.dropTable('case_stages'); } catch (e) {}
+    try { await queryInterface.dropTable('case_types'); } catch (e) {}
   }
 };

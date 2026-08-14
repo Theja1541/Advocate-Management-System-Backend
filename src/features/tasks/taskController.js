@@ -4,7 +4,7 @@ const logger = require('../../config/logger');
 exports.getAllTasks = async (req, res, next) => {
   try {
     const { query, status, priority } = req.query;
-    const tasks = await taskService.getAllTasks({ query, status, priority });
+    const tasks = await taskService.getAllTasks({ query, status, priority }, req.user);
     res.status(200).json({
       status: 'success',
       data: { tasks },
@@ -14,6 +14,7 @@ exports.getAllTasks = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getTaskById = async (req, res, next) => {
   try {

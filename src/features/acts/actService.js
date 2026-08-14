@@ -118,8 +118,20 @@ const buildActFilters = ({ name, abbreviation, section, q, search } = {}) => {
   return where;
 };
 
-const getAllActs = async (filters = {}) => {
+const getAllActs = async (filters = {}, currentUser) => {
   const where = buildActFilters(filters);
+  
+  if (currentUser) {
+    const { isSuperAdmin, isGroupAdmin } = require('../../utils/roleHelper');
+    const isSuper = isSuperAdmin(currentUser.role);
+    if (!isSuper) {
+      where.tenantId = currentUser.tenantId;
+    }
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    }
+  }
+
   const queryOptions = {
     attributes: SAFE_ATTRIBUTES,
     where,

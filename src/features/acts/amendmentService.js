@@ -85,12 +85,25 @@ const buildAmendmentFilters = ({ name, abbreviation, section, q, search, sourceA
   return where;
 };
 
-const getAllAmendments = async (filters = {}) => {
+const getAllAmendments = async (filters = {}, currentUser) => {
   const { limit, offset, ...rest } = filters;
   const { User } = require('../associations');
+  const where = buildAmendmentFilters(rest);
+
+  if (currentUser) {
+    const { isSuperAdmin, isGroupAdmin } = require('../../utils/roleHelper');
+    const isSuper = isSuperAdmin(currentUser.role);
+    if (!isSuper) {
+      where.tenantId = currentUser.tenantId;
+    }
+    if (isGroupAdmin(currentUser.role)) {
+      where.created_by = currentUser.id;
+    }
+  }
+
   const options = {
     attributes: SAFE_ATTRIBUTES,
-    where: buildAmendmentFilters(rest),
+    where,
     include: [
       { model: User, as: 'creator', attributes: ['id', 'name'] },
       { model: User, as: 'updater', attributes: ['id', 'name'] },

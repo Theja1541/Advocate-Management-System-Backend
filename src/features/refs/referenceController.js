@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllReferences = async (req, res, next) => {
   try {
-    const references = await referenceService.getAllReferences();
+    const references = await referenceService.getAllReferences(req.user);
     res.status(200).json({
       status: 'success',
       data: { references },
@@ -13,6 +13,7 @@ exports.getAllReferences = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getReferenceById = async (req, res, next) => {
   try {

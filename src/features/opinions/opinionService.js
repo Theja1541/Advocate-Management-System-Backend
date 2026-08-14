@@ -104,12 +104,33 @@ const generateReferenceNo = async () => {
   return `OP-${year}/${String(nextNum).padStart(3, '0')}`;
 };
 
-const getAllOpinions = async (tenantId) => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+const { Op } = require('sequelize');
+
+const getAllOpinions = async (tenantId, currentUser = null) => {
+  const where = { tenantId };
+
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        where.advocateId = { [Op.in]: allowedAdvocateIds };
+      }
+    }
+  }
+
+
   const opinions = await Opinion.findAll({
-    where: { tenantId },
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [clientInclude, advocateInclude, landInclude, approverInclude, issuerInclude, finalPdfInclude],
-    order: [['issueDate', 'DESC'], ['id', 'DESC']],
+    order: [['id', 'DESC']],
   });
   return opinions.map(toPublicOpinion);
 };

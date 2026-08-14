@@ -5,7 +5,7 @@ const { requireAdvocateScope } = require('../../utils/advocateScope');
 exports.getAllCases = async (req, res, next) => {
   try {
     const advocateId = requireAdvocateScope(req.user);
-    const cases = await caseService.getAllCases({ advocateId });
+    const cases = await caseService.getAllCases({ advocateId }, req.user);
     res.status(200).json({
       status: 'success',
       data: { cases },
@@ -19,7 +19,7 @@ exports.getAllCases = async (req, res, next) => {
 exports.getCaseById = async (req, res, next) => {
   try {
     const advocateId = requireAdvocateScope(req.user);
-    const caseRecord = await caseService.getCaseById(req.params.id, { advocateId });
+    const caseRecord = await caseService.getCaseById(req.params.id, { advocateId }, req.user);
     res.status(200).json({
       status: 'success',
       data: { case: caseRecord },
@@ -64,10 +64,11 @@ exports.updateCase = async (req, res, next) => {
 exports.deleteCase = async (req, res, next) => {
   try {
     const advocateId = requireAdvocateScope(req.user);
-    await caseService.deleteCase(req.params.id, { advocateId });
+    await caseService.deleteCase(req.params.id, { advocateId }, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteCase error:', error);
     next(error);
   }
 };
+

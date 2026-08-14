@@ -133,10 +133,31 @@ const deleteUser = async (id) => {
   return true;
 };
 
+const crypto = require('crypto');
+
+const resetPassword = async (id) => {
+  const user = await User.findByPk(id, {
+    attributes: WRITE_ATTRIBUTES,
+  });
+
+  if (!user) {
+    throw new AppError('User not found', 404);
+  }
+
+  const tempPassword = crypto.randomBytes(8).toString('hex');
+  user.passwordHash = await bcrypt.hash(tempPassword, 10);
+  user.mustChangePassword = true;
+  
+  await user.save();
+
+  return tempPassword;
+};
+
 module.exports = {
   getAllUsers,
   getUserById,
   createUser,
   updateUser,
   deleteUser,
+  resetPassword,
 };

@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllAdvocates = async (req, res, next) => {
   try {
-    const advocates = await advocateService.getAllAdvocates();
+    const advocates = await advocateService.getAllAdvocates(req.user);
     res.status(200).json({
       status: 'success',
       data: { advocates },
@@ -16,7 +16,7 @@ exports.getAllAdvocates = async (req, res, next) => {
 
 exports.getAdvocateById = async (req, res, next) => {
   try {
-    const advocate = await advocateService.getAdvocateById(req.params.id);
+    const advocate = await advocateService.getAdvocateById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { advocate },
@@ -29,7 +29,7 @@ exports.getAdvocateById = async (req, res, next) => {
 
 exports.createAdvocate = async (req, res, next) => {
   try {
-    const advocate = await advocateService.createAdvocate(req.body);
+    const advocate = await advocateService.createAdvocate(req.body, req.user);
     res.status(201).json({
       status: 'success',
       data: { advocate },
@@ -42,7 +42,7 @@ exports.createAdvocate = async (req, res, next) => {
 
 exports.updateAdvocate = async (req, res, next) => {
   try {
-    const advocate = await advocateService.updateAdvocate(req.params.id, req.body);
+    const advocate = await advocateService.updateAdvocate(req.params.id, req.body, req.user);
     res.status(200).json({
       status: 'success',
       data: { advocate },
@@ -55,10 +55,24 @@ exports.updateAdvocate = async (req, res, next) => {
 
 exports.deleteAdvocate = async (req, res, next) => {
   try {
-    await advocateService.deleteAdvocate(req.params.id);
+    await advocateService.deleteAdvocate(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteAdvocate error:', error);
+    next(error);
+  }
+};
+
+exports.searchAdvocates = async (req, res, next) => {
+  try {
+    const queryStr = req.query.q || '';
+    const advocates = await advocateService.searchTenantAdvocates(queryStr, req.user);
+    res.status(200).json({
+      status: 'success',
+      data: { advocates },
+    });
+  } catch (error) {
+    logger.error('SearchAdvocates error:', error);
     next(error);
   }
 };

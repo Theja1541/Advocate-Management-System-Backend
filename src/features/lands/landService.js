@@ -63,14 +63,44 @@ const assertUserExists = async (userId, fieldLabel) => {
   if (!user) throw new AppError(`${fieldLabel} user not found`, 400);
 };
 
-const getAllLands = async () => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+const { Op } = require('sequelize');
+
+const getAllLands = async (currentUser = null) => {
+  const where = {};
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        const cases = await Case.findAll({
+          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          attributes: ['id'],
+        });
+        const caseIds = cases.map((c) => c.id);
+        if (caseIds.length === 0) {
+          return [];
+        }
+        where.caseId = { [Op.in]: caseIds };
+      }
+    }
+  }
+
+
   const lands = await Land.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [clientInclude, caseInclude],
     order: [['id', 'ASC']],
   });
   return lands.map(toPublicLand);
 };
+
 
 const getLandById = async (id) => {
   const land = await Land.findByPk(id, {

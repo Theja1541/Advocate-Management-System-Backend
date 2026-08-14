@@ -1,0 +1,275 @@
+{
+  "advocates": {
+    "total": 5,
+    "hasTenantId": true,
+    "t1Rows": 5,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "alerts": {
+    "total": 13,
+    "hasTenantId": true,
+    "t1Rows": 13,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "amendments": {
+    "total": 16,
+    "hasTenantId": true,
+    "t1Rows": 16,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "bare_acts": {
+    "total": 9,
+    "hasTenantId": true,
+    "t1Rows": 9,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "case_approval_history": {
+    "total": 7,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "case_diaries": {
+    "total": 6,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "case_stage_history": {
+    "total": 11,
+    "hasTenantId": true,
+    "t1Rows": 11,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "case_stages": {
+    "total": 3,
+    "hasTenantId": true,
+    "t1Rows": 3,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "case_types": {
+    "total": 4,
+    "hasTenantId": true,
+    "t1Rows": 4,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "cases": {
+    "total": 20,
+    "hasTenantId": true,
+    "t1Rows": 13,
+    "nonT1Rows": 7,
+    "nullTenantRows": 0
+  },
+  "clients": {
+    "total": 6,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "courts": {
+    "total": 3,
+    "hasTenantId": true,
+    "t1Rows": 3,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "daybook": {
+    "total": 8,
+    "hasTenantId": true,
+    "t1Rows": 8,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "diary_entries": {
+    "total": 0,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "document_categories": {
+    "total": 29,
+    "hasTenantId": true,
+    "t1Rows": 29,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "documents": {
+    "total": 3,
+    "hasTenantId": true,
+    "t1Rows": 3,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "global_settings": {
+    "total": 1,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "group_admin_advocates": {
+    "total": 0,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "land_title_searches": {
+    "total": 1,
+    "hasTenantId": true,
+    "t1Rows": 1,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "lands": {
+    "total": 4,
+    "hasTenantId": true,
+    "t1Rows": 4,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "legal_texts": {
+    "total": 3,
+    "hasTenantId": true,
+    "t1Rows": 3,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "memberships": {
+    "total": 5,
+    "hasTenantId": true,
+    "t1Rows": 5,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "modules": {
+    "total": 22,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "opinions": {
+    "total": 4,
+    "hasTenantId": true,
+    "t1Rows": 4,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "payments": {
+    "total": 6,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "permissions": {
+    "total": 102,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "phrase_groups": {
+    "total": 6,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "phrase_occurrences": {
+    "total": 23,
+    "hasTenantId": true,
+    "t1Rows": 23,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "references_library": {
+    "total": 2,
+    "hasTenantId": true,
+    "t1Rows": 2,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "roles": {
+    "total": 9,
+    "hasTenantId": true,
+    "t1Rows": 5,
+    "nonT1Rows": 0,
+    "nullTenantRows": 4
+  },
+  "sequelizemeta": {
+    "total": 30,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "state_court_fee_rules": {
+    "total": 6,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "state_court_fee_slabs": {
+    "total": 11,
+    "hasTenantId": true,
+    "t1Rows": 11,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "subscription_plans": {
+    "total": 1,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "tasks": {
+    "total": 1,
+    "hasTenantId": true,
+    "t1Rows": 1,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "tenant_settings": {
+    "total": 0,
+    "hasTenantId": true,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "tenant_subscriptions": {
+    "total": 0,
+    "hasTenantId": true,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "tenants": {
+    "total": 1,
+    "hasTenantId": false,
+    "t1Rows": 0,
+    "nonT1Rows": 0,
+    "nullTenantRows": 0
+  },
+  "users": {
+    "total": 7,
+    "hasTenantId": true,
+    "t1Rows": 6,
+    "nonT1Rows": 0,
+    "nullTenantRows": 1
+  }
+}

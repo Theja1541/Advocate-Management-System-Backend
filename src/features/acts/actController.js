@@ -13,7 +13,7 @@ exports.getAllActs = async (req, res, next) => {
       q,
       search,
       includeDeleted,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       results: acts.length,
@@ -98,29 +98,31 @@ exports.getAllAmendments = async (req, res, next) => {
         sourceAct,
         targetAct,
         effectiveDate,
-      });
-      return res.status(200).json({
+      }, req.user);
+
+      res.status(200).json({
         status: 'success',
         results: amendments.length,
-        data: { amendments, totalCount },
+        totalCount,
+        data: { amendments },
+      });
+    } else {
+      const amendments = await amendmentService.getAllAmendments({
+        name,
+        abbreviation,
+        section,
+        q,
+        search,
+        sourceAct,
+        targetAct,
+        effectiveDate,
+      }, req.user);
+      res.status(200).json({
+        status: 'success',
+        results: amendments.length,
+        data: { amendments },
       });
     }
-
-    const amendments = await amendmentService.getAllAmendments({
-      name,
-      abbreviation,
-      section,
-      q,
-      search,
-      sourceAct,
-      targetAct,
-      effectiveDate,
-    });
-    res.status(200).json({
-      status: 'success',
-      results: amendments.length,
-      data: { amendments },
-    });
   } catch (error) {
     logger.error('GetAllAmendments error:', error);
     next(error);

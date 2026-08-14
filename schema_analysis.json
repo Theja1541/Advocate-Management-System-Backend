@@ -1,0 +1,2705 @@
+{
+  "fkRows": [
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "user_id",
+      "CONSTRAINT_NAME": "advocates_ibfk_1",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "advocates_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "alerts_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "created_by",
+      "CONSTRAINT_NAME": "amendments_ibfk_1",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "updated_by",
+      "CONSTRAINT_NAME": "amendments_ibfk_2",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "bare_acts_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "fk_case_approval_history_case",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "case_diaries_ibfk_12",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "advocate_id",
+      "CONSTRAINT_NAME": "case_diaries_ibfk_13",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "court_id",
+      "CONSTRAINT_NAME": "case_diaries_ibfk_14",
+      "REFERENCED_TABLE_NAME": "courts",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "conducted_by",
+      "CONSTRAINT_NAME": "case_diaries_ibfk_15",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "case_diaries_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "case_stage_history_ibfk_19",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "old_stage_id",
+      "CONSTRAINT_NAME": "case_stage_history_ibfk_20",
+      "REFERENCED_TABLE_NAME": "case_stages",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "new_stage_id",
+      "CONSTRAINT_NAME": "case_stage_history_ibfk_21",
+      "REFERENCED_TABLE_NAME": "case_stages",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "case_stage_history_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "case_stages_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "case_types_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "advocate_id",
+      "CONSTRAINT_NAME": "cases_ibfk_271",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "client_id",
+      "CONSTRAINT_NAME": "cases_ibfk_272",
+      "REFERENCED_TABLE_NAME": "clients",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "case_type_id",
+      "CONSTRAINT_NAME": "cases_ibfk_273",
+      "REFERENCED_TABLE_NAME": "case_types",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "case_stage_id",
+      "CONSTRAINT_NAME": "cases_ibfk_274",
+      "REFERENCED_TABLE_NAME": "case_stages",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "court_id",
+      "CONSTRAINT_NAME": "cases_ibfk_275",
+      "REFERENCED_TABLE_NAME": "courts",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "clients_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "courts_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "recorded_by",
+      "CONSTRAINT_NAME": "daybook_ibfk_1",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "daybook_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "fk_diary_entries_case",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "created_by",
+      "CONSTRAINT_NAME": "fk_diary_entries_user",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "document_categories_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "documents_ibfk_24",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "uploaded_by",
+      "CONSTRAINT_NAME": "documents_ibfk_25",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "diary_id",
+      "CONSTRAINT_NAME": "documents_ibfk_26",
+      "REFERENCED_TABLE_NAME": "case_diaries",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "document_category_id",
+      "CONSTRAINT_NAME": "documents_ibfk_27",
+      "REFERENCED_TABLE_NAME": "document_categories",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "land_id",
+      "CONSTRAINT_NAME": "documents_land_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "lands",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "documents_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "group_admin_id",
+      "CONSTRAINT_NAME": "group_admin_advocates_ibfk_1",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "advocate_id",
+      "CONSTRAINT_NAME": "group_admin_advocates_ibfk_2",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "land_id",
+      "CONSTRAINT_NAME": "land_title_searches_ibfk_1",
+      "REFERENCED_TABLE_NAME": "lands",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "conducted_by",
+      "CONSTRAINT_NAME": "land_title_searches_ibfk_2",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "client_id",
+      "CONSTRAINT_NAME": "lands_ibfk_13",
+      "REFERENCED_TABLE_NAME": "clients",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "lands_ibfk_14",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "lands_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "advocate_id",
+      "CONSTRAINT_NAME": "memberships_ibfk_1",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "memberships_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "approved_by",
+      "CONSTRAINT_NAME": "opinions_approved_by_foreign_idx",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "document_id",
+      "CONSTRAINT_NAME": "opinions_document_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "documents",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "client_id",
+      "CONSTRAINT_NAME": "opinions_ibfk_13",
+      "REFERENCED_TABLE_NAME": "clients",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "advocate_id",
+      "CONSTRAINT_NAME": "opinions_ibfk_14",
+      "REFERENCED_TABLE_NAME": "advocates",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "issued_by",
+      "CONSTRAINT_NAME": "opinions_issued_by_foreign_idx",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "land_id",
+      "CONSTRAINT_NAME": "opinions_land_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "lands",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "opinions_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "case_id",
+      "CONSTRAINT_NAME": "payments_ibfk_1",
+      "REFERENCED_TABLE_NAME": "cases",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "payments_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "role_id",
+      "CONSTRAINT_NAME": "permissions_ibfk_19",
+      "REFERENCED_TABLE_NAME": "roles",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "module_id",
+      "CONSTRAINT_NAME": "permissions_ibfk_20",
+      "REFERENCED_TABLE_NAME": "modules",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "phrase_groups_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "phrase_occurrences_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "phrase_group_id",
+      "CONSTRAINT_NAME": "phrase_occurrences_ibfk_2",
+      "REFERENCED_TABLE_NAME": "phrase_groups",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "references_library_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "roles_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "state_court_fee_rules_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "rule_id",
+      "CONSTRAINT_NAME": "state_court_fee_slabs_ibfk_191",
+      "REFERENCED_TABLE_NAME": "state_court_fee_rules",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "state_court_fee_slabs_ibfk_192",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "assigned_to",
+      "CONSTRAINT_NAME": "tasks_ibfk_1",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "created_by",
+      "CONSTRAINT_NAME": "tasks_ibfk_2",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "updated_by",
+      "CONSTRAINT_NAME": "tasks_ibfk_3",
+      "REFERENCED_TABLE_NAME": "users",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "tasks_tenant_id_foreign_idx",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "tenant_settings_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "tenant_subscriptions_ibfk_1",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "plan_id",
+      "CONSTRAINT_NAME": "tenants_ibfk_1",
+      "REFERENCED_TABLE_NAME": "subscription_plans",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "role_id",
+      "CONSTRAINT_NAME": "users_ibfk_5",
+      "REFERENCED_TABLE_NAME": "roles",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "tenant_id",
+      "CONSTRAINT_NAME": "users_ibfk_6",
+      "REFERENCED_TABLE_NAME": "tenants",
+      "REFERENCED_COLUMN_NAME": "id"
+    }
+  ],
+  "cols": [
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "mobile"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "email"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "specialization"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "enrolment"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "experience"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "relation"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "user_id"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "advocates",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "reference_type"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "reference_id"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "alert_type"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "priority"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "assigned_to"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "is_read"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "message"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "metadata"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "alerts",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "source_act"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "target_act"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "old_section"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "old_title"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "new_section"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "new_title"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "effective_date"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "amendments",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "abbreviation"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "effective_date"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "type"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "state"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "sections_count"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "is_bookmarked"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "pdf_file"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "pdf_original_name"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "pdf_storage_name"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "pdf_storage_path"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "pdf_size"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "mime_type"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "file_hash"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "version_number"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "is_current"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "uploaded_by"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "uploaded_at"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "deleted_by"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "deleted_at"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "bare_acts",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "level"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "approved_by"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "action_date"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "action_time"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "comments"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "case_approval_history",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "hearing_date"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "hearing_time"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "advocate_id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "note"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "next_hearing_date"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "attachments_count"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "court_id"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "hearing_type"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "judge"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "outcome"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "next_action"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "conducted_by"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "actual_start_time"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "actual_end_time"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "adjournment_reason"
+    },
+    {
+      "TABLE_NAME": "case_diaries",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "old_stage_id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "new_stage_id"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "remarks"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "changed_by"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "changed_at"
+    },
+    {
+      "TABLE_NAME": "case_stage_history",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "display_order"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "color"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "is_closed"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "is_active"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "is_system"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "case_stages",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "display_order"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "is_active"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "is_system"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "case_types",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "case_no"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "title"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "court"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "next_hearing"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "advocate_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "client_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "case_type_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "case_stage_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "court_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "approval_level"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "court_fee_snapshot"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "suit_value"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "fee_percentage"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "advocate_fee"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "court_fee"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "process_fee"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "filing_fee"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "misc_charges"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "total_payable"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "fee_calculation_status"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "cases",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "client_code"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "mobile"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "email"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "village"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "aadhaar_masked"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "pan_masked"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "docs_count"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "clients",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "location"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "state_code"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "is_active"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "is_system"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "courts",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "daybook_code"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "transaction_date"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "category"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "particulars"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "payment_mode"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "type"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "amount"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "recorded_by"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "daybook",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "title"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "category"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "entry_date"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "notes"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "diary_entries",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "display_order"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "is_active"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "is_system"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "document_categories",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "document_code"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "file_type"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "file_size"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "file_path"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "uploaded_by"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "upload_date"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "diary_id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "document_category_id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "search_content"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "documents",
+      "COLUMN_NAME": "land_id"
+    },
+    {
+      "TABLE_NAME": "global_settings",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "global_settings",
+      "COLUMN_NAME": "key"
+    },
+    {
+      "TABLE_NAME": "global_settings",
+      "COLUMN_NAME": "value"
+    },
+    {
+      "TABLE_NAME": "global_settings",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "global_settings",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "group_admin_id"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "advocate_id"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "group_admin_advocates",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "land_id"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "search_date"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "period_from"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "period_to"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "ec_status"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "ec_reference_no"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "revenue_records_verified"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "registration_records_verified"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "litigation_checked"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "documents_verified"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "remarks"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "conducted_by"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "land_title_searches",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "survey_no"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "client_id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "village"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "mandal"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "district"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "extent"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "classification"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "patta_no"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "encumbrance_status"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "title_status"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "sub_division_no"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "sro"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "registration_district"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "document_no"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "document_year"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "registration_date"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "acquisition_type"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "current_owner_name"
+    },
+    {
+      "TABLE_NAME": "lands",
+      "COLUMN_NAME": "remarks"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "title"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "content"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "category"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "legal_texts",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "advocate_id"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "plan_name"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "fee_amount"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "start_date"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "expiry_date"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "memberships",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "modules",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "modules",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "modules",
+      "COLUMN_NAME": "key_code"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "reference_no"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "client_id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "survey_no"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "village"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "opinion_type"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "issue_date"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "title_status"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "advocate_id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "findings_note"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "land_id"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "approved_by"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "approval_date"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "issued_by"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "reject_reason"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "recommendation"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "limitations"
+    },
+    {
+      "TABLE_NAME": "opinions",
+      "COLUMN_NAME": "document_id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "receipt_no"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "case_id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "party_type"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "party_id"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "amount_received"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "amount_outstanding"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "transaction_date"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "payments",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "role_id"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "module_id"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "access_level"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "permissions",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "phrase"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "phrase_groups",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "phrase_group_id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "source_type"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "source_id"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "phrase_occurrences",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "citation"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "title"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "court"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "judge"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "type"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "tag"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "note"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "references_library",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "roles",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "sequelizemeta",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "state_code"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "state_name"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "rule_type"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "fixed_amount"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "percentage_rate"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "min_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "max_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "effective_from"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "effective_to"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "act_name"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "act_version"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "notification_no"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "default_advocate_fee_pct"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "process_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "filing_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "misc_charges"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "is_active"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "notes"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "calculation_mode"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_rules",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "rule_id"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "from_amount"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "to_amount"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "fee_type"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "fee_value"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "min_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "max_fee"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "display_order"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "state_court_fee_slabs",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "price"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "billing_cycle"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "max_users"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "storage_limit_mb"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "features"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "is_trial"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "trial_days"
+    },
+    {
+      "TABLE_NAME": "subscription_plans",
+      "COLUMN_NAME": "display_order"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "title"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "description"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "priority"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "due_date"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "assigned_to"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "created_by"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "updated_by"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "tasks",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "key"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "value"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "tenant_settings",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "tenant_id"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "plan_id"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "start_date"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "end_date"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "amount_paid"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "payment_reference"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "tenant_subscriptions",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "code"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "email"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "phone"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "logo"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "plan_id"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "subscription_start"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "subscription_end"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "max_users"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "storage_limit"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "address"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "city"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "state"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "country"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "pincode"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "contact_person"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "website"
+    },
+    {
+      "TABLE_NAME": "tenants",
+      "COLUMN_NAME": "gst_number"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "name"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "email"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "role_id"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "password_hash"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "status"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "created_at"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "updated_at"
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "tenant_id"
+    }
+  ],
+  "tableCounts": {
+    "advocates": 5,
+    "alerts": 13,
+    "amendments": 16,
+    "bare_acts": 9,
+    "case_approval_history": 7,
+    "case_diaries": 6,
+    "case_stage_history": 11,
+    "case_stages": 3,
+    "case_types": 4,
+    "cases": 20,
+    "clients": 6,
+    "courts": 3,
+    "daybook": 8,
+    "diary_entries": 0,
+    "document_categories": 29,
+    "documents": 3,
+    "global_settings": 1,
+    "group_admin_advocates": 0,
+    "land_title_searches": 1,
+    "lands": 4,
+    "legal_texts": 3,
+    "memberships": 5,
+    "modules": 22,
+    "opinions": 4,
+    "payments": 6,
+    "permissions": 102,
+    "phrase_groups": 6,
+    "phrase_occurrences": 23,
+    "references_library": 2,
+    "roles": 9,
+    "sequelizemeta": 30,
+    "state_court_fee_rules": 6,
+    "state_court_fee_slabs": 11,
+    "subscription_plans": 1,
+    "tasks": 1,
+    "tenant_settings": 0,
+    "tenant_subscriptions": 0,
+    "tenants": 1,
+    "users": 7
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "A.Theja",
+      "email": "amasatheja1541@gmail.com",
+      "role_id": 1,
+      "password_hash": "$2b$10$BXAlw3pt6Y40M3bJr.BoFekOhN9dEZwaeAV306GATwIaDLD0e7JmG",
+      "status": "active",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Office Admin",
+      "email": "admin@legaldesk.in",
+      "role_id": 2,
+      "password_hash": "$2b$10$ofr22McoxdDyGh2x7m7D4.yuFnFbkorvW7ApKTgZo3Vv0qyQaypDm",
+      "status": "active",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Sub Admin",
+      "email": "subadmin@legaldesk.in",
+      "role_id": 3,
+      "password_hash": "$2b$10$ofr22McoxdDyGh2x7m7D4.yuFnFbkorvW7ApKTgZo3Vv0qyQaypDm",
+      "status": "active",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 4,
+      "name": "M. Sailaja",
+      "email": "advocate@legaldesk.in",
+      "role_id": 4,
+      "password_hash": "$2b$10$ofr22McoxdDyGh2x7m7D4.yuFnFbkorvW7ApKTgZo3Vv0qyQaypDm",
+      "status": "active",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Staff Bearer",
+      "email": "staff@legaldesk.in",
+      "role_id": 5,
+      "password_hash": "$2b$10$ofr22McoxdDyGh2x7m7D4.yuFnFbkorvW7ApKTgZo3Vv0qyQaypDm",
+      "status": "active",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 6,
+      "name": "P. Raghavendra Rao",
+      "email": "raghavendra@legaldesk.in",
+      "role_id": 2,
+      "password_hash": "$2b$10$.YF8gK1/78dUe7ZxO9QcaeZ.bkWhilzv0ITGJ4kSNecVOXawH1YO6",
+      "status": "active",
+      "created_at": "2026-08-03T11:42:19.000Z",
+      "updated_at": "2026-08-03T11:43:56.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Alpha Admin",
+      "email": "admin@alpha.com",
+      "role_id": 8,
+      "password_hash": "$2b$10$LpSF11djsZmqwOgrw3.l0eV1KE8U8WERwCXxJFcK8UkJJa/i7iLQq",
+      "status": "active",
+      "created_at": "2026-08-04T11:26:13.000Z",
+      "updated_at": "2026-08-04T11:26:13.000Z",
+      "tenant_id": null
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Super Admin",
+      "description": "Full system access",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Admin",
+      "description": "Advocates, cases, payments and reports management",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Sub Admin",
+      "description": "Case updates, land and diary data helper",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Advocate",
+      "description": "Practitioner login for assigned matters",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Staff/Bearer",
+      "description": "Day book and field visit records",
+      "created_at": "2026-07-28T10:12:33.000Z",
+      "updated_at": "2026-07-28T10:12:33.000Z",
+      "tenant_id": 1
+    },
+    {
+      "id": 8,
+      "name": "Tenant Admin",
+      "description": "Full access to tenant data",
+      "created_at": "2026-08-04T11:26:13.000Z",
+      "updated_at": "2026-08-04T11:26:13.000Z",
+      "tenant_id": null
+    },
+    {
+      "id": 50,
+      "name": "Sub Admin",
+      "description": "Limited administrative access",
+      "created_at": "2026-08-04T13:00:01.000Z",
+      "updated_at": "2026-08-04T13:00:01.000Z",
+      "tenant_id": null
+    },
+    {
+      "id": 51,
+      "name": "Advocate",
+      "description": "Standard advocate access",
+      "created_at": "2026-08-04T13:00:01.000Z",
+      "updated_at": "2026-08-04T13:00:01.000Z",
+      "tenant_id": null
+    },
+    {
+      "id": 52,
+      "name": "Staff/Bearer",
+      "description": "Basic staff access",
+      "created_at": "2026-08-04T13:00:01.000Z",
+      "updated_at": "2026-08-04T13:00:01.000Z",
+      "tenant_id": null
+    }
+  ],
+  "tenants": [
+    {
+      "id": 1,
+      "name": "Legacy Primary Firm",
+      "code": "LEGACY",
+      "email": null,
+      "phone": null,
+      "logo": null,
+      "status": "active",
+      "plan_id": 1,
+      "subscription_start": "2026-08-04T09:28:43.000Z",
+      "subscription_end": null,
+      "max_users": 100,
+      "storage_limit": null,
+      "created_at": "2026-08-04T09:28:43.000Z",
+      "updated_at": "2026-08-04T09:28:43.000Z",
+      "address": null,
+      "city": null,
+      "state": null,
+      "country": null,
+      "pincode": null,
+      "contact_person": null,
+      "website": null,
+      "gst_number": null
+    }
+  ]
+}

@@ -77,11 +77,12 @@ const toAuthUser = (user) => ({
   advocateId: getAdvocateId(user),
   tenantId: user.tenantId,
   tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
+  mustChangePassword: user.mustChangePassword,
 });
 
 const findAuthUserById = async (id) => {
   return User.findByPk(id, {
-    attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId'],
+    attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword'],
     include: [roleInclude, advocateInclude, tenantInclude],
   });
 };
@@ -96,7 +97,7 @@ exports.login = async (req, res, next) => {
 
     const user = await User.findOne({
       where: { email, status: 'active' },
-      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status', 'tenantId'],
+      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status', 'tenantId', 'mustChangePassword'],
       include: [roleInclude, advocateInclude, tenantInclude],
     });
 
@@ -110,7 +111,7 @@ exports.login = async (req, res, next) => {
     res.cookie('refreshToken', refreshToken, getRefreshCookieOptions());
 
     res.status(200).json({
-      status: 'success',
+      status: user.mustChangePassword ? 'PASSWORD_CHANGE_REQUIRED' : 'success',
       token: accessToken,
       data: {
         user: toAuthUser(user),
@@ -185,6 +186,44 @@ exports.getMe = async (req, res, next) => {
     });
   } catch (error) {
     logger.error('GetMe error:', error);
+    next(error);
+  }
+};
+
+exports.changePassword = async (req, res, next) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    
+    const user = await User.findByPk(req.user.id, {
+      attributes: ['id', 'passwordHash', 'mustChangePassword']
+    });
+
+    if (!user) {
+      return next(new AppError('User not found', 404));
+    }
+
+    if (currentPassword === newPassword) {
+      return next(new AppError('New password cannot be the same as the current password', 400));
+    }
+
+    if (!(await bcrypt.compare(currentPassword, user.passwordHash))) {
+      return next(new AppError('Incorrect current password', 401));
+    }
+
+    const newPasswordHash = await bcrypt.hash(newPassword, 10);
+
+    user.passwordHash = newPasswordHash;
+    user.mustChangePassword = false;
+    await user.save();
+    
+    res.clearCookie('refreshToken', getRefreshCookieBaseOptions());
+
+    res.status(200).json({
+      status: 'success',
+      message: 'Password changed successfully. Please log in again with your new password.',
+    });
+  } catch (error) {
+    logger.error('Change password error:', error);
     next(error);
   }
 };
