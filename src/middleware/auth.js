@@ -41,7 +41,11 @@ const protect = (req, res, next) => {
     const contextData = { tenantId: decoded.tenantId, isSuperAdmin: superAdminFlag };
 
     tenantContext.run(contextData, () => {
-      checkTenantStatus(req, res, next);
+      checkTenantStatus(req, res, (err) => {
+        if (err) return next(err);
+        const { validateAdminContext } = require('./contextValidator');
+        validateAdminContext(req, res, next);
+      });
     });
   } catch (error) {
     logger.error('JWT Verification Error:', error);

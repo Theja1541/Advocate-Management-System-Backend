@@ -30,6 +30,8 @@ Case.init(
     feeCalculationStatus: { type: DataTypes.STRING(20), allowNull: true, field: 'fee_calculation_status' },
     createdBy: { type: DataTypes.BIGINT.UNSIGNED, allowNull: true, field: 'created_by' },
     updatedBy: { type: DataTypes.BIGINT.UNSIGNED, allowNull: true, field: 'updated_by' },
+    contextType: { type: DataTypes.STRING(50), allowNull: true, field: 'context_type' },
+    contextId: { type: DataTypes.BIGINT, allowNull: true, field: 'context_id' },
   },
 
   {

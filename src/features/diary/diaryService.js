@@ -125,12 +125,19 @@ const getAllDiaries = async ({ advocateId } = {}, currentUser = null) => {
     }
   }
 
+  const dynamicCaseInclude = { ...caseInclude };
 
+  if (currentUser && currentUser.adminContext) {
+    dynamicCaseInclude.where = {
+      contextType: currentUser.adminContext.type,
+      contextId: currentUser.adminContext.id,
+    };
+  }
 
   const entries = await CaseDiary.findAll({
     where,
     attributes: SAFE_ATTRIBUTES,
-    include: [caseInclude, advocateInclude, attachmentInclude],
+    include: [dynamicCaseInclude, advocateInclude, attachmentInclude],
     order: [
       ['hearingDate', 'DESC'],
       ['hearingTime', 'DESC'],
@@ -202,7 +209,7 @@ const createAttachmentsForDiary = async (diaryId, caseId, files, uploadedBy, tra
   return addedCount;
 };
 
-const getDiaryById = async (id, { advocateId } = {}) => {
+const getDiaryById = async (id, { advocateId } = {}, currentUser = null) => {
   const entry = await CaseDiary.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
     include: [caseInclude, advocateInclude, attachmentInclude],
@@ -214,6 +221,12 @@ const getDiaryById = async (id, { advocateId } = {}) => {
 
   if (advocateId != null && String(entry.advocateId) !== String(advocateId)) {
     throw new AppError('You can only access diary entries for your matters', 403);
+  }
+
+  if (currentUser && currentUser.adminContext) {
+    if (entry.case && entry.case.contextType && (entry.case.contextType !== currentUser.adminContext.type || String(entry.case.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Inherited case belongs to a different Admin Context', 403);
+    }
   }
 
   return toPublicDiary(entry);
@@ -300,7 +313,7 @@ const createDiary = async (
       auditService.logEvent('DIARY_CREATED', req, { diaryId: entry.id, caseId: entry.caseId, status: entry.status });
     }
     
-    return getDiaryById(entry.id, { advocateId: scopedAdvocateId });
+    return getDiaryById(entry.id, { advocateId: scopedAdvocateId }, req?.user);
   } catch (error) {
     await t.rollback();
     throw error;
@@ -334,6 +347,7 @@ const updateDiary = async (
 ) => {
   const entry = await CaseDiary.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
+    include: [caseInclude],
   });
 
   if (!entry) {
@@ -342,6 +356,13 @@ const updateDiary = async (
 
   if (scopedAdvocateId != null && String(entry.advocateId) !== String(scopedAdvocateId)) {
     throw new AppError('You can only access diary entries for your matters', 403);
+  }
+
+  const currentUser = req?.user;
+  if (currentUser && currentUser.adminContext) {
+    if (entry.case && entry.case.contextType && (entry.case.contextType !== currentUser.adminContext.type || String(entry.case.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Inherited case belongs to a different Admin Context', 403);
+    }
   }
 
   if (
@@ -464,7 +485,7 @@ const updateDiary = async (
       }
     }
 
-    return getDiaryById(entry.id, { advocateId: scopedAdvocateId });
+    return getDiaryById(entry.id, { advocateId: scopedAdvocateId }, req?.user);
   } catch (error) {
     await t.rollback();
     throw error;
@@ -474,6 +495,7 @@ const updateDiary = async (
 const deleteDiary = async (id, { advocateId: scopedAdvocateId, req } = {}) => {
   const entry = await CaseDiary.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
+    include: [caseInclude],
   });
 
   if (!entry) {
@@ -482,6 +504,13 @@ const deleteDiary = async (id, { advocateId: scopedAdvocateId, req } = {}) => {
 
   if (scopedAdvocateId != null && String(entry.advocateId) !== String(scopedAdvocateId)) {
     throw new AppError('You can only access diary entries for your matters', 403);
+  }
+
+  const currentUser = req?.user;
+  if (currentUser && currentUser.adminContext) {
+    if (entry.case && entry.case.contextType && (entry.case.contextType !== currentUser.adminContext.type || String(entry.case.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Inherited case belongs to a different Admin Context', 403);
+    }
   }
 
   // Find all attachments to clean up filesystem after DB delete

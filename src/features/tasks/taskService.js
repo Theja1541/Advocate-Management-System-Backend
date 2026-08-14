@@ -67,6 +67,11 @@ const getAllTasks = async ({ query, status, priority } = {}, currentUser = null)
   }
 
 
+  if (currentUser && currentUser.adminContext) {
+    where.contextType = currentUser.adminContext.type;
+    where.contextId = currentUser.adminContext.id;
+  }
+
   const tasks = await Task.findAll({
     where,
     attributes: SAFE_ATTRIBUTES,
@@ -80,7 +85,7 @@ const getAllTasks = async ({ query, status, priority } = {}, currentUser = null)
   return tasks.map(toPublicTask);
 };
 
-const getTaskById = async (id) => {
+const getTaskById = async (id, currentUser = null) => {
   const task = await Task.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
     include: [userInclude, creatorInclude],
@@ -88,6 +93,12 @@ const getTaskById = async (id) => {
 
   if (!task) {
     throw new AppError('Task not found', 404);
+  }
+
+  if (currentUser && currentUser.adminContext) {
+    if (task.contextType && (task.contextType !== currentUser.adminContext.type || String(task.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Task belongs to a different Admin Context', 403);
+    }
   }
 
   return toPublicTask(task);
@@ -101,7 +112,7 @@ const createTask = async ({
   status,
   assignedTo,
   createdBy,
-}) => {
+}, currentUser = null) => {
   if (assignedTo) await assertUserExists(assignedTo, 'Assigned');
   if (createdBy) await assertUserExists(createdBy, 'Creator');
 
@@ -114,18 +125,27 @@ const createTask = async ({
     assignedTo: assignedTo || null,
     createdBy: createdBy || null,
     updatedBy: createdBy || null,
+    contextType: currentUser?.adminContext?.type || null,
+    contextId: currentUser?.adminContext?.id || null,
   });
 
-  return getTaskById(task.id);
+  return getTaskById(task.id, currentUser);
 };
 
 const updateTask = async (
   id,
-  { title, description, priority, dueDate, status, assignedTo, updatedBy }
+  { title, description, priority, dueDate, status, assignedTo, updatedBy },
+  currentUser = null
 ) => {
   const task = await Task.findByPk(id);
   if (!task) {
     throw new AppError('Task not found', 404);
+  }
+
+  if (currentUser && currentUser.adminContext) {
+    if (task.contextType && (task.contextType !== currentUser.adminContext.type || String(task.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Task belongs to a different Admin Context', 403);
+    }
   }
 
   if (assignedTo !== undefined) {
@@ -150,14 +170,21 @@ const updateTask = async (
     await resolveAlert('Task', task.id, 'TASK_DUE_TODAY');
   }
 
-  return getTaskById(task.id);
+  return getTaskById(task.id, currentUser);
 };
 
-const deleteTask = async (id) => {
+const deleteTask = async (id, currentUser = null) => {
   const task = await Task.findByPk(id);
   if (!task) {
     throw new AppError('Task not found', 404);
   }
+
+  if (currentUser && currentUser.adminContext) {
+    if (task.contextType && (task.contextType !== currentUser.adminContext.type || String(task.contextId) !== String(currentUser.adminContext.id))) {
+      throw new AppError('Access denied: Task belongs to a different Admin Context', 403);
+    }
+  }
+
   await task.destroy();
   await resolveAllAlertsForRecord('Task', id);
   return true;

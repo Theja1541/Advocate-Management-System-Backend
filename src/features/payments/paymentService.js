@@ -1,3 +1,4 @@
+const { Op } = require('sequelize');
 const { sequelize } = require('../../config/database');
 const { Payment, Case, Client, Advocate, User, Daybook } = require('../associations');
 const AppError = require('../../utils/AppError');
@@ -129,7 +130,15 @@ const buildDaybookFromPayment = ({
 };
 
 const { getScopedAdvocateIds } = require('../../utils/advocateScope');
-const { isGroupAdmin } = require('../../utils/roleHelper');
+const { isGroupAdmin, isAdvocate } = require('../../utils/roleHelper');
+
+const assertAdvocateCaseContext = async (caseId, currentUser, options = {}) => {
+  if (!caseId || !currentUser || !currentUser.adminContext || !isAdvocate(currentUser.role)) return;
+  const caseRecord = await Case.findByPk(caseId, { attributes: ['id', 'contextType', 'contextId'], bypassTenant: true, transaction: options.transaction });
+  if (caseRecord && (caseRecord.contextType !== currentUser.adminContext.type || String(caseRecord.contextId) !== String(currentUser.adminContext.id))) {
+    throw new AppError('Access denied: Payment belongs to a Case in a different Admin Context', 403);
+  }
+};
 
 const getAllPayments = async (currentUser = null) => {
   const where = {};
@@ -142,8 +151,15 @@ const getAllPayments = async (currentUser = null) => {
         if (allowedAdvocateIds.length === 0) {
           return [];
         }
+        
+        const caseQueryWhere = { advocateId: { [Op.in]: allowedAdvocateIds } };
+        if (currentUser.adminContext) {
+           caseQueryWhere.contextType = currentUser.adminContext.type;
+           caseQueryWhere.contextId = currentUser.adminContext.id;
+        }
+        
         const cases = await Case.findAll({
-          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          where: caseQueryWhere,
           attributes: ['id'],
         });
         const caseIds = cases.map((c) => c.id);
@@ -166,13 +182,16 @@ const getAllPayments = async (currentUser = null) => {
 };
 
 
-const getPaymentById = async (id, options = {}) => {
+const getPaymentById = async (id, currentUser = null, options = {}) => {
   const payment = await Payment.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
     include: [caseInclude],
     transaction: options.transaction,
   });
   if (!payment) throw new AppError('Payment not found', 404);
+  if (payment.caseId) {
+    await assertAdvocateCaseContext(payment.caseId, currentUser, options);
+  }
   return toPublicPayment(payment);
 };
 
@@ -188,9 +207,12 @@ const createPayment = async ({
   paymentMode,
   createdBy,
   updatedBy,
-}) => {
+}, currentUser = null) => {
   return sequelize.transaction(async (transaction) => {
     const caseRecord = await assertCaseExists(caseId, { transaction });
+    if (caseId) {
+      await assertAdvocateCaseContext(caseId, currentUser, { transaction });
+    }
     const party = await assertPartyExists(partyType, partyId, { transaction });
     await assertUserExists(createdBy, 'createdBy', { transaction });
     await assertUserExists(updatedBy, 'updatedBy', { transaction });
@@ -258,7 +280,7 @@ const createPayment = async ({
       { transaction }
     );
 
-    return getPaymentById(payment.id, { transaction });
+    return getPaymentById(payment.id, currentUser, { transaction });
   });
 };
 
@@ -274,13 +296,19 @@ const updatePayment = async (
     transactionDate,
     status,
     updatedBy,
-  }
+  },
+  currentUser = null
 ) => {
   const payment = await Payment.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!payment) throw new AppError('Payment not found', 404);
+  
+  if (payment.caseId) {
+    await assertAdvocateCaseContext(payment.caseId, currentUser);
+  }
 
   if (caseId !== undefined) {
     await assertCaseExists(caseId);
+    await assertAdvocateCaseContext(caseId, currentUser);
     payment.caseId = caseId;
   }
 
@@ -326,12 +354,15 @@ const updatePayment = async (
     await resolveAlert('Payment', payment.id, 'PAYMENT_DUE');
   }
 
-  return getPaymentById(payment.id);
+  return getPaymentById(payment.id, currentUser);
 };
 
-const deletePayment = async (id) => {
+const deletePayment = async (id, currentUser = null) => {
   const payment = await Payment.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!payment) throw new AppError('Payment not found', 404);
+  if (payment.caseId) {
+    await assertAdvocateCaseContext(payment.caseId, currentUser);
+  }
   await payment.destroy();
   await resolveAllAlertsForRecord('Payment', id);
   return true;

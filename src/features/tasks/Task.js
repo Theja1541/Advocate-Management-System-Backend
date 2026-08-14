@@ -53,6 +53,16 @@ Task.init(
       allowNull: true,
       field: 'updated_by',
     },
+    contextType: {
+      type: DataTypes.STRING(50),
+      allowNull: true,
+      field: 'context_type',
+    },
+    contextId: {
+      type: DataTypes.BIGINT,
+      allowNull: true,
+      field: 'context_id',
+    },
   },
   {
     sequelize,

@@ -17,7 +17,7 @@ exports.getAllPayments = async (req, res, next) => {
 
 exports.getPaymentById = async (req, res, next) => {
   try {
-    const payment = await paymentService.getPaymentById(req.params.id);
+    const payment = await paymentService.getPaymentById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { payment },
@@ -34,7 +34,7 @@ exports.createPayment = async (req, res, next) => {
       ...req.body,
       createdBy: req.user?.id,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(201).json({
       status: 'success',
       data: { payment },
@@ -50,7 +50,7 @@ exports.updatePayment = async (req, res, next) => {
     const payment = await paymentService.updatePayment(req.params.id, {
       ...req.body,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       data: { payment },
@@ -63,7 +63,7 @@ exports.updatePayment = async (req, res, next) => {
 
 exports.deletePayment = async (req, res, next) => {
   try {
-    await paymentService.deletePayment(req.params.id);
+    await paymentService.deletePayment(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeletePayment error:', error);

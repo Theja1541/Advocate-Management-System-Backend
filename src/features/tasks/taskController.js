@@ -18,7 +18,7 @@ exports.getAllTasks = async (req, res, next) => {
 
 exports.getTaskById = async (req, res, next) => {
   try {
-    const task = await taskService.getTaskById(req.params.id);
+    const task = await taskService.getTaskById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { task },
@@ -34,7 +34,7 @@ exports.createTask = async (req, res, next) => {
     const task = await taskService.createTask({
       ...req.body,
       createdBy: req.user?.id,
-    });
+    }, req.user);
     res.status(201).json({
       status: 'success',
       data: { task },
@@ -50,7 +50,7 @@ exports.updateTask = async (req, res, next) => {
     const task = await taskService.updateTask(req.params.id, {
       ...req.body,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       data: { task },
@@ -63,7 +63,7 @@ exports.updateTask = async (req, res, next) => {
 
 exports.deleteTask = async (req, res, next) => {
   try {
-    await taskService.deleteTask(req.params.id);
+    await taskService.deleteTask(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteTask error:', error);

@@ -3,7 +3,53 @@ const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court, St
 const courtFeeService = require('../court-fees/courtFee.service');
 const AppError = require('../../utils/AppError');
 const { assertAdvocateOwnsCase, getScopedAdvocateIds, assertUserCanAccessAdvocateData } = require('../../utils/advocateScope');
-const { isGroupAdmin } = require('../../utils/roleHelper');
+const { isGroupAdmin, isTenantAdmin, isSuperAdmin, isAdvocate } = require('../../utils/roleHelper');
+
+const assertAdminOwnsCase = (caseRecord, currentUser) => {
+  if (!currentUser) return;
+  if (isSuperAdmin(currentUser.role)) return;
+
+  if (isTenantAdmin(currentUser.role)) {
+    if (caseRecord.contextType !== 'TENANT_ADMIN' || String(caseRecord.contextId) !== String(currentUser.id)) {
+      throw new AppError('Access denied: You can only modify your own Tenant Admin cases', 403);
+    }
+    return;
+  }
+
+  if (isGroupAdmin(currentUser.role)) {
+    if (caseRecord.contextType !== 'GROUP_ADMIN' || String(caseRecord.contextId) !== String(currentUser.id)) {
+      throw new AppError('Access denied: You can only modify your own Group Admin cases', 403);
+    }
+    return;
+  }
+};
+
+const assertAdvocateExists = async (advocateId) => {
+  if (advocateId == null) return;
+  const advocate = await Advocate.findByPk(advocateId, { attributes: ['id'] });
+  if (!advocate) throw new AppError('Assigned advocate not found', 400);
+};
+
+const assertClientExists = async (clientId) => {
+  if (clientId == null) return;
+  const client = await Client.findByPk(clientId, { attributes: ['id'] });
+  if (!client) throw new AppError('Client not found', 400);
+};
+
+const validateCaseMasters = async (caseTypeId, caseStageId, courtId) => {
+  if (caseTypeId) {
+    const caseType = await CaseType.findByPk(caseTypeId, { attributes: ['id'] });
+    if (!caseType) throw new AppError('Invalid case type', 400);
+  }
+  if (caseStageId) {
+    const caseStage = await CaseStage.findByPk(caseStageId, { attributes: ['id'] });
+    if (!caseStage) throw new AppError('Invalid case stage', 400);
+  }
+  if (courtId) {
+    const court = await Court.findByPk(courtId, { attributes: ['id'] });
+    if (!court) throw new AppError('Invalid court', 400);
+  }
+};
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -33,6 +79,8 @@ const SAFE_ATTRIBUTES = [
   'updatedBy',
   'created_at',
   'updated_at',
+  'contextType',
+  'contextId',
 ];
 
 const caseIncludes = [
@@ -59,6 +107,10 @@ const getAllCases = async ({ advocateId } = {}, currentUser = null) => {
   const where = {};
   if (advocateId != null) {
     where.advocateId = advocateId;
+    if (currentUser && currentUser.adminContext) {
+      where.contextType = currentUser.adminContext.type;
+      where.contextId = currentUser.adminContext.id;
+    }
   }
 
   if (currentUser) {
@@ -98,6 +150,12 @@ const getCaseById = async (id, { advocateId } = {}, currentUser = null) => {
   assertAdvocateOwnsCase(caseRecord, advocateId);
   if (currentUser) {
     await assertUserCanAccessAdvocateData(caseRecord.advocateId, currentUser);
+    
+    if (currentUser.adminContext) {
+      if (caseRecord.contextType && (caseRecord.contextType !== currentUser.adminContext.type || String(caseRecord.contextId) !== String(currentUser.adminContext.id))) {
+        throw new AppError('Access denied: Case belongs to a different Admin Context', 403);
+      }
+    }
   }
 
   return toPublicCase(caseRecord);
@@ -206,6 +264,22 @@ const createCase = async (
 
   const feeResult = await calculateFeeForCase(courtId, { suitValue, feePercentage, processFee, filingFee, miscCharges });
 
+  let contextType = null;
+  let contextId = null;
+  
+  if (user) {
+    if (user.adminContext) {
+      contextType = user.adminContext.type;
+      contextId = user.adminContext.id;
+    } else if (isGroupAdmin(user.role)) {
+      contextType = 'GROUP_ADMIN';
+      contextId = user.id;
+    } else if (isTenantAdmin(user.role)) {
+      contextType = 'TENANT_ADMIN';
+      contextId = user.id;
+    }
+  }
+
   const t = await sequelize.transaction();
   try {
     const caseRecord = await Case.create({
@@ -230,6 +304,8 @@ const createCase = async (
       totalPayable: feeResult.totalPayable,
       feeCalculationStatus: feeResult.feeCalculationStatus,
       courtFeeSnapshot: feeResult.courtFeeSnapshot,
+      contextType,
+      contextId,
       createdBy: user?.id || null,
     }, { transaction: t });
 
@@ -270,6 +346,15 @@ const updateCase = async (
   }
 
   assertAdvocateOwnsCase(caseRecord, scopedAdvocateId);
+  if (user) {
+    if (user.adminContext) {
+      if (caseRecord.contextType && (caseRecord.contextType !== user.adminContext.type || String(caseRecord.contextId) !== String(user.adminContext.id))) {
+        throw new AppError('Access denied: Case belongs to a different Admin Context', 403);
+      }
+    } else {
+      assertAdminOwnsCase(caseRecord, user);
+    }
+  }
 
   if (caseNo && caseNo !== caseRecord.caseNo) {
     const existing = await Case.findOne({
@@ -379,7 +464,7 @@ const updateCase = async (
   }
 };
 
-const deleteCase = async (id, { advocateId } = {}) => {
+const deleteCase = async (id, { advocateId } = {}, currentUser = null) => {
   const caseRecord = await Case.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
   });
@@ -389,6 +474,15 @@ const deleteCase = async (id, { advocateId } = {}) => {
   }
 
   assertAdvocateOwnsCase(caseRecord, advocateId);
+  if (currentUser) {
+    if (currentUser.adminContext) {
+      if (caseRecord.contextType && (caseRecord.contextType !== currentUser.adminContext.type || String(caseRecord.contextId) !== String(currentUser.adminContext.id))) {
+        throw new AppError('Access denied: Case belongs to a different Admin Context', 403);
+      }
+    } else {
+      assertAdminOwnsCase(caseRecord, currentUser);
+    }
+  }
 
   await caseRecord.destroy();
   await resolveAllAlertsForRecord('Case', id);

@@ -157,9 +157,16 @@ const validateDocumentFile = (file) => {
 };
 
 const { getScopedAdvocateIds } = require('../../utils/advocateScope');
-const { isGroupAdmin } = require('../../utils/roleHelper');
+const { isGroupAdmin, isAdvocate } = require('../../utils/roleHelper');
 const { Op } = require('sequelize');
 
+const assertAdvocateCaseContext = async (caseId, currentUser) => {
+  if (!caseId || !currentUser || !currentUser.adminContext || !isAdvocate(currentUser.role)) return;
+  const caseRecord = await Case.findByPk(caseId, { attributes: ['id', 'contextType', 'contextId'], bypassTenant: true });
+  if (caseRecord && (caseRecord.contextType !== currentUser.adminContext.type || String(caseRecord.contextId) !== String(currentUser.adminContext.id))) {
+    throw new AppError('Access denied: Document belongs to a Case in a different Admin Context', 403);
+  }
+};
 
 const getAllDocuments = async (tenantId, currentUser = null) => {
   const attributes = await getSafeAttributes();
@@ -174,8 +181,15 @@ const getAllDocuments = async (tenantId, currentUser = null) => {
         if (allowedAdvocateIds.length === 0) {
           return [];
         }
+        
+        const caseQueryWhere = { advocateId: { [Op.in]: allowedAdvocateIds } };
+        if (currentUser.adminContext) {
+           caseQueryWhere.contextType = currentUser.adminContext.type;
+           caseQueryWhere.contextId = currentUser.adminContext.id;
+        }
+        
         const cases = await Case.findAll({
-          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          where: caseQueryWhere,
           attributes: ['id'],
         });
         const caseIds = cases.map((c) => c.id);
@@ -187,8 +201,6 @@ const getAllDocuments = async (tenantId, currentUser = null) => {
     }
   }
 
-
-
   const documents = await Document.findAll({
     where,
     attributes,
@@ -199,7 +211,7 @@ const getAllDocuments = async (tenantId, currentUser = null) => {
 };
 
 
-const getDocumentById = async (id, tenantId) => {
+const getDocumentById = async (id, tenantId, currentUser = null) => {
   const attributes = await getSafeAttributes();
   const document = await Document.findOne({
     where: { id, tenantId },
@@ -209,6 +221,10 @@ const getDocumentById = async (id, tenantId) => {
 
   if (!document) {
     throw new AppError('Document not found', 404);
+  }
+
+  if (document.caseId) {
+    await assertAdvocateCaseContext(document.caseId, currentUser);
   }
 
   return toPublicDocument(document);
@@ -222,11 +238,17 @@ const createDocument = async ({
   file,
   uploadedBy,
   tenantId,
+  currentUser,
 }) => {
   validateDocumentFile(file);
 
-  await assertCaseBelongsToTenant(caseId, tenantId);
-  await assertLandBelongsToTenant(landId, tenantId);
+  if (caseId) {
+    await assertCaseBelongsToTenant(caseId, tenantId);
+    await assertAdvocateCaseContext(caseId, currentUser);
+  }
+  if (landId) {
+    await assertLandBelongsToTenant(landId, tenantId);
+  }
 
   // Check storage limit
   if (tenantId) {
@@ -272,18 +294,23 @@ const createDocument = async ({
     });
   }
 
-  return getDocumentById(document.id, tenantId);
+  return getDocumentById(document.id, tenantId, currentUser);
 };
 
-const updateDocument = async (id, { name, documentCategoryId, caseId, landId, file, tenantId }) => {
+const updateDocument = async (id, { name, documentCategoryId, caseId, landId, file, tenantId, currentUser }) => {
   const attributes = await getSafeAttributes();
   const document = await Document.findOne({ where: { id, tenantId }, attributes });
   if (!document) {
     throw new AppError('Document not found', 404);
   }
+  
+  if (document.caseId) {
+    await assertAdvocateCaseContext(document.caseId, currentUser);
+  }
 
   if (caseId !== undefined) {
     await assertCaseBelongsToTenant(caseId, tenantId);
+    await assertAdvocateCaseContext(caseId, currentUser);
     document.caseId = caseId || null;
   }
   if (landId !== undefined) {
@@ -323,10 +350,10 @@ const updateDocument = async (id, { name, documentCategoryId, caseId, landId, fi
     document.changed('searchContent', false);
     await document.save();
   }
-  return getDocumentById(document.id, tenantId);
+  return getDocumentById(document.id, tenantId, currentUser);
 };
 
-const deleteDocument = async (id, tenantId) => {
+const deleteDocument = async (id, tenantId, currentUser = null) => {
   const attributes = await getSafeAttributes();
   const document = await Document.findOne({
     where: { id, tenantId },
@@ -335,6 +362,10 @@ const deleteDocument = async (id, tenantId) => {
 
   if (!document) {
     throw new AppError('Document not found', 404);
+  }
+  
+  if (document.caseId) {
+    await assertAdvocateCaseContext(document.caseId, currentUser);
   }
 
   const filePath = document.filePath;
@@ -351,11 +382,15 @@ const deleteDocument = async (id, tenantId) => {
   return true;
 };
 
-const getDocumentTextContent = async (id, tenantId) => {
+const getDocumentTextContent = async (id, tenantId, currentUser = null) => {
   const attributes = await getSafeAttributes();
   const document = await Document.findOne({ where: { id, tenantId }, attributes });
   if (!document) {
     throw new AppError('Document not found', 404);
+  }
+
+  if (document.caseId) {
+    await assertAdvocateCaseContext(document.caseId, currentUser);
   }
 
   const plain = toPublicDocument(document);

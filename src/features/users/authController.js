@@ -21,7 +21,20 @@ const tenantInclude = { model: Tenant, as: 'tenant', attributes: ['name', 'logo'
 const advocateInclude = {
   model: Advocate,
   as: 'advocateProfile',
-  attributes: ['id'],
+  attributes: ['id', 'tenantAdminId'],
+  include: [
+    {
+      model: User,
+      as: 'groupAdmins',
+      attributes: ['id', 'name'],
+      through: { attributes: [] },
+    },
+    {
+      model: User,
+      as: 'assignedTenantAdmin',
+      attributes: ['id', 'name'],
+    }
+  ],
   required: false,
 };
 
@@ -67,18 +80,42 @@ const signRefreshToken = (user) => {
   );
 };
 
-const toAuthUser = (user) => ({
-  id: user.id,
-  name: user.name,
-  email: user.email,
-  roleId: user.roleId,
-  role: getRoleName(user),
-  status: user.status,
-  advocateId: getAdvocateId(user),
-  tenantId: user.tenantId,
-  tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
-  mustChangePassword: user.mustChangePassword,
-});
+const toAuthUser = (user) => {
+  const base = {
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    roleId: user.roleId,
+    role: getRoleName(user),
+    status: user.status,
+    advocateId: getAdvocateId(user),
+    tenantId: user.tenantId,
+    tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
+    mustChangePassword: user.mustChangePassword,
+  };
+
+  if (base.advocateId && user.advocateProfile) {
+    const contexts = [];
+    if (user.advocateProfile.tenantAdminId) {
+      contexts.push({
+        type: 'TENANT_ADMIN',
+        id: user.advocateProfile.tenantAdminId,
+        name: user.advocateProfile.assignedTenantAdmin?.name || 'Tenant Admin',
+      });
+    }
+    if (user.advocateProfile.groupAdmins) {
+      user.advocateProfile.groupAdmins.forEach(ga => {
+        contexts.push({
+          type: 'GROUP_ADMIN',
+          id: ga.id,
+          name: ga.name,
+        });
+      });
+    }
+    base.availableContexts = contexts;
+  }
+  return base;
+};
 
 const findAuthUserById = async (id) => {
   return User.findByPk(id, {

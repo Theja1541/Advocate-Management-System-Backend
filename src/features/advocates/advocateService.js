@@ -327,7 +327,19 @@ const createAdvocate = async (
     { model: User, as: 'assignedTenantAdmin', attributes: ['id', 'name', 'email'] },
   ];
 
+  const isTenantAdmin = currentUser && !isGA && !isSuperAdmin(currentUser.role);
+  const resolvedTenantAdminId = isTenantAdmin ? currentUser.id : tenantAdminId;
+
   return sequelize.transaction(async (transaction) => {
+    if (isGA && !resolvedTenantAdminId) {
+      throw new AppError('Tenant Admin must be selected when creating an advocate', 400);
+    }
+    
+    if (isGA && resolvedTenantAdminId) {
+      const ta = await User.findOne({ where: { id: resolvedTenantAdminId, tenantId: currentUser.tenantId }, transaction });
+      if (!ta) throw new AppError('Selected Tenant Admin is invalid or belongs to another tenant', 400);
+    }
+
     // 1. Check duplicate advocate within same tenant
     if (tenantId) {
       const existingAdvocate = await findExistingTenantAdvocate(
@@ -337,6 +349,10 @@ const createAdvocate = async (
       );
 
       if (existingAdvocate) {
+        if (existingAdvocate.tenantAdminId && resolvedTenantAdminId && String(existingAdvocate.tenantAdminId) !== String(resolvedTenantAdminId)) {
+          throw new AppError('Advocate already exists under a different Tenant Admin. Cannot reassign silently.', 400);
+        }
+
         // If Group Admins passed, link existing advocate
         let gIds = groupAdminIds || [];
         if (isGA && !gIds.includes(currentUser.id)) {
@@ -352,8 +368,8 @@ const createAdvocate = async (
           }
         }
         
-        if (tenantAdminId) {
-          existingAdvocate.tenantAdminId = tenantAdminId;
+        if (!existingAdvocate.tenantAdminId && resolvedTenantAdminId) {
+          existingAdvocate.tenantAdminId = resolvedTenantAdminId;
           await existingAdvocate.save({ transaction });
         }
 
@@ -400,7 +416,7 @@ const createAdvocate = async (
         status: status || 'active',
         userId,
         tenantId,
-        tenantAdminId: tenantAdminId || null,
+        tenantAdminId: resolvedTenantAdminId || null,
       },
       { transaction }
     );

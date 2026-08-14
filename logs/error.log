@@ -8975,3 +8975,541 @@
 2026-08-14 11:53:40:5340 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
 2026-08-14 11:54:02:542 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
 2026-08-14 11:54:02:542 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:43:21:4321 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:43:22:4322 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:43:26:4326 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:44:26:4426 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:44:28:4428 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:44:32:4432 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:44:36:4436 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:45:00:450 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:46:53:4653 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:46:53:4653 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:46:57:4657 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:46:57:4657 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:47:45:4745 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:47:49:4749 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:47:51:4751 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:51:07:517 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:52:19:5219 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:20:5220 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:52:20:5220 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:52:43:5243 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:53:43:5343 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:53:43:5343 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:54:43:5443 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:54:43:5443 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:55:43:5543 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:55:43:5543 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:55:59:5559 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:55:59:5559 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/cases - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/clients - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/advocates - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/daybook - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/acts - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/amendments - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/lands - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/opinions - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m400 - Admin Context headers are required for Advocates - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 13:56:00:560 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:57:34:5734 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:57:39:5739 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:57:39:5739 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:57:39:5739 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:57:39:5739 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:57:42:5742 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 13:57:43:5743 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 13:57:49:5749 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:49:5749 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:57:49:5749 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:49:5749 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:57:53:5753 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:53:5753 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:57:53:5753 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:57:53:5753 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:07:587 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:58:07:587 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:58:07:587 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 13:58:07:587 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 13:58:17:5817 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 13:58:17:5817 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 13:58:27:5827 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:27:5827 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:27:5827 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:27:5827 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:29:5829 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:29:5829 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:29:5829 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:29:5829 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:30:5830 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:30:5830 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 13:58:30:5830 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 13:58:30:5830 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:06:11:611 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:06:11:611 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:06:11:611 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:06:11:611 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:06:16:616 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:16:616 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:19:619 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:19:619 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:22:622 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:22:622 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:06:30:630 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:06:30:630 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:06:30:630 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:06:30:630 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:06:31:631 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:06:31:631 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:06:31:631 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:06:31:631 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:18:58:1858 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 14:18:58:1858 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
+2026-08-14 14:21:03:213 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:21:03:213 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:21:03:213 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:21:03:213 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:21:05:215 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:21:05:215 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:21:05:215 [31merror[39m: [31mGetAllDiaries error: Unknown column 'case.contextType' in 'where clause'[39m
+2026-08-14 14:21:05:215 [31merror[39m: [31m500 - Unknown column 'case.contextType' in 'where clause' - /api/v1/diary - GET - ::1[39m
+2026-08-14 14:21:06:216 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:21:06:216 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/documents - GET - ::1[39m
+2026-08-14 14:24:26:2426 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:24:26:2426 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:27:2527 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:27:2527 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:27:2527 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:27:2527 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:28:2528 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:28:2528 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:28:2528 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:28:2528 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:35:2535 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:35:2535 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:35:2535 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:35:2535 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:38:2538 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:38:2538 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:38:2538 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:38:2538 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:40:2540 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:40:2540 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:40:2540 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:40:2540 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:41:2541 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:41:2541 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 14:25:41:2541 [31merror[39m: [31mGetAllPayments error: Op is not defined[39m
+2026-08-14 14:25:41:2541 [31merror[39m: [31m500 - Op is not defined - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:24:54:2454 [31merror[39m: [31mCreateCase error: assertAdvocateExists is not defined[39m
+2026-08-14 16:24:54:2454 [31merror[39m: [31m500 - assertAdvocateExists is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-14 16:25:06:256 [31merror[39m: [31mCreateCase error: assertAdvocateExists is not defined[39m
+2026-08-14 16:25:06:256 [31merror[39m: [31m500 - assertAdvocateExists is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:32:58:3258 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:32:59:3259 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:32:59:3259 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:32:59:3259 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:33:04:334 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:33:07:337 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:33:07:337 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:34:04:344 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:34:04:344 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:35:04:354 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:35:04:354 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:36:04:364 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:36:04:364 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:37:04:374 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:37:04:374 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:38:04:384 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:38:04:384 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:39:04:394 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:39:04:394 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:39:4039 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:39:4039 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:40:40:4040 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:40:52:4052 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:40:52:4052 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:19:4119 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:20:4120 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:20:4120 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:21:4121 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:21:4121 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:21:4121 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:21:4121 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:22:4122 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:41:23:4123 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:44:37:4437 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:46:02:462 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/dashboard - GET - ::1[39m
+2026-08-14 16:47:02:472 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:47:02:472 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:47:23:4723 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:51:31:5131 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/cases - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/clients - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/advocates - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/diary - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/daybook - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/payments - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/alerts? - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/lands - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/opinions - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/acts - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/amendments - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/modules - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 16:51:32:5132 [31merror[39m: [31m403 - Forbidden: Invalid Group Admin context - /api/v1/roles/roles - GET - ::1[39m
+2026-08-14 17:11:49:1149 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 17:11:50:1150 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 17:11:58:1158 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-14 17:14:56:1456 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m

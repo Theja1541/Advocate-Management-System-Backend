@@ -23,7 +23,7 @@ exports.getAllDocuments = async (req, res, next) => {
 exports.getDocumentById = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    const document = await documentService.getDocumentById(req.params.id, tenantId);
+    const document = await documentService.getDocumentById(req.params.id, tenantId, req.user);
     res.status(200).json({
       status: 'success',
       data: { document },
@@ -45,6 +45,7 @@ exports.createDocument = async (req, res, next) => {
       file: req.file,
       uploadedBy: req.user?.id,
       tenantId,
+      currentUser: req.user,
     });
     res.status(201).json({
       status: 'success',
@@ -66,7 +67,7 @@ exports.createDocument = async (req, res, next) => {
 exports.downloadDocument = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    const document = await documentService.getDocumentById(req.params.id, tenantId);
+    const document = await documentService.getDocumentById(req.params.id, tenantId, req.user);
     const filePath = document.filePath;
     const fsPathCandidates = [
       filePath,
@@ -98,7 +99,7 @@ function filePathCandidatesFind(candidates) {
 exports.getDocumentText = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    const content = await documentService.getDocumentTextContent(req.params.id, tenantId);
+    const content = await documentService.getDocumentTextContent(req.params.id, tenantId, req.user);
     res.status(200).json({
       status: 'success',
       data: { content },
@@ -119,6 +120,7 @@ exports.updateDocument = async (req, res, next) => {
       landId: req.body.landId !== undefined ? Number(req.body.landId) : undefined,
       file: req.file,
       tenantId,
+      currentUser: req.user,
     });
     res.status(200).json({
       status: 'success',
@@ -140,7 +142,7 @@ exports.updateDocument = async (req, res, next) => {
 exports.deleteDocument = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    await documentService.deleteDocument(req.params.id, tenantId);
+    await documentService.deleteDocument(req.params.id, tenantId, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteDocument error:', error);

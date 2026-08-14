@@ -11,6 +11,13 @@ const authorizePermission = (moduleKey, action = 'V') => {
     try {
       const userRoleName = req.user.role; // Set by 'protect' authentication middleware
       const roleId = req.user.roleId;
+      
+      const { isAdvocate } = require('../utils/roleHelper');
+
+      // Enforce strict Read-Only access for Advocates
+      if (isAdvocate(userRoleName) && action !== 'V') {
+        return next(new AppError('Access Denied: Advocates have read-only access to Admin data.', 403));
+      }
 
       const isAuthorized = await checkPermission(userRoleName, moduleKey, action, roleId);
 
