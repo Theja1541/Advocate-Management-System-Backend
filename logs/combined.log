@@ -15015,3 +15015,16 @@
 2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/memberships - GET - ::1[39m
 2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
 2026-08-11 16:47:34:4734 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-14 11:53:23:5323 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-14 11:53:24:5324 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-14 11:53:24:5324 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-14 11:53:24:5324 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-14 11:53:24:5324 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-14 11:53:24:5324 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-14 11:53:24:5324 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-14 11:53:34:5334 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-14 11:53:34:5334 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-14 11:53:40:5340 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
+2026-08-14 11:53:40:5340 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
+2026-08-14 11:54:02:542 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m
+2026-08-14 11:54:02:542 [31merror[39m: [31m404 - Can't find /api/v1/group-admins on this server! - /api/v1/group-admins - GET - ::1[39m

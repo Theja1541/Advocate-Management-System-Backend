@@ -12,6 +12,7 @@ const AppError = require('./utils/AppError');
 const authRoutes = require('./features/users/authRoutes');
 const roleRoutes = require('./features/users/roleRoutes');
 const userRoutes = require('./features/users/userRoutes');
+const groupAdminRoutes = require('./features/users/groupAdminRoutes');
 const advocateRoutes = require('./features/advocates/advocateRoutes');
 const caseRoutes = require('./features/cases/caseRoutes');
 const clientRoutes = require('./features/clients/clientRoutes');
@@ -85,6 +86,7 @@ app.get('/health', (req, res) => {
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/roles', roleRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/group-admins', groupAdminRoutes);
 app.use('/api/v1/advocates', advocateRoutes);
 app.use('/api/v1/cases', caseRoutes);
 app.use('/api/v1/clients', clientRoutes);
