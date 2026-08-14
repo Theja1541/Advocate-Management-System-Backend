@@ -44,4 +44,13 @@ router
     userController.deleteUser
   );
 
+router
+  .route('/:id/reset-password')
+  .post(
+    authorizePermission('roles', 'E'),
+    ...userIdParamRules,
+    validate,
+    userController.resetPassword
+  );
+
 module.exports = router;

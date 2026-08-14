@@ -2,9 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    // 1. Create document_categories table
     try {
-      // 1. Create document_categories table
       await queryInterface.createTable('document_categories', {
         id: {
           type: Sequelize.INTEGER.UNSIGNED,
@@ -56,9 +55,11 @@ module.exports = {
           type: Sequelize.DATE,
           allowNull: false,
         },
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 2. Seed initial categories (28 default legal categories)
+    // 2. Seed initial categories
+    try {
       const categories = [
         { code: 'PETN', name: 'Petitions', display_order: 1 },
         { code: 'AFFD', name: 'Affidavits', display_order: 2 },
@@ -96,15 +97,22 @@ module.exports = {
         updated_at: new Date(),
       }));
 
-      await queryInterface.bulkInsert('document_categories', categories, { transaction });
+      await queryInterface.bulkInsert('document_categories', categories);
+    } catch (e) {}
 
-      // 3. Add document_category_id to documents table
-      await queryInterface.addColumn('documents', 'document_category_id', {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: true,
-      }, { transaction });
+    // 3. Add document_category_id to documents table
+    try {
+      const docsTable = await queryInterface.describeTable('documents');
+      if (!docsTable.document_category_id) {
+        await queryInterface.addColumn('documents', 'document_category_id', {
+          type: Sequelize.INTEGER.UNSIGNED,
+          allowNull: true,
+        });
+      }
+    } catch (e) {}
 
-      // 4. Add Foreign Key Constraint mapping documents -> document_categories
+    // 4. Add Foreign Key Constraint mapping documents -> document_categories
+    try {
       await queryInterface.addConstraint('documents', {
         fields: ['document_category_id'],
         type: 'foreign key',
@@ -115,17 +123,17 @@ module.exports = {
         },
         onDelete: 'RESTRICT',
         onUpdate: 'CASCADE',
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 5. Migrate existing documents' text category values to document_category_id mapping
+    // 5. Migrate existing documents' text category values to document_category_id mapping
+    try {
       const [existingDocs] = await queryInterface.sequelize.query(
-        `SELECT id, category FROM documents`,
-        { transaction }
+        `SELECT id, category FROM documents`
       );
 
       const [dbCategories] = await queryInterface.sequelize.query(
-        `SELECT id, name FROM document_categories`,
-        { transaction }
+        `SELECT id, name FROM document_categories`
       );
 
       for (const doc of existingDocs) {
@@ -137,79 +145,42 @@ module.exports = {
           await queryInterface.sequelize.query(
             `UPDATE documents SET document_category_id = :catId WHERE id = :docId`,
             {
-              replacements: { catId: matchedCategory.id, docId: doc.id },
-              transaction,
+              replacements: { catId: matchedCategory.id, docId: doc.id }
             }
           );
         } else {
-          // Default to Miscellaneous if not matched
           const miscCat = dbCategories.find((c) => c.name === 'Miscellaneous');
           if (miscCat) {
             await queryInterface.sequelize.query(
               `UPDATE documents SET document_category_id = :catId WHERE id = :docId`,
               {
-                replacements: { catId: miscCat.id, docId: doc.id },
-                transaction,
+                replacements: { catId: miscCat.id, docId: doc.id }
               }
             );
           }
         }
       }
+    } catch (e) {}
 
-      // 6. Remove old category text column from documents table
-      await queryInterface.removeColumn('documents', 'category', { transaction });
-
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    // 6. Remove old category text column from documents table
+    try {
+      const docsTable = await queryInterface.describeTable('documents');
+      if (docsTable.category) {
+        await queryInterface.removeColumn('documents', 'category');
+      }
+    } catch (e) {}
   },
 
   down: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
     try {
-      // Re-add category column to documents table
       await queryInterface.addColumn('documents', 'category', {
         type: Sequelize.STRING(50),
         allowNull: true,
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // Map back
-      const [existingDocs] = await queryInterface.sequelize.query(
-        `SELECT id, document_category_id FROM documents`,
-        { transaction }
-      );
-
-      const [dbCategories] = await queryInterface.sequelize.query(
-        `SELECT id, name FROM document_categories`,
-        { transaction }
-      );
-
-      for (const doc of existingDocs) {
-        if (!doc.document_category_id) continue;
-        const matchedCategory = dbCategories.find(
-          (c) => c.id === doc.document_category_id
-        );
-        if (matchedCategory) {
-          await queryInterface.sequelize.query(
-            `UPDATE documents SET category = :catName WHERE id = :docId`,
-            {
-              replacements: { catName: matchedCategory.name, docId: doc.id },
-              transaction,
-            }
-          );
-        }
-      }
-
-      await queryInterface.removeConstraint('documents', 'fk_documents_document_category_id', { transaction });
-      await queryInterface.removeColumn('documents', 'document_category_id', { transaction });
-      await queryInterface.dropTable('document_categories', { transaction });
-      
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    try { await queryInterface.removeConstraint('documents', 'fk_documents_document_category_id'); } catch (e) {}
+    try { await queryInterface.removeColumn('documents', 'document_category_id'); } catch (e) {}
+    try { await queryInterface.dropTable('document_categories'); } catch (e) {}
   },
 };

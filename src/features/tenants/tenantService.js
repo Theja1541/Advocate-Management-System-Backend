@@ -5,9 +5,32 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 
 const getTenants = async (query = {}) => {
-  return await Tenant.findAll({
-    include: [{ model: SubscriptionPlan, as: 'plan' }],
-    order: [['created_at', 'DESC']]
+  const tenants = await Tenant.findAll({
+    include: [
+      { model: SubscriptionPlan, as: 'plan' },
+      { 
+        model: User, 
+        as: 'Users',
+        attributes: ['id', 'roleId'],
+        include: [{ model: Role, as: 'role', attributes: ['id', 'name'] }]
+      }
+    ],
+    order: [['created_at', 'DESC']],
+    bypassTenant: true
+  });
+
+  return tenants.map(t => {
+    const plain = t.toJSON();
+    const groupAdminsCount = (plain.Users || []).filter(u => 
+      u.role?.name?.toLowerCase().includes('group admin')
+    ).length;
+    const usersCount = (plain.Users || []).length;
+
+    return {
+      ...plain,
+      groupAdminsCount,
+      usersCount
+    };
   });
 };
 
@@ -44,6 +67,7 @@ const createTenant = async (tenantData, adminData) => {
         await TenantSubscription.create({
           tenantId: tenant.id,
           planId: plan.id,
+          amountPaid: plan.price ?? 0.00,
           status: 'active',
           startDate: new Date(),
           endDate: endDate,
@@ -59,18 +83,20 @@ const createTenant = async (tenantData, adminData) => {
 
     // 4. Create Tenant Admin Role
     const adminRole = await Role.create({
-      name: `Tenant Admin ${tenant.id}`,
+      name: 'Tenant Admin',
       description: 'Full access to tenant data',
       tenantId: tenant.id
     }, { transaction, bypassTenant: true });
 
     // 5. Create other default roles
     const defaultRoles = [
+      { name: 'Group Admin', description: 'Group administrator access', tenantId: tenant.id },
       { name: 'Sub Admin', description: 'Limited administrative access', tenantId: tenant.id },
       { name: 'Advocate', description: 'Standard advocate access', tenantId: tenant.id },
       { name: 'Staff/Bearer', description: 'Basic staff access', tenantId: tenant.id }
     ];
     const createdDefaultRoles = await Role.bulkCreate(defaultRoles, { transaction, bypassTenant: true });
+
 
     // 6. Assign modules to roles
     const modules = await Module.findAll({ transaction, bypassTenant: true });
@@ -134,7 +160,7 @@ const updateTenant = async (id, data) => {
 
 const resetAdminPassword = async (tenantId, newPassword) => {
   const tenant = await getTenantById(tenantId);
-  const adminRole = await Role.findOne({ where: { name: `Tenant Admin ${tenant.id}`, tenantId }, bypassTenant: true });
+  const adminRole = await Role.findOne({ where: { name: 'Tenant Admin', tenantId }, bypassTenant: true });
   if (!adminRole) throw new AppError('Tenant Admin role not found', 404);
 
   const user = await User.findOne({ where: { roleId: adminRole.id, tenantId }, bypassTenant: true });

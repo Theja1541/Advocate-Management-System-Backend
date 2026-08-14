@@ -120,7 +120,7 @@ const VALID_LEVELS = ['---', 'V', 'VE', 'VA', 'VEA'];
 
 const upsertPermission = async ({ roleId, moduleId, accessLevel }, options = {}) => {
   const role = await Role.findByPk(roleId, {
-    attributes: ['id'],
+    attributes: ['id', 'name'],
     transaction: options.transaction,
   });
   if (!role) throw new AppError('Role not found', 404);
@@ -140,16 +140,40 @@ const upsertPermission = async ({ roleId, moduleId, accessLevel }, options = {})
     transaction: options.transaction,
   });
 
+  let created = false;
   if (!permission) {
     permission = await Permission.create(
       { roleId, moduleId, accessLevel },
       { transaction: options.transaction }
     );
-    return { permission, created: true };
+    created = true;
+  } else {
+    await permission.update({ accessLevel }, { transaction: options.transaction });
   }
 
-  await permission.update({ accessLevel }, { transaction: options.transaction });
-  return { permission, created: false };
+  if (role.name === 'Tenant Admin') {
+    const groupAdminRole = await Role.findOne({
+      where: { name: 'Group Admin' },
+      attributes: ['id'],
+      transaction: options.transaction,
+    });
+    if (groupAdminRole) {
+      let gaPermission = await Permission.findOne({
+        where: { roleId: groupAdminRole.id, moduleId },
+        transaction: options.transaction,
+      });
+      if (!gaPermission) {
+        await Permission.create(
+          { roleId: groupAdminRole.id, moduleId, accessLevel },
+          { transaction: options.transaction }
+        );
+      } else {
+        await gaPermission.update({ accessLevel }, { transaction: options.transaction });
+      }
+    }
+  }
+
+  return { permission, created };
 };
 
 exports.updatePermission = async (req, res, next) => {

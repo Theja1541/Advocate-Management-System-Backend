@@ -1,5 +1,7 @@
 const { Daybook, User } = require('../associations');
 const AppError = require('../../utils/AppError');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+const { applyGroupAdminIsolation } = require('../../utils/groupAdminScope');
 
 const SAFE_ATTRIBUTES = [
   'id',
@@ -41,8 +43,22 @@ const generateDaybookCode = async () => {
   return `DB-${String(nextNum).padStart(3, '0')}`;
 };
 
-const getAllEntries = async () => {
+const scopeDaybookWhere = async (where, currentUser) => {
+  if (!currentUser) return;
+  const role = currentUser.role || currentUser.rawRole;
+  if (isGroupAdmin(role)) {
+    where.recorded_by = currentUser.id;
+    return;
+  }
+  await applyGroupAdminIsolation(where, currentUser, 'recorded_by');
+};
+
+const getAllEntries = async (currentUser = null) => {
+  const where = {};
+  await scopeDaybookWhere(where, currentUser);
+
   const entries = await Daybook.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [recorderInclude],
     order: [
@@ -53,8 +69,12 @@ const getAllEntries = async () => {
   return entries.map(toPublicEntry);
 };
 
-const getEntryById = async (id) => {
-  const entry = await Daybook.findByPk(id, {
+const getEntryById = async (id, currentUser = null) => {
+  const where = { id };
+  await scopeDaybookWhere(where, currentUser);
+
+  const entry = await Daybook.findOne({
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [recorderInclude],
   });
@@ -108,9 +128,12 @@ const updateEntry = async (
     type,
     amount,
     recordedBy,
-  }
+  },
+  currentUser = null
 ) => {
-  const entry = await Daybook.findByPk(id, { attributes: SAFE_ATTRIBUTES });
+  const where = { id };
+  await scopeDaybookWhere(where, currentUser);
+  const entry = await Daybook.findOne({ where, attributes: SAFE_ATTRIBUTES });
   if (!entry) throw new AppError('Day book entry not found', 404);
 
   if (recordedBy !== undefined) {
@@ -135,11 +158,13 @@ const updateEntry = async (
   if (amount !== undefined) entry.amount = amount;
 
   await entry.save();
-  return getEntryById(entry.id);
+  return getEntryById(entry.id, currentUser);
 };
 
-const deleteEntry = async (id) => {
-  const entry = await Daybook.findByPk(id, { attributes: SAFE_ATTRIBUTES });
+const deleteEntry = async (id, currentUser = null) => {
+  const where = { id };
+  await scopeDaybookWhere(where, currentUser);
+  const entry = await Daybook.findOne({ where, attributes: SAFE_ATTRIBUTES });
   if (!entry) throw new AppError('Day book entry not found', 404);
   await entry.destroy();
   return true;

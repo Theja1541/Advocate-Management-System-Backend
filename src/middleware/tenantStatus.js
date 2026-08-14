@@ -1,13 +1,15 @@
 const { Tenant } = require('../features/associations');
 const AppError = require('../utils/AppError');
 const logger = require('../config/logger');
+const { isSuperAdmin } = require('../utils/roleHelper');
 
 const checkTenantStatus = async (req, res, next) => {
   try {
     // If Super Admin, bypass tenant status check
-    if (req.user && req.user.role === 'Super Admin') {
+    if (req.user && isSuperAdmin(req.user.role)) {
       return next();
     }
+
 
     if (!req.user || !req.user.tenantId) {
       return next(new AppError('Tenant identification missing.', 401));

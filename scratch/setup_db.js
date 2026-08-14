@@ -19,6 +19,8 @@ const {
   Alert,
   BareAct,
   Amendment,
+  Tenant,
+  SubscriptionPlan,
 } = require('../src/features/associations');
 
 async function setup() {
@@ -27,17 +29,46 @@ async function setup() {
     await sequelize.authenticate();
     console.log('Connected to database successfully.');
 
-    // Disable foreign keys to bypass constraint blockages while drops occur
+    console.log('Cleaning up existing database tables...');
     await sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
-    console.log('Foreign key checks disabled.');
+    const [tables] = await sequelize.query(
+      "SELECT table_name FROM information_schema.tables WHERE table_schema = DATABASE();"
+    );
+    for (const row of tables) {
+      const tableName = row.TABLE_NAME || row.table_name;
+      if (tableName) {
+        await sequelize.query(`DROP TABLE IF EXISTS \`${tableName}\`;`);
+      }
+    }
+    await sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
+    console.log('All old tables dropped cleanly.');
 
-    // 1. Sync all tables (Drop existing and recreate based on model definitions)
+    // 1. Sync all tables (Recreate based on model definitions)
     await sequelize.sync({ force: true });
     console.log('Tables synced and created successfully.');
 
-    // Enable foreign key checks back
-    await sequelize.query('SET FOREIGN_KEY_CHECKS = 1;');
-    console.log('Foreign key checks enabled.');
+    // 1b. Seed Default Subscription Plan & Tenant
+    const defaultPlan = await SubscriptionPlan.create({
+      id: 1,
+      name: 'Legacy Free Plan',
+      code: 'LEGACY_FREE',
+      price: 0,
+      billingCycle: 'lifetime',
+      maxUsers: 100,
+      storageLimitMb: 5000,
+      status: 'active',
+    });
+
+    await Tenant.create({
+      id: 1,
+      name: 'Legacy Primary Firm',
+      code: 'LEGACY',
+      status: 'active',
+      planId: defaultPlan.id,
+      subscriptionStart: new Date(),
+      maxUsers: 100,
+    });
+    console.log('Default Tenant & Plan seeded.');
 
     // 2. Seed Roles
     const roles = await Role.bulkCreate([
@@ -77,10 +108,10 @@ async function setup() {
     // 4. Seed Permissions
     const matrix = {
       'Super Admin':  ['VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA','VEA'],
-      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','—','VE'],
-      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','—','V'],
-      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','—','V','V','V','—','VE'],
-      'Staff/Bearer': ['V','VA','V','VE','VE','—','—','V','—','VE','—','—','V','—','V']
+      'Admin':        ['VEA','VEA','VE','VE','VE','V','VEA','VEA','VE','VE','VEA','VE','V','---','VE'],
+      'Sub Admin':    ['VE','V','VE','VE','VE','V','V','VE','V','VE','V','V','V','---','V'],
+      'Advocate':     ['V','VA','VE','VE','VE','VEA','V','V','V','---','V','V','V','---','VE'],
+      'Staff/Bearer': ['V','VA','V','VE','VE','---','---','V','---','VE','---','---','V','---','V']
     };
 
     const permissions = [];
@@ -91,7 +122,7 @@ async function setup() {
         permissions.push({
           roleId,
           moduleId: dbModule.id,
-          accessLevel: level
+          accessLevel: (level === '—' || level === '-') ? '---' : level
         });
       });
     }
@@ -238,9 +269,9 @@ async function setup() {
 
     // 15. Seed Alerts
     await Alert.bulkCreate([
-      { type: 'O.S. 214/2024', description: 'cross-examination of PW-2 deferred', severity: 'tape', dueInfo: '15 Jul 2026', isResolved: false },
-      { type: 'O.S. 88/2025', description: 'Arguments part-heard, written arguments called for', severity: 'tape', dueInfo: '15 Jul 2026', isResolved: false },
-      { type: 'Payments Due', description: 'Part fee received — Sri Venkateswara Traders (A.S. 31/2025)', severity: 'brass', dueInfo: '2 days ago', isResolved: false }
+      { tenantId: 1, referenceType: 'case', referenceId: 1, alertType: 'HEARING', priority: 'high', status: 'active', message: 'O.S. 214/2024 - cross-examination of PW-2 deferred' },
+      { tenantId: 1, referenceType: 'case', referenceId: 2, alertType: 'HEARING', priority: 'medium', status: 'active', message: 'O.S. 88/2025 - Arguments part-heard, written arguments called for' },
+      { tenantId: 1, referenceType: 'payment', referenceId: 2, alertType: 'PAYMENT_DUE', priority: 'medium', status: 'active', message: 'Part fee received — Sri Venkateswara Traders (A.S. 31/2025)' }
     ]);
     console.log('Alerts seeded.');
 

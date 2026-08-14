@@ -2,19 +2,28 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // 1. Insert "Legal Texts" module into modules table
-    await queryInterface.bulkInsert('modules', [
-      {
-        name: 'Legal Texts',
-        key_code: 'legalTexts'
-      }
-    ]);
-
-    // 2. Retrieve the inserted module ID
-    const [modules] = await queryInterface.sequelize.query(
+    // 1. Check if "Legal Texts" module already exists
+    const [existing] = await queryInterface.sequelize.query(
       `SELECT id FROM modules WHERE key_code = 'legalTexts' LIMIT 1;`
     );
-    const moduleId = modules?.[0]?.id;
+
+    let moduleId;
+
+    if (!existing || existing.length === 0) {
+      await queryInterface.bulkInsert('modules', [
+        {
+          name: 'Legal Texts',
+          key_code: 'legalTexts'
+        }
+      ]);
+
+      const [inserted] = await queryInterface.sequelize.query(
+        `SELECT id FROM modules WHERE key_code = 'legalTexts' LIMIT 1;`
+      );
+      moduleId = inserted?.[0]?.id;
+    } else {
+      moduleId = existing[0].id;
+    }
 
     if (!moduleId) {
       throw new Error('Failed to retrieve seeded Legal Texts module ID.');
@@ -56,7 +65,9 @@ module.exports = {
     });
 
     if (permissionsToSeed.length > 0) {
-      await queryInterface.bulkInsert('permissions', permissionsToSeed, {});
+      try {
+        await queryInterface.bulkInsert('permissions', permissionsToSeed, {});
+      } catch (e) {}
     }
   },
 

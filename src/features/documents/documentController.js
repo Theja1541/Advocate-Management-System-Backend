@@ -8,7 +8,7 @@ const AppError = require('../../utils/AppError');
 exports.getAllDocuments = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    const documents = await documentService.getAllDocuments(tenantId);
+    const documents = await documentService.getAllDocuments(tenantId, req.user);
     res.status(200).json({
       status: 'success',
       data: { documents },
@@ -18,6 +18,7 @@ exports.getAllDocuments = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getDocumentById = async (req, res, next) => {
   try {

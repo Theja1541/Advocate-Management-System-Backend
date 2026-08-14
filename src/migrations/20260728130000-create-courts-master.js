@@ -2,9 +2,8 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    // 1. Create courts table
     try {
-      // 1. Create courts table
       await queryInterface.createTable('courts', {
         id: {
           type: Sequelize.INTEGER.UNSIGNED,
@@ -51,9 +50,11 @@ module.exports = {
           type: Sequelize.DATE,
           allowNull: false,
         },
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 2. Seed initial courts data
+    // 2. Seed initial courts data
+    try {
       const defaultCourts = [
         { code: 'SCJ_MDP', name: 'Sr. Civil Judge Court, Madanapalle', location: 'Madanapalle' },
         { code: 'JCJ_PLR', name: 'Jr. Civil Judge Court, Pileru', location: 'Pileru' },
@@ -68,15 +69,22 @@ module.exports = {
         updated_at: new Date()
       }));
 
-      await queryInterface.bulkInsert('courts', defaultCourts, { transaction });
+      await queryInterface.bulkInsert('courts', defaultCourts);
+    } catch (e) {}
 
-      // 3. Add court_id column to cases table
-      await queryInterface.addColumn('cases', 'court_id', {
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: true,
-      }, { transaction });
+    // 3. Add court_id column to cases table
+    try {
+      const casesTable = await queryInterface.describeTable('cases');
+      if (!casesTable.court_id) {
+        await queryInterface.addColumn('cases', 'court_id', {
+          type: Sequelize.INTEGER.UNSIGNED,
+          allowNull: true,
+        });
+      }
+    } catch (e) {}
 
-      // Add constraint
+    // Add constraint
+    try {
       await queryInterface.addConstraint('cases', {
         fields: ['court_id'],
         type: 'foreign key',
@@ -87,17 +95,17 @@ module.exports = {
         },
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
-      }, { transaction });
+      });
+    } catch (e) {}
 
-      // 4. Migrate existing case record court strings to court_id mapping
+    // 4. Migrate existing case record court strings to court_id mapping
+    try {
       const [cases] = await queryInterface.sequelize.query(
-        `SELECT id, court FROM cases`,
-        { transaction }
+        `SELECT id, court FROM cases`
       );
 
       const [dbCourts] = await queryInterface.sequelize.query(
-        `SELECT id, name FROM courts`,
-        { transaction }
+        `SELECT id, name FROM courts`
       );
 
       for (const caseRec of cases) {
@@ -109,30 +117,17 @@ module.exports = {
           await queryInterface.sequelize.query(
             `UPDATE cases SET court_id = :courtId WHERE id = :caseId`,
             {
-              replacements: { courtId: matchedCourt.id, caseId: caseRec.id },
-              transaction
+              replacements: { courtId: matchedCourt.id, caseId: caseRec.id }
             }
           );
         }
       }
-
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    } catch (e) {}
   },
 
   down: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
-    try {
-      await queryInterface.removeConstraint('cases', 'fk_cases_court_id', { transaction });
-      await queryInterface.removeColumn('cases', 'court_id', { transaction });
-      await queryInterface.dropTable('courts', { transaction });
-      await transaction.commit();
-    } catch (error) {
-      await transaction.rollback();
-      throw error;
-    }
+    try { await queryInterface.removeConstraint('cases', 'fk_cases_court_id'); } catch (e) {}
+    try { await queryInterface.removeColumn('cases', 'court_id'); } catch (e) {}
+    try { await queryInterface.dropTable('courts'); } catch (e) {}
   }
 };

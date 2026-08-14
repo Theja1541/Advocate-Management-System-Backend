@@ -128,14 +128,43 @@ const buildDaybookFromPayment = ({
   };
 };
 
-const getAllPayments = async () => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllPayments = async (currentUser = null) => {
+  const where = {};
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        const cases = await Case.findAll({
+          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          attributes: ['id'],
+        });
+        const caseIds = cases.map((c) => c.id);
+        if (caseIds.length === 0) {
+          return [];
+        }
+        where.caseId = { [Op.in]: caseIds };
+      }
+    }
+  }
+
+
   const payments = await Payment.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [caseInclude],
     order: [['transactionDate', 'DESC'], ['id', 'DESC']],
   });
   return payments.map(toPublicPayment);
 };
+
 
 const getPaymentById = async (id, options = {}) => {
   const payment = await Payment.findByPk(id, {

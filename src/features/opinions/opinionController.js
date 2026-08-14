@@ -4,7 +4,7 @@ const logger = require('../../config/logger');
 exports.getAllOpinions = async (req, res, next) => {
   try {
     const tenantId = req.user?.tenantId;
-    const opinions = await opinionService.getAllOpinions(tenantId);
+    const opinions = await opinionService.getAllOpinions(tenantId, req.user);
     res.status(200).json({
       status: 'success',
       data: { opinions },
@@ -14,6 +14,7 @@ exports.getAllOpinions = async (req, res, next) => {
     next(error);
   }
 };
+
 
 exports.getOpinionById = async (req, res, next) => {
   try {

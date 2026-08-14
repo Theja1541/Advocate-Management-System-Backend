@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllClients = async (req, res, next) => {
   try {
-    const clients = await clientService.getAllClients();
+    const clients = await clientService.getAllClients(req.user);
     res.status(200).json({
       status: 'success',
       data: { clients },
@@ -14,9 +14,10 @@ exports.getAllClients = async (req, res, next) => {
   }
 };
 
+
 exports.getClientById = async (req, res, next) => {
   try {
-    const client = await clientService.getClientById(req.params.id);
+    const client = await clientService.getClientById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { client },
@@ -49,7 +50,7 @@ exports.updateClient = async (req, res, next) => {
     const client = await clientService.updateClient(req.params.id, {
       ...req.body,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       data: { client },
@@ -62,7 +63,7 @@ exports.updateClient = async (req, res, next) => {
 
 exports.deleteClient = async (req, res, next) => {
   try {
-    await clientService.deleteClient(req.params.id);
+    await clientService.deleteClient(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteClient error:', error);

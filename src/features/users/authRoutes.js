@@ -17,4 +17,18 @@ router.post('/logout', authController.logout);
 router.post('/refresh', authController.refresh);
 router.get('/me', protect, authController.getMe);
 
+const changePasswordValidator = [
+  body('currentPassword').notEmpty().withMessage('Current password is required'),
+  body('newPassword').isLength({ min: 8 }).withMessage('New password must be at least 8 characters'),
+  body('confirmPassword').custom((value, { req }) => {
+    if (value !== req.body.newPassword) {
+      throw new Error('Password confirmation does not match new password');
+    }
+    return true;
+  }),
+  validate
+];
+
+router.post('/change-password', protect, changePasswordValidator, authController.changePassword);
+
 module.exports = router;

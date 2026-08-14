@@ -3,6 +3,7 @@ const AppError = require('../utils/AppError');
 const logger = require('../config/logger');
 const { tenantContext } = require('../config/database');
 const { checkTenantStatus } = require('./tenantStatus');
+const { normalizeRole, isSuperAdmin } = require('../utils/roleHelper');
 
 const protect = (req, res, next) => {
   let token;
@@ -24,17 +25,20 @@ const protect = (req, res, next) => {
       return next(new AppError('Invalid security token payload. Please log in again.', 401));
     }
 
+    const normalizedRole = normalizeRole(decoded.role);
+
     req.user = {
       id: decoded.id,
       name: decoded.name,
       roleId: decoded.roleId,
-      role: decoded.role,
+      role: normalizedRole,
+      rawRole: decoded.role,
       advocateId: decoded.advocateId ?? null,
       tenantId: decoded.tenantId ?? null,
     };
 
-    const isSuperAdmin = decoded.role === 'Super Admin';
-    const contextData = { tenantId: decoded.tenantId, isSuperAdmin };
+    const superAdminFlag = isSuperAdmin(normalizedRole);
+    const contextData = { tenantId: decoded.tenantId, isSuperAdmin: superAdminFlag };
 
     tenantContext.run(contextData, () => {
       checkTenantStatus(req, res, next);
@@ -46,8 +50,9 @@ const protect = (req, res, next) => {
 };
 
 const restrictTo = (...roles) => {
+  const allowed = roles.map(normalizeRole);
   return (req, res, next) => {
-    if (!roles.includes(req.user.role)) {
+    if (!allowed.includes(normalizeRole(req.user?.role))) {
       return next(new AppError('Access denied: Insufficient privileges for this operation.', 403));
     }
     next();
@@ -55,3 +60,4 @@ const restrictTo = (...roles) => {
 };
 
 module.exports = { protect, restrictTo };
+

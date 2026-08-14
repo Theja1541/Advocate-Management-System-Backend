@@ -32,16 +32,67 @@ const assertUserExists = async (userId, fieldLabel) => {
   }
 };
 
-const getAllClients = async () => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { Case } = require('../associations');
+const { Op } = require('sequelize');
+
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const isGAUser = (user) =>
+  Boolean(user && (isGroupAdmin(user.role) || isGroupAdmin(user.rawRole)));
+
+const scopeClientWhere = (where, user) => {
+  if (isGAUser(user)) {
+    where.created_by = user.id;
+  }
+};
+
+const getAllClients = async (currentUser = null) => {
+  const where = {};
+
+  if (currentUser) {
+    if (isGAUser(currentUser)) {
+      where.created_by = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        const cases = await Case.findAll({
+          where: { advocateId: { [Op.in]: allowedAdvocateIds } },
+          attributes: ['clientId'],
+        });
+        const clientIds = cases.map((c) => c.clientId).filter(Boolean);
+        if (clientIds.length === 0) {
+          return [];
+        }
+        where.id = { [Op.in]: clientIds };
+      }
+    }
+  }
+
   const clients = await Client.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     order: [['id', 'ASC']],
   });
-  return clients.map(toPublicClient);
+  let result = clients.map(toPublicClient);
+  if (isGAUser(currentUser)) {
+    result = result.filter(
+      (c) => Number(c.createdBy ?? c.created_by) === Number(currentUser.id)
+    );
+  }
+  return result;
 };
 
-const getClientById = async (id) => {
-  const client = await Client.findByPk(id, {
+
+const getClientById = async (id, currentUser = null) => {
+  const where = { id };
+  scopeClientWhere(where, currentUser);
+
+  const client = await Client.findOne({
+    where,
     attributes: SAFE_ATTRIBUTES,
   });
 
@@ -114,9 +165,14 @@ const updateClient = async (
     docsCount,
     createdBy,
     updatedBy,
-  }
+  },
+  currentUser = null
 ) => {
-  const client = await Client.findByPk(id, {
+  const where = { id };
+  scopeClientWhere(where, currentUser);
+
+  const client = await Client.findOne({
+    where,
     attributes: SAFE_ATTRIBUTES,
   });
 
@@ -157,8 +213,12 @@ const updateClient = async (
   return toPublicClient(client);
 };
 
-const deleteClient = async (id) => {
-  const client = await Client.findByPk(id, {
+const deleteClient = async (id, currentUser = null) => {
+  const where = { id };
+  scopeClientWhere(where, currentUser);
+
+  const client = await Client.findOne({
+    where,
     attributes: SAFE_ATTRIBUTES,
   });
 

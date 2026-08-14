@@ -47,6 +47,12 @@ User.init(
       allowNull: false,
       defaultValue: 'active',
     },
+    mustChangePassword: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+      field: 'must_change_password',
+    },
   },
   {
     sequelize,

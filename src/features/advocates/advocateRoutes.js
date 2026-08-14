@@ -13,6 +13,8 @@ const router = express.Router();
 
 router.use(protect);
 
+router.get('/search', authorizePermission('advs', 'V'), advocateController.searchAdvocates);
+
 router
   .route('/')
   .get(authorizePermission('advs', 'V'), advocateController.getAllAdvocates)
@@ -22,6 +24,7 @@ router
     validate,
     advocateController.createAdvocate
   );
+
 
 router
   .route('/:id')

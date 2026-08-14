@@ -64,9 +64,36 @@ User.belongsTo(Role, { foreignKey: 'role_id', as: 'role' });
 Role.belongsToMany(Module, { through: Permission, foreignKey: 'role_id', otherKey: 'module_id', as: 'modules' });
 Module.belongsToMany(Role, { through: Permission, foreignKey: 'module_id', otherKey: 'role_id', as: 'roles' });
 
+const GroupAdminAdvocate = require('./users/GroupAdminAdvocate');
+
 // 3. User & Advocate link
 User.hasOne(Advocate, { foreignKey: 'userId', as: 'advocateProfile' });
 Advocate.belongsTo(User, { foreignKey: 'userId', as: 'user' });
+
+// 3a. Advocate & Tenant Admin link
+Advocate.belongsTo(User, { foreignKey: 'tenantAdminId', as: 'assignedTenantAdmin' });
+User.hasMany(Advocate, { foreignKey: 'tenantAdminId', as: 'tenantAdminAdvocates' });
+
+// 3b. Group Admin ↔ Advocate Many-to-Many
+User.belongsToMany(Advocate, {
+  through: GroupAdminAdvocate,
+  foreignKey: 'group_admin_id',
+  otherKey: 'advocate_id',
+  as: 'assignedAdvocates',
+});
+
+Advocate.belongsToMany(User, {
+  through: GroupAdminAdvocate,
+  foreignKey: 'advocate_id',
+  otherKey: 'group_admin_id',
+  as: 'groupAdmins',
+});
+
+User.hasMany(GroupAdminAdvocate, { foreignKey: 'group_admin_id', as: 'advocateLinks' });
+GroupAdminAdvocate.belongsTo(User, { foreignKey: 'group_admin_id', as: 'groupAdmin' });
+
+Advocate.hasMany(GroupAdminAdvocate, { foreignKey: 'advocate_id', as: 'groupAdminLinks' });
+GroupAdminAdvocate.belongsTo(Advocate, { foreignKey: 'advocate_id', as: 'advocate' });
 
 // 4. Clients, Advocates & Cases
 Client.hasMany(Case, { foreignKey: 'client_id', as: 'cases' });
@@ -228,5 +255,6 @@ module.exports = {
   PhraseGroup,
   PhraseOccurrence,
   LandTitleSearch,
+  GroupAdminAdvocate,
 };
 

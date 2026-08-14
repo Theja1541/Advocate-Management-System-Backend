@@ -25,13 +25,22 @@ const assertUserExists = async (userId, fieldLabel) => {
   if (!user) throw new AppError(`${fieldLabel} user not found`, 400);
 };
 
-const getAllReferences = async () => {
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllReferences = async (currentUser = null) => {
+  const where = {};
+  if (currentUser && isGroupAdmin(currentUser.role)) {
+    where.createdBy = currentUser.id;
+  }
+
   const references = await Reference.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     order: [['id', 'ASC']],
   });
   return references.map(toPublicReference);
 };
+
 
 const getReferenceById = async (id) => {
   const reference = await Reference.findByPk(id, {

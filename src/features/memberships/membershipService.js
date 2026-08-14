@@ -60,12 +60,34 @@ const addYears = (dateStr, years = 1) => {
   return d.toISOString().slice(0, 10);
 };
 
-const getAllMemberships = async () => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllMemberships = async (currentUser = null) => {
+  const where = {};
+  if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      where.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return [];
+        }
+        where.advocateId = { [Op.in]: allowedAdvocateIds };
+      }
+    }
+  }
+
+
   const memberships = await Membership.findAll({
+    where,
     attributes: SAFE_ATTRIBUTES,
     include: [advocateInclude],
     order: [['expiryDate', 'ASC'], ['id', 'ASC']],
   });
+
 
   const result = [];
   for (const membership of memberships) {

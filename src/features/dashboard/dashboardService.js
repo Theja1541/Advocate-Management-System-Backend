@@ -46,9 +46,46 @@ const getRelativeTime = (date) => {
   return `${diffDays}d ago`;
 };
 
-const getDashboard = async ({ advocateId } = {}) => {
+const { getScopedAdvocateIds } = require('../../utils/advocateScope');
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getDashboard = async ({ advocateId } = {}, currentUser = null) => {
   const todayStr = new Date().toISOString().slice(0, 10);
-  const caseWhere = advocateId ? { advocateId } : {};
+  let caseWhere = {};
+
+  if (advocateId) {
+    caseWhere.advocateId = advocateId;
+  } else if (currentUser) {
+    if (isGroupAdmin(currentUser.role)) {
+      caseWhere.createdBy = currentUser.id;
+    } else {
+      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
+      if (allowedAdvocateIds !== null) {
+        if (allowedAdvocateIds.length === 0) {
+          return {
+            kpis: {
+              totalCases: 0,
+              activeCases: 0,
+              closedCases: 0,
+              todayHearings: 0,
+              pendingHearings: 0,
+              duePaymentAmount: 0,
+              pendingPaymentsCount: 0,
+              pendingTasks: 0,
+              disputedTitle: 0,
+            },
+            causeList: [],
+            causeMeta: { matterCount: 0, courtCount: 0, pendingCount: 0 },
+            recentActivity: [],
+            notifications: [],
+            displayDate: formatDisplayDate(new Date()),
+          };
+        }
+        caseWhere.advocateId = { [Op.in]: allowedAdvocateIds };
+      }
+    }
+  }
+
 
   // 1. Fetch KPI Counts
   const totalCases = await Case.count({ where: caseWhere });
@@ -59,9 +96,10 @@ const getDashboard = async ({ advocateId } = {}) => {
   const todayHearings = await CaseDiary.count({
     where: {
       hearingDate: todayStr,
-      ...(advocateId ? { advocateId } : {}),
+      ...(caseWhere.advocateId ? { advocateId: caseWhere.advocateId } : {}),
     },
   });
+
 
     const store = tenantContext.getStore();
   const paymentWhere = { amountOutstanding: { [Op.gt]: 0 } };

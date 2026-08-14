@@ -50,6 +50,9 @@ exports.search = async (req, res, next) => {
     }
 
     const tenantId = req.user.tenantId;
+    const { isGroupAdmin } = require('../../utils/roleHelper');
+    const isGA = isGroupAdmin(req.user.role) || isGroupAdmin(req.user.rawRole);
+    const userId = req.user.id;
     const lowerQuery = q.toLowerCase();
 
     // 1. Search PhraseGroups for exact match
@@ -72,8 +75,10 @@ exports.search = async (req, res, next) => {
     const allOccurrences = [];
 
     // 2. Search LegalTexts
+    const ltWhere = { tenantId, content: { [Op.like]: `%${q}%` } };
+    if (isGA) ltWhere.created_by = userId;
     const legalTexts = await LegalText.findAll({
-      where: { tenantId, content: { [Op.like]: `%${q}%` } },
+      where: ltWhere,
       attributes: ['id', 'title', 'content']
     });
     legalTexts.forEach(lt => {
@@ -86,8 +91,10 @@ exports.search = async (req, res, next) => {
     });
 
     // 3. Search Documents
+    const docWhere = { tenantId, searchContent: { [Op.like]: `%${q}%` } };
+    if (isGA) docWhere.uploadedBy = userId;
     const documents = await Document.findAll({
-      where: { tenantId, searchContent: { [Op.like]: `%${q}%` } },
+      where: docWhere,
       attributes: ['id', 'name', 'searchContent']
     });
     documents.forEach(doc => {
@@ -100,8 +107,10 @@ exports.search = async (req, res, next) => {
     });
 
     // 4. Search CaseDiary (Hearings)
+    const diaryWhere = { tenantId, note: { [Op.like]: `%${q}%` } };
+    if (isGA) diaryWhere.created_by = userId;
     const diaries = await CaseDiary.findAll({
-      where: { tenantId, note: { [Op.like]: `%${q}%` } },
+      where: diaryWhere,
       attributes: ['id', 'hearingDate', 'note']
     });
     diaries.forEach(diary => {
@@ -115,8 +124,10 @@ exports.search = async (req, res, next) => {
     });
 
     // 5. Search Opinions
+    const opWhere = { tenantId, findingsNote: { [Op.like]: `%${q}%` } };
+    if (isGA) opWhere.created_by = userId;
     const opinions = await Opinion.findAll({
-      where: { tenantId, findingsNote: { [Op.like]: `%${q}%` } },
+      where: opWhere,
       attributes: ['id', 'referenceNo', 'findingsNote']
     });
     opinions.forEach(op => {
@@ -225,7 +236,12 @@ exports.append = async (req, res, next) => {
       return next(new AppError('Invalid or unsupported source type for appending', 400));
     }
 
-    const record = await Model.findOne({ where: { id: sourceId, tenantId }, transaction });
+    const { isGroupAdmin } = require('../../utils/roleHelper');
+    const recordWhere = { id: sourceId, tenantId };
+    if (isGroupAdmin(req.user.role) || isGroupAdmin(req.user.rawRole)) {
+      recordWhere.created_by = req.user.id;
+    }
+    const record = await Model.findOne({ where: recordWhere, transaction });
     if (!record) {
       await transaction.rollback();
       return next(new AppError('Source not found or access denied', 404));

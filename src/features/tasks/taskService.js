@@ -41,8 +41,17 @@ const assertUserExists = async (userId, fieldLabel) => {
   }
 };
 
-const getAllTasks = async ({ query, status, priority } = {}) => {
+const { isGroupAdmin } = require('../../utils/roleHelper');
+
+const getAllTasks = async ({ query, status, priority } = {}, currentUser = null) => {
   const where = {};
+
+  if (currentUser && isGroupAdmin(currentUser.role)) {
+    where[Op.or] = [
+      { createdBy: currentUser.id },
+      { assignedTo: currentUser.id },
+    ];
+  }
 
   if (status) {
     where.status = status;
@@ -50,12 +59,13 @@ const getAllTasks = async ({ query, status, priority } = {}) => {
   if (priority) {
     where.priority = priority;
   }
-  if (query) {
+  if (query && !where[Op.or]) {
     where[Op.or] = [
       { title: { [Op.like]: `%${query}%` } },
       { description: { [Op.like]: `%${query}%` } },
     ];
   }
+
 
   const tasks = await Task.findAll({
     where,
