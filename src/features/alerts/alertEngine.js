@@ -112,7 +112,8 @@ const evaluateRules = async () => {
       include: [
         { model: Advocate, as: 'assignedAdvocate', attributes: ['name'] },
         { model: Client, as: 'client', attributes: ['name'] },
-      ]
+      ],
+      attributes: ['id', 'caseNo', 'nextHearing', 'tenantId', 'status']
     });
 
     for (const c of cases) {
@@ -127,6 +128,7 @@ const evaluateRules = async () => {
           alertType: 'HEARING_MISSED',
           priority: 'high',
           message: `Missed hearing for case ${c.caseNo} (${clientName}) on ${hearingDate}.`,
+          tenantId: c.tenantId,
         });
       } else if (hearingDate === todayStr) {
         await upsertAlert({
@@ -135,6 +137,7 @@ const evaluateRules = async () => {
           alertType: 'HEARING_TODAY',
           priority: 'high',
           message: `Hearing today for case ${c.caseNo} (${clientName}). Advocate: ${advocateName}.`,
+          tenantId: c.tenantId,
         });
         // Resolve future alerts if they exist
         await resolveAlert('Case', c.id, 'HEARING_TOMORROW');
@@ -146,6 +149,7 @@ const evaluateRules = async () => {
           alertType: 'HEARING_TOMORROW',
           priority: 'medium',
           message: `Hearing tomorrow for case ${c.caseNo} (${clientName}).`,
+          tenantId: c.tenantId,
         });
         await resolveAlert('Case', c.id, 'HEARING_3_DAYS');
       } else if (hearingDate <= in3DaysStr && hearingDate > tomorrowStr) {
@@ -155,6 +159,7 @@ const evaluateRules = async () => {
           alertType: 'HEARING_3_DAYS',
           priority: 'low',
           message: `Hearing coming up on ${hearingDate} for case ${c.caseNo}.`,
+          tenantId: c.tenantId,
         });
       }
     }
@@ -172,6 +177,7 @@ const evaluateRules = async () => {
         alertType: 'CASE_APPROVAL_PENDING',
         priority: 'medium',
         message: `Case ${c.caseNo} is pending approval.`,
+        tenantId: c.tenantId,
       });
     }
   } catch (error) {
@@ -182,7 +188,7 @@ const evaluateRules = async () => {
   try {
     const payments = await Payment.findAll({
       where: { status: { [Op.notIn]: ['Completed', 'completed', 'paid'] } },
-      include: [{ model: Case, as: 'case', attributes: ['caseNo'] }]
+      include: [{ model: Case, as: 'case', attributes: ['caseNo', 'tenantId'] }],
     });
     
     for (const p of payments) {
@@ -197,6 +203,7 @@ const evaluateRules = async () => {
             alertType: 'PAYMENT_OVERDUE',
             priority: 'high',
             message: `Payment of ${p.amountOutstanding || p.amount} is overdue for case ${caseNo}.`,
+            tenantId: p.tenantId || p.case?.tenantId,
           });
         } else if (dueDate === todayStr) {
           await upsertAlert({
@@ -205,6 +212,7 @@ const evaluateRules = async () => {
             alertType: 'PAYMENT_DUE',
             priority: 'medium',
             message: `Payment of ${p.amountOutstanding || p.amount} is due today for case ${caseNo}.`,
+            tenantId: p.tenantId || p.case?.tenantId,
           });
         }
       }
@@ -230,6 +238,7 @@ const evaluateRules = async () => {
             priority: 'high',
             message: `Task "${t.title}" is overdue.`,
             assignedTo: t.assigneeId,
+            tenantId: t.tenantId,
           });
         } else if (dueDate === todayStr) {
           await upsertAlert({
@@ -239,6 +248,7 @@ const evaluateRules = async () => {
             priority: 'medium',
             message: `Task "${t.title}" is due today.`,
             assignedTo: t.assigneeId,
+            tenantId: t.tenantId,
           });
         }
       }

@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllEntries = async (req, res, next) => {
   try {
-    const entries = await daybookService.getAllEntries(req.user);
+    const entries = await daybookService.getAllEntries(req.user, req.query.tenantId);
     res.status(200).json({
       status: 'success',
       data: { entries },

@@ -54,5 +54,6 @@ router.route('/document-categories/:id')
   .put(authorizePermission('roles', 'E'), mastersController.updateDocumentCategory);
 
 router.patch('/document-categories/:id/activate', authorizePermission('roles', 'E'), mastersController.activateDocumentCategory);
+router.patch('/document-categories/:id/deactivate', authorizePermission('roles', 'E'), mastersController.deactivateDocumentCategory);
 
 module.exports = router;

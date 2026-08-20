@@ -16,7 +16,7 @@ exports.createGroupAdmin = async (req, res, next) => {
 
 exports.getGroupAdmins = async (req, res, next) => {
   try {
-    const groupAdmins = await groupAdminService.getGroupAdmins(req.user);
+    const groupAdmins = await groupAdminService.getGroupAdmins(req.user, req.query.tenantId);
     res.status(200).json({
       status: 'success',
       data: { groupAdmins },

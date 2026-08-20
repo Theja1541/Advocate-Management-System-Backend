@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllPayments = async (req, res, next) => {
   try {
-    const payments = await paymentService.getAllPayments(req.user);
+    const payments = await paymentService.getAllPayments(req.user, req.query.tenantId);
     res.status(200).json({
       status: 'success',
       data: { payments },

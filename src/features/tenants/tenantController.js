@@ -34,7 +34,7 @@ exports.createTenant = async (req, res, next) => {
     const tenant = await tenantService.createTenant(tenantData, adminData);
     res.status(201).json({ status: 'success', data: { tenant } });
   } catch (error) {
-    logger.error('CreateTenant error:', error);
+    console.error('CreateTenant error FULL:', JSON.stringify(error, null, 2)); logger.error('CreateTenant error:', error);
     next(error);
   }
 };

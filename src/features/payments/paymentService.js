@@ -130,7 +130,7 @@ const buildDaybookFromPayment = ({
 };
 
 const { getScopedAdvocateIds } = require('../../utils/advocateScope');
-const { isGroupAdmin, isAdvocate } = require('../../utils/roleHelper');
+const { isGroupAdmin, isAdvocate, isSuperAdmin } = require('../../utils/roleHelper');
 
 const assertAdvocateCaseContext = async (caseId, currentUser, options = {}) => {
   if (!caseId || !currentUser || !currentUser.adminContext || !isAdvocate(currentUser.role)) return;
@@ -140,8 +140,14 @@ const assertAdvocateCaseContext = async (caseId, currentUser, options = {}) => {
   }
 };
 
-const getAllPayments = async (currentUser = null) => {
+const getAllPayments = async (currentUser = null, queryTenantId = null) => {
   const where = {};
+  
+  const isSuper = currentUser ? isSuperAdmin(currentUser.role || currentUser.rawRole) : false;
+  if (isSuper && queryTenantId) {
+    where.tenantId = queryTenantId;
+  }
+
   if (currentUser) {
     if (isGroupAdmin(currentUser.role)) {
       where.createdBy = currentUser.id;

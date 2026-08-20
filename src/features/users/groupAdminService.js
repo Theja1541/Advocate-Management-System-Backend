@@ -4,6 +4,8 @@ const { sequelize } = require('../../config/database');
 const { User, Role, Advocate, GroupAdminAdvocate } = require('../associations');
 const AppError = require('../../utils/AppError');
 const { isSuperAdmin, isTenantAdmin, isGroupAdmin, normalizeRole } = require('../../utils/roleHelper');
+const { generateTemporaryPassword } = require('../../utils/cryptoUtil');
+const emailService = require('../../services/emailService');
 
 const DEFAULT_LOGIN_PASSWORD = 'password';
 
@@ -61,10 +63,9 @@ const createGroupAdmin = async ({ name, email, password, status }, currentUser) 
 
     const roleId = await getGroupAdminRoleId(tenantId, transaction);
 
-    const passwordHash = await bcrypt.hash(
-      password && String(password).trim() ? String(password).trim() : DEFAULT_LOGIN_PASSWORD,
-      10
-    );
+    const isTempPassword = !(password && String(password).trim());
+    const actualPassword = isTempPassword ? generateTemporaryPassword() : String(password).trim();
+    const passwordHash = await bcrypt.hash(actualPassword, 10);
 
     const user = await User.create(
       {
@@ -74,9 +75,29 @@ const createGroupAdmin = async ({ name, email, password, status }, currentUser) 
         roleId,
         status: status === 'inactive' ? 'inactive' : 'active',
         tenantId,
+        mustChangePassword: isTempPassword,
       },
       { transaction }
     );
+
+    if (isTempPassword) {
+      const emailResult = await emailService.sendEmail({
+        to: normalizedEmail,
+        subject: 'Welcome to Advocate Management System - Group Admin',
+        text: `Hello ${name},\n\nYour Group Admin account has been created.\n\nYour temporary password is: ${actualPassword}\n\nPlease login and change your password immediately.\n\nLogin URL: http://localhost:5173/login`,
+        html: `
+          <p>Hello <strong>${name}</strong>,</p>
+          <p>Your Group Admin account has been successfully created.</p>
+          <p>Your temporary password is: <strong>${actualPassword}</strong></p>
+          <p>Please login and change your password immediately.</p>
+          <p><a href="http://localhost:5173/login">Click here to login</a></p>
+        `
+      });
+
+      if (!emailResult.success) {
+        throw new AppError(`Failed to send welcome email: ${emailResult.error}. User creation aborted.`, 500);
+      }
+    }
 
     return {
       id: user.id,
@@ -90,11 +111,15 @@ const createGroupAdmin = async ({ name, email, password, status }, currentUser) 
   });
 };
 
-const getGroupAdmins = async (currentUser) => {
+const getGroupAdmins = async (currentUser, queryTenantId) => {
   const isSuper = isSuperAdmin(currentUser.role);
   const isGA = isGroupAdmin(currentUser.role);
 
   const whereClause = isSuper ? {} : { tenantId: currentUser.tenantId };
+  if (isSuper && queryTenantId) {
+    whereClause.tenantId = queryTenantId;
+  }
+  
   if (isGA && currentUser) {
     whereClause.id = currentUser.id;
   }

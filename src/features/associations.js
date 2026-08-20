@@ -31,6 +31,8 @@ const LegalText = require('./legal-texts/LegalText');
 const PhraseGroup = require('./legal-texts/PhraseGroup');
 const PhraseOccurrence = require('./legal-texts/PhraseOccurrence');
 const LandTitleSearch = require('./title-searches/LandTitleSearch');
+const SmtpSetting = require('./settings/SmtpSetting');
+
 
 // Tenant Relationships
 Tenant.hasMany(TenantSetting, { foreignKey: 'tenant_id', as: 'settings', onDelete: 'CASCADE' });
@@ -158,9 +160,9 @@ Opinion.belongsTo(User, { foreignKey: 'issued_by', as: 'issuer' });
 Opinion.belongsTo(Document, { foreignKey: 'document_id', as: 'finalPdf' });
 Document.hasOne(Opinion, { foreignKey: 'document_id', as: 'opinion' });
 
-// 9. Membership & Advocates
-Advocate.hasOne(Membership, { foreignKey: 'advocate_id', as: 'membership' });
-Membership.belongsTo(Advocate, { foreignKey: 'advocate_id', as: 'advocate' });
+// 9. Membership & Group Admins (User)
+User.hasOne(Membership, { foreignKey: 'group_admin_id', as: 'membership' });
+Membership.belongsTo(User, { foreignKey: 'group_admin_id', as: 'groupAdmin' });
 
 // 10. Payments & Cases
 Case.hasMany(Payment, { foreignKey: 'case_id', as: 'payments' });
@@ -220,6 +222,13 @@ LandTitleSearch.belongsTo(Land, { foreignKey: 'land_id', as: 'land' });
 User.hasMany(LandTitleSearch, { foreignKey: 'conducted_by', as: 'titleSearchesConducted' });
 LandTitleSearch.belongsTo(User, { foreignKey: 'conducted_by', as: 'conductedByUser' });
 
+// 16. Smtp Settings
+User.hasMany(SmtpSetting, { foreignKey: 'created_by', as: 'createdSmtpSettings' });
+SmtpSetting.belongsTo(User, { foreignKey: 'created_by', as: 'creator' });
+
+User.hasMany(SmtpSetting, { foreignKey: 'updated_by', as: 'updatedSmtpSettings' });
+SmtpSetting.belongsTo(User, { foreignKey: 'updated_by', as: 'updater' });
+
 // Export everything from a unified hub to prevent circular dependency
 module.exports = {
   Role,
@@ -256,5 +265,6 @@ module.exports = {
   PhraseOccurrence,
   LandTitleSearch,
   GroupAdminAdvocate,
+  SmtpSetting,
 };
 

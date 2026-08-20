@@ -15899,3 +15899,1155 @@
 2026-08-14 18:43:01:431 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
 2026-08-14 18:43:11:4311 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
 2026-08-14 18:43:11:4311 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-15 22:06:33:633 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-15 22:06:35:635 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-15 22:06:35:635 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-15 22:06:35:635 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-15 22:06:35:635 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-15 22:06:35:635 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-15 22:06:35:635 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-15 22:06:45:645 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-15 22:06:45:645 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-15 22:11:26:1126 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-15 22:11:27:1127 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-15 22:11:27:1127 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-15 22:11:27:1127 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-15 22:11:27:1127 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-15 22:11:27:1127 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-15 22:11:37:1137 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-15 22:11:37:1137 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-15 22:23:27:2327 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-15 22:23:45:2345 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-15 22:23:46:2346 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-15 22:23:46:2346 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-15 22:23:46:2346 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-15 22:23:46:2346 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-15 22:23:46:2346 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-15 22:23:56:2356 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-15 22:23:56:2356 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 11:30:24:3024 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:30:27:3027 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:30:27:3027 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 11:30:27:3027 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 11:30:27:3027 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 11:30:27:3027 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 11:30:27:3027 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 11:30:37:3037 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 11:30:37:3037 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/tenants/stats - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/dashboard - GET - ::1[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-17 11:31:13:3113 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-17 11:37:18:3718 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:37:18:3718 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 11:37:18:3718 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 11:37:18:3718 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 11:37:18:3718 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 11:37:18:3718 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 11:37:28:3728 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 11:37:28:3728 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 11:43:22:4322 [31merror[39m: [31m404 - Can't find /api/v1/masters/document-categories/31/deactivate on this server! - /api/v1/masters/document-categories/31/deactivate - PATCH - ::1[39m
+2026-08-17 11:43:27:4327 [31merror[39m: [31m404 - Can't find /api/v1/masters/document-categories/31/deactivate on this server! - /api/v1/masters/document-categories/31/deactivate - PATCH - ::1[39m
+2026-08-17 11:47:33:4733 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:47:36:4736 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:47:37:4737 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 11:47:37:4737 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 11:47:37:4737 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 11:47:37:4737 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 11:47:37:4737 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 11:47:39:4739 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 11:47:40:4740 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 11:47:40:4740 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 11:47:40:4740 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 11:47:40:4740 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 11:47:40:4740 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 11:47:50:4750 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 11:47:50:4750 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 12:01:42:142 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/settings/logo - PUT - ::1[39m
+2026-08-17 12:17:32:1732 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 12:17:33:1733 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 12:17:33:1733 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 12:17:33:1733 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 12:17:33:1733 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 12:17:33:1733 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 12:17:43:1743 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 12:17:43:1743 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:30:08:308 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:30:10:3010 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:30:10:3010 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:30:10:3010 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:30:10:3010 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:30:10:3010 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:30:10:3010 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:30:20:3020 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:30:20:3020 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:30:25:3025 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:30:25:3025 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:30:25:3025 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:30:25:3025 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:30:25:3025 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:30:25:3025 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:30:35:3035 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:30:35:3035 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:36:10:3610 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:36:11:3611 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:36:11:3611 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:36:11:3611 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:36:11:3611 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:36:11:3611 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:36:21:3621 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:36:21:3621 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:36:24:3624 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:36:24:3624 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:36:24:3624 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:36:24:3624 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:36:24:3624 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:36:24:3624 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:36:35:3635 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:36:35:3635 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:36:35:3635 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:36:35:3635 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:36:35:3635 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:36:35:3635 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:36:45:3645 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:36:45:3645 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:36:47:3647 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:36:47:3647 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:36:47:3647 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:36:47:3647 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:36:47:3647 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:36:47:3647 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:36:57:3657 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:36:58:3658 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:36:59:3659 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:37:00:370 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:37:00:370 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:37:00:370 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:37:00:370 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:37:00:370 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:37:10:3710 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:37:10:3710 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:37:18:3718 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:37:19:3719 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:37:19:3719 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:37:19:3719 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:37:19:3719 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:37:19:3719 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:37:30:3730 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:37:30:3730 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:37:30:3730 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:37:30:3730 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:37:30:3730 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:37:30:3730 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:37:40:3740 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:37:40:3740 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:37:47:3747 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:37:47:3747 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:37:47:3747 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:37:47:3747 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:37:47:3747 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:37:47:3747 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:37:55:3755 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:37:55:3755 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:37:55:3755 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:37:55:3755 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:37:55:3755 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:37:55:3755 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:38:05:385 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:38:05:385 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:38:07:387 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:38:07:387 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:38:07:387 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:38:07:387 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:38:07:387 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:38:07:387 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:38:17:3817 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:38:17:3817 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:38:45:3845 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 15:38:45:3845 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 15:38:45:3845 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 15:38:45:3845 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 15:38:45:3845 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 15:38:45:3845 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 15:38:55:3855 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 15:38:56:3856 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 15:54:49:5449 [37mdebug[39m: [37mExecuting (default): SELECT 1+1 AS result[39m
+2026-08-17 15:54:49:5449 [37mdebug[39m: [37mExecuting (default): SELECT `Daybook`.`id`, `Daybook`.`daybook_code` AS `daybookCode`, `Daybook`.`transaction_date` AS `transactionDate`, `Daybook`.`category`, `Daybook`.`particulars`, `Daybook`.`payment_mode` AS `paymentMode`, `Daybook`.`type`, `Daybook`.`amount`, `Daybook`.`recorded_by` AS `recordedBy`, `Daybook`.`created_at`, `Daybook`.`updated_at`, `recorder`.`id` AS `recorder.id`, `recorder`.`name` AS `recorder.name` FROM `daybook` AS `Daybook` LEFT OUTER JOIN `users` AS `recorder` ON `Daybook`.`recorded_by` = `recorder`.`id` WHERE `Daybook`.`tenant_id` = 1 ORDER BY `transactionDate` ASC, `Daybook`.`id` ASC;[39m
+2026-08-17 15:54:49:5449 [37mdebug[39m: [37mExecuting (default): SELECT `Payment`.`id`, `Payment`.`receipt_no` AS `receiptNo`, `Payment`.`case_id` AS `caseId`, `Payment`.`party_type` AS `partyType`, `Payment`.`party_id` AS `partyId`, `Payment`.`amount_received` AS `amountReceived`, `Payment`.`amount_outstanding` AS `amountOutstanding`, `Payment`.`transaction_date` AS `transactionDate`, `Payment`.`status`, `Payment`.`created_by` AS `createdBy`, `Payment`.`updated_by` AS `updatedBy`, `Payment`.`created_at`, `Payment`.`updated_at`, `case`.`id` AS `case.id`, `case`.`case_no` AS `case.caseNo`, `case`.`title` AS `case.title` FROM `payments` AS `Payment` LEFT OUTER JOIN `cases` AS `case` ON `Payment`.`case_id` = `case`.`id` WHERE `Payment`.`tenant_id` = 1 ORDER BY `transactionDate` DESC, `Payment`.`id` DESC;[39m
+2026-08-17 16:12:41:1241 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:12:41:1241 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:12:41:1241 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:12:41:1241 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:12:41:1241 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:12:41:1241 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:12:51:1251 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:12:51:1251 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:12:53:1253 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:12:53:1253 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:12:53:1253 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:12:53:1253 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:12:53:1253 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:12:53:1253 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:13:03:133 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:13:03:133 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:13:08:138 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:13:08:138 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:13:08:138 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:13:08:138 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:13:08:138 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:13:08:138 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:13:18:1318 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:13:18:1318 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:13:29:1329 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:13:30:1330 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:13:30:1330 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:13:30:1330 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:13:30:1330 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:13:30:1330 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:13:40:1340 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:13:40:1340 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:17:21:1721 [31merror[39m: [31mUpdateUser error: WHERE parameter "tenant_id" has invalid "undefined" value[39m
+2026-08-17 16:17:21:1721 [31merror[39m: [31m500 - WHERE parameter "tenant_id" has invalid "undefined" value - /api/v1/users/273 - PUT - ::1[39m
+2026-08-17 16:17:35:1735 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:17:35:1735 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:17:35:1735 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:17:35:1735 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:17:35:1735 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:17:35:1735 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:17:45:1745 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:17:45:1745 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:17:45:1745 [31merror[39m: [31mUpdateUser error: WHERE parameter "tenant_id" has invalid "undefined" value[39m
+2026-08-17 16:17:45:1745 [31merror[39m: [31m500 - WHERE parameter "tenant_id" has invalid "undefined" value - /api/v1/users/273 - PUT - ::1[39m
+2026-08-17 16:18:45:1845 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:18:45:1845 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:18:45:1845 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:18:45:1845 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:18:46:1846 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:18:46:1846 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:18:56:1856 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:18:56:1856 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:24:37:2437 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:24:37:2437 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:24:37:2437 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:24:37:2437 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:24:37:2437 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:24:37:2437 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:24:47:2447 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:24:48:2448 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:32:17:3217 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:32:19:3219 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:32:19:3219 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:32:19:3219 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:32:19:3219 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:32:19:3219 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:32:19:3219 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:32:29:3229 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:32:29:3229 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:32:37:3237 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:32:37:3237 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:32:37:3237 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:32:37:3237 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:32:37:3237 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:32:37:3237 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:32:47:3247 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:32:47:3247 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:42:29:4229 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 16:42:29:4229 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 16:42:29:4229 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 16:42:29:4229 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 16:42:29:4229 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 16:42:29:4229 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 16:42:39:4239 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 16:42:39:4239 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-17 16:47:03:473 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-17 16:48:05:485 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-17 17:59:06:596 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 17:59:08:598 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 17:59:08:598 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 17:59:08:598 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 17:59:08:598 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 17:59:08:598 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 17:59:08:598 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 17:59:17:5917 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-17 17:59:18:5918 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-17 17:59:18:5918 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-17 17:59:18:5918 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-17 17:59:18:5918 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-17 17:59:18:5918 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-17 17:59:28:5928 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-17 17:59:28:5928 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 09:36:20:3620 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 09:36:21:3621 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 09:36:21:3621 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 09:36:21:3621 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 09:36:21:3621 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 09:36:21:3621 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 09:36:21:3621 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 09:36:31:3631 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 09:36:31:3631 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 09:36:52:3652 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 09:36:53:3653 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 09:36:53:3653 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 09:36:53:3653 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 09:36:53:3653 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 09:36:53:3653 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 09:37:03:373 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 09:37:03:373 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 10:10:58:1058 [31merror[39m: [31mCreateCase error: sequelize is not defined[39m
+2026-08-18 10:10:58:1058 [31merror[39m: [31m500 - sequelize is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-18 10:11:16:1116 [31merror[39m: [31mCreateCase error: sequelize is not defined[39m
+2026-08-18 10:11:16:1116 [31merror[39m: [31m500 - sequelize is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-18 11:33:40:3340 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins - GET - ::1[39m
+2026-08-18 11:33:40:3340 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins - GET - ::1[39m
+2026-08-18 11:33:47:3347 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:33:49:3349 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:33:50:3350 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 11:33:50:3350 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 11:33:50:3350 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 11:33:50:3350 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 11:33:50:3350 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 11:34:00:340 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:34:01:341 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 11:34:01:341 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 11:34:01:341 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 11:34:01:341 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 11:34:01:341 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 11:34:11:3411 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 11:34:11:3411 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 11:35:59:3559 [31merror[39m: [31mCreateCase error: sequelize is not defined[39m
+2026-08-18 11:35:59:3559 [31merror[39m: [31m500 - sequelize is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-18 11:36:05:365 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-18 11:36:14:3614 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:36:15:3615 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 11:36:15:3615 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 11:36:15:3615 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 11:36:15:3615 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 11:36:15:3615 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 11:36:19:3619 [31merror[39m: [31mCreateCase error: sequelize is not defined[39m
+2026-08-18 11:36:19:3619 [31merror[39m: [31m500 - sequelize is not defined - /api/v1/cases - POST - ::1[39m
+2026-08-18 11:36:25:3625 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 11:36:25:3625 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 11:38:19:3819 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:38:20:3820 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 11:38:20:3820 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 11:38:20:3820 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 11:38:20:3820 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 11:38:20:3820 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 11:38:30:3830 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 11:38:30:3830 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 11:59:36:5936 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 11:59:36:5936 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 11:59:36:5936 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 11:59:36:5936 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 11:59:36:5936 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 11:59:36:5936 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 11:59:46:5946 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 11:59:46:5946 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 11:59:46:5946 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:04:46:446 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:04:47:447 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:04:47:447 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:04:47:447 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:04:47:447 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:04:47:447 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:04:57:457 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:04:57:457 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:04:57:457 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:06:54:654 [31merror[39m: [31mUpdateCase error: Access Denied: Only Staff/Bearer can approve at this level.[39m
+2026-08-18 12:06:54:654 [31merror[39m: [31m403 - Access Denied: Only Staff/Bearer can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:06:55:655 [31merror[39m: [31mUpdateCase error: Access Denied: Only Staff/Bearer can approve at this level.[39m
+2026-08-18 12:06:55:655 [31merror[39m: [31m403 - Access Denied: Only Staff/Bearer can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:07:10:710 [31merror[39m: [31mUpdateCase error: Access Denied: Only Staff/Bearer can approve at this level.[39m
+2026-08-18 12:07:10:710 [31merror[39m: [31m403 - Access Denied: Only Staff/Bearer can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:07:18:718 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:07:21:721 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:07:35:735 [31merror[39m: [31mUpdateCase error: Access Denied: Only Staff/Bearer can approve at this level.[39m
+2026-08-18 12:07:35:735 [31merror[39m: [31m403 - Access Denied: Only Staff/Bearer can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:07:43:743 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 12:33:51:3351 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:33:53:3353 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:33:53:3353 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:33:53:3353 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:33:53:3353 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:33:53:3353 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:33:53:3353 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:34:03:343 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:34:04:344 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:34:04:344 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:38:51:3851 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:38:52:3852 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:38:52:3852 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:38:52:3852 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:38:52:3852 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:38:52:3852 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:38:55:3855 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:38:55:3855 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:38:55:3855 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:38:55:3855 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:38:55:3855 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:38:55:3855 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:38:58:3858 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:38:59:3859 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:38:59:3859 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:38:59:3859 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:38:59:3859 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:38:59:3859 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:39:09:399 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:39:09:399 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:39:09:399 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:39:50:3950 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:39:51:3951 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:39:51:3951 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:39:51:3951 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:39:51:3951 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:39:51:3951 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:40:01:401 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:40:01:401 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:40:01:401 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:40:11:4011 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:40:12:4012 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:40:12:4012 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:40:12:4012 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:40:12:4012 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:40:12:4012 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:40:22:4022 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:40:22:4022 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:40:22:4022 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:40:37:4037 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 12:40:38:4038 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 12:40:38:4038 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 12:40:38:4038 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 12:40:38:4038 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 12:40:38:4038 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 12:40:48:4048 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 12:40:48:4048 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 12:40:48:4048 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 12:46:42:4642 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-18 12:46:56:4656 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-18 14:04:12:412 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:04:15:415 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:04:15:415 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:04:15:415 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:04:15:415 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:04:15:415 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:04:15:415 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:04:17:417 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:04:18:418 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:04:18:418 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:04:18:418 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:04:18:418 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:04:18:418 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:04:28:428 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:04:28:428 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:04:28:428 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:07:18:718 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:11:1011 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:14:1014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:18:1018 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:19:1019 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:10:20:1020 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:20:48:2048 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:20:48:2048 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:20:48:2048 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:20:48:2048 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:20:49:2049 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:20:49:2049 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:20:59:2059 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:20:59:2059 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:20:59:2059 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:23:24:2324 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:23:24:2324 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:23:24:2324 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:23:24:2324 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:23:24:2324 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:23:24:2324 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:23:34:2334 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:23:34:2334 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:23:34:2334 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:29:26:2926 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:29:26:2926 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:29:26:2926 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:29:26:2926 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:29:26:2926 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:29:26:2926 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:29:36:2936 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:29:36:2936 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:29:36:2936 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:32:59:3259 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:32:59:3259 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:32:59:3259 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:32:59:3259 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:32:59:3259 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:32:59:3259 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:33:09:339 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:33:10:3310 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:33:10:3310 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:33:15:3315 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:33:15:3315 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:33:15:3315 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:33:15:3315 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:33:15:3315 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:33:15:3315 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:33:25:3325 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:33:25:3325 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:33:25:3325 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:33:29:3329 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:33:29:3329 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:33:29:3329 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:33:29:3329 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:33:29:3329 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:33:29:3329 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:33:39:3339 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:33:39:3339 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:33:39:3339 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:35:47:3547 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:35:47:3547 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:35:47:3547 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:35:47:3547 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:35:47:3547 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:35:47:3547 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:35:57:3557 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:35:57:3557 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:35:57:3557 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:36:20:3620 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:36:20:3620 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:36:20:3620 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:36:20:3620 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:36:20:3620 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:36:20:3620 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:36:31:3631 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:36:31:3631 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:36:31:3631 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-18 14:40:14:4014 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 14:40:32:4032 [31merror[39m: [31mgetSmtpSettings error: Table 'advocate_management_system.smtp_settings' doesn't exist[39m
+2026-08-18 14:40:32:4032 [31merror[39m: [31m500 - Table 'advocate_management_system.smtp_settings' doesn't exist - /api/v1/settings/smtp - GET - ::1[39m
+2026-08-18 14:40:32:4032 [31merror[39m: [31mgetSmtpSettings error: Table 'advocate_management_system.smtp_settings' doesn't exist[39m
+2026-08-18 14:40:32:4032 [31merror[39m: [31m500 - Table 'advocate_management_system.smtp_settings' doesn't exist - /api/v1/settings/smtp - GET - ::1[39m
+2026-08-18 14:40:48:4048 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-18 14:40:55:4055 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 14:40:55:4055 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 14:40:55:4055 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 14:40:55:4055 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 14:40:55:4055 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 14:40:55:4055 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 14:40:57:4057 [31merror[39m: [31mgetSmtpSettings error: Table 'advocate_management_system.smtp_settings' doesn't exist[39m
+2026-08-18 14:40:57:4057 [31merror[39m: [31m500 - Table 'advocate_management_system.smtp_settings' doesn't exist - /api/v1/settings/smtp - GET - ::1[39m
+2026-08-18 14:40:57:4057 [31merror[39m: [31mgetSmtpSettings error: Table 'advocate_management_system.smtp_settings' doesn't exist[39m
+2026-08-18 14:40:57:4057 [31merror[39m: [31m500 - Table 'advocate_management_system.smtp_settings' doesn't exist - /api/v1/settings/smtp - GET - ::1[39m
+2026-08-18 14:41:05:415 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 14:41:05:415 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 14:41:05:415 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:01:56:156 [31merror[39m: [31m404 - SMTP configuration not found. Please configure SMTP first. - /api/v1/settings/smtp/test - POST - ::1[39m
+2026-08-18 15:07:54:754 [31merror[39m: [31mupdateSmtpSettings error: Validation error: Validation isEmail on reply_to_email failed[39m
+2026-08-18 15:07:54:754 [31merror[39m: [31m500 - Validation error: Validation isEmail on reply_to_email failed - /api/v1/settings/smtp - PUT - ::1[39m
+2026-08-18 15:08:06:86 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:08:08:88 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:08:08:88 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:08:08:88 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:08:08:88 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:08:08:88 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:08:08:88 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:08:09:89 [31merror[39m: [31mupdateSmtpSettings error: Validation error: Validation isEmail on reply_to_email failed[39m
+2026-08-18 15:08:09:89 [31merror[39m: [31m500 - Validation error: Validation isEmail on reply_to_email failed - /api/v1/settings/smtp - PUT - ::1[39m
+2026-08-18 15:08:10:810 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:08:11:811 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:08:11:811 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:08:11:811 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:08:11:811 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:08:11:811 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:08:18:818 [31merror[39m: [31mupdateSmtpSettings error: Validation error: Validation isEmail on reply_to_email failed[39m
+2026-08-18 15:08:18:818 [31merror[39m: [31m500 - Validation error: Validation isEmail on reply_to_email failed - /api/v1/settings/smtp - PUT - ::1[39m
+2026-08-18 15:08:21:821 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:08:21:821 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 15:08:21:821 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:09:06:96 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:09:06:96 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:09:06:96 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:09:06:96 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:09:06:96 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:09:06:96 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:09:16:916 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:09:16:916 [31merror[39m: [31mError upserting alert: Cannot add or update a child row: a foreign key constraint fails (`advocate_management_system`.`alerts`, CONSTRAINT `alerts_tenant_id_foreign_idx` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`))[39m
+2026-08-18 15:09:16:916 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:10:18:1018 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:10:18:1018 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:10:18:1018 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:10:18:1018 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:10:18:1018 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:10:18:1018 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:10:28:1028 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:10:28:1028 [31merror[39m: [31mAlert Engine: Payments check failed Unknown column 'Payment.dueDate' in 'field list'[39m
+2026-08-18 15:10:28:1028 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:10:36:1036 [31merror[39m: [31mupdateSmtpSettings error: Cannot read properties of undefined (reading 'ne')[39m
+2026-08-18 15:10:36:1036 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'ne') - /api/v1/settings/smtp - PUT - ::1[39m
+2026-08-18 15:10:41:1041 [31merror[39m: [31mupdateSmtpSettings error: Cannot read properties of undefined (reading 'ne')[39m
+2026-08-18 15:10:41:1041 [31merror[39m: [31m500 - Cannot read properties of undefined (reading 'ne') - /api/v1/settings/smtp - PUT - ::1[39m
+2026-08-18 15:11:52:1152 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:11:52:1152 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:11:52:1152 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:11:52:1152 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:11:52:1152 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:11:52:1152 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:12:02:122 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:12:02:122 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:12:26:1226 [32minfo[39m: [32mEmail sent successfully to amasatheja7@gmail.com. Message ID: <639e6479-71f2-e5da-0c54-4e7ce0b257ba@gmail.com>[39m
+2026-08-18 15:13:19:1319 [32minfo[39m: [32mEmail sent successfully to tejadarling1541@gmail.com. Message ID: <b5e688a2-abfe-b0ae-01c6-2ba5e0054547@gmail.com>[39m
+2026-08-18 15:14:54:1454 [32minfo[39m: [32mEmail sent successfully to tejadarling1541@gmail.com. Message ID: <a69bec5a-44c4-5716-5844-bfdf785e690b@gmail.com>[39m
+2026-08-18 15:20:56:2056 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:20:57:2057 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:20:57:2057 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:20:57:2057 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:20:57:2057 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:20:57:2057 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:21:07:217 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:21:07:217 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:30:10:3010 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:30:12:3012 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:30:12:3012 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:30:12:3012 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:30:12:3012 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:30:12:3012 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:30:12:3012 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:30:22:3022 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:30:22:3022 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:30:34:3034 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:30:35:3035 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:30:35:3035 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:30:35:3035 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:30:35:3035 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:30:35:3035 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:30:45:3045 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:30:45:3045 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:30:57:3057 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:30:57:3057 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:30:57:3057 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:30:57:3057 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:30:57:3057 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:30:57:3057 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:31:07:317 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:31:07:317 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:31:22:3122 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:31:22:3122 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:31:22:3122 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:31:22:3122 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:31:22:3122 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:31:22:3122 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:31:33:3133 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:31:33:3133 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:34:05:345 [32minfo[39m: [32mEmail sent successfully to tejadarling1541@gmail.com. Message ID: <dafc98ff-dfd2-6bdc-9734-74c11ca3e918@gmail.com>[39m
+2026-08-18 15:35:49:3549 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-18 15:35:49:3549 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-18 15:36:17:3617 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:36:17:3617 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:36:17:3617 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:36:17:3617 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:36:17:3617 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:36:17:3617 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:36:27:3627 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:36:27:3627 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:38:27:3827 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:38:27:3827 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:38:27:3827 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:38:27:3827 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:38:27:3827 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:38:27:3827 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:38:37:3837 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:38:37:3837 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 15:53:25:5325 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 15:53:26:5326 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 15:53:26:5326 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 15:53:26:5326 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 15:53:26:5326 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 15:53:26:5326 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 15:53:36:5336 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 15:53:36:5336 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 16:09:21:921 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:09:23:923 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:09:23:923 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:09:23:923 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:09:23:923 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:09:23:923 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:09:23:923 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:09:33:933 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 16:09:33:933 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 16:10:09:109 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:10:09:109 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:10:09:109 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:10:09:109 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:10:09:109 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:10:09:109 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:10:19:1019 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 16:10:19:1019 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 16:10:40:1040 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:10:40:1040 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:10:40:1040 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:10:40:1040 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:10:40:1040 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:10:40:1040 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:10:43:1043 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:10:43:1043 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:10:43:1043 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:10:43:1043 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:10:43:1043 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:10:43:1043 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:10:53:1053 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 16:10:53:1053 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 16:34:58:3458 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-18 16:34:58:3458 [31merror[39m: [31m401 - No refresh token provided - /api/v1/auth/refresh - POST - ::1[39m
+2026-08-18 16:34:59:3459 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-18 16:36:45:3645 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-18 16:41:23:4123 [31merror[39m: [31mUpdateCase error: Access Denied: Only Advocate can approve at this level.[39m
+2026-08-18 16:41:23:4123 [31merror[39m: [31m403 - Access Denied: Only Advocate can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:42:13:4213 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:42:50:4250 [31merror[39m: [31mUpdateCase error: Access Denied: Only Advocate can approve at this level.[39m
+2026-08-18 16:42:50:4250 [31merror[39m: [31m403 - Access Denied: Only Advocate can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:42:58:4258 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:43:04:434 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:44:13:4413 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:48:25:4825 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:49:17:4917 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins?tenantId=98 - GET - ::1[39m
+2026-08-18 16:49:18:4918 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins?tenantId=98 - GET - ::1[39m
+2026-08-18 16:51:43:5143 [31merror[39m: [31mUpdateCase error: Access Denied: Only Advocate can approve at this level.[39m
+2026-08-18 16:51:43:5143 [31merror[39m: [31m403 - Access Denied: Only Advocate can approve at this level. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:51:57:5157 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:52:14:5214 [31merror[39m: [31m403 - Access Denied: Advocates have read-only access to Admin data. - /api/v1/cases/1000 - PUT - ::1[39m
+2026-08-18 16:55:16:5516 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:55:16:5516 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:55:16:5516 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:55:16:5516 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:55:16:5516 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:55:16:5516 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:55:26:5526 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 16:55:26:5526 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-18 16:56:31:5631 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-18 16:56:32:5632 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-18 16:56:32:5632 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-18 16:56:32:5632 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-18 16:56:32:5632 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-18 16:56:32:5632 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-18 16:56:42:5642 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-18 16:56:42:5642 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-19 09:29:58:2958 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 09:30:00:300 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 09:30:01:301 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-19 09:30:01:301 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-19 09:30:01:301 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-19 09:30:01:301 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-19 09:30:01:301 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-19 09:30:06:306 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 09:30:06:306 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-19 09:30:06:306 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-19 09:30:06:306 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-19 09:30:06:306 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-19 09:30:06:306 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-19 09:30:16:3016 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-19 09:30:16:3016 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-19 09:31:33:3133 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins - GET - ::1[39m
+2026-08-19 09:31:33:3133 [31merror[39m: [31m403 - Access denied: Insufficient privileges for this operation. - /api/v1/group-admins - GET - ::1[39m
+2026-08-19 09:57:15:5715 [32minfo[39m: [32mEmail sent successfully to tejadarling1541@gmail.com. Message ID: <85f5c62f-9dbd-fa2f-e9af-93aac7c86f02@gmail.com>[39m
+2026-08-19 17:44:24:4424 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 17:44:28:4428 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 17:44:29:4429 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-19 17:44:29:4429 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-19 17:44:29:4429 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-19 17:44:29:4429 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-19 17:44:29:4429 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-19 17:44:39:4439 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-19 17:44:39:4439 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-19 17:44:47:4447 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-19 17:44:47:4447 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-19 17:44:50:4450 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 17:44:50:4450 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-19 17:44:50:4450 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-19 17:44:50:4450 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-19 17:44:51:4451 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-19 17:44:51:4451 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-19 17:45:01:451 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-19 17:45:01:451 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31mJWT Verification Error: jwt expired[39m
+2026-08-19 17:45:15:4515 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-19 17:46:18:4618 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-19 17:46:26:4626 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-19 17:46:27:4627 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-19 17:46:27:4627 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-19 17:46:27:4627 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-19 17:46:27:4627 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-19 17:46:27:4627 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-19 17:46:37:4637 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-19 17:46:37:4637 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-19 17:46:58:4658 [32minfo[39m: [32mEmail sent successfully to tejadarling1541@gmail.com. Message ID: <2f6b0c23-3539-2dfa-d8ca-6dc72723c04c@gmail.com>[39m
+2026-08-20 09:43:36:4336 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:43:39:4339 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:43:39:4339 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:43:40:4340 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:43:40:4340 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:43:40:4340 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:43:40:4340 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:43:47:4347 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:43:48:4348 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:43:48:4348 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:43:48:4348 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:43:48:4348 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:43:48:4348 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:43:58:4358 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:43:58:4358 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:46:02:462 [31merror[39m: [31mCreateTenant error: Validation error[39m
+2026-08-20 09:46:02:462 [31merror[39m: [31m500 - Validation error - /api/v1/tenants - POST - ::1[39m
+2026-08-20 09:46:07:467 [31merror[39m: [31mCreateTenant error: Validation error[39m
+2026-08-20 09:46:07:467 [31merror[39m: [31m500 - Validation error - /api/v1/tenants - POST - ::1[39m
+2026-08-20 09:46:14:4614 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-20 09:46:20:4620 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:46:20:4620 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:46:20:4620 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:46:20:4620 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:46:21:4621 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:46:21:4621 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:46:25:4625 [31merror[39m: [31mCreateTenant error: Validation error[39m
+2026-08-20 09:46:25:4625 [31merror[39m: [31m500 - Validation error - /api/v1/tenants - POST - ::1[39m
+2026-08-20 09:46:31:4631 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:46:31:4631 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:48:37:4837 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:48:37:4837 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:48:37:4837 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:48:37:4837 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:48:37:4837 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:48:37:4837 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:48:47:4847 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:48:47:4847 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:50:25:5025 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:50:26:5026 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:50:26:5026 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:50:26:5026 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:50:26:5026 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:50:26:5026 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:50:36:5036 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:50:36:5036 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): START TRANSACTION;[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `tenants` (`id`,`name`,`status`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?);[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `tenant_settings` (`id`,`tenant_id`,`key`,`value`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `roles` (`id`,`tenant_id`,`name`,`description`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `roles` (`id`,`tenant_id`,`name`,`description`,`created_at`,`updated_at`) VALUES (NULL,104,'Group Admin','Group administrator access','2026-08-20 04:21:08','2026-08-20 04:21:08'),(NULL,104,'Sub Admin','Limited administrative access','2026-08-20 04:21:08','2026-08-20 04:21:08'),(NULL,104,'Advocate','Standard advocate access','2026-08-20 04:21:08','2026-08-20 04:21:08'),(NULL,104,'Staff/Bearer','Basic staff access','2026-08-20 04:21:08','2026-08-20 04:21:08');[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): SELECT `id`, `name`, `key_code` AS `keyCode` FROM `modules` AS `Module`;[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `permissions` (`role_id`,`module_id`,`access_level`,`created_at`,`updated_at`) VALUES (402,1,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,2,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,3,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,4,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,5,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,6,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,7,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,8,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,9,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,10,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,11,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,12,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,13,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,14,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,15,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,16,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,17,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,18,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,19,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,20,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,21,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(402,22,'VEA','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,1,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,2,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,3,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,4,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,5,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,6,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,7,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,8,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,9,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,10,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,11,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,12,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,13,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,14,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,15,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,16,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,17,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,18,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,19,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,20,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,21,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(403,22,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,1,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,2,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,3,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,4,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,5,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,6,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,7,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,8,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,9,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,10,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,11,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,12,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,13,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,14,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,15,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,16,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,17,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,18,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,19,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,20,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,21,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(404,22,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,1,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,2,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,3,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,4,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,5,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,6,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,7,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,8,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,9,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,10,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,11,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,12,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,13,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,14,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,15,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,16,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,17,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,18,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,19,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,20,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,21,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(405,22,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,1,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,2,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,3,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,4,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,5,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,6,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,7,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,8,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,9,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,10,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,11,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,12,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,13,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,14,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,15,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,16,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,17,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,18,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,19,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,20,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,21,'---','2026-08-20 04:21:08','2026-08-20 04:21:08'),(406,22,'---','2026-08-20 04:21:08','2026-08-20 04:21:08');[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): INSERT INTO `users` (`id`,`tenant_id`,`name`,`email`,`role_id`,`password_hash`,`status`,`must_change_password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);[39m
+2026-08-20 09:51:08:518 [37mdebug[39m: [37mExecuting (default): SELECT `id`, `provider`, `sender_name`, `from_email`, `reply_to_email`, `smtp_host`, `smtp_port`, `encryption_type`, `smtp_auth_enabled`, `smtp_username`, `smtp_password_encrypted`, `is_active`, `test_status`, `last_tested_at`, `last_test_result`, `created_by`, `updated_by`, `created_at`, `updated_at` FROM `smtp_settings` AS `SmtpSetting` WHERE `SmtpSetting`.`is_active` = true LIMIT 1;[39m
+2026-08-20 09:51:12:5112 [32minfo[39m: [32mEmail sent successfully to admin1234567@example.com. Message ID: <a3327477-0814-8767-b178-bbd328530fcd@gmail.com>[39m
+2026-08-20 09:51:12:5112 [37mdebug[39m: [37mExecuting (f989ac52-1fe7-4975-9db6-3036e1383eae): COMMIT;[39m
+2026-08-20 09:51:34:5134 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:51:34:5134 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:51:34:5134 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:51:34:5134 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:51:34:5134 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:51:34:5134 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:51:44:5144 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:51:44:5144 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:53:12:5312 [31merror[39m: [31mCreateTenant error: Validation error[39m
+2026-08-20 09:53:12:5312 [31merror[39m: [31m400 - code must be unique - /api/v1/tenants - POST - ::1[39m
+2026-08-20 09:53:25:5325 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 09:53:25:5325 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 09:53:25:5325 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 09:53:25:5325 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 09:53:25:5325 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 09:53:25:5325 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 09:53:29:5329 [31merror[39m: [31mCreateTenant error: Validation error[39m
+2026-08-20 09:53:29:5329 [31merror[39m: [31m400 - code must be unique - /api/v1/tenants - POST - ::1[39m
+2026-08-20 09:53:35:5335 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 09:53:35:5335 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 09:54:44:5444 [32minfo[39m: [32mEmail sent successfully to amasatheja7@gmail.com. Message ID: <782add44-9ac2-4459-669a-8ac1717bcec5@gmail.com>[39m
+2026-08-20 09:57:27:5727 [32minfo[39m: [32mEmail sent successfully to shiva123@gmail.com. Message ID: <9886e990-388d-6655-cfa0-cdd7e7b2188c@gmail.com>[39m
+2026-08-20 10:13:08:138 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:13:08:138 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:13:08:138 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:13:08:138 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:13:08:138 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:13:08:138 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:13:19:1319 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:13:19:1319 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:14:40:1440 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:14:40:1440 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:14:40:1440 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:14:40:1440 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:14:40:1440 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:14:40:1440 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:14:50:1450 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:14:50:1450 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:15:12:1512 [31merror[39m: [31m500 - External API Error: Missing X-API-Key header - /api/v1/bare-acts/search?q=65 - GET - ::1[39m
+2026-08-20 10:16:23:1623 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:16:24:1624 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:16:24:1624 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:16:24:1624 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:16:24:1624 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:16:24:1624 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:16:34:1634 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:16:34:1634 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:16:34:1634 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:16:34:1634 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:16:34:1634 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:16:34:1634 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:16:44:1644 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:16:44:1644 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:17:13:1713 [31merror[39m: [31m500 - External API Error: Invalid API key - /api/v1/bare-acts/search?q=63 - GET - ::1[39m
+2026-08-20 10:18:20:1820 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:18:20:1820 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:18:20:1820 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:18:20:1820 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:18:20:1820 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:18:20:1820 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:18:30:1830 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:18:30:1830 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:18:32:1832 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:18:32:1832 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:18:32:1832 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:18:32:1832 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:18:32:1832 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:18:32:1832 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:18:42:1842 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:18:42:1842 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:19:01:191 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/bare-acts/search?q=Data%20Protection - GET - ::1[39m
+2026-08-20 10:20:23:2023 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 10:20:23:2023 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 10:20:23:2023 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 10:20:23:2023 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 10:20:24:2024 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 10:20:24:2024 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 10:20:34:2034 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 10:20:34:2034 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 10:28:10:2810 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 11:44:57:4457 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 11:44:58:4458 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 11:44:59:4459 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 11:44:59:4459 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 11:44:59:4459 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 11:44:59:4459 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 11:44:59:4459 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 11:54:33:5433 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 11:54:33:5433 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 11:54:33:5433 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 11:54:33:5433 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 11:54:33:5433 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 11:54:33:5433 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 11:54:44:5444 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 11:54:44:5444 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 11:54:47:5447 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 11:54:47:5447 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 11:54:47:5447 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 11:54:47:5447 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 11:54:47:5447 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 11:54:47:5447 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 11:54:57:5457 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 11:54:57:5457 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m

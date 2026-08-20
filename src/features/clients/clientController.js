@@ -3,7 +3,7 @@ const logger = require('../../config/logger');
 
 exports.getAllClients = async (req, res, next) => {
   try {
-    const clients = await clientService.getAllClients(req.user);
+    const clients = await clientService.getAllClients(req.user, req.query.tenantId);
     res.status(200).json({
       status: 'success',
       data: { clients },

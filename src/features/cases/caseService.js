@@ -1,9 +1,11 @@
 const { Op } = require('sequelize');
+const { sequelize } = require('../../config/database');
 const { Case, Advocate, Client, CaseType, CaseStage, CaseStageHistory, Court, StateCourtFeeRule } = require('../associations');
 const courtFeeService = require('../court-fees/courtFee.service');
 const AppError = require('../../utils/AppError');
 const { assertAdvocateOwnsCase, getScopedAdvocateIds, assertUserCanAccessAdvocateData } = require('../../utils/advocateScope');
-const { isGroupAdmin, isTenantAdmin, isSuperAdmin, isAdvocate } = require('../../utils/roleHelper');
+const { isGroupAdmin, isTenantAdmin, isSuperAdmin, isAdvocate, normalizeRole } = require('../../utils/roleHelper');
+const { getDynamicApprovalLadder } = require('../../utils/approvalLadder');
 
 const assertAdminOwnsCase = (caseRecord, currentUser) => {
   if (!currentUser) return;
@@ -402,6 +404,29 @@ const updateCase = async (
     };
     const finalCourtId = courtId !== undefined ? courtId : caseRecord.courtId;
     feeResult = await calculateFeeForCase(finalCourtId, inputs);
+  }
+
+  if (approvalLevel !== undefined && approvalLevel !== caseRecord.approvalLevel) {
+    const ladder = await getDynamicApprovalLadder();
+    const maxLevel = ladder.length;
+
+    if (maxLevel === 0) {
+      throw new AppError('No Case Approval approvers configured. Cannot perform approval action.', 400);
+    }
+
+    if (approvalLevel > maxLevel) {
+      throw new AppError('Invalid approval level', 400);
+    }
+
+    if (approvalLevel > caseRecord.approvalLevel && user) {
+      const targetLevelIndex = caseRecord.approvalLevel;
+      const requiredRole = ladder[targetLevelIndex];
+      const userRole = normalizeRole(user.role);
+
+      if (userRole !== 'Super Admin' && userRole !== requiredRole) {
+        throw new AppError(`Access Denied: Only ${requiredRole} can approve at this level.`, 403);
+      }
+    }
   }
 
   const t = await sequelize.transaction();

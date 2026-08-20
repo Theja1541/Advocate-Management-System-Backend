@@ -1,4 +1,5 @@
 const userService = require('./userService');
+const emailService = require('../../services/emailService');
 const logger = require('../../config/logger');
 
 exports.getAllUsers = async (req, res, next) => {
@@ -65,13 +66,26 @@ exports.deleteUser = async (req, res, next) => {
 
 exports.resetPassword = async (req, res, next) => {
   try {
-    const tempPassword = await userService.resetPassword(req.params.id);
+    const { tempPassword, email } = await userService.resetPassword(req.params.id);
+
+    const emailResult = await emailService.sendEmail({
+      to: email,
+      subject: 'Your Password Has Been Reset',
+      text: `Your password has been reset by the administrator. Your new temporary password is: ${tempPassword}\nPlease login and change your password immediately.`,
+      html: `<p>Your password has been reset by the administrator.</p><p>Your new temporary password is: <strong>${tempPassword}</strong></p><p>Please login and change your password immediately.</p>`
+    });
+
+    if (!emailResult.success) {
+      logger.error(`Failed to send reset password email to ${email}: ${emailResult.error}`);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Password was reset, but failed to send the email with the new password. Please contact support.'
+      });
+    }
+
     res.status(200).json({
       status: 'success',
-      message: 'Password has been reset successfully',
-      data: {
-        temporaryPassword: tempPassword,
-      }
+      message: 'Password has been reset and emailed to the user successfully.',
     });
   } catch (error) {
     logger.error('ResetPassword error:', error);

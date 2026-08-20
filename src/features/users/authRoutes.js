@@ -29,6 +29,12 @@ const changePasswordValidator = [
   validate
 ];
 
+const forgotPasswordValidator = [
+  body('email').isEmail().withMessage('Please enter a valid email address'),
+  validate
+];
+
 router.post('/change-password', protect, changePasswordValidator, authController.changePassword);
+router.post('/forgot-password', forgotPasswordValidator, authController.forgotPassword);
 
 module.exports = router;

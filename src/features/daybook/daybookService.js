@@ -1,6 +1,6 @@
 const { Daybook, User } = require('../associations');
 const AppError = require('../../utils/AppError');
-const { isGroupAdmin } = require('../../utils/roleHelper');
+const { isGroupAdmin, isSuperAdmin } = require('../../utils/roleHelper');
 const { applyGroupAdminIsolation } = require('../../utils/groupAdminScope');
 
 const SAFE_ATTRIBUTES = [
@@ -53,8 +53,14 @@ const scopeDaybookWhere = async (where, currentUser) => {
   await applyGroupAdminIsolation(where, currentUser, 'recorded_by');
 };
 
-const getAllEntries = async (currentUser = null) => {
+const getAllEntries = async (currentUser = null, queryTenantId = null) => {
   const where = {};
+
+  const isSuper = currentUser ? isSuperAdmin(currentUser.role || currentUser.rawRole) : false;
+  if (isSuper && queryTenantId) {
+    where.tenantId = queryTenantId;
+  }
+
   await scopeDaybookWhere(where, currentUser);
 
   const entries = await Daybook.findAll({

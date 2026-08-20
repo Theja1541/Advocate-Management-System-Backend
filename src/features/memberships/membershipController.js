@@ -17,7 +17,7 @@ exports.getAllMemberships = async (req, res, next) => {
 
 exports.getMembershipById = async (req, res, next) => {
   try {
-    const membership = await membershipService.getMembershipById(req.params.id);
+    const membership = await membershipService.getMembershipById(req.params.id, req.user);
     res.status(200).json({
       status: 'success',
       data: { membership },
@@ -34,7 +34,7 @@ exports.createMembership = async (req, res, next) => {
       ...req.body,
       createdBy: req.user?.id,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(201).json({
       status: 'success',
       data: { membership },
@@ -50,7 +50,7 @@ exports.updateMembership = async (req, res, next) => {
     const membership = await membershipService.updateMembership(req.params.id, {
       ...req.body,
       updatedBy: req.user?.id,
-    });
+    }, req.user);
     res.status(200).json({
       status: 'success',
       data: { membership },
@@ -63,7 +63,7 @@ exports.updateMembership = async (req, res, next) => {
 
 exports.renewMembership = async (req, res, next) => {
   try {
-    const membership = await membershipService.renewMembership(req.params.id, {
+    const membership = await membershipService.renewMembership(req.params.id, req.user, {
       updatedBy: req.user?.id,
     });
     res.status(200).json({
@@ -78,7 +78,7 @@ exports.renewMembership = async (req, res, next) => {
 
 exports.deleteMembership = async (req, res, next) => {
   try {
-    await membershipService.deleteMembership(req.params.id);
+    await membershipService.deleteMembership(req.params.id, req.user);
     res.status(204).send();
   } catch (error) {
     logger.error('DeleteMembership error:', error);
