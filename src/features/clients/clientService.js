@@ -36,7 +36,7 @@ const { getScopedAdvocateIds } = require('../../utils/advocateScope');
 const { Case } = require('../associations');
 const { Op } = require('sequelize');
 
-const { isGroupAdmin } = require('../../utils/roleHelper');
+const { isGroupAdmin, isSuperAdmin } = require('../../utils/roleHelper');
 
 const isGAUser = (user) =>
   Boolean(user && (isGroupAdmin(user.role) || isGroupAdmin(user.rawRole)));
@@ -47,8 +47,13 @@ const scopeClientWhere = (where, user) => {
   }
 };
 
-const getAllClients = async (currentUser = null) => {
+const getAllClients = async (currentUser = null, queryTenantId = null) => {
   const where = {};
+
+  const isSuper = currentUser ? isSuperAdmin(currentUser.role) : false;
+  if (isSuper && queryTenantId) {
+    where.tenantId = queryTenantId;
+  }
 
   if (currentUser) {
     if (isGAUser(currentUser)) {

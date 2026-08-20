@@ -4,6 +4,14 @@ module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';
 
+  // Handle Sequelize validation and unique constraint errors
+  if (err.name === 'SequelizeValidationError' || err.name === 'SequelizeUniqueConstraintError') {
+    err.statusCode = 400;
+    err.status = 'fail';
+    err.message = err.errors.map(e => e.message).join(', ');
+    err.isOperational = true;
+  }
+
   // Log error using Winston
   logger.error(`${err.statusCode} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
 

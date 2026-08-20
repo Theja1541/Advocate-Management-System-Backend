@@ -7,6 +7,8 @@ const Role = require('../users/Role');
 const GroupAdminAdvocate = require('../users/GroupAdminAdvocate');
 const AppError = require('../../utils/AppError');
 const { isSuperAdmin, isGroupAdmin, normalizeRole } = require('../../utils/roleHelper');
+const { generateTemporaryPassword } = require('../../utils/cryptoUtil');
+const emailService = require('../../services/emailService');
 
 const isGAUser = (user) => {
   if (!user) return false;
@@ -118,12 +120,11 @@ const createLinkedLoginUser = async (
   const finalRoleId = roleId || (await getAdvocateRoleId(transaction));
   await assertEmailAvailableForUser(email, null, transaction);
 
-  const passwordHash = await bcrypt.hash(
-    password && String(password).trim() ? String(password).trim() : DEFAULT_LOGIN_PASSWORD,
-    10
-  );
+  const isTempPassword = !(password && String(password).trim());
+  const actualPassword = isTempPassword ? generateTemporaryPassword() : String(password).trim();
+  const passwordHash = await bcrypt.hash(actualPassword, 10);
 
-  return User.create(
+  const user = await User.create(
     {
       name,
       email,
@@ -131,9 +132,31 @@ const createLinkedLoginUser = async (
       passwordHash,
       status: status === 'inactive' ? 'inactive' : 'active',
       tenantId,
+      mustChangePassword: isTempPassword,
     },
     { transaction }
   );
+
+  if (isTempPassword) {
+    const emailResult = await emailService.sendEmail({
+      to: email,
+      subject: 'Welcome to Advocate Management System - Advocate',
+      text: `Hello ${name},\n\nYour Advocate account has been created.\n\nYour temporary password is: ${actualPassword}\n\nPlease login and change your password immediately.\n\nLogin URL: http://localhost:5173/login`,
+      html: `
+        <p>Hello <strong>${name}</strong>,</p>
+        <p>Your Advocate account has been successfully created.</p>
+        <p>Your temporary password is: <strong>${actualPassword}</strong></p>
+        <p>Please login and change your password immediately.</p>
+        <p><a href="http://localhost:5173/login">Click here to login</a></p>
+      `
+    });
+
+    if (!emailResult.success) {
+      throw new AppError(`Failed to send welcome email: ${emailResult.error}. User creation aborted.`, 500);
+    }
+  }
+
+  return user;
 };
 
 const syncLinkedLoginUser = async (
@@ -170,7 +193,7 @@ const syncLinkedLoginUser = async (
   await user.save({ transaction });
 };
 
-const getAllAdvocates = async (currentUser) => {
+const getAllAdvocates = async (currentUser, queryTenantId) => {
   const isSuper = currentUser ? isSuperAdmin(currentUser.role) : true;
   const isGA = isGAUser(currentUser);
 
@@ -185,6 +208,10 @@ const getAllAdvocates = async (currentUser) => {
   }
 
   const whereClause = isSuper ? {} : { tenantId: currentUser.tenantId };
+  if (isSuper && queryTenantId) {
+    whereClause.tenantId = queryTenantId;
+  }
+  
   if (advocateIdsFilter !== null) {
     whereClause.id = { [Op.in]: advocateIdsFilter };
   }

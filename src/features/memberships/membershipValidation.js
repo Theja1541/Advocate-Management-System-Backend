@@ -3,11 +3,11 @@ const { body, param } = require('express-validator');
 const STATUSES = ['active', 'expiring', 'expired'];
 
 const createMembershipRules = [
-  body('advocateId')
+  body('groupAdminId')
     .notEmpty()
-    .withMessage('Advocate is required')
+    .withMessage('Group Admin is required')
     .isInt({ min: 1 })
-    .withMessage('Valid advocate ID is required'),
+    .withMessage('Valid Group Admin ID is required'),
   body('planName')
     .trim()
     .notEmpty()
@@ -39,10 +39,10 @@ const updateMembershipRules = [
   param('id')
     .isInt({ min: 1 })
     .withMessage('Valid membership ID is required'),
-  body('advocateId')
+  body('groupAdminId')
     .optional()
     .isInt({ min: 1 })
-    .withMessage('Valid advocate ID is required'),
+    .withMessage('Valid Group Admin ID is required'),
   body('planName')
     .optional()
     .trim()

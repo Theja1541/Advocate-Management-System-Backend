@@ -264,3 +264,40 @@ exports.changePassword = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.forgotPassword = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    const { User } = require('../associations');
+    const { generateTemporaryPassword } = require('../../utils/cryptoUtil');
+    const emailService = require('../../services/emailService');
+    const bcrypt = require('bcrypt');
+    const AppError = require('../../utils/AppError');
+
+    const user = await User.findOne({ where: { email } });
+    if (!user) {
+      return res.status(200).json({ status: 'success', message: 'If that email is in our database, we have sent a password reset link to it.' });
+    }
+
+    const tempPassword = generateTemporaryPassword();
+    user.passwordHash = await bcrypt.hash(tempPassword, 10);
+    user.mustChangePassword = true;
+    await user.save();
+
+    const emailResult = await emailService.sendEmail({
+      to: email,
+      subject: 'Password Reset - Advocate Management System',
+      text: `Hello ${user.name},\n\nWe received a request to reset your password.\n\nYour new temporary password is: ${tempPassword}\n\nPlease login and change your password immediately.\n\nLogin URL: http://localhost:5173/login`,
+      html: `<p>Hello <strong>${user.name}</strong>,</p><p>We received a request to reset your password.</p><p>Your new temporary password is: <strong>${tempPassword}</strong></p><p>Please login and change your password immediately.</p><p><a href="http://localhost:5173/login">Click here to login</a></p>`
+    });
+
+    if (!emailResult.success) {
+      return next(new AppError(`Failed to send email: ${emailResult.error}`, 500));
+    }
+
+    res.status(200).json({ status: 'success', message: 'If that email is in our database, we have sent a password reset link to it.' });
+  } catch (error) {
+    next(error);
+  }
+};
+

@@ -3,6 +3,8 @@ const { Tenant, TenantSetting, TenantSubscription, SubscriptionPlan, User, Role,
 const AppError = require('../../utils/AppError');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
+const { generateTemporaryPassword } = require('../../utils/cryptoUtil');
+const emailService = require('../../services/emailService');
 
 const getTenants = async (query = {}) => {
   const tenants = await Tenant.findAll({
@@ -39,6 +41,15 @@ const getTenantById = async (id) => {
     include: [{ model: SubscriptionPlan, as: 'plan' }, { model: TenantSetting, as: 'settings' }]
   });
   if (!tenant) throw new AppError('Tenant not found', 404);
+
+  const adminRole = await Role.findOne({ where: { name: 'Tenant Admin', tenantId: id }, bypassTenant: true });
+  if (adminRole) {
+    const adminUser = await User.findOne({ where: { roleId: adminRole.id, tenantId: id }, bypassTenant: true, attributes: ['id', 'name', 'email', 'status'] });
+    if (adminUser) {
+      tenant.dataValues.tenantAdmin = adminUser;
+    }
+  }
+
   return tenant;
 };
 
@@ -115,15 +126,38 @@ const createTenant = async (tenantData, adminData) => {
     await Permission.bulkCreate(perms, { transaction, bypassTenant: true });
 
     // 7. Create Admin User
-    const passwordHash = await bcrypt.hash(adminData.password, 10);
+    const isTempPassword = !(adminData.password && String(adminData.password).trim());
+    const actualPassword = isTempPassword ? generateTemporaryPassword() : String(adminData.password).trim();
+    const passwordHash = await bcrypt.hash(actualPassword, 10);
+
     await User.create({
       name: adminData.name,
       email: adminData.email,
       passwordHash,
       roleId: adminRole.id,
       status: 'active',
-      tenantId: tenant.id
+      tenantId: tenant.id,
+      mustChangePassword: isTempPassword
     }, { transaction, bypassTenant: true });
+
+    if (isTempPassword) {
+      const emailResult = await emailService.sendEmail({
+        to: adminData.email,
+        subject: 'Welcome to Advocate Management System - Tenant Admin',
+        text: `Hello ${adminData.name},\n\nYour Tenant Admin account for ${tenantData.name} has been created.\n\nYour temporary password is: ${actualPassword}\n\nPlease login and change your password immediately.\n\nLogin URL: http://localhost:5173/login`,
+        html: `
+          <p>Hello <strong>${adminData.name}</strong>,</p>
+          <p>Your Tenant Admin account for <strong>${tenantData.name}</strong> has been successfully created.</p>
+          <p>Your temporary password is: <strong>${actualPassword}</strong></p>
+          <p>Please login and change your password immediately.</p>
+          <p><a href="http://localhost:5173/login">Click here to login</a></p>
+        `
+      });
+
+      if (!emailResult.success) {
+        throw new AppError(`Failed to send welcome email: ${emailResult.error}. Tenant creation aborted.`, 500);
+      }
+    }
 
     await transaction.commit();
     return tenant;
@@ -135,6 +169,7 @@ const createTenant = async (tenantData, adminData) => {
 
 const updateTenant = async (id, data) => {
   const tenant = await getTenantById(id);
+  const oldStatus = tenant.status;
   
   if (data.status) tenant.status = data.status;
   if (data.name) tenant.name = data.name;
@@ -155,6 +190,18 @@ const updateTenant = async (id, data) => {
   if (data.planId !== undefined) tenant.planId = data.planId;
   
   await tenant.save({ bypassTenant: true });
+
+  if (data.status && data.status !== oldStatus) {
+    const { User, Advocate } = require('../associations');
+    const newStatus = data.status === 'active' ? 'active' : 'inactive';
+    
+    // Cascade status to all users and advocates inside the tenant
+    await User.update({ status: newStatus }, { where: { tenantId: id }, bypassTenant: true });
+    if (Advocate) {
+      await Advocate.update({ status: newStatus }, { where: { tenantId: id }, bypassTenant: true });
+    }
+  }
+
   return tenant;
 };
 

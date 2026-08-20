@@ -1,10 +1,11 @@
 const { Op } = require('sequelize');
-const { Membership, Advocate, User } = require('../associations');
+const { Membership, User, Role } = require('../associations');
 const AppError = require('../../utils/AppError');
+const { isGroupAdmin } = require('../../utils/roleHelper');
 
 const SAFE_ATTRIBUTES = [
   'id',
-  'advocateId',
+  'groupAdminId',
   'planName',
   'feeAmount',
   'startDate',
@@ -16,10 +17,11 @@ const SAFE_ATTRIBUTES = [
   'updated_at',
 ];
 
-const advocateInclude = {
-  model: Advocate,
-  as: 'advocate',
-  attributes: ['id', 'name', 'enrolment', 'status'],
+const groupAdminInclude = {
+  model: User,
+  as: 'groupAdmin',
+  attributes: ['id', 'name', 'email', 'status', 'tenantId'],
+  include: [{ model: Role, as: 'role', attributes: ['name'] }]
 };
 
 const toPublicMembership = (membership) => {
@@ -43,9 +45,25 @@ const deriveStatus = (expiryDate) => {
   return 'active';
 };
 
-const assertAdvocateExists = async (advocateId) => {
-  const advocate = await Advocate.findByPk(advocateId, { attributes: ['id'] });
-  if (!advocate) throw new AppError('Advocate not found', 400);
+const assertGroupAdminValid = async (groupAdminId, currentUser) => {
+  const user = await User.findByPk(groupAdminId, {
+    attributes: ['id', 'tenantId'],
+    include: [{ model: Role, as: 'role', attributes: ['name'] }]
+  });
+  
+  if (!user) throw new AppError('Group Admin not found', 400);
+  
+  // Tenant isolation
+  if (currentUser && currentUser.role?.name !== 'Super Admin') {
+    if (user.tenantId !== currentUser.tenantId) {
+      throw new AppError('Cannot assign membership to a Group Admin outside your tenant', 403);
+    }
+  }
+
+  // Validate it's actually a Group Admin
+  if (user.role?.name !== 'Group Admin') {
+    throw new AppError('Selected user is not a Group Admin', 400);
+  }
 };
 
 const assertUserExists = async (userId, fieldLabel) => {
@@ -60,34 +78,31 @@ const addYears = (dateStr, years = 1) => {
   return d.toISOString().slice(0, 10);
 };
 
-const { getScopedAdvocateIds } = require('../../utils/advocateScope');
-
-const { isGroupAdmin } = require('../../utils/roleHelper');
-
 const getAllMemberships = async (currentUser = null) => {
   const where = {};
+  
   if (currentUser) {
     if (isGroupAdmin(currentUser.role)) {
-      where.createdBy = currentUser.id;
-    } else {
-      const allowedAdvocateIds = await getScopedAdvocateIds(currentUser);
-      if (allowedAdvocateIds !== null) {
-        if (allowedAdvocateIds.length === 0) {
-          return [];
-        }
-        where.advocateId = { [Op.in]: allowedAdvocateIds };
-      }
+      where.groupAdminId = currentUser.id;
+    } else if (currentUser.role?.name !== 'Super Admin') {
+      // Must be within tenant
+      // We'll filter the included User model by tenantId
     }
   }
 
-
-  const memberships = await Membership.findAll({
+  const queryOptions = {
     where,
     attributes: SAFE_ATTRIBUTES,
-    include: [advocateInclude],
+    include: [{
+      ...groupAdminInclude,
+      where: (currentUser && currentUser.role?.name !== 'Super Admin') 
+        ? { tenantId: currentUser.tenantId } 
+        : undefined
+    }],
     order: [['expiryDate', 'ASC'], ['id', 'ASC']],
-  });
+  };
 
+  const memberships = await Membership.findAll(queryOptions);
 
   const result = [];
   for (const membership of memberships) {
@@ -101,12 +116,21 @@ const getAllMemberships = async (currentUser = null) => {
   return result;
 };
 
-const getMembershipById = async (id) => {
+const getMembershipById = async (id, currentUser) => {
   const membership = await Membership.findByPk(id, {
     attributes: SAFE_ATTRIBUTES,
-    include: [advocateInclude],
+    include: [groupAdminInclude],
   });
   if (!membership) throw new AppError('Membership not found', 404);
+
+  if (currentUser && currentUser.role?.name !== 'Super Admin') {
+    if (membership.groupAdmin?.tenantId !== currentUser.tenantId) {
+      throw new AppError('Access denied', 403);
+    }
+    if (isGroupAdmin(currentUser.role) && Number(membership.groupAdminId) !== Number(currentUser.id)) {
+      throw new AppError('Access denied', 403);
+    }
+  }
 
   const publicMembership = toPublicMembership(membership);
   if (membership.status !== publicMembership.status) {
@@ -117,28 +141,28 @@ const getMembershipById = async (id) => {
 };
 
 const createMembership = async ({
-  advocateId,
+  groupAdminId,
   planName,
   feeAmount,
   startDate,
   expiryDate,
   createdBy,
   updatedBy,
-}) => {
-  await assertAdvocateExists(advocateId);
+}, currentUser) => {
+  await assertGroupAdminValid(groupAdminId, currentUser);
   await assertUserExists(createdBy, 'createdBy');
   await assertUserExists(updatedBy, 'updatedBy');
 
   const existing = await Membership.findOne({
-    where: { advocateId },
+    where: { groupAdminId },
     attributes: ['id'],
   });
   if (existing) {
-    throw new AppError('Membership already exists for this advocate', 409);
+    throw new AppError('Membership already exists for this Group Admin', 409);
   }
 
   const membership = await Membership.create({
-    advocateId,
+    groupAdminId,
     planName,
     feeAmount,
     startDate,
@@ -148,26 +172,30 @@ const createMembership = async ({
     updatedBy: updatedBy || null,
   });
 
-  return getMembershipById(membership.id);
+  return getMembershipById(membership.id, currentUser);
 };
 
 const updateMembership = async (
   id,
-  { advocateId, planName, feeAmount, startDate, expiryDate, status, updatedBy }
+  { groupAdminId, planName, feeAmount, startDate, expiryDate, status, updatedBy },
+  currentUser
 ) => {
   const membership = await Membership.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!membership) throw new AppError('Membership not found', 404);
 
-  if (advocateId !== undefined && Number(advocateId) !== Number(membership.advocateId)) {
-    await assertAdvocateExists(advocateId);
+  // Check access before update
+  await getMembershipById(id, currentUser);
+
+  if (groupAdminId !== undefined && Number(groupAdminId) !== Number(membership.groupAdminId)) {
+    await assertGroupAdminValid(groupAdminId, currentUser);
     const existing = await Membership.findOne({
-      where: { advocateId, id: { [Op.ne]: id } },
+      where: { groupAdminId, id: { [Op.ne]: id } },
       attributes: ['id'],
     });
     if (existing) {
-      throw new AppError('Membership already exists for this advocate', 409);
+      throw new AppError('Membership already exists for this Group Admin', 409);
     }
-    membership.advocateId = advocateId;
+    membership.groupAdminId = groupAdminId;
   }
 
   if (updatedBy !== undefined) {
@@ -184,12 +212,15 @@ const updateMembership = async (
   membership.status = status || deriveStatus(nextExpiry);
 
   await membership.save();
-  return getMembershipById(membership.id);
+  return getMembershipById(membership.id, currentUser);
 };
 
-const renewMembership = async (id, { updatedBy } = {}) => {
+const renewMembership = async (id, currentUser, { updatedBy } = {}) => {
   const membership = await Membership.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!membership) throw new AppError('Membership not found', 404);
+
+  // Check access
+  await getMembershipById(id, currentUser);
 
   if (updatedBy !== undefined) {
     await assertUserExists(updatedBy, 'updatedBy');
@@ -209,12 +240,16 @@ const renewMembership = async (id, { updatedBy } = {}) => {
   membership.status = deriveStatus(membership.expiryDate);
 
   await membership.save();
-  return getMembershipById(membership.id);
+  return getMembershipById(membership.id, currentUser);
 };
 
-const deleteMembership = async (id) => {
+const deleteMembership = async (id, currentUser) => {
   const membership = await Membership.findByPk(id, { attributes: SAFE_ATTRIBUTES });
   if (!membership) throw new AppError('Membership not found', 404);
+  
+  // Check access
+  await getMembershipById(id, currentUser);
+
   await membership.destroy();
   return true;
 };

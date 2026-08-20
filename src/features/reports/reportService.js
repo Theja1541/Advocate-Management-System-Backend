@@ -340,8 +340,8 @@ const getMembershipReport = async (options = {}) => {
     `
     SELECT
       m.id,
-      m.advocate_id AS advocateId,
-      a.name AS advocateName,
+      m.group_admin_id AS groupAdminId,
+      u.name AS groupAdminName,
       m.plan_name AS planName,
       m.fee_amount AS feeAmount,
       m.start_date AS startDate,
@@ -349,9 +349,9 @@ const getMembershipReport = async (options = {}) => {
       m.status,
       DATEDIFF(m.expiry_date, CURDATE()) AS daysToExpiry
     FROM memberships m
-    LEFT JOIN advocates a ON a.id = m.advocate_id
+    LEFT JOIN users u ON u.id = m.group_admin_id
     WHERE ${fc.clause}
-    ORDER BY m.expiry_date ASC, a.name ASC
+    ORDER BY m.expiry_date ASC, u.name ASC
     `,
     { replacements: typeof fc !== "undefined" ? fc.reps : typeof fcC !== "undefined" ? { ...fcC.reps, ...fcP.reps } : {}, type: QueryTypes.SELECT }
   );

@@ -15,11 +15,11 @@ Membership.init(
       allowNull: false,
       field: 'tenant_id',
     },
-    advocateId: {
-      type: DataTypes.BIGINT,
+    groupAdminId: {
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
       unique: true,
-      field: 'advocate_id',
+      field: 'group_admin_id',
     },
     planName: {
       type: DataTypes.STRING(50),

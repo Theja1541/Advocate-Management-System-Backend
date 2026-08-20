@@ -25,8 +25,7 @@ const createUserRules = [
     .withMessage('Valid Role ID is required')
     .toInt(),
   body('password')
-    .notEmpty()
-    .withMessage('Password is required')
+    .optional({ values: 'falsy' })
     .isLength({ min: 8, max: 128 })
     .withMessage('Password must be between 8 and 128 characters'),
   body('status')
