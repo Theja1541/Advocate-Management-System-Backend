@@ -267,12 +267,13 @@ exports.changePassword = async (req, res, next) => {
 
 exports.forgotPassword = async (req, res, next) => {
   try {
-    const { email } = req.body;
     const { User } = require('../associations');
     const { generateTemporaryPassword } = require('../../utils/cryptoUtil');
     const emailService = require('../../services/emailService');
     const bcrypt = require('bcrypt');
     const AppError = require('../../utils/AppError');
+    const email = req.body.email ? String(req.body.email).toLowerCase().trim() : '';
+    if (!email) return next(new AppError('Please provide an email address', 400));
 
     const user = await User.findOne({ where: { email } });
     if (!user) {
@@ -300,4 +301,6 @@ exports.forgotPassword = async (req, res, next) => {
     next(error);
   }
 };
+
+
 

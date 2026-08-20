@@ -9851,3 +9851,75 @@
 2026-08-20 10:17:13:1713 [31merror[39m: [31m500 - External API Error: Invalid API key - /api/v1/bare-acts/search?q=63 - GET - ::1[39m
 2026-08-20 10:19:01:191 [31merror[39m: [31m401 - You are not logged in. Please sign in to access. - /api/v1/bare-acts/search?q=Data%20Protection - GET - ::1[39m
 2026-08-20 10:28:10:2810 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-20 12:43:23:4323 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 12:48:20:4820 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:58:49:5849 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:58:56:5856 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:58:58:5858 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:59:05:595 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:59:36:5936 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:01:11:111 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:01:33:133 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:01:36:136 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:51:30:5130 [31merror[39m: [31mCreateGroupAdmin error: Validation error[39m
+2026-08-20 14:51:30:5130 [31merror[39m: [31m400 - email must be unique - /api/v1/group-admins - POST - ::1[39m

@@ -17051,3 +17051,168 @@
 2026-08-20 11:54:47:5447 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
 2026-08-20 11:54:57:5457 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
 2026-08-20 11:54:57:5457 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 12:40:46:4046 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 12:40:47:4047 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 12:40:47:4047 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 12:40:47:4047 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 12:40:47:4047 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 12:40:47:4047 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 12:40:57:4057 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 12:40:57:4057 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts?status=active - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/cases - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/clients - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/advocates - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/diary - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/daybook - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/payments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/alerts? - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/lands - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/opinions - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/acts - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/amendments - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/roles - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/roles/modules - GET - ::1[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31mJWT Verification Error: invalid signature[39m
+2026-08-20 12:41:38:4138 [31merror[39m: [31m401 - Invalid or expired security token. Please log in again. - /api/v1/auth/me - GET - ::1[39m
+2026-08-20 12:43:23:4323 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 12:46:39:4639 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-20 12:46:43:4643 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 12:46:45:4645 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 12:46:45:4645 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 12:46:45:4645 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 12:46:45:4645 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 12:46:45:4645 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 12:46:45:4645 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 12:46:55:4655 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 12:46:55:4655 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 12:47:20:4720 [32minfo[39m: [32mEmail sent successfully to test@lawfirm.com. Message ID: <0c76f62c-c43e-056f-7f40-ad56f72f8cc5@gmail.com>[39m
+2026-08-20 12:48:20:4820 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:00:15:015 [32minfo[39m: [32mEmail sent successfully to user@gmail.com. Message ID: <3e091407-ba82-66bb-0cf5-ee5e2df18fb4@gmail.com>[39m
+2026-08-20 13:10:37:1037 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <bba51276-aba1-9c7b-803b-6d0c1b6127d5@gmail.com>[39m
+2026-08-20 13:54:38:5438 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:54:39:5439 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:54:40:5440 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 13:54:40:5440 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 13:54:40:5440 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 13:54:40:5440 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 13:54:40:5440 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 13:54:50:5450 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 13:54:50:5450 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 13:55:22:5522 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:55:22:5522 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 13:55:22:5522 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 13:55:22:5522 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 13:55:22:5522 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 13:55:22:5522 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 13:55:32:5532 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 13:55:32:5532 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 13:56:01:561 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <e537fc71-e4a2-55e3-689a-3ec4ca6fcdc7@gmail.com>[39m
+2026-08-20 13:57:01:571 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:57:01:571 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 13:57:01:571 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 13:57:01:571 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 13:57:01:571 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 13:57:01:571 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 13:57:11:5711 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 13:57:11:5711 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 13:57:12:5712 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:57:13:5713 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 13:57:13:5713 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 13:57:13:5713 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 13:57:13:5713 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 13:57:13:5713 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 13:57:23:5723 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 13:57:23:5723 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 13:57:45:5745 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 13:57:46:5746 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 13:57:46:5746 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 13:57:46:5746 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 13:57:46:5746 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 13:57:46:5746 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 13:57:56:5756 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 13:57:56:5756 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 13:58:49:5849 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:58:56:5856 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:58:58:5858 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:59:05:595 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:59:36:5936 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 13:59:47:5947 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <a1350674-4f8b-a5f0-f249-d10d037a9723@gmail.com>[39m
+2026-08-20 14:01:11:111 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:01:23:123 [32minfo[39m: [32mEmail sent successfully to amasatheja7@gmail.com. Message ID: <acd0886c-2f96-b880-d4aa-c0e1acbf3405@gmail.com>[39m
+2026-08-20 14:01:33:133 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:01:36:136 [31merror[39m: [31m401 - Incorrect email or password - /api/v1/auth/login - POST - ::1[39m
+2026-08-20 14:50:28:5028 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-20 14:50:32:5032 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 14:50:32:5032 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 14:50:32:5032 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 14:50:32:5032 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 14:50:32:5032 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 14:50:32:5032 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 14:50:42:5042 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 14:50:42:5042 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 14:51:30:5130 [32minfo[39m: [32mEmail sent successfully to suresh@gmail.com. Message ID: <fc2c7203-314a-9cfe-7039-1cb0cbdb59d2@gmail.com>[39m
+2026-08-20 14:51:30:5130 [31merror[39m: [31mCreateGroupAdmin error: Validation error[39m
+2026-08-20 14:51:30:5130 [31merror[39m: [31m400 - email must be unique - /api/v1/group-admins - POST - ::1[39m
+2026-08-20 14:55:06:556 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 14:55:07:557 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 14:55:08:558 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 14:55:08:558 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 14:55:08:558 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 14:55:08:558 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 14:55:08:558 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 14:55:18:5518 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 14:55:18:5518 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 14:55:46:5546 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-20 14:55:46:5546 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-20 14:55:46:5546 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-20 14:55:46:5546 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-20 14:55:46:5546 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-20 14:55:46:5546 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-20 14:55:56:5556 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-20 14:55:56:5556 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-20 15:00:10:010 [32minfo[39m: [32mShutting down server gracefully...[39m
