@@ -91,6 +91,7 @@ const toAuthUser = (user) => {
     tenantId: user.tenantId,
     tenant: user.tenant ? { name: user.tenant.name, logo: user.tenant.logo } : null,
     mustChangePassword: user.mustChangePassword,
+    mfaEnabled: user.mfaEnabled,
   };
 
   if (base.advocateId && user.advocateProfile) {
@@ -118,7 +119,7 @@ const toAuthUser = (user) => {
 
 const findAuthUserById = async (id) => {
   return User.findByPk(id, {
-    attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword'],
+    attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword', 'mfaEnabled'],
     include: [roleInclude, advocateInclude, tenantInclude],
   });
 };
@@ -134,37 +135,53 @@ exports.login = async (req, res, next) => {
 
     const user = await User.findOne({
       where: { email, status: 'active' },
-      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status', 'tenantId', 'mustChangePassword'],
+      attributes: ['id', 'name', 'email', 'roleId', 'passwordHash', 'status', 'tenantId', 'mustChangePassword', 'mfaEnabled'],
       include: [roleInclude, advocateInclude, tenantInclude],
     });
 
-    if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
+        if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
       return next(new AppError('Incorrect email or password', 401));
     }
 
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const otpHash = await bcrypt.hash(otp, 10);
+    const isSuperAdmin = user.role && user.role.name === 'Super Admin';
+    if (isSuperAdmin && user.mfaEnabled) {
+      const otp = Math.floor(100000 + Math.random() * 900000).toString();
+      const otpHash = await bcrypt.hash(otp, 10);
 
-    user.mfaOtpHash = otpHash;
-    user.mfaOtpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-    user.mfaOtpAttempts = 0;
-    user.mfaOtpLastSentAt = new Date();
-    await user.save();
+      user.mfaOtpHash = otpHash;
+      user.mfaOtpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
+      user.mfaOtpAttempts = 0;
+      user.mfaOtpLastSentAt = new Date();
+      await user.save();
 
-    const emailResult = await emailService.sendEmail({
-      to: user.email,
-      subject: 'Login Verification Code - Advocate Management System',
-      text: `Hello ${user.name},\n\nYour 6-digit verification code is: ${otp}\n\nThis code expires in 5 minutes.\nPlease do not share this code with anyone.`,
-      html: `<p>Hello <strong>${user.name}</strong>,</p><p>Your 6-digit verification code is: <strong>${otp}</strong></p><p>This code expires in 5 minutes.</p><p><em>Please do not share this code with anyone.</em></p>`
-    });
+      const emailResult = await emailService.sendEmail({
+        to: user.email,
+        subject: 'Login Verification Code - Advocate Management System',
+        text: `Hello ${user.name},\n\nYour 6-digit verification code is: ${otp}\n\nThis code expires in 5 minutes.\nPlease do not share this code with anyone.`,
+        html: `<p>Hello <strong>${user.name}</strong>,</p><p>Your 6-digit verification code is: <strong>${otp}</strong></p><p>This code expires in 5 minutes.</p><p><em>Please do not share this code with anyone.</em></p>`
+      });
 
-    if (!emailResult.success) {
-      return next(new AppError('Failed to send verification email. Please try again.', 500));
+      if (!emailResult.success) {
+        return next(new AppError('Failed to send verification email. Please try again.', 500));
+      }
+
+      return res.status(200).json({
+        status: 'MFA_REQUIRED',
+        userId: user.id,
+      });
     }
 
+    const accessToken = signAccessToken(user);
+    const refreshToken = signRefreshToken(user);
+
+    res.cookie('refreshToken', refreshToken, getRefreshCookieOptions());
+
     res.status(200).json({
-      status: 'MFA_REQUIRED',
-      userId: user.id,
+      status: user.mustChangePassword ? 'PASSWORD_CHANGE_REQUIRED' : 'success',
+      token: accessToken,
+      data: {
+        user: toAuthUser(user),
+      },
     });
   } catch (error) {
     logger.error('Login error:', error);
@@ -178,7 +195,7 @@ exports.verifyMfa = async (req, res, next) => {
 
     const user = await User.findOne({
       where: { id: userId, status: 'active' },
-      attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword', 'mfaOtpHash', 'mfaOtpExpiresAt', 'mfaOtpAttempts'],
+      attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword', 'mfaOtpHash', 'mfaOtpExpiresAt', 'mfaOtpAttempts', 'mfaEnabled'],
       include: [roleInclude, advocateInclude, tenantInclude],
     });
 
@@ -349,7 +366,7 @@ exports.changePassword = async (req, res, next) => {
     const { currentPassword, newPassword } = req.body;
     
     const user = await User.findByPk(req.user.id, {
-      attributes: ['id', 'passwordHash', 'mustChangePassword']
+      attributes: ['id', 'passwordHash', 'mustChangePassword', 'mfaEnabled']
     });
 
     if (!user) {
@@ -415,6 +432,43 @@ exports.forgotPassword = async (req, res, next) => {
 
     res.status(200).json({ status: 'success', message: 'If that email is in our database, we have sent a password reset link to it.' });
   } catch (error) {
+    next(error);
+  }
+};
+
+
+
+
+exports.toggleMfa = async (req, res, next) => {
+  try {
+    const { password, enabled } = req.body;
+    
+    if (!password) {
+      return next(new AppError('Password is required', 400));
+    }
+
+    const user = await User.findByPk(req.user.id, {
+      attributes: ['id', 'passwordHash', 'mfaEnabled']
+    });
+
+    if (!user) {
+      return next(new AppError('User not found', 404));
+    }
+
+    if (!(await bcrypt.compare(password, user.passwordHash))) {
+      return next(new AppError('Incorrect password', 401));
+    }
+
+    user.mfaEnabled = !!enabled;
+    await user.save();
+
+    res.status(200).json({
+      status: 'success',
+      message: `Multi-Factor Authentication ${user.mfaEnabled ? 'enabled' : 'disabled'} successfully.`,
+      mfaEnabled: user.mfaEnabled
+    });
+  } catch (error) {
+    logger.error('Toggle MFA error:', error);
     next(error);
   }
 };
