@@ -53,6 +53,27 @@ User.init(
       defaultValue: false,
       field: 'must_change_password',
     },
+    mfaOtpHash: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      field: 'mfa_otp_hash',
+    },
+    mfaOtpExpiresAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      field: 'mfa_otp_expires_at',
+    },
+    mfaOtpAttempts: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+      field: 'mfa_otp_attempts',
+    },
+    mfaOtpLastSentAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      field: 'mfa_otp_last_sent_at',
+    },
   },
   {
     sequelize,

@@ -16,7 +16,6 @@ const roleInclude = {
   attributes: ['id', 'name'],
 };
 
-
 const tenantInclude = { model: Tenant, as: 'tenant', attributes: ['name', 'logo'] };
 const advocateInclude = {
   model: Advocate,
@@ -127,6 +126,7 @@ const findAuthUserById = async (id) => {
 exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
+    const emailService = require('../../services/emailService');
 
     if (!email || !password) {
       return next(new AppError('Please provide email and password', 400));
@@ -142,6 +142,73 @@ exports.login = async (req, res, next) => {
       return next(new AppError('Incorrect email or password', 401));
     }
 
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const otpHash = await bcrypt.hash(otp, 10);
+
+    user.mfaOtpHash = otpHash;
+    user.mfaOtpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
+    user.mfaOtpAttempts = 0;
+    user.mfaOtpLastSentAt = new Date();
+    await user.save();
+
+    const emailResult = await emailService.sendEmail({
+      to: user.email,
+      subject: 'Login Verification Code - Advocate Management System',
+      text: `Hello ${user.name},\n\nYour 6-digit verification code is: ${otp}\n\nThis code expires in 5 minutes.\nPlease do not share this code with anyone.`,
+      html: `<p>Hello <strong>${user.name}</strong>,</p><p>Your 6-digit verification code is: <strong>${otp}</strong></p><p>This code expires in 5 minutes.</p><p><em>Please do not share this code with anyone.</em></p>`
+    });
+
+    if (!emailResult.success) {
+      return next(new AppError('Failed to send verification email. Please try again.', 500));
+    }
+
+    res.status(200).json({
+      status: 'MFA_REQUIRED',
+      userId: user.id,
+    });
+  } catch (error) {
+    logger.error('Login error:', error);
+    next(error);
+  }
+};
+
+exports.verifyMfa = async (req, res, next) => {
+  try {
+    const { userId, otp } = req.body;
+
+    const user = await User.findOne({
+      where: { id: userId, status: 'active' },
+      attributes: ['id', 'name', 'email', 'roleId', 'status', 'tenantId', 'mustChangePassword', 'mfaOtpHash', 'mfaOtpExpiresAt', 'mfaOtpAttempts'],
+      include: [roleInclude, advocateInclude, tenantInclude],
+    });
+
+    if (!user) {
+      return next(new AppError('User not found or inactive', 401));
+    }
+
+    if (!user.mfaOtpHash || !user.mfaOtpExpiresAt) {
+      return next(new AppError('No pending verification found', 400));
+    }
+
+    if (user.mfaOtpAttempts >= 5) {
+      return next(new AppError('Maximum verification attempts exceeded. Please request a new code.', 429));
+    }
+
+    if (new Date() > new Date(user.mfaOtpExpiresAt)) {
+      return next(new AppError('Verification code has expired. Please request a new code.', 400));
+    }
+
+    if (!(await bcrypt.compare(otp, user.mfaOtpHash))) {
+      user.mfaOtpAttempts += 1;
+      await user.save();
+      return next(new AppError('Incorrect verification code', 401));
+    }
+
+    user.mfaOtpHash = null;
+    user.mfaOtpExpiresAt = null;
+    user.mfaOtpAttempts = 0;
+    await user.save();
+
     const accessToken = signAccessToken(user);
     const refreshToken = signRefreshToken(user);
 
@@ -155,7 +222,58 @@ exports.login = async (req, res, next) => {
       },
     });
   } catch (error) {
-    logger.error('Login error:', error);
+    logger.error('Verify MFA error:', error);
+    next(error);
+  }
+};
+
+exports.resendMfa = async (req, res, next) => {
+  try {
+    const { userId } = req.body;
+    const emailService = require('../../services/emailService');
+
+    const user = await User.findOne({
+      where: { id: userId, status: 'active' },
+      attributes: ['id', 'name', 'email', 'mfaOtpLastSentAt'],
+    });
+
+    if (!user) {
+      return next(new AppError('User not found or inactive', 401));
+    }
+
+    if (user.mfaOtpLastSentAt) {
+      const timeSinceLastSent = Date.now() - new Date(user.mfaOtpLastSentAt).getTime();
+      if (timeSinceLastSent < 60000) {
+        return next(new AppError('Please wait 60 seconds before requesting a new code.', 429));
+      }
+    }
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const otpHash = await bcrypt.hash(otp, 10);
+
+    user.mfaOtpHash = otpHash;
+    user.mfaOtpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
+    user.mfaOtpAttempts = 0;
+    user.mfaOtpLastSentAt = new Date();
+    await user.save();
+
+    const emailResult = await emailService.sendEmail({
+      to: user.email,
+      subject: 'Login Verification Code - Advocate Management System',
+      text: `Hello ${user.name},\n\nYour new 6-digit verification code is: ${otp}\n\nThis code expires in 5 minutes.\nPlease do not share this code with anyone.`,
+      html: `<p>Hello <strong>${user.name}</strong>,</p><p>Your new 6-digit verification code is: <strong>${otp}</strong></p><p>This code expires in 5 minutes.</p><p><em>Please do not share this code with anyone.</em></p>`
+    });
+
+    if (!emailResult.success) {
+      return next(new AppError('Failed to send verification email. Please try again.', 500));
+    }
+
+    res.status(200).json({
+      status: 'success',
+      message: 'A new verification code has been sent to your email.'
+    });
+  } catch (error) {
+    logger.error('Resend MFA error:', error);
     next(error);
   }
 };
@@ -186,7 +304,6 @@ exports.refresh = async (req, res, next) => {
       );
     }
 
-    // Ensure role name is present for access-token claims
     if (!getRoleName(user)) {
       return next(new AppError('User role is missing or invalid', 401));
     }
@@ -301,6 +418,3 @@ exports.forgotPassword = async (req, res, next) => {
     next(error);
   }
 };
-
-
-

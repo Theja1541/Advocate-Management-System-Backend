@@ -37,4 +37,18 @@ const forgotPasswordValidator = [
 router.post('/change-password', protect, changePasswordValidator, authController.changePassword);
 router.post('/forgot-password', forgotPasswordValidator, authController.forgotPassword);
 
+const verifyMfaValidator = [
+  body('userId').notEmpty().withMessage('User ID is required'),
+  body('otp').isLength({ min: 6, max: 6 }).isNumeric().withMessage('OTP must be a 6-digit number'),
+  validate
+];
+
+const resendMfaValidator = [
+  body('userId').notEmpty().withMessage('User ID is required'),
+  validate
+];
+
+router.post('/verify-mfa', verifyMfaValidator, authController.verifyMfa);
+router.post('/resend-mfa', resendMfaValidator, authController.resendMfa);
+
 module.exports = router;
