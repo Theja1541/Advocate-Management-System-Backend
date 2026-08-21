@@ -17534,3 +17534,104 @@
 2026-08-21 10:56:52:5652 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
 2026-08-21 10:56:52:5652 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
 2026-08-21 10:59:18:5918 [32minfo[39m: [32mShutting down server gracefully...[39m
+2026-08-21 11:11:40:1140 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:11:41:1141 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:11:41:1141 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:11:41:1141 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:11:41:1141 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:11:41:1141 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:11:51:1151 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:11:51:1151 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-21 11:11:58:1158 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-21 11:11:59:1159 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/cases - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/clients - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/advocates - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/diary - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/daybook - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/payments - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/amendments - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/lands - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/opinions - GET - ::1[39m
+2026-08-21 11:12:03:123 [31merror[39m: [31m403 - Access Denied: You do not have permission to perform this operation. - /api/v1/acts - GET - ::1[39m
+2026-08-21 11:12:20:1220 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <c1b3a35d-13df-7082-3ab1-e85130b445ff@gmail.com>[39m
+2026-08-21 11:12:31:1231 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <fc59f167-a922-8385-1354-04f000a4f11f@gmail.com>[39m
+2026-08-21 11:13:06:136 [32minfo[39m: [32mEmail sent successfully to amasatheja7@gmail.com. Message ID: <a967f5ac-7a43-cd20-5ade-11e9329aa8a9@gmail.com>[39m
+2026-08-21 11:14:11:1411 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <aa4b469c-9d51-8d7f-4318-39e2e171c6e7@gmail.com>[39m
+2026-08-21 11:19:27:1927 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <222a4676-b892-b0bb-0e81-5f82f3134e68@gmail.com>[39m
+2026-08-21 11:32:31:3231 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:32:31:3231 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:32:31:3231 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:32:31:3231 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:32:31:3231 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:32:31:3231 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:32:41:3241 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:32:41:3241 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:32:51:3251 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:32:51:3251 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:32:51:3251 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:32:51:3251 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:32:51:3251 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:32:51:3251 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:33:01:331 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:33:01:331 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:33:08:338 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:33:09:339 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:33:09:339 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:33:09:339 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:33:09:339 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:33:09:339 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:33:19:3319 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:33:19:3319 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:34:16:3416 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:34:17:3417 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:34:17:3417 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:34:17:3417 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:34:17:3417 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:34:17:3417 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:34:27:3427 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:34:27:3427 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:38:09:389 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:38:12:3812 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:38:13:3813 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:38:13:3813 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:38:13:3813 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:38:13:3813 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:38:13:3813 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:38:21:3821 [32minfo[39m: [32mMySQL database connection established successfully.[39m
+2026-08-21 11:38:22:3822 [33mwarn[39m: [33mensureTasksTable / ensureAmendmentTable / ensureCaseTable failed:[39m
+2026-08-21 11:38:22:3822 [33mwarn[39m: [33mensureStateCourtFeeTables failed:[39m
+2026-08-21 11:38:22:3822 [33mwarn[39m: [33mensureGlobalSettingsTable failed:[39m
+2026-08-21 11:38:22:3822 [32minfo[39m: [32mAlert engine scheduled daily at midnight (0 0 * * *).[39m
+2026-08-21 11:38:22:3822 [32minfo[39m: [32mServer successfully started on port 5000 in development mode.[39m
+2026-08-21 11:38:32:3832 [32minfo[39m: [32mStarting Alert Engine evaluation...[39m
+2026-08-21 11:38:32:3832 [32minfo[39m: [32mFinished Alert Engine evaluation.[39m
+2026-08-21 11:44:04:444 [32minfo[39m: [32mEmail sent successfully to amasatheja1541@gmail.com. Message ID: <1638f85c-3cb4-3ce6-2a64-7414f3124cfd@gmail.com>[39m

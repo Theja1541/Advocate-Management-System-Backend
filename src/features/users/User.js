@@ -74,6 +74,12 @@ User.init(
       allowNull: true,
       field: 'mfa_otp_last_sent_at',
     },
+    mfaEnabled: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+      field: 'mfa_enabled',
+    },
   },
   {
     sequelize,

@@ -51,4 +51,12 @@ const resendMfaValidator = [
 router.post('/verify-mfa', verifyMfaValidator, authController.verifyMfa);
 router.post('/resend-mfa', resendMfaValidator, authController.resendMfa);
 
+const toggleMfaValidator = [
+  body('password').notEmpty().withMessage('Password is required'),
+  body('enabled').isBoolean().withMessage('Enabled must be a boolean'),
+  validate
+];
+
+router.post('/toggle-mfa', protect, toggleMfaValidator, authController.toggleMfa);
 module.exports = router;
+
